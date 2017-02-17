@@ -1,0 +1,402 @@
+<openerp>
+	<data>
+	
+<!-- Request>Configuration>Request>Category-->
+	 <record model="ir.ui.view" id="config_request_categ_tree_view">
+            <field name="name">config.request.categ.tree</field>
+            <field name="model">config.request.categ</field>
+            <field name="arch" type="xml">
+                <tree string="Request Category" editable="bottom">
+              
+                    <field name="active"/>
+                    <field name="name"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="config_request_categ_form_view">
+            <field name="name">config.request.categ.form</field>
+            <field name="model">config.request.categ</field>
+            <field name="arch" type="xml">
+                <form string="Request Category">
+              		<sheet>
+              			<group>
+              				<field name="active"/>
+		                    <field name="name"/>
+		                    <field name="desc"/>
+	                    </group>
+                    </sheet>                 
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="config_request_categ_action">
+            <field name="name">Request Category</field>
+            <field name="res_model">config.request.categ</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add Category</p>
+            </field>
+        </record>
+        
+
+<!-- Request>Configuration>Request>Type-->
+	 <record model="ir.ui.view" id="config_request_type_tree_view">
+            <field name="name">config.request.type.tree</field>
+            <field name="model">config.request.type</field>
+            <field name="arch" type="xml">
+                <tree string="Request Type" editable="bottom">
+              
+                    <field name="active"/>
+                    <field name="name"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="config_request_type_form_view">
+            <field name="name">config.request.type.form</field>
+            <field name="model">config.request.type</field>
+            <field name="arch" type="xml">
+                <form string="Request Type">
+              		<sheet>
+              			<group>
+              				<field name="active"/>
+		                    <field name="name"/>
+		                    <field name="desc"/>
+                         </group>
+                    </sheet>                  
+                </form>
+            </field>
+        </record>
+      
+        <record model="ir.actions.act_window" id="config_request_type_action">
+            <field name="name">Request Type</field>
+            <field name="res_model">config.request.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add Type</p>
+            </field>
+        </record>
+
+
+<!-- Request>Configuration>Request>Source of Fund-->
+	 <record model="ir.ui.view" id="config_request_source_tree_view">
+            <field name="name">config.request.source.tree</field>
+            <field name="model">config.request.source</field>
+            <field name="arch" type="xml">
+                <tree string="Source of Fund" editable="bottom">
+              		
+              		<field name="active"/>
+                    <field name="name"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="config_request_source_form_view">
+            <field name="name">config.request.source.form</field>
+            <field name="model">config.request.source</field>
+            <field name="arch" type="xml">
+                <form string="Source of Fund">
+					<sheet>
+						<group>
+							<field name="active"/>              
+		                    <field name="name"/>
+		                    <field name="desc"/>
+                        </group>
+                    </sheet>             
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="config_request_source_action">
+            <field name="name">Source of Fund</field>
+            <field name="res_model">config.request.source</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add source of fund</p>
+            </field>
+        </record>
+
+<!-- Request>Configuration>Approval>Request -->
+   <record model="ir.ui.view" id="config_approval_search_view">
+            <field name="name">config.approval.search</field>
+            <field name="model">config.approval</field>
+            <field name="arch" type="xml">
+                <search string="Approval">
+              
+                    <field name="request_categ_id"/>
+                    <field name="department_level_id"/>
+                    <field name="department_id"/>
+                                           
+                </search>
+            </field>
+     </record>	
+
+
+	 <record model="ir.ui.view" id="config_approval_tree_view">
+            <field name="name">config.approval.tree</field>
+            <field name="model">config.approval</field>
+            <field name="arch" type="xml">
+                <tree string="Approval">
+              
+                    <field name="active"/>
+                    <field name="request_categ_id"/>
+                    <field name="department_level_id"/>
+                    <field name="department_id"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="config_approval_form_view">
+            <field name="name">config.approval.form</field>
+            <field name="model">config.approval</field>
+            <field name="arch" type="xml">
+                <form string="Approval">
+              	
+                   <sheet>
+                   		<group>
+                   			<field name="active"/>
+                   	   </group>
+                   	   <group>
+                   			<group>
+                   				<field name="name" invisible="1"/>
+                   				<field name="request_categ_id"/>
+		                   		<field name ="department_id"/>
+		                   	</group>
+		                   	<group>
+		                   		<field name="department_level_id"/>
+		                	</group>
+		               </group>
+            	  		
+            	  		<group>
+            	  			<field name="approval_rule_ids"  nolabel="1" widget="many2many"/>
+            	  		</group>
+                   		
+				   </sheet>                                    
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="config_approval_action">
+            <field name="name">Approval</field>
+            <field name="res_model">config.approval</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add request approval</p>
+            </field>
+        </record>
+
+
+<!-- Request>Configuration>Approval>Rules -->
+
+	 <record model="ir.ui.view" id="config_approval_rule_search_view">
+            <field name="name">config.approval.rule.search</field>
+            <field name="model">config.approval.rule</field>
+            <field name="arch" type="xml">
+                <search string="Approval Rule">
+              
+                    <field name="active"/>
+                    <field name="request_type_id"/>
+                    <field name="request_source_id"/>
+                                           
+                </search>
+            </field>
+        </record>
+
+
+	 <record model="ir.ui.view" id="config_approval_rule_tree_view">
+            <field name="name">config.approval.rule.tree</field>
+            <field name="model">config.approval.rule</field>
+            <field name="arch" type="xml">
+                <tree string="Approval Rule">
+              
+                    <field name="active"/>
+                    <field name="request_type_id"/>
+                    <field name="request_source_id"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="config_approval_rule_form_view">
+            <field name="name">config.approval.rule.form</field>
+            <field name="model">config.approval.rule</field>
+            <field name="arch" type="xml">
+                <form string="Approval Rule">
+              	
+                   <sheet>
+                   		<group>
+                   		   <field name="active"/>
+                   		</group>
+                   		<group>
+                   			<group>
+		                   		<field name="request_type_id"/>
+<!-- 		                   		<field name="filter_type" invisible="1"/> -->
+		                   		<field name="name" invisible="1"/>
+		                    </group>
+		                    <group>
+		                   		<field name="request_source_id"/>
+		                   		<field name="approval_ids" invisible="1"/>
+		                   	</group>
+                   		</group>
+                   		
+                   		<group>
+                   				<field name="approval_chain_ids" nolabel="1"/>
+                   		</group>
+				   </sheet>                                    
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="config_approval_rule_action">
+            <field name="name">Approval Rule</field>
+            <field name="res_model">config.approval.rule</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add approval rule</p>
+            </field>
+        </record>
+
+ 		<record model="ir.ui.view" id="config_approval_chain_tree_view">
+            <field name="name">config.approval.chain.tree</field>
+            <field name="model">config.approval.chain</field>
+            <field name="arch" type="xml">
+                <tree string="Approval Chain" editable="bottom">
+              
+                    <field name="hr_job_id"/>
+                    <field name="amount"/>
+                    <field name="priority"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 	<record model="ir.ui.view" id="config_approval_chain_form_view">
+            <field name="name">config.approval.chain.form</field>
+            <field name="model">config.approval.chain</field>
+            <field name="arch" type="xml">
+                <form string="Approval Chain">
+              
+                    <sheet>
+                    	<group>
+		                    <field name="hr_job_id" />
+		                    <field name="amount"/>
+		                    <field name="priority"/>
+	                    </group>
+                    </sheet>                       
+                </form>
+            </field>
+      	</record>
+        
+<!-- Request>Configuration>IOU-->
+	 <record model="ir.ui.view" id="config_iou_purpose_tree_view">
+            <field name="name">config.iou.purpose.tree</field>
+            <field name="model">config.iou.purpose</field>
+            <field name="arch" type="xml">
+                <tree string="Iou Purpose">
+              
+                    <field name="active"/>
+                    <field name="name"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="config_iou_purpose_form_view">
+            <field name="name">config.iou.purpose.form</field>
+            <field name="model">config.iou.purpose</field>
+            <field name="arch" type="xml">
+                <form string="Iou Purpose">
+              		<sheet>
+              			<group>
+              				<field name="active"/>
+		                    <field name="name"/>
+		                    <field name="desc"/>
+	                    </group>
+                    </sheet>                 
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="config_iou_purpose_action">
+            <field name="name">Iou Purpose</field>
+            <field name="res_model">config.iou.purpose</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add Iou Purpose</p>
+            </field>
+        </record>
+
+<!-- Request>Bypass Activation-->
+	 <record model="ir.ui.view" id="bypass_activation_tree_view">
+            <field name="name">bypass.activation.tree</field>
+            <field name="model">bypass.activation</field>
+            <field name="arch" type="xml">
+                <tree string="Bypas Activation">
+              
+                    <field name="user_id"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="bypass_activation_form_view">
+            <field name="name">bypass.activation.form</field>
+            <field name="model">bypass.activation</field>
+            <field name="arch" type="xml">
+                <form string="Bypass User">
+              		<sheet>
+              			<group>	              				              			
+				            <group>
+				              	<field name="user_id" readonly="1"/>
+				              	<br/><br/>
+	              				<field name="start_date"/>
+		                		<field name="assigned_user_ids" widget="many2many_tags"/>
+		                	</group>
+				            <group>
+				            	<field name="active"/>
+				            	<br/><br/>
+		                		<field name="end_date"/>
+		                		<field name="reason" required="1"/>
+				             </group>
+			             </group>
+	                    <footer> 
+	                    	<button name="write" type="object" string="Save"/> or
+	                     	<button name="cancel" string="Cancel" special="cancel" class="oe_link"/>
+	                    </footer>
+                    </sheet> 
+                                    
+                </form>
+            </field>
+        </record>
+
+
+        <act_window
+            name="Bypass Activation"
+            res_model="bypass.activation"
+            src_model="bypass.activation"
+            view_mode="form"
+            id="bypass_activation_act_window"
+            view_id="bypass_activation_form_view"
+            target="new" />
+
+
+
+        
+	</data>
+</openerp>	

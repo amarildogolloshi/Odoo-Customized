@@ -1,0 +1,5 @@
+id,code,name,active
+product_major_class_01,01,MC,TRUE
+product_major_class_02,02,Bike,TRUE
+product_major_class_03,03,Cab,TRUE
+product_major_class_04,04,Others,TRUE

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+	
+<!-- 		<menuitem id="employee_lst_menu" name="Employee List" -->
+<!-- 		                  parent="muti_treasury.partner_menu" action = "employee_lst_action"/> -->
+		<delete model="ir.ui.menu" id="hr.menu_hr_department_tree" />
+		
+                  
+        <menuitem id="religion_menu" name="Religion"
+       			  parent="hr.menu_human_resources_configuration" action="religion_tree_action"/>
+       			  
+        <menuitem id="level_menu" name="Level"
+       			  parent="hr.menu_human_resources_configuration" action="level_tree_action"/>
+       			  
+       	<menuitem id="course_menu" name="Course"
+       			  parent="hr.menu_human_resources_configuration" action="course_tree_action"/>
+       			  
+       	<menuitem id="medical_conf_menu" name="Medical Information"
+       				parent = "hr.menu_human_resources_configuration"/>
+       			  
+       	<menuitem id="physical_menu" name="Blood Type"
+       			  parent="medical_conf_menu" action="blood_tree_action"/>
+       			  
+       	<menuitem id="blood_menu" name="Physical Disorder"
+       			  parent="medical_conf_menu" action="physical_tree_action"/>
+       			  
+       	<menuitem id="allergy_menu" name="Allergy"
+       			  parent="medical_conf_menu" action="allergy_tree_action"/>
+       			  
+       	<menuitem id="health_menu" name="Health Problems"
+       			  parent="medical_conf_menu" action="health_tree_action"/>
+       			  
+       	<menuitem id="skill_menu" name="Skills"
+       			  parent="hr.menu_human_resources_configuration" action="skill_tree_action"/>
+       			  
+       	<menuitem id="license_menu" name="License"
+       			  parent="hr.menu_human_resources_configuration" action="license_conf_tree_action"/>
+       			  
+       	<menuitem id="organisation_menu" name="Organisation"
+       			  parent="hr.menu_human_resources_configuration" action="organisation_conf_tree_action"/>
+		
+		<menuitem id="seminar_menu" name="Seminar"
+       			  parent="hr.menu_human_resources_configuration" action="seminar_conf_tree_action"/>
+       			  
+       	<menuitem id="external_jobs_menu" name="External Jobs"
+       			  parent="hr.menu_human_resources_configuration" action="external_jobs_tree_action"/>
+       			  
+       	<menuitem id="parents_menu" name="Parents"
+       			  parent="hr.menu_human_resources_configuration" action="parent_view_action"/>
+       			  
+       	<menuitem id="children_menu" name="Children"
+       			  parent="hr.menu_human_resources_configuration" action="children_view_action"/>
+       			 
+   		<menuitem id="spouse_menu" name="Spouse"
+   			  parent="hr.menu_human_resources_configuration" action="spouse_view_action"/>
+   			  
+   		<menuitem id="company_menu" name="Companies"
+   			  parent="hr.menu_hr_root" action="companies_tree_action" sequence = "0"/>
+   			  
+<!--    		<menuitem id="business_unit" name="Business Unit" -->
+<!--    			  parent="hr.menu_hr_root" action="bu_tree_action" sequence ="0"/> -->
+   		
+   		<menuitem id="branch_info_menu" name="Branch Information"
+       			  parent="hr.menu_human_resources_configuration" />
+   		
+   		<menuitem id="area_menu" name="Branch Area"
+   			  parent="branch_info_menu" action="area_tree_action" sequence = "1"/>
+   			  
+   		<menuitem id="branch_menu" name="Branch"
+   			  parent="branch_info_menu" action="branch_tree_action" sequence = "2"/>
+   			  
+   		<menuitem id="department_menu" name="Department"
+   			  parent="hr.menu_hr_root" action="department_tree_action"/>
+   			  
+   		<menuitem id="localization_menu" name="Localization"
+   			  parent="hr.menu_human_resources_configuration"/>
+   		
+   		<menuitem id="province_menu" name="Province"
+   			  parent="localization_menu" action="province_tree_action"/>
+   			  
+   		<menuitem id="city_menu" name="City"
+   			  parent="localization_menu" action="city_tree_action"/>
+		
+		<menuitem id="barangay_menu" name="Barangay"
+   			  parent="localization_menu" action="barangay_tree_action"/>
+   			  
+   		<menuitem id="job_menu" name="Job/Position"
+   			  parent="hr.menu_human_resources_configuration"/>
+   			  
+   		<menuitem id="job_menu" name="Job/Position"
+   			  parent="hr.menu_human_resources_configuration"/>
+   			  
+   		<menuitem id="job_level_menu" name="Job Level"
+   			  parent="job_menu" action="job_level_tree_action"/>
+   			  
+   		<menuitem id="hr_job_menu" name="Job"
+   			  parent="job_menu" action="job_tree_action"/>
+		
+    </data>
+  </openerp>

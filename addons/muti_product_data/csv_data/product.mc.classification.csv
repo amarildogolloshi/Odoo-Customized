@@ -1,0 +1,5 @@
+id,mc_classification,breaking_period
+product_mc_classification_CUB,CUB,30
+product_mc_classification_TRI-MODEL 30,TRI-MODEL 30,30
+product_mc_classification_CAB,CAB,30
+product_mc_classification_TRI-MODEL 45,TRI-MODEL 45,45

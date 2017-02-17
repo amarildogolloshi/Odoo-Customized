@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+
+        <record model="ir.actions.act_window" id="point_of_sale.action_pos_pos_form">
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="muti_pos_order_form">
+            <field name="name">MUTI POS order</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="replace">
+                  <field name="product_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="muti_view_pos_order_kanban">
+            <field name="name">pos.order.kanban</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total"/>
+                    <field name="date_order"/>
+                    <field name="state"/>
+                    <field name="currency_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <strong><span><t t-esc="record.partner_id.value"/></span></strong>
+                                    </div>
+                                    <div class="col-xs-6 pull-right text-right">
+                                        <strong><field name="amount_total" widget="monetary"/></strong>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 text-muted">
+                                        <span><t t-esc="record.name.value"/> <t t-esc="record.date_order.value"/></span>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <span t-attf-class="pull-right text-right label #{['draft', 'cancel'].indexOf(record.state.raw_value) > -1 ? 'label-default' : ['done'].indexOf(record.state.raw_value) > -1 ? 'label-success' : 'label-primary'}"><t t-esc="record.state.value"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+    </data>
+</openerp>

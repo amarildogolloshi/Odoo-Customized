@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="barcode_printing_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/muti_printer/static/src/css/muti_printer.css"/>
+                <script type="text/javascript" src="/muti_printer/static/src/js/muti_printer.js"/>
+            </xpath>
+        </template>
+
+        <menuitem id="main_printing_menu" name="MUTI Printer" />
+
+        <menuitem id="barcode_printing_menu" name="Product"
+            parent="main_printing_menu" />
+
+        <record id="action_barcode_printer" model="ir.actions.client">
+            <field name="name">MUTI Printer</field>
+            <field name="tag">muti_printer.barcode_printer</field>
+        </record>
+
+        <menuitem id="barcode_printing_page_menu" name="Barcode" parent="barcode_printing_menu"
+            action="action_barcode_printer"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  <openerp> -->
+<!--     <data> -->
+
+<!--         <menuitem id="muti_inventory_menu" name="MUTI"/> -->
+<!-- 		<menuitem id="supplier_menu" name="Supplier" -->
+<!-- 		                  parent="stock.menu_stock_config_settings"  -->
+<!-- 		                  sequence="1" action = "supplier_tree_action"/> -->
+<!--     </data> -->
+<!--   </openerp> -->
+
+  
+ <openerp>
+  <data>         
+<!-- 		<menuitem id="supplier_menu" name="Supplier" -->
+<!-- 		                  parent="stock.menu_stock_config_settings"  -->
+<!-- 		                  sequence="1" -->
+<!-- 		                  action = "supplier_tree_action"/>  -->
+		
+		
+		
+		<menuitem id="muti_supplier_view" 
+				  name="Supplier" 
+				  parent="stock.menu_stock_config_settings" 
+				  sequence="1"
+				  action="muti_supplier_tree_action"/>
+				  
+		<menuitem id="muti_mc_view" 
+				  name="MC Registration"
+				  sequence="2"
+				  parent="stock.menu_stock_config_settings"/>
+  			  
+		<menuitem id="muti_mc_details_view" 
+				  name="Details" 
+				  parent="muti_mc_view" 
+				  sequence="1" action="details_tree_action"/>
+		
+				  
+		<menuitem id="collectors_monitoring_menu" name="Collector Monitoring" 
+				  parent="stock.menu_stock_root"/>
+		<menuitem id="collector_view" 
+				  name="Collector" sequence="1" 
+				  parent="collectors_monitoring_menu" 
+				  action="collectors_tree_action"/>
+		<menuitem id="brgy_assignment_view" 
+				  name="Barangay Assignment" sequence="2" 
+				  parent="collectors_monitoring_menu" 
+				  action="brgy_assignment_tree_action"/>
+		
+		
+		<menuitem id="purchase_menu" name="Purchases" 
+				  parent="stock.menu_stock_root"/>
+<!-- 		<menuitem id="purchase_request_quotation_menu" 
+		          name="Request for Quotation" 
+		          parent="purchase_menu" sequence="1" 
+		          action="purchase_request_quotation_action"/> -->
+<!-- 		<menuitem id="purchase_order_menu" 
+				  name="Purchase Order" 
+				  parent="purchase_menu" sequence="2" 
+				  action="purchase_order_action"/> -->
+<!-- 			  
+		<menuitem id="muti_mc_batch_view" 
+				  name="Batch" 
+				  parent="muti_mc_view" 
+				  sequence="2" action="muti_supplier_tree_action"/>
+		<menuitem id="muti_mc_optional_view" 
+				  name="Optional" 
+				  parent="muti_mc_view" 
+				  sequence="3" action="muti_supplier_tree_action"/>
+			<menuitem id="muti_mc_liquidation_view" 
+				  name="Liquidation" 
+				  parent="muti_mc_view" 
+				  sequence="4" action="muti_supplier_tree_action"/>  -->
+	</data>
+</openerp>

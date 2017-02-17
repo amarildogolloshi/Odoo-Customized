@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+    <!--Begin your code here.-->
+    <!--Warehouse Form-->
+    <record model="ir.ui.view" id="stock_warehouse_form">
+      <field name="name">stock.warehouse</field>
+      <field name="model">stock.warehouse</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="stock.view_warehouse"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='code']" position="after">
+          <field name="branch_id" required="1"/>
+          <!--<group string="Location Information" colspan="4">-->
+            <!--<field name="lot_stock_id" required="1"/>-->
+            <!--<field name="wh_input_stock_loc_id" required="1"/>-->
+            <!--<field name="wh_output_stock_loc_id" required="1"/>-->
+          <!--</group>-->
+        </xpath>
+      </field>
+    </record>
+    <!--End of coding here.-->
+  </data>
+</openerp>

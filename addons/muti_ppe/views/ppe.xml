@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+<!--Property and Equipment Log-->
+        <record model="ir.ui.view" id="tree_muti_ppe_log">
+            <field name="name">muti.ppe.log.tree</field>
+            <field name="model">muti.ppe.log</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="doc_date"/>
+                <field name="reference_code"/>
+                <field name="reference_date"/>
+                <field name="supplier_id"/>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="form_muti_ppe_log">
+            <field name="name">muti.ppe.log.form</field>
+            <field name="model">muti.ppe.log</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="set_review"
+                            string="For Approval"
+                            type="object"
+                            states="void,draft" />
+
+                        <button name="set_approve"
+                            string="Approve"
+                            type="object"
+                            states="reviewed"/>
+
+                        <button name="set_disapprove"
+                            string="Disapprove"
+                            type="object"
+                            states="Approved"/>
+
+                        <button name="set_draft"
+                            string="Set Back To Draft"
+                            type="object"
+                            states="reviewed,approved"/>
+
+                        <button name="set_post"
+                            string="Post"
+                            type="object"
+                            states="approved"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="doc_date"/>
+                                <field name="supplier_id"/>
+                            </group>
+                            <group>
+                                <field name="reference_code"/>
+                                <field name="reference_date"/>
+                            </group>
+                        </group>
+                        <group>
+                            <notebook>
+                                <page string="PPE Items">
+                                    <field name="log_lines">
+                                       <tree>
+                                            <field name="item_code"/>
+                                            <field name="property_type_id"/>
+                                            <field name="item"/>
+                                            <field name="brand_id"/>
+                                            <field name="description"/>
+                                            <field name="unit_cost"/>
+                                       </tree>
+                                    </field>
+                                    <group>
+                                        <group>
+                                            <field name="reviewed_by" attrs="{'invisible':[('state', '=', 'draft')]}"/>
+                                            <field name="approved_by" attrs="{'invisible':[('state', '=', 'draft')]}"/>
+                                        </group>
+                                        <group class="oe_subtotal_footer oe_right" name="sale_total">
+                                            <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                                <label for="amount_total" />
+                                                <button name="button_dummy" string="(update)" type="object" class="oe_edit_only oe_link"/>
+                                            </div>
+                                            <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Attachments">
+                                    <field name="attachment_ids">
+                                       <tree>
+                                            <field name="name"/>
+                                            <field name="description"/>
+                                            <field name="attachment"/>
+                                       </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--Actions-->
+        <record model="ir.actions.act_window" id="act_muti_ppe_log">
+            <field name="name">Property and Equipment Log</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.ppe.log</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create PPE record</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_muti_ppe_log_reviewed">
+            <field name="name">Property and Equipment Log</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.ppe.log</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', '=', 'reviewed')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create PPE record</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_muti_ppe_log_approved">
+            <field name="name">Property and Equipment Log</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.ppe.log</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', '=', 'approved')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create PPE record</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_muti_ppe_log_posted">
+            <field name="name">Property and Equipment Log</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.ppe.log</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', '=', 'posted')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create PPE record</p>
+            </field>
+        </record>
+
+<!--Property and Equipment Log Lines-->
+        <record model="ir.actions.act_window" id="act_muti_ppe_log_lines">
+            <field name="name">Property and Equipment Log Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.ppe.log.lines</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="form_muti_ppe_log_lines">
+            <field name="name">muti.ppe.log.lines.form</field>
+            <field name="model">muti.ppe.log.lines</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="item"/>
+                                <field name="brand_id"/>
+                                <field name="unit_cost"/>
+                            </group>
+                            <group>
+                                <field name="item_code"/>
+                                <field name="property_type_id"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--Property and Equipment Attachment Documents-->
+        <record model="ir.actions.act_window" id="act_muti_ppe_log_attachment">
+            <field name="name">Property and Equipment Attachment Documents</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.ppe.log.attachment</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="form_muti_ppe_log_attachment">
+            <field name="name">muti.ppe.log.attachment.form</field>
+            <field name="model">muti.ppe.log.attachment</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="attachment"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--Property and Equipment Brand-->
+        <record model="ir.actions.act_window" id="act_muti_ppe_brand">
+            <field name="name">Property and Equipment Brand</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.ppe.brand</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="form_muti_ppe_brand">
+            <field name="name">muti.ppe.brand.form</field>
+            <field name="model">muti.ppe.brand</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!-- Property and Equipment Type -->
+        <record model="ir.actions.act_window" id="act_muti_ppe_type">
+            <field name="name">Property and Equipment Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.ppe.type</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="form_muti_ppe_type">
+            <field name="name">muti.ppe.type.form</field>
+            <field name="model">muti.ppe.type</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--Menus-->
+    <menuitem id="menu_muti_ppe" name="Property and Equipment" groups="base.group_no_one"/>
+    <menuitem id="ppe_menu" name="PPE Logs" parent="menu_muti_ppe" sequence="1"/>
+
+    <menuitem id="ppe_logs_menu" name="Log in Slip" parent="ppe_menu" action="act_muti_ppe_log" sequence="1"/>
+    <menuitem id="ppe_logs_menu_reviewed" name="Reviewed" parent="ppe_menu" action="act_muti_ppe_log_reviewed" sequence="2"/>
+    <menuitem id="ppe_logs_menu_approved" name="Approved" parent="ppe_menu" action="act_muti_ppe_log_approved" sequence="3"/>
+    <menuitem id="ppe_logs_menu_posted" name="Posted" parent="ppe_menu" action="act_muti_ppe_log_posted" sequence="4"/>
+
+    </data>
+</openerp>

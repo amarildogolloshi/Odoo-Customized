@@ -1,0 +1,278 @@
+<openerp>
+	<data>
+
+
+<!-- Request>Configuration>Department>Level -->
+
+ 	   <record model="ir.ui.view" id="config_department_level_tree_view">
+            <field name="name">config.department.level.tree</field>
+            <field name="model">config.department.level</field>
+            <field name="arch" type="xml">
+                <tree string="Department Level">
+              		
+                    <field name="active"/>
+                    <field name="name"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 	<record model="ir.ui.view" id="config_department_level_form_view">
+            <field name="name">config.department.level.form</field>
+            <field name="model">config.department.level</field>
+            <field name="arch" type="xml">
+                <form string="Department Level">	
+              
+                    <sheet>
+                    
+                    	<group>
+                    		<field name="active"/>
+		                    <field name="name"/>
+		                </group>
+		                
+		                <field name="hr_department_ids" widget="many2many">
+		                	<tree >
+		                		<field name="name"/>
+		                		<field name="company_id"/>
+		                	</tree>
+		                </field>
+		                
+                    </sheet> 
+                                          
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="config_department_level_action">
+            <field name="name">Level</field>
+            <field name="res_model">config.department.level</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add new level</p>
+            </field>
+        </record>
+	
+
+<!-- Request>Configuration>Department>Approvers -->
+   <record model="ir.ui.view" id="config_department_approver_view">
+            <field name="name">config.department.approver.search</field>
+            <field name="model">config.department.approver</field>
+            <field name="arch" type="xml">
+                <search string="Authority">
+              
+                    <field name="hr_department_id"/>
+                    <field name="branch_id"/>
+                                           
+                </search>
+            </field>
+     </record>	
+
+
+	 <record model="ir.ui.view" id="config_department_approver_tree_view">
+            <field name="name">config.department.approver.tree</field>
+            <field name="model">config.department.approver</field>
+            <field name="arch" type="xml">
+                <tree string="Authority">
+              
+                     <field name="active"/>
+                    <field name="hr_department_id"/>
+                    <field name="branch_id"/>
+                                                              
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="config_department_approver_form_view">
+            <field name="name">config.department.approver.form</field>
+            <field name="model">config.department.approver</field>
+            <field name="arch" type="xml">
+                <form string="Approvers">
+              	
+                   <sheet>
+                   		<group>
+                   		    <field name="active"/>
+		                   	<field name="hr_department_id" required="1" domain="[('level_id','!=',False)]" />
+		                   	<field name="branch_id"/>
+		                </group>
+		                
+		                <group>
+		                
+		                </group>
+            	  		
+            	  		<group>
+            	  			<field name="authority_user_id"  nolabel="1" >
+            	  				<tree editable="bottom">
+            	  					<field name="active"/>
+            	  					<field name="hr_job"/>
+            	  					<field name="source_id"/>
+            	  					<field name="user_id" />
+            	  					<field name="allow_bypass"/>
+            	  					<field name="allow_user_ids" widget="many2many_tags"/>
+            	  				</tree>
+            	  			</field>
+            	  		</group>
+                   		
+				   </sheet>                                    
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="config_department_approver_action">
+            <field name="name">Approvers</field>
+            <field name="res_model">config.department.approver</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to assign approvers</p>
+            </field>
+        </record>
+
+<!-- Request>Configuration>Department>Assigned Code -->
+   <record model="ir.ui.view" id="config_assigned_code_search_view">
+            <field name="name">config.assigned.code.search</field>
+            <field name="model">config.assigned.code</field>
+            <field name="arch" type="xml">
+                <search string="Assigned Code">
+              
+                    <field name="department_id"/>
+                    <field name="company_id"/>
+                                           
+                </search>
+            </field>
+     </record>	
+
+ 	   <record model="ir.ui.view" id="config_assigned_code_tree_view">
+            <field name="name">config.assigned.code.tree</field>
+            <field name="model">config.assigned.code</field>
+            <field name="arch" type="xml">
+                <tree string="Assigned Code" editable="bottom">
+              		
+                    <field name="active"/>
+                    <field name="company_id" readonly="1"/>
+                    <field name="department_id"/>
+                    <field name="bu_code"/>
+                    <field name="area_id"/>
+                    <field name="dept_code"/>
+<!--                     <field name="sequence_code"/> -->
+<!--                     <field name="nxt_num"/> -->
+<!--                     <field name="area_id" readonly="1"/> -->
+<!--                     <field name="code"/> -->
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 	<record model="ir.ui.view" id="config_assigned_code_form_view">
+            <field name="name">config.assigned.code.form</field>
+            <field name="model">config.assigned.code</field>
+            <field name="arch" type="xml">
+                <form string="Assigned Code">	
+              
+                    <sheet>
+                    	<group>
+                    		<field name="active"/>
+                    		<field name="company_id" readonly="1"/>
+								
+<!--                     		<field name="department_id" domain="[('level_id','!=', False)]"/> -->
+<!--                     		<field name="code"/> -->
+							<field name="department_id" />
+		                </group>
+		            </sheet> 
+                                          
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="config_assigned_code_action">
+            <field name="name">Assigned Code</field>
+            <field name="res_model">config.assigned.code</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add new series</p>
+            </field>
+        </record>
+
+
+<!-- Request>Configuration>Department>Request Series -->
+ 	   <record model="ir.ui.view" id="config_request_series_search_view">
+            <field name="name">config.request.series.search</field>
+            <field name="model">config.request.series</field>
+            <field name="arch" type="xml">
+                <search string="Request Series">
+              		
+
+                    <field name="department_id"/>
+                    <field name="company_id"/>
+                    <field name="prefix"/>
+                    
+                                           
+                </search>
+            </field>
+        </record>
+
+
+ 	   <record model="ir.ui.view" id="config_request_series_tree_view">
+            <field name="name">config.request.series.tree</field>
+            <field name="model">config.request.series</field>
+            <field name="arch" type="xml">
+                <tree string="Request Series" editable="top">
+              		
+                    <field name="active"/>
+                    <field name="department_id"/>
+                    <field name="company_id" readonly="1"/>
+                    <field name="prefix"/>
+                    <field name="length_series"/>
+                    <field name="nxt_number"/>
+                    <field name="number_increment"/>
+                    
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 	<record model="ir.ui.view" id="config_request_series_form_view">
+            <field name="name">config.request.series.form</field>
+            <field name="model">config.request.series</field>
+            <field name="arch" type="xml">
+                <form string="Request Center">	
+              
+                    <sheet>
+                    
+                    	<group>
+                    		<field name="active"/>
+                    		<group>
+		                    	<field name="department_id"/>
+		                    	<field name="company_id"/>
+		                    	<field name="length_series"/>
+		                    </group>
+		                    <group>
+		                    	<field name="prefix"/>
+		                    	<field name="nxt_number"/>
+		                    	<field name="number_increment"/>
+		                    </group>
+		                </group>
+		                
+		               
+                    </sheet> 
+                                          
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="config_request_series_action">
+            <field name="name">Request Series</field>
+            <field name="res_model">config.request.series</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click here to add new request series</p>
+            </field>
+        </record>
+	
+		
+		
+	</data>
+</openerp>

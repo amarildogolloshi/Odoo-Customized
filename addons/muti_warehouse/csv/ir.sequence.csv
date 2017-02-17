@@ -1,0 +1,2 @@
+"id","name","code","prefix","padding"
+"ir_sequence_req_code_price_adjustment","price_adjustment_seq","price_adjustment_seq","PA-%(year)s%(month)s%(day)s-",7

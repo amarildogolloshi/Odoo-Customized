@@ -1,0 +1,25 @@
+<openerp>
+	<data>
+	
+ 	<record model="ir.ui.view" id="req_employee_form_view">
+            <field name="name">employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+            
+                <notebook position="inside">
+
+                    <page string="Request Configuration">
+                        <group>
+                        	<field name="hr_department_ids" widget="many2many_tags" string="Allowed Branch"/>
+                        </group>  
+                      
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+    
+    
+	</data>
+</openerp>

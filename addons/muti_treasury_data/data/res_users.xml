@@ -1,0 +1,2439 @@
+<openerp>
+	<data>
+	
+       <record id="muti_users_data.res_users_m0010" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%; animation: 0s ease 0s normal none 1 running none;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0011" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0016" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0017" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0020" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0021" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0027" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0030" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0031" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0032" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0034" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0035" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0038" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0041" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0043" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0044" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0047" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0054" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0056" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0070" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0073" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0074" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0080" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0081" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0082" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0090" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0093" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0094" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0100" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0108" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0121" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0124" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0125" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0144" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0147" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0149" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0153" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0155" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0157" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0162" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0176" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0180" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0197" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0199" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0201" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0217" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0227" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0230" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0241" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+      
+      <record id="muti_users_data.res_users_m0247" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0269" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0272" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0294" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0295" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0296" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0297" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0306" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0307" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0311" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0312" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0318" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0319" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0320" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0325" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0326" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0332" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0340" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0347" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0348" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0372" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0389" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0395" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0397" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0399" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0404" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0413" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0432" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0462" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0473" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0486" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0510" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0511" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0530" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0536" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0541" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0546" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0552" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0570" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0572" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0573" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0574" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0584" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0601" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0613" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0617" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0618" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0620" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0623" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0626" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0629" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0633" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0640" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0644" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0652" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0653" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0660" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0668" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0669" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0670" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0676" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0695" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0696" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0703" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0709" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0712" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0719" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0724" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0727" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0730" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0736" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0743" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0751" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0752" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0768" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0772" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0778" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0782" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0785" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0803" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0806" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0808" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0816" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0817" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0829" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0832" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0838" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0839" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0845" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0857" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0858" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0861" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0862" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0873" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0875" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0878" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0881" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0882" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0883" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0884" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0893" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0894" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0900" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0912" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0917" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0924" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0937" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0942" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0949" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0950" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0952" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0953" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0954" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0956" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0961" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0962" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0963" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0964" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+        <record id="muti_users_data.res_users_m0965" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0966" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0969" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0971" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0972" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0973" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0977" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0978" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0981" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0991" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0992" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+       <record id="muti_users_data.res_users_m0997" model="res.users">
+           <field name="signature">
+	            <![CDATA[
+	           		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+	      		 ]]>
+      		</field>
+       </record>
+       
+		<record id="muti_users_data.res_users_m1011" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1017" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1021" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1023" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1026" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1029" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1031" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1037" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1038" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1040" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1041" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1042" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1043" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1044" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1045" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1046" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1047" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1048" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 
+		 <record id="muti_users_data.res_users_m1050" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1054" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1058" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1064" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1067" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1069" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1074" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1076" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1079" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1080" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1084" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1087" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1089" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1093" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1094" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1096" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1098" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1099" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1100" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1111" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1119" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1121" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1123" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1127" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1129" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1130" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1132" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1138" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1139" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1141" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1143" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1146" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1148" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1149" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1157" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1162" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1167" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1170" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1176" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1180" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1182" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1189-muti" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1190" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1192" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1195" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1199" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1202" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1203" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1204" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1206" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1207" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1208" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1213" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1217" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1218" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1220" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1221" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1222" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1225" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1226" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1228" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1229" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1230" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1231" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1232" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1233" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1242" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1244" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1249" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>		 
+		 
+		 <record id="muti_users_data.res_users_m1250" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1251" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1252" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1253" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1254" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1256" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1257" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1258" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1263" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1264" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1268" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1272" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1273" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1275" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1276" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1277" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1278" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1279" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1281" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1284" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1287" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1291" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1298" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1307" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1317" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1318" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1319" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1320" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1321" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1323" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1326" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1329" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1330" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1341" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1342" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1403" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+		 
+		 <record id="muti_users_data.res_users_m1441" model="res.users">
+		     <field name="signature">
+		       <![CDATA[
+		      		<p><img class="center-block" style="width: 25%;" src="/muti_treasury/static/src/img/user_signature/signature.png"></p>
+		 		 ]]>
+				</field>
+		 </record>
+
+
+       
+       
+       
+       
+	
+	  
+	
+	
+	</data>
+</openerp>

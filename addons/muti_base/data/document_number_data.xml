@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <!--This searches the record with the id "document_number_data_po".
+	        if there is no record, it is created.
+	        if there is, the provided fields are updated.-->
+        <record id="document_number_data_po" model="config.document.number.format">
+            <field name="document">Purchase Order</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">PO-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_dc" model="config.document.number.format">
+            <field name="document">Delivery Confirmation Slip</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">DC-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_pv" model="config.document.number.format">
+            <field name="document">Payment Voucher</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">PV-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_ct" model="config.document.number.format">
+            <field name="document">Change Term</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CT-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_pt" model="config.document.number.format">
+            <field name="document">Pretermination</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">PT-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_rs" model="config.document.number.format">
+            <field name="document">Restructuring</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">RS-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_oa" model="config.document.number.format">
+            <field name="document">Other Adjustment</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">OA-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_cfas" model="config.document.number.format">
+            <field name="document">Cash Fund Advance Slip</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CFA-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_petty_cash" model="config.document.number.format">
+            <field name="document">Petty Cash Fund Summary</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">PCFS-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_fn" model="config.document.number.format">
+            <field name="document">Default Payment - First Notice</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">FN-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_sn" model="config.document.number.format">
+            <field name="document">Default Payment - Second Notice</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">SN-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_nd" model="config.document.number.format">
+            <field name="document">Notice of Deposit</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">ND-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+         <record id="document_number_data_dl" model="config.document.number.format">
+            <field name="document">Demand Letter</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">DL-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+         <record id="document_number_data_fdl" model="config.document.number.format">
+            <field name="document">Final Demand Letter</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">FDL-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+       <record id="document_number_data_mcr" model="config.document.number.format">
+            <field name="document">MC Registration</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">MCR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+       <record id="document_number_data_mcro" model="config.document.number.format">
+            <field name="document">MC Registration - Optional</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">MCR[O]-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_loan_code" model="config.document.number.format">
+            <field name="document">Loan Code</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_for_repossession" model="config.document.number.format">
+            <field name="document">For Repossesion</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">FR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_journal_voucher" model="config.document.number.format">
+            <field name="document">Journal Voucher</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">JV-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_account_payables_voucher" model="config.document.number.format">
+            <field name="document">Accounts Payable Voucher</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">APV-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_check_voucher" model="config.document.number.format">
+            <field name="document">Check Voucher</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CV-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_cancel_check_voucher" model="config.document.number.format">
+            <field name="document">Cancel Check Voucher</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CCV-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_general_journal" model="config.document.number.format">
+            <field name="document">General Journal</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">GJ-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_cash_receipts_journal" model="config.document.number.format">
+            <field name="document">Cash Receipts Journal</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CRJ-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_cash_disbursement_journal" model="config.document.number.format">
+            <field name="document">Cash Disbursements Journal</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CDJ-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_bank_transactions_journal" model="config.document.number.format">
+            <field name="document">Bank Transactions Journal</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">BTJ-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_data_payment_request" model="config.document.number.format">
+            <field name="document">Payment Request</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">PR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_unit_repossession" model="config.document.number.format">
+            <field name="document">Unit Repossession Slip</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">URS-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_ct_comp" model="config.document.number.format">
+            <field name="document">Change Term Computation</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">DUMMYCT-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_pt_comp" model="config.document.number.format">
+            <field name="document">Pretermination Computation</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">DUMMYPT-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_check_encashment" model="config.document.number.format">
+            <field name="document">Check Encashment</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CE-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_reqest_for_repo" model="config.document.number.format">
+            <field name="document">Request For Repossession</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">RFR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_dccr" model="config.document.number.format">
+            <field name="document">Reconciliation of Daily Cash Balances</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">RDCB-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_cc" model="config.document.number.format">
+            <field name="document">Cash Count</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CC-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_cav" model="config.document.number.format">
+            <field name="document">Cash Voucher</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CAV-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_udr" model="config.document.number.format">
+            <field name="document">Unit Deposit Receipt</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">UDR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_job_order" model="config.document.number.format">
+            <field name="document">Job Order</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">JO-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_unit_recondition" model="config.document.number.format">
+            <field name="document">Unit Recondition</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">RN-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_payment_request" model="config.document.number.format">
+            <field name="document">Payment Request Voucher</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">PRV-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_cash_advance_request" model="config.document.number.format">
+            <field name="document">Cash Advance Request</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CAR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_data_liquidation" model="config.document.number.format">
+            <field name="document">Cash Advance Liquidation</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CAL-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_mcreg_liquidation" model="config.document.number.format">
+            <field name="document">MC Registration CA Liquidation</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">MCRL-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_deposit_slip" model="config.document.number.format">
+            <field name="document">Deposit Slip</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">DS-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_deposit" model="config.document.number.format">
+            <field name="document">Deposit</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">DEP-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_stock_transfer_request" model="config.document.number.format">
+            <field name="document">Stock Transfer Request</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">STR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_withdrawal_slip" model="config.document.number.format">
+            <field name="document">Withdrawal Slip</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">WS-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_ownership_transfer_slip" model="config.document.number.format">
+            <field name="document">Ownership Transfer Slip</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">OTS-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_asset_transfer_slip" model="config.document.number.format">
+            <field name="document">Asset Transfer Slip</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">ATS-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_unit_redemption" model="config.document.number.format">
+            <field name="document">Unit Redemption</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">MUR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_unit_redemption_repo" model="config.document.number.format">
+            <field name="document">Unit Redemption - Repo</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">MRR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_fcs_cancellation" model="config.document.number.format">
+            <field name="document">FCS Cancellation</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">CCR-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_legal_endorsement" model="config.document.number.format">
+            <field name="document">Legal Endorsement</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">LE-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+        <record id="document_number_repo_cash_unit_return" model="config.document.number.format">
+            <field name="document">REPO-Cash Unit Return</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">URC-%(branch)s-%(y)s-</field>
+            <field name="length_series">9</field>
+        </record>
+
+        <record id="document_number_branch_assignment" model="config.document.number.format">
+            <field name="document">Branch Assignment</field>
+            <field name="is_system_generated">True</field>
+            <field name="prefix">BA-%(branch)s-%(y)s-</field>
+            <field name="length_series">5</field>
+        </record>
+    </data>
+</openerp>

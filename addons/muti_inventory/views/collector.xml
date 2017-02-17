@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+	
+	<!-- COLLECTORS -->
+	
+		<record model="ir.ui.view" id="collector_tree_view">
+			<field name="name">collector.tree</field>
+			<field name="model">config.collectors</field>
+			<field name="arch" type="xml">
+				<tree string="Collectors">
+					<field name="name"/>
+					<field name="branch"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="collector_form_view">
+			<field name="name">collector.form</field>
+			<field name="model">config.collectors</field>
+			<field name="arch" type="xml">
+				<form string="Collectors">
+					<sheet>
+						<group>
+							<field name="active"/>
+						</group>
+						<group>
+							<group>
+								<field name="name"/>
+							</group>
+							<group>
+								<field name="branch"/>
+							</group>
+							
+						</group>
+						<field name="barangay_list">
+							<tree create="false" delete="false">
+								<field name="active"></field>
+								<field name="barangay_id"></field>
+								<field name="city_id"></field>
+								<field name="province_id"></field>
+							</tree>
+						</field>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		 <record model="ir.actions.act_window" id="collectors_tree_action">
+            <field name="name">Collectors</field>
+            <field name="res_model">config.collectors</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first Collector!
+                </p>
+            </field>
+        </record>
+        
+       <!--  BARANGAY ASSIGNMENT -->
+        <record model="ir.ui.view" id="brgy_assignment_tree_view">
+			<field name="name">brgy_assignment.tree</field>
+			<field name="model">config.brgy.assignment</field>
+			<field name="arch" type="xml">
+				<tree string="Barangay Assignment">
+					<field name="active"/>
+					<field name="transaction_number"/>
+					<field name="transaction_date"/>
+					<field name="collector_id"/>
+					<field name="encoder"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="brgy_assignment_form_view"> 
+			<field name="name">brgy.assignment.form</field>
+			<field name="model">config.brgy.assignment</field>
+			<field name="arch" type="xml">
+				<form string="Barangay Assignment">
+					<header>
+						<button name="draft" type="workflow"
+							    string="Reset to draft"
+							    states="confirmed,done"></button>
+						<button name="confirm" type="workflow"
+								string="Confirm"
+								states="draft"
+								class="oe_highlight"></button>
+						<button name="void" type="workflow"
+								string="Void"
+								states="confirmed"
+								class="oe_highlight"></button>
+						<field name="state" widget="statusbar"></field>
+					</header>
+					<sheet>
+						<group>
+							<group>
+								<field name="active"/>
+							</group>
+							<group>
+								<field name="transaction_date"/>
+							</group>
+						</group>
+						<group>
+							<group>
+								<field name="transaction_number"/>
+								<field name="branch_id"/>
+							</group>
+							<group>
+								<field name="collector_id"/>
+								<field name="remarks"/>
+							</group>
+						</group>
+						<field name="barangay_list">
+							<tree editable="bottom">
+								<field name="barangay_id"/>
+								<field name="city_id" readonly="1"/>
+								<field name="province_id" readonly="1"/>
+								<field name="collector_id" readonly="1"/>
+							</tree>
+						</field>
+						<group>
+							<group></group>
+							<group>
+								<field name="encoder" class="text-right" />
+							</group>
+						</group>
+					</sheet>
+					
+				</form>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="brgy_assignment_tree_action">
+            <field name="name">Barangay Assignment</field>
+            <field name="res_model">config.brgy.assignment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Assign the first Barangay.
+                </p>
+            </field>
+        </record> -->
+	
+	</data>
+</openerp>

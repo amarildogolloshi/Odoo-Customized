@@ -1,0 +1,127 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<openerp>
+  <data>
+    <record model="ir.actions.act_window" id="mechanic_commission_report">
+      <field name="name">Mechanics</field>
+      <field name="res_model">muti.mechanic</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">Create the first mechanic record</p>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="muti_commission_record">
+      <field name="name">Mechanic Commission</field>
+      <field name="res_model">muti.commission.record</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first mechanic record</p>
+      </field>
+    </record>
+
+    <menuitem name="Mechanic Commission" id="muti_mechanic" parent="base.menu_sale_report"
+          action="mechanic_commission_report"/>
+    <!--<menuitem name="Mechanic Commission Records" id="muti_commission" parent="base.menu_sale_report"-->
+          <!--action="muti_commission_record"/>-->
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="muti_mechanic.list">
+      <field name="name">mechanic.list</field>
+      <field name="model">muti.mechanic</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="user_id"/>
+          <field name="type_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- form view -->
+    <record model="ir.ui.view" id="muti_mechanic.form">
+      <field name="name">mechanic.form</field>
+      <field name="model">muti.mechanic</field>
+      <field name="arch" type="xml">
+        <form string="Mechanic Form">
+            <sheet>
+              <group>
+                <group>
+                  <field name="user_id"/>
+                  <field name="type_id"/>
+                </group>
+                <group>
+                  <field name="latest_commission"/>
+                  <field name="total_commission"/>
+                  <button string="Generate commission records" type="object" name="generate_commission_records"/>
+                </group>
+              </group>
+              <notebook>
+                <page string="Commissions">
+                  <field name="commission_ids" string="Commission History">
+                    <tree>
+                      <field name="date_from"/>
+                      <field name="date_to"/>
+                      <field name="total_sale"/>
+                      <field name="commission"/>
+                      <field name="percent_commissioned"/>
+                      <field name="state"/>
+                      <button attrs="{'invisible':[('state','=','released')]}"
+                              name="release" string="Set to Released" type="object" icon="terp-gtk-jump-to-ltr" />
+                      <button attrs="{'invisible':[('state','=','draft')]}"
+                              name="set_draft" string="Set to Draft" type="object" icon="STOCK_UNDO" />
+                    </tree>
+                  </field>
+                </page>
+                <!--<page string="Journal Entries">-->
+
+                <!--</page>-->
+              </notebook>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+
+
+    <!-- muti.commission -->
+    <record model="ir.ui.view" id="muti_commission_form">
+      <field name="name">commission.form</field>
+      <field name="model">muti.commission.record</field>
+      <field name="arch" type="xml">
+        <form string="Mechanic Commission Record">
+          <sheet>
+            <group>
+              <group>
+                <field name="date_from"/>
+                <field name="date_to"/>
+              </group>
+              <group>
+                <field name="total_sale"/>
+                <field name="commission"/>
+                <field name="percent_commissioned"/>
+                <field name="state"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="POS Orders">
+                <field name="sales_ids">
+                  <tree>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="date_order"/>
+                    <field name="state"/>
+                    <field name="amount_total"/>
+                    <field name="amount_paid"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+  </data>
+</openerp>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+    <menuitem id="mandatory_contribution" name="Mandatory Contribution" parent="hr_payroll.payroll_configure" sequence = "1"/>
+		
+   	<menuitem 
+	     id="menu_sss_contribution" 
+	     name="SSS"
+	     parent="mandatory_contribution"
+	     action="sss_action"/>
+	     
+	<menuitem 
+	       id="menu_ph_contribution" 
+	       name="PhilHealth"
+	       parent="mandatory_contribution"
+	       action="ph_action"/>
+	       
+	       
+	<menuitem 
+	       id="menu_hdmf_contribution" 
+	       name="HDMF"
+	       parent="mandatory_contribution"
+	       action="hdmf_action"/>
+	       
+	       
+	<menuitem id="income_tax_menu" name="Income Tax" parent="hr_payroll.payroll_configure" sequence = "2"/>
+	
+	<menuitem 
+	       id="menu_tax_exemption" 
+	       name="Tax Exemption"
+	       parent="income_tax_menu"
+	       action="action_payroll_tax_exempt_tree_view"/>
+	       
+	       
+	<menuitem 
+	       id="menu_payroll_deduct" 
+	       name="Other Salary Deductions Schedule"
+	       parent="hr_payroll.payroll_configure"
+	       action="action_payroll_deduct_tree_view"/>
+    
+    </data>
+</openerp>

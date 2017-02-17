@@ -1,0 +1,112 @@
+<openerp>
+	<data>
+<!-- Employees>Appraisal>Assigned Type-->
+		 <record model="ir.ui.view" id="config_appraisal_tree_view">
+	            <field name="name">config.appraisal.tree</field>
+	            <field name="model">config.appraisal</field>
+	            <field name="arch" type="xml">
+	                <tree string="Appraisal Configuration" editable="top">
+	              
+	                    <field name="job_level_id"/>
+	                    <field name="report_id" domain="[('name','ilike', 'Appraisal')]"/>
+	                                           
+	                </tree>
+	            </field>
+	        </record>	
+	
+		 <record model="ir.ui.view" id="config_appraisal_form_view">
+	            <field name="name">config.appraisal.form</field>
+	            <field name="model">config.appraisal</field>
+	            <field name="arch" type="xml">
+	                <form string="Appraisal Configuration">		               
+	              		<sheet>
+	              			<group>
+	              				<field name="job_level_id" string="Employee"/>
+	              				<field name="report_id" domain="[('name','ilike', 'Appraisal')]"/>			                    		                     
+		         			</group>             
+	                    </sheet>                 
+	                </form>
+	            </field>
+	        </record>
+	
+	
+	        <record model="ir.actions.act_window" id="config_appraisal_action">
+	            <field name="name">Appraisal</field>
+	            <field name="res_model">config.appraisal</field>
+	            <field name="view_type">form</field>
+	            <field name="view_mode">tree,form</field>
+	        </record>
+
+<!-- Employees>Appraisal>Rating-->
+		 <record model="ir.ui.view" id="config_appraisal_rating_tree_view">
+	            <field name="name">config.appraisal.rating.tree</field>
+	            <field name="model">config.appraisal.rating</field>
+	            <field name="arch" type="xml">
+	                <tree string="Appraisal Rating" editable="top">
+	              		
+	              		<field name="active"/>
+	                    <field name="start_rate"/>
+	              		<field name="end_rate"/>
+	                    <field name="description"/>
+	                                           
+	                </tree>
+	            </field>
+	        </record>
+	        
+	         <record model="ir.ui.view" id="config_appraisal_rating_form_view">
+	            <field name="name">config.appraisal.rating.form</field>
+	            <field name="model">config.appraisal.rating</field>
+	            <field name="arch" type="xml">
+	                <form string="Appraisal Rating">		               
+	              		<sheet>
+	              			<group>
+	              				<field name="active"/>
+	              				<field name="start_rate"/>
+	              				<field name="end_rate"/>
+	              				<field name="description" />			                    		                     
+		         			</group>             
+	                    </sheet>                 
+	                </form>
+	            </field>
+	        </record>
+	
+	
+	        <record model="ir.actions.act_window" id="config_appraisal_rating_action">
+	            <field name="name">Appraisal Rating</field>
+	            <field name="res_model">config.appraisal.rating</field>
+	            <field name="view_type">form</field>
+	            <field name="view_mode">tree,form</field>
+	        </record>
+
+
+
+			<record model="ir.ui.view" id="config_appraisal_evaluation_tree_view">
+			           <field name="name">config.appraisal.evaluation.tree</field>
+			           <field name="model">config.appraisal.evaluation</field>
+			           <field name="arch" type="xml">
+			               <tree string="Appraisal Evaluation" editable="bottom">
+			             
+			                   <field name="appraisal_num"/>
+			                   <field name="due_date"/>
+			                                          
+			               </tree>
+			           </field>
+			       </record>	
+			
+			 <record model="ir.ui.view" id="config_appraisal_evaluation_form_view">
+			           <field name="name">config.appraisal.evaluation.form</field>
+			           <field name="model">config.appraisal.evaluation</field>
+			           <field name="arch" type="xml">
+			               <form string="Appraisal Evaluation">		               
+			             		<sheet>
+			             			<group>
+			             				<field name="appraisal_num"/>
+			             				<field name="due_date"/>			                    		                     
+			         				</group>             
+			                   </sheet>                 
+			               </form>
+			           </field>
+			       </record>
+	         	
+	</data>
+</openerp>

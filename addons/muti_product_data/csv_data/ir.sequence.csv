@@ -1,0 +1,5 @@
+"id","name","code","padding"
+"ir_sequence_major_class","Major Class Code","product.major.class",2
+"ir_sequence_make","Make","product.make",2
+"ir_sequence_group","Group","product.group",2
+"ir_sequence_subgroup","SubGroup","product.partgroup",3

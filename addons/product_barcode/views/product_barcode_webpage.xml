@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="product_barcode_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <!--<link rel="stylesheet" href="/oepetstore/static/src/css/barcode_printing.css"/>-->
+                <script type="text/javascript" src="/product_barcode/static/src/js/script.js"/>
+            </xpath>
+        </template>
+        <template id="index">
+                <title>Paroduct Barcodes</title>
+                <h1>Hi there!</h1>
+                <t t-foreach="teachers" t-as="teacher">
+                  <p><t t-esc="teacher"/></p>
+                </t>
+        </template>
+
+    </data>
+</openerp>

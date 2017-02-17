@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+	<!-- Form PDC Acknowledgment -->
+		<record model = "ir.ui.view" id="pdc_acknowledgment form">
+			<field name = "name">Acknowledgment of Post-Dated Checks</field>
+			<field name = "model">pdc.acknowledgment</field>
+			<field name = "type">form</field>
+			<field name = "arch" type = "xml">
+				<form string = "AP Checks">
+					<header>
+						<button name="set_draft" type="object"
+							string="Reset to draft"					
+							states="confirm"
+							class="oe_highlight"/>
+							
+						<button name="set_confirm" type="object"
+							string="Confirmed"
+							states="draft"
+							class="oe_highlight"/>
+							
+						<field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<group col = "4" colspan = "4">
+							<field name="branch_id" readonly="True"/>
+                    		<field name="apc_date" readonly="True"/>
+                    		<newline/>
+                    		<field name="res_partner_id" context="{'forbranch':[branch_id]}" readonly="False" colspan="4" required="1"/>
+                    		<newline/>
+                    		<field name="apc_number"  readonly="False" required="1"/>
+	<!--                     <field name="total_check_amount" readonly="True"/> -->
+					
+							<newline/>
+					
+							<field name="apc_ids" mode="tree" nolabel="1" colspan="4">
+                       		<tree string="Post-Dated Check Information" >
+                           		<field name="check_number" required="1"/>
+                           		<field name="bank" required="1"/>
+                           		<field name="bank_branch" required="1"/>
+                           		<field name="check_date" required="1"/>
+                           		<field name="check_amount" required="1"/>
+                           		<field name="cancelled"/>
+                       		</tree>
+                    		</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	
+	<!-- Tree PDC Acknowledgment -->
+	
+		<record model = "ir.ui.view" id = "pdc_acknowledgment_tree">
+			<field name = "name">Acknowledgment of Post-Dated Checks Tree</field>
+			<field name = "model">pdc.acknowledgment</field>
+			<field name = "type">tree</field>
+			<field name = "arch" type="xml">
+				<tree string = "Details">
+					<field name="branch_id" />
+                	<field name="apc_date" />
+                	<field name="apc_number"/>
+                	<field name="res_partner_id"/>
+                	<field name="state"/>
+				</tree>
+			</field>
+		</record>
+	
+	<!-- Action PDC Acknowledgment -->
+	
+		<record model = "ir.actions.act_window" id = "pdc_acknowledgment_action">
+			<field name="name">Acknowledgement of Post-Dated Checks</field>
+        	<field name="type">ir.actions.act_window</field>
+        	<field name="res_model">pdc.acknowledgment</field>
+        	<field name="view_type">form</field>     
+        	<field name="view_mode">tree,form</field>
+        	<field name="view_id" ref="pdc_acknowledgment_tree"/>
+	<!--         <field name="context">{'filter_br':'br'}</field> -->
+		</record>
+	
+	<!-- Form Detail PDC Acknowledgment -->
+	
+		<record model = "ir.ui.view" id = "pdc_acknowledgment_det_form">
+			<field name="name">Post-Dated Check Information</field>
+        	<field name="model">pdc.acknowledgment.det</field>
+        	<field name="type">form</field>
+       		<field name="arch" type="xml">
+        		<form string="Post-Dated Check Information">
+        			<group col="4" colspan="4">
+        				<field name="check_date" required="1"/>
+                    	<field name="check_number" required="1"/>
+                    	<field name="check_amount" required="1"/>
+                    	<field name="bank" required="1"/>                                    
+                    	<field name="bank_branch" required="1"/>
+                    	<field name="cancelled" />
+                	</group>       
+            	</form>
+        	</field>
+		</record>
+	
+	<!-- Menu -->
+	
+	<menuitem name="PDC Acknowledgment"
+           id="pdc_acknowledgment"
+           parent="sale.menu_sale_invoicing"
+           action="pdc_acknowledgment_action"/>
+           
+	</data>
+</openerp>

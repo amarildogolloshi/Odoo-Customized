@@ -1,0 +1,14 @@
+<openerp>
+    <data>
+        <template id="matrix_survey" inherit_id="survey.matrix">
+            <xpath expr="//table/tbody/tr/td" position="inside">
+            <input t-if="question.matrix_subtype == 'modified_simple'" type="radio" t-att-name="'%s_%s' % (prefix, row_label.id)" t-att-value='col_label.id' />
+                <textarea t-if="question.matrix_subtype == 'column_textarea'" rows="25" t-att-name="'%s_%s_%s' % (prefix, row_label.id, col_label.id)" t-att-value='col_label.id' />
+            </xpath>
+             <xpath expr="//table/tbody/tr/th" position="replace">
+                <th t-if="question.matrix_subtype != 'modified_simple'"><span t-field="row_label.value" /></th>
+                <th t-if="question.matrix_subtype == 'modified_simple'"><input t-att-value="row_label.value" t-att-name="row_label.value" /></th>
+            </xpath>
+        </template>
+    </data>
+</openerp>

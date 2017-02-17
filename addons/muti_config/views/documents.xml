@@ -1,0 +1,235 @@
+<openerp>
+    <data>
+
+
+        <!-- Config Delivery Receipt   -->
+        <!--<record model="ir.ui.view" id="config_delivery_receipt_series_search_view">-->
+        <!--<field name="name">config.delivery.receipt.search</field>-->
+        <!--<field name="model">request.request</field>-->
+        <!--<field name="arch" type="xml">-->
+        <!--<search string="Cash Search">-->
+
+        <!--<filter icon="terp-personal" name="myrequest" string="My Request" context="{'action_default':'myrequest'}"/>-->
+        <!--<filter icon="terp-personal" name="branchdept" string="Branch/Dept Request" context="{'action_default':'branchdept'}"/>-->
+        <!--<filter icon="terp-personal" name="other" string="Other Request" context="{'action_default':'other'}"/>-->
+        <!--<field name="request_no"/>-->
+        <!--<field name="request_date"/>-->
+        <!--<field name="hr_employee_id"/>-->
+        <!--<field name="department_id"/>-->
+        <!--<field name="request_through"/>-->
+        <!--<field name="request_type_id"/>-->
+
+        <!--</search>-->
+        <!--</field>-->
+        <!--</record>-->
+
+        <record model="ir.ui.view" id="config_delivery_receipt_series_tree_view">
+            <field name="name">config.delivery.receipt.series.tree</field>
+            <field name="model">config.delivery.receipt.series</field>
+            <field name="arch" type="xml">
+                <tree string="Delivery Receipt Series">
+
+                    <!--decoration-muted="state=='draft'" decoration-info="state == 'final'"-->
+                      <!--decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')"-->
+
+                    <field name="branch_id"/>
+                    <field name="name"/>
+                    <field name="series_from"/>
+                    <field name="series_to"/>
+                    <field name="leaves"/>
+                    <field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="config_delivery_receipt_series_form_view">
+            <field name="name">config.delivery.receipt.series.form</field>
+            <field name="model">config.delivery.receipt.series</field>
+            <field name="arch" type="xml">
+                <form string="Delivery Receipt Series Form">
+                    <header>
+                        <!--<button name="action_draft" type="object"-->
+                                <!--string="Reset to draft"-->
+                                <!--states="confirm"/>-->
+                        <!--<button name="action_confirm_msg_a" type="object"-->
+                                <!--string="Confirm"-->
+                                <!--attrs="{'invisible': [('btn_msg', '!=', False)]}"-->
+                                <!--class="oe_highlight"-->
+                                <!--confirm="Please review first the document before confirming the record"-->
+                        <!--/>-->
+                        <!--<button name="action_confirm" type="object"-->
+                                <!--string="Confirm"-->
+                                <!--attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"-->
+                                <!--class="oe_highlight"-->
+                                <!--confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"-->
+                        <!--/>-->
+
+                        <!--<button name="action_approve_msg_a" type="object"-->
+                                <!--string="Approve"-->
+                                <!--attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"-->
+                                <!--class="oe_highlight"-->
+                                <!--confirm="Are you sure you want to approve this document?"-->
+                        <!--/>-->
+                        <!--<button name="action_approve" type="object"-->
+                                <!--string="Approve"-->
+                                <!--attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"-->
+                                <!--class="oe_highlight"-->
+                                <!--confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"-->
+                        <!--/>-->
+                        <!--<button name="action_disapprove" type="object"-->
+                                <!--string="Disapprove" states="confirm"-->
+                                <!--class="oe_highlight"-->
+                                <!--confirm="Are you sure you want to set the document to DISAPPROVED?"-->
+                        <!--/>-->
+                        <!--<button name="action_void" type="object"-->
+                                <!--string="Void"-->
+                                <!--attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"-->
+                                <!--class="oe_highlight"-->
+                                <!--confirm="Are you sure you want to set the document to VOID?"-->
+                        <!--/>-->
+                        <!--<field name="state" widget="statusbar"-->
+                               <!--statusbar_visible="draft,confirm,approve,disapprove,void"/>-->
+                        <!--<field name="btn_msg" invisible="1"/>-->
+                    </header>
+
+                    <sheet>
+                        <group colspan="1">
+                            <field name="name" readonly="1"/>
+                        </group>
+                        <group colspan="2">
+                            <group>
+                                <field name="branch_id" type="selection"/>
+                                <field name="leaves"/>
+                            </group>
+                            <group>
+                                <field name="series_from"/>
+                                <field name="series_to"/>
+                            </group>
+                        </group>
+                        <group colspan="2">
+                            <group>
+                                <field name="state" readonly="1" type="char"/>
+                            </group>
+                            <group>
+                                <button name="action_final"
+                                        string="Finalized"
+                                        type="object"
+                                        class="btn-primary"
+                                        confirm=""
+                                        attrs="{'invisible': [('state', 'not in',('draft'))]}"
+                                        colspan="2"
+                                />
+                            </group>
+                        </group>
+                        <field name="cdr_ids" widget="many2many">
+                            <tree>
+                                <field name="branch_id"/>
+                                <field name="dr_number"/>
+                                <field name="dr_id"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+
+                    </sheet>
+
+                </form>
+            </field>
+
+
+        </record>
+
+        <!--<record model="ir.ui.view" id="config_delivery_receipt_series_kanban_view">-->
+            <!--<field name="name">config.delivery.receipt.series.kanban</field>-->
+            <!--<field name="model">config.delivery.receipt.series</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<kanban default_group_by="request_categ_id">-->
+                    <!--<field name="color"/>-->
+                    <!--<templates>-->
+                        <!--<t t-name="kanban-box">-->
+                            <!--<div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}-->
+                                                  <!--oe_kanban_global_click_edit oe_semantic_html_override-->
+                                                  <!--oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">-->
+
+
+                                <!--<div class="oe_dropdown_kanban">-->
+                                    <!--&lt;!&ndash; dropdown menu &ndash;&gt;-->
+                                    <!--<div class="oe_dropdown_toggle">-->
+                                        <!--&lt;!&ndash;                                         <span class="oe_e">request_no</span> &ndash;&gt;-->
+                                        <!--<ul class="oe_dropdown_menu">-->
+                                            <!--<li>-->
+                                                <!--<a type="delete">Delete</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<ul class="oe_kanban_colorpicker"-->
+                                                    <!--data-field="color"/>-->
+                                            <!--</li>-->
+                                        <!--</ul>-->
+                                    <!--</div>-->
+                                    <!--<div class="oe_clear"></div>-->
+                                <!--</div>-->
+
+                                <!--<div t-attf-class="oe_kanban_content">-->
+                                    <!--<div class="o_kanban_image">-->
+                                        <!--<img t-att-src="kanban_image('request.request', 'image', record.id.value)"-->
+                                             <!--class="img-responsive"/>-->
+                                    <!--</div>-->
+
+                                    <!--<div>-->
+                                        <!--<span style="font-weight:bold;font-size:15px">-->
+                                            <!--<field name="request_no"/>-->
+                                        <!--</span>-->
+                                        <!--<br/>-->
+                                        <!--<span style="font-weight:bold;">-->
+                                            <!--<field name="department_id"/>-->
+                                        <!--</span>-->
+                                        <!--<br/>-->
+                                        <!--<field name="hr_employee_id"/>-->
+                                        <!--<br/>-->
+                                        <!--<field name="request_type_id"/>-->
+                                    <!--</div>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</t>-->
+                    <!--</templates>-->
+                <!--</kanban>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record model="ir.actions.act_window" id="config_delivery_receipt_series_action">
+            <field name="name">Delivery Receipt Series</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.delivery.receipt.series</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <!--<field name="domain">[('request_categ_id', 'ilike', 'cash')]</field>-->
+            <!--<field name="context">{"search_default":'CASH',"action_default":'myrequest'}</field>-->
+        </record>
+
+
+        <record model="ir.actions.act_window.view" id="config_delivery_receipt_series_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="config_delivery_receipt_series_tree_view"/>
+            <field name="act_window_id" ref="config_delivery_receipt_series_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="config_delivery_receipt_series_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="config_delivery_receipt_series_form_view"/>
+            <field name="act_window_id" ref="config_delivery_receipt_series_action"/>
+        </record>
+
+        <!--<record model="ir.actions.act_window.view" id="config_delivery_receipt_series_kanban_action">-->
+            <!--<field name="sequence" eval="1"/>-->
+            <!--<field name="view_mode">kanban</field>-->
+            <!--<field name="view_id" ref="config_delivery_receipt_series_kanban_view"/>-->
+            <!--<field name="act_window_id" ref="config_delivery_receipt_series_action"/>-->
+        <!--</record>-->
+
+
+    </data>
+</openerp>

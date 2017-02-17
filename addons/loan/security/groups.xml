@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="group_loan_branch_manager" model="res.groups">
+            <field name="name">Loan Branch Manager</field>
+        </record>
+        <record id="group_loan_cashier" model="res.groups">
+            <field name="name">Loan Cashier</field>
+        </record>
+        <record id="group_loan_ci_collector" model="res.groups">
+            <field name="name">Loan CI / Collector</field>
+        </record>
+        <record id="group_loan_user" model="res.groups">
+            <field name="name">Loan User</field>
+        </record>
+        <record id="group_payable_clerk" model="res.groups">
+            <field name="name">Payable Clerk</field>
+        </record>
+        <record id="group_loan_processor" model="res.groups">
+            <field name="name">Loan Processor</field>
+        </record>
+        <record id="group_loan_readonly" model="res.groups">
+            <field name="name">Loan Readonly User</field>
+        </record>
+        <record id="group_loan_receptionist" model="res.groups">
+            <field name="name">Loan Receptionist</field>
+        </record>
+
+    </data>
+</openerp>

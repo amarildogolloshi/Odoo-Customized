@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+		<!-- <delete model="ir.ui.menu" id="stock.menu_product_variant_config_stock"/> -->
+
+		<menuitem name="Products" id="stock.menu_product_variant_config_stock" groups="base.group_no_one"/>
+		
+		<menuitem id="product_menu" name="Products"
+       			  parent="stock.menu_stock_inventory_control"/>
+       			  
+       	<menuitem id="sparepart_menu" name="Spare parts"
+       			  parent="product_menu" action = "spare_product_view_action"/>
+       			  
+       	<menuitem id="mc_menu" name="Motorcycle Units"
+       			  parent="product_menu" action = "mc_product_view_action"/>
+       			  
+       	<menuitem id="nontrade_menu" name="Non-Trade"
+       			  parent="product_menu" action = "nontrade_product_view_action"/>
+
+<!--        	<menuitem id="free_menu" name="Free Items"
+       			  parent="product_menu" action = "free_product_view_action"/> -->
+
+<!--         <menuitem id="stock.menu_product_in_config_stock" name="Vehicle Information"
+       			  parent="stock.menu_stock_config_settings"/> -->
+
+<!--        	<menuitem id="major_class_menu" name="Major Class"
+       			  parent="stock.menu_product_in_config_stock" action="product_category_major_class_act" sequence = "0"/>
+
+       	<menuitem id="make_menu" name="Make"
+       			  parent="stock.menu_product_in_config_stock" action="make_tree_action" sequence = "1"/>
+
+       	<menuitem id="group_menu" name="Group"
+       			  parent="stock.menu_product_in_config_stock" action="product_category_group_act" sequence = "2"/>
+
+  	    <menuitem id="subgroup_menu" name="Sub Group"
+  			  		parent="stock.menu_product_in_config_stock" action="product_category_subgroup_act" sequence = "3"/>		 -->
+
+
+       	<menuitem id="brand_menu" name="Brand"
+       			  parent="stock.menu_product_in_config_stock" action="brand_tree_action"/>
+       			  
+       	<menuitem id="model_menu" name="Model"
+       			  parent="stock.menu_product_in_config_stock" action="model_tree_action"/>	  
+       			  
+       	<menuitem id="color_menu" name="Color"
+       			  parent="stock.menu_product_in_config_stock" action="color_tree_action"/>	
+       			  
+       	<menuitem id="body_menu" name="Body"
+       			  parent="stock.menu_product_in_config_stock" action="body_tree_action"/>
+       			  
+       	<menuitem id="wheel_menu" name="Wheel"
+       			  parent="stock.menu_product_in_config_stock" action="wheel_tree_action"/>	
+       			  
+       	<menuitem id="type_menu" name="Type"
+       			  parent="stock.menu_product_in_config_stock" action="type_tree_action"/>	  
+       	
+       	<menuitem id="transmission_menu" name="Transmission"
+       			  parent="stock.menu_product_in_config_stock" action="transmission_tree_action"/>	
+       			  
+       	<menuitem id="mc_classification_menu" name="MC Classification"
+       			  parent="stock.menu_product_in_config_stock" action="mc_classification_tree_action"/>
+
+    </data>
+  </openerp>

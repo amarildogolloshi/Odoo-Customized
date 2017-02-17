@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+    
+    
+<!--     PARENT -->
+		
+		<record model="ir.ui.view" id="parents_tree_view">
+            <field name="name">partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Parents">
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="external_job_id"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="parents_form_view">
+            <field name="name">partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Parents Form">
+                    <sheet>
+                    <group string = "Name">
+                    	<field name = "first_name" required = "True"/>
+                    	<field name="middle_name" required = "True"/>
+                    	<field name="last_name" required = "True"/>
+                    </group>
+                    <group>
+                        <field name="gender" required = "True"/>
+                        <field name="birthday" required= "True"/>
+                        <field name="external_job_id" required= "True"/>
+                        
+                    </group>
+                    <group string = "Address">
+                       	<field name="street" required = "True"/>
+                       	<field name="province_id" required= "True"/>
+                       	<field name = "city_id" domain="[('province_id.id','=',province_id)]" required= "True"/>
+                		<field name = "barangay_id" domain="[('city_id.id','=',city_id)]" required= "True"/>
+                	</group>
+	                
+                    </sheet>
+                </form>
+            </field>
+        </record>
+  
+        
+        <record model="ir.actions.act_window" id="parent_view_action">
+            <field name="name">Parents</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="context">{'partner_type':'parent'}</field>
+            
+        </record> 
+        
+        <record model="ir.actions.act_window.view" id="parent_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="parents_tree_view"/>
+            <field name="act_window_id" ref="parent_view_action"/>
+        </record>
+       
+        <record model="ir.actions.act_window.view" id="parents_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="parents_form_view"/>
+            <field name="act_window_id" ref="parent_view_action"/>
+        </record>
+        
+        
+<!-- CHILDREN -->
+		
+		<record model="ir.ui.view" id="children_tree_view">
+            <field name="name">children.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Children">
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="birthday"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="children_form_view">
+            <field name="name">children.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Children Form">
+                    <sheet>
+                    <group string = "Name">
+                    	<field name = "first_name" required = "True"/>
+                    	<field name="middle_name" required = "True"/>
+                    	<field name="last_name" required = "True"/>
+                    </group>
+                    <group>
+                        <field name="gender" required = "True"/>
+                        <field name="birthday" required= "True"/>
+                        
+                    </group>
+	                
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="children_view_action">
+            <field name="name">Children</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="context">{'partner_type':'children'}</field>
+            
+        </record> 
+        
+        <record model="ir.actions.act_window.view" id="children_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="children_tree_view"/>
+            <field name="act_window_id" ref="children_view_action"/>
+        </record>
+       
+        <record model="ir.actions.act_window.view" id="children_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="children_form_view"/>
+            <field name="act_window_id" ref="children_view_action"/>
+        </record>
+        
+
+<!-- SPOUSE -->
+		
+		<record model="ir.ui.view" id="spouse_tree_view">
+            <field name="name">spouse.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Spouse">
+                    <field name="name"/>
+                    <field name="birthday"/>
+                    <field name="external_job_id"/>
+                    <field name="date_marriage"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="spouse_form_view">
+            <field name="name">spouse.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Spouse Form">
+                    <sheet>
+                    <group string = "Name">
+                    	<field name = "first_name" required = "True"/>
+                    	<field name="middle_name" required = "True"/>
+                    	<field name="last_name" required = "True"/>
+                    </group>
+                    <group>
+                        <field name="gender" required = "True"/>
+                        <field name="birthday" required= "True"/>
+                        <field name="date_marriage" required = "True"/>
+                        <field name="external_job_id" required = "True"/>
+                    </group>
+	                
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="spouse_view_action">
+            <field name="name">Spouse</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="context">{'partner_type':'spouse'}</field>
+            
+        </record> 
+        
+        <record model="ir.actions.act_window.view" id="spouse_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="spouse_tree_view"/>
+            <field name="act_window_id" ref="spouse_view_action"/>
+        </record>
+       
+        <record model="ir.actions.act_window.view" id="spouse_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="spouse_form_view"/>
+            <field name="act_window_id" ref="spouse_view_action"/>
+        </record>
+
+    </data>
+</openerp>
+

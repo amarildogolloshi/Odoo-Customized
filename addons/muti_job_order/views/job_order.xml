@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+<!-- for MC REPO JOB ORDER ........................................................................... -->
+        <record model="ir.ui.view" id="job_order_form">
+            <field name="name">Job Order</field>
+            <field name="model">muti.job.order</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="set_approve"
+                            string="Approve"
+                            type="object"
+                            states="review"/>
+
+                        <button name="set_disapprove"
+                            string="Disapprove"
+                            type="object"
+                            states="review"/>
+
+                        <button name="set_cancel"
+                            string="Void"
+                            type="object"
+                            states="cancel,confirm, recommend"/>
+
+                        <button name="set_review"
+                            string="For Approval"
+                            type="object"
+                            states="cancel,recommend" />
+
+                        <button name="set_recommend"
+                            string="Recommend"
+                            type="object"
+                            states="cancel,confirm"/>
+
+                        <button name="set_draft"
+                            string="Set Back To Draft"
+                            type="object"
+                            states="cancel,confirm"/>
+
+                        <button name="set_confirm"
+                            string="Confirm"
+                            type="object"
+                            states="draft,cancel,void"/>
+                        
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="branch_id" readonly="True"/>
+                                <field name="jo_number" readonly="True" />
+                            </group>
+                            <group>
+                                <field name="jo_date" readonly="True"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="MC Information">
+                                <group>
+                                    <field name="mc_unit" required="True"
+                                            attrs="{'readonly':[('state','!=','draft')]}"
+                                            domain="[('is_repo','=',True),('branch_id','=',branch_id),('is_sold_redeemed','=',False)]" />
+                                    <field name="engineno" readonly="True"/>
+                                    <field name="chassisno" readonly="True"/>
+                                    <field name="make" readonly="True"/>
+                                    <field name="model" readonly="True"/>
+                                    <field name="body" readonly="True"/>
+                                    <field name="color" readonly="True"/>
+                                    <field name="wheel" readonly="True"/>
+                                    <field name="transmission" readonly="True" string="Transmission"/>
+                                </group>
+                            </page>
+                            <page string="Spare parts/Items">
+                                <group>
+                                    <field name="job_order_ids" mode="tree" nolabel="1" colspan="4" attrs="{'readonly':[('state','!=','draft')]}">
+                                       <tree string="Spare parts/Items" >
+                                           <field name="qty" required="1"/>
+                                           <field name="spare_part" required="1"/>
+                                           <field name="is_part_available" required="1"/>
+                                           <field name="unit_cost" required="1"/>
+                                           <field name="item_total" readonly="True" sum="Total"/>
+                                       </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Remarks">
+                                <group>
+                                    <field name="machining"/>
+                                    <field name="job_desc"/>
+                                </group>
+                            </page>
+                        </notebook>
+
+                        <group>
+                            <group>
+                                <group>
+                                    <field name="prepared_by" readonly="True"/>
+                                    <field name="reviewed_by" readonly="True"/>
+                                </group>
+                                <group>
+                                    <field name="recommended_by" readonly="True"/>
+                                    <field name="approved_by" readonly="True"/>
+                                    <field name="state" invisible="True"/>
+                                </group>
+                            </group>
+
+                            <newline/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree -->
+        <record model="ir.ui.view" id="job_order_tree">
+            <field name="name">Job Order</field>
+            <field name="model">muti.job.order</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Details" colors="blue:state in ('draft');red:state in ('eval');black:state in ('approve');red:state in ('cancel')">
+                    <field name="branch_id" />
+                    <field name="jo_date" />
+                    <field name="jo_number"/>
+                    <field name="engineno"/>
+	                <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- search -->
+		<record model="ir.ui.view" id="job_order_search">
+			<field name="name">Job Order</field>
+			<field name="model">muti.job.order</field>
+			<field name="arch" type="xml">
+				<search string="Job Order Information">
+                    <field name="jo_number" select="1"/>
+                    <field name="jo_date" select="1"/>
+                    <field name="branch_id" select="1"/>
+                    <field name="engineno" select="1"/>
+				</search>
+			</field>
+		</record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="job_order_action">
+            <field name="name">Job Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.job.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="job_order_tree"/>
+            <field name="context">{'filter_br':'br'}</field>
+            <field name="domain">[('state','in',['draft','void','confirm','recommend','review','approve','disapprove'])]</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="job_order_recommend_action">
+            <field name="name">Job Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.job.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="job_order_tree"/>
+            <field name="context">{'filter_br':'br'}</field>
+            <field name="domain">[('state','=','confirm')]</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="job_order_review_action">
+            <field name="name">Job Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.job.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="job_order_tree"/>
+            <field name="context">{'filter_br':'br',}</field>
+            <field name="domain">[('state','=','recommend')]</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="job_order_approve_action">
+            <field name="name">Job Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">muti.job.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="job_order_tree"/>
+            <field name="context">{'filter_br':'br'}</field>
+            <field name="domain">[('state','=','review')]</field>
+        </record>
+
+        <!-- Form Detail -->
+        <record model="ir.ui.view" id="job_order_detail_form">
+            <field name="name">Job Order Items</field>
+            <field name="model">muti.job.order.detail</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Job Order Items">
+                    <group col="6" colspan="6">
+                        <field name="spare_part" required="1" colspan="6"/>
+                        <newline/>
+                        <field name="is_part_available"/>
+                        <field name="qty" required="1" attrs="{'readonly':[('is_part_available','!=',True)]}"/>
+                        <field name="unit_cost" required="1" attrs="{'readonly':[('is_part_available','!=',True)]}"/>
+                        <field name="item_total" readonly="True"/>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- for MENU ........................................................................... -->
+        <menuitem
+            parent="stock.menu_stock_root"
+            id="job_order"
+            name="Job Order"
+            sequence="6"/>
+
+		<menuitem
+            parent="job_order"
+            id="job_order_req"
+            name="Request"
+            action="job_order_action"
+            sequence="1"/>
+
+		<menuitem
+            parent="job_order"
+            id="job_order_recom"
+            name="Recommend"
+            action="job_order_recommend_action"
+            sequence="2"/>
+
+		<menuitem
+            parent="job_order"
+            id="job_order_rev"
+            name="Review"
+            action="job_order_review_action"
+            sequence="3"/>
+
+		<menuitem
+            parent="job_order"
+            id="job_order_appr"
+            name="For Approval"
+            action="job_order_approve_action"
+            sequence="4"/>
+
+        <!-- end for MENU ........................................................................... -->
+    </data>
+</openerp>

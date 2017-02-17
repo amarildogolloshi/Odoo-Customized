@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+        <record model="ir.ui.view" id="res_partner_rep_type_form_field">
+            <field name="name">res.partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="website" position="after">
+                    <field name="active"/>
+                </field>
+                <xpath expr='//page[3]/group[@name="container_row_2"]/group[@name="sale"]/field[@name="customer"]' position="after">
+                    <field name="employee"/>
+                    <field name="wholesaler"/>
+                    <field name="retailer"/>
+                </xpath>
+                <xpath expr='//page[3]/group[@name="container_row_2"]/group[@name="purchase"]' position="inside">
+                    <field name="point_sale_barcode"/>
+                    <field name="discount" attrs="{'readonly':[('wholesaler', '!=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_partner_rep_type_tree_field">
+            <field name="name">res.partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="email" position="after">
+                    <field name="active"/>
+                </field>
+                <field name="phone" position="after">
+                    <field name="address"/>
+                </field>
+                <field name="phone" position="before">
+                    <field name="user_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

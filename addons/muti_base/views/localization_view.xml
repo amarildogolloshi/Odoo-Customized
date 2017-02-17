@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+    	
+ <!--     	        Companies         -->
+	   <record model="ir.ui.view" id="companies_search_view">
+            <field name="name">Companies</field>
+            <field name="model">res.company</field>
+         	<field name="arch" type="xml">
+         		<search>
+         			<filter string="Archived" name="archived" domain="[('active', '=', False)]"/>
+                 	<field name="name"/>
+                </search>
+            </field>
+        </record>
+	   
+       <record model="ir.ui.view" id="companies_tree_view">
+            <field name="name">Companies</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_tree"/>
+            <field name="arch" type="xml">
+                 	<field name="name" position="before">
+	                	<field name = "code"/>
+	                </field>		
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="companies_form_view">
+            <field name="name">Companies</field>
+            <field name="model">res.company</field>
+            <field name="type">form</field>
+             <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+            		<field name="partner_id" position="after">
+	                	<field name = "active"/>
+	                	<field name = "code"/>
+	                	<field name = "abbreviation"/>
+                	</field>
+<!--             		<field name="company_registry" position="after"> -->
+<!-- 						<field name="bu_class_id" /> -->
+<!-- 					</field> -->
+
+	                <notebook>
+	                    <page string="Branch/es">
+	                            <tree string=" ">
+	                                <field name="branch_id">
+	                                	<tree string = "Branch">
+	                                		<field name = "branch_code"/>
+	                                		<field name = "name"/>
+	                                		<field name = "telno"/>
+<!-- 	                                		<field name = "manager_id"/> -->
+
+	                                	</tree>
+	                                </field>
+
+	                            </tree>
+	                    </page>
+                    </notebook>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="companies_tree_action">
+            <field name="name">Companies</field>
+            <field name="res_model">res.company</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first company
+                </p>
+            </field>
+        </record>
+        
+        
+        
+<!--          Business Unit         -->
+
+<!--         <record model="ir.ui.view" id="bu_tree_view"> -->
+<!--             <field name="name">bu.tree</field> -->
+<!--             <field name="model">config.bu</field> -->
+<!--             <field name="arch" type="xml"> -->
+<!--                 <tree string="Business Unit"> -->
+<!--                     <field name="name"/> -->
+<!--                     <field name="company_id"/> -->
+<!--                 </tree> -->
+<!--             </field> -->
+<!--         </record> -->
+
+<!-- 		<record model="ir.ui.view" id="bu_form_view"> -->
+<!--             <field name="name">bu.form</field> -->
+<!--             <field name="model">config.bu</field> -->
+<!--             <field name="arch" type="xml"> -->
+<!--                 <form string="Business Unit"> -->
+<!--                     <sheet> -->
+<!--                     <group> -->
+<!--                         <field name="name"/> -->
+<!--                         <field name="company_id"/> -->
+<!--                     </group> -->
+<!--                     </sheet> -->
+<!--                 </form> -->
+<!--             </field> -->
+<!--         </record> -->
+        
+        
+<!--         <record model="ir.actions.act_window" id="bu_tree_action"> -->
+<!--             <field name="name">Business Unit</field> -->
+<!--             <field name="res_model">config.bu</field> -->
+<!--             <field name="view_type">form</field> -->
+<!--             <field name="view_mode">tree,form</field> -->
+<!--             <field name="help" type="html"> -->
+<!--                 <p class="oe_view_nocontent_create"> -->
+<!--                     Create the first business unit -->
+<!--                 </p> -->
+<!--             </field> -->
+<!--         </record> -->
+        
+        
+        <!-- Area -->
+        <record model="ir.ui.view" id="area_tree_view">
+            <field name="name">area.tree</field>
+            <field name="model">config.area</field>
+            <field name="arch" type="xml">
+                <tree string="Area">
+                    <field name="name"/>
+                    <field name="area_code"/>
+<!--                     <field name = "manager_id"/> -->
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="area_tree_action">
+            <field name="name">Area</field>
+            <field name="res_model">config.area</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first area
+                </p>
+            </field>
+        </record>
+        
+
+	<!-- Province -->        
+
+        <record model="ir.ui.view" id="province_tree_view">
+            <field name="name">province.tree</field>
+            <field name="model">config.province</field>
+            <field name="arch" type="xml">
+                <tree string="Province">
+                    <field name="active"/>
+                    <field name="province_code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="province_form_view">
+            <field name="name">province.form</field>
+            <field name="model">config.province</field>
+            <field name="arch" type="xml">
+                <form string="Province Form">
+                    <sheet>
+                    <group>
+                    	<field name = "active"/>
+                        <field name="name"/>
+                        <field name="province_code"/>
+                        <field name="old_prov_code"/>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="province_tree_action">
+            <field name="name">Province</field>
+            <field name="res_model">config.province</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first province
+                </p>
+            </field>
+        </record>
+        
+        
+        
+<!-- City -->       
+        
+        <record model="ir.ui.view" id="city_tree_view">
+            <field name="name">city.tree</field>
+            <field name="model">config.city</field>
+            <field name="arch" type="xml">
+                <tree string="City/Municipality">
+                    <field name="active"/>
+                    <field name="city_code"/>
+                    <field name="name"/>
+                    <field name="province_id"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="city_form_view">
+            <field name="name">city.form</field>
+            <field name="model">config.city</field>
+            <field name="arch" type="xml">
+                <form string="City/Municipality Form">
+                    <sheet>
+	                    <group>
+	                        <field name="active"/>
+		                    <field name="city_code"/>
+		                    <field name="name"/>
+		                    <field name="province_id"/>
+	                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="city_tree_action">
+            <field name="name">City/Municipality</field>
+            <field name="res_model">config.city</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first city
+                </p>
+            </field>
+        </record>
+        
+        
+<!-- Barangay -->       
+        
+        <record model="ir.ui.view" id="barangay_tree_view">
+            <field name="name">barangay.tree</field>
+            <field name="model">config.barangay</field>
+            <field name="arch" type="xml">
+                <tree string="Barangay" editable = "bottom">
+                    <field name="active"/>
+                    <field name="brgy_code"/>
+                    <field name="name"/>
+                    <field name="city_id"/>
+                    <field name="zip_code" required="1"/>
+                    <field name="province_name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="barangay_form_view">
+            <field name="name">barangay.form</field>
+            <field name="model">config.barangay</field>
+            <field name="arch" type="xml">
+                <form string="Barangay Form">
+                    <sheet>
+                    <group>
+                        <field name="active"/>
+                    <field name="brgy_code"/>
+                    <field name="name"/>
+                    <field name="city_id"/>
+                    <field name="zip_code"/>
+                    <field name="province_name"/>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="barangay_tree_action">
+            <field name="name">Barangay</field>
+            <field name="res_model">config.barangay</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first barangay
+                </p>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+

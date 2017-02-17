@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		
+<!-- Configure Receipt Series -->
+		
+		<record model = "ir.ui.view" id = "config_receipts_series_form">
+			<field name="name">Configure Receipt Series</field>
+			<field name="model">config.receipts.series</field>
+			<field name="arch" type="xml">
+				<form string = "Receipt Series">
+					<header>
+					<button name="action_draft" type="object"
+							string="Reset to draft"					
+							states="fin"
+							class="oe_highlight"/>
+							
+					<button name="action_finalized" type="object"
+							string="Finalized"
+							states="draft"
+							class="oe_highlight"/>
+							
+					<field name="state" widget="statusbar"/>
+				</header>
+				<sheet>
+					<group col="4" colspan="4">
+						<field name="branch_id" required="True" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+						<field name="name" readonly="True"  attrs="{'readonly': [('state','not in',('draft'))]}"/>
+						<field name="receipt_type" required="True" attrs="{'readonly':[('state','in',['fin'])]}"/>
+						<field name="cashier"  attrs="{'readonly': [('state','not in',('draft'))]}"/>
+						<field name="leaves" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+						
+						<newline/>
+						<field name="or_from" required="True"  attrs="{'readonly': [('state','not in',('draft'))]}"/> <!--on_change="onchange_or_from(or_from,leaves)"  -->
+						<field name="or_to" required="True"  attrs="{'readonly': [('state','not in',('draft'))]}"/>
+<!-- 						<field name="state" readonly="True"/> -->
+						<newline/>
+							
+						<newline/>
+						<separator colspan = "4"/>
+						<field name="receipts_ids" readonly="True" colspan="4" nolabel="True">
+                           	<tree string="Receipts">
+                               	<field name="or_number"/>
+                               	<field name="state"/>
+                               	<field name="creditcol_id"/>
+                               	<field name = "cashsale_id"/>
+                               	<field name = "creditsale_id"/>
+                               	<field name = "creditmemo_id"/>                              	
+                           	</tree>
+                        </field>    
+					</group>
+				</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="config_receipts_series_tree">
+			<field name="name">Configure Receipt Series</field>
+			<field name="model">config.receipts.series</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Receipt Series">
+					<field name="branch_id" readonly="True"/>
+	                <field name="name" readonly="True"/>
+	                <field name="receipt_type"/>
+	                <field name="cashier"/>
+	                <field name="or_from"/>
+	                <field name="or_to"/>
+	                 <field name="state"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="config_receipts_series_action">
+            <field name="name">Configure Receipts Series</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.receipts.series</field>
+            <field name="view_type">form</field>      
+            <field name="view_mode">form,tree</field> 
+            <field name="view_id" ref="config_receipts_series_tree"/>  
+        </record>
+<!-- Configure Receipt Series ends here -->-->
+
+<!-- Config Receipt Series Details -->
+		
+		<record model="ir.ui.view" id="config_receipts_series_det_form">
+			<field name="name">Receipts Monitoring</field>
+			<field name="model">config.receipts.series.det</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string = "Receipts">
+					<group col="4" colspan="4">
+						<field name="branch_id" readonly="True"/>
+                        <field name="or_number" readonly="True"/>
+                        <field name="state" readonly="True"/>
+                        <field name="creditcol_id" readonly="True"/>
+                        <field name = "cashsale_id" readonly="True"/>
+                        <field name = "creditsale_id" readonly="True"/>
+                        <field name = "creditmemo_id" readonly="True"/>	 	
+					</group>
+					<group col="6" colspan="6">
+						<button name="set_void" colspan="2" string="Void" type="object"
+							states="unused,void,used" icon="gtk-cancel"
+							attrs="{'invisible':[('state','!=','unused')]}"/>
+					</group>
+				</form>
+			</field>
+		</record>	
+		
+		<record model="ir.ui.view" id="config_receipts_series_det_tree">
+            <field name="name">Receipts</field>
+            <field name="model">config.receipts.series.det</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Receipts">
+	                <field name="branch_id"/>
+	                <field name="or_number"/>
+	                <field name="state"/>
+	                <field name="cashier"/>
+	                <field name="creditcol_id"/>
+                    <field name = "cashsale_id"/>
+                    <field name = "creditsale_id"/>
+                    <field name = "creditmemo_id"/>
+                </tree>
+            </field>
+        </record>
+
+<!--         <record model="ir.ui.view" id="config_receipts_series_det_search"> -->
+<!--             <field name="name">config_receipts_series_det.search</field> -->
+<!--             <field name="model">config_receipts_series_det</field> -->
+<!--             <field name="type">search</field> -->
+<!--             <field name="arch" type="xml"> -->
+<!--                 <search string="Receipts"> -->
+<!--                     <field name="branch_id" select="1"/> -->
+<!--                     <field name="or_number" select="1"/> -->
+<!--                     <field name="state" select="1"/> -->
+<!--                 </search> -->
+<!--             </field> -->
+<!--         </record>   -->
+
+        <record model="ir.actions.act_window" id="config_receipts_series_det_action">
+            <field name="name">Receipts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.receipts.series.det</field>
+            <field name="view_type">form</field>      
+            <field name="view_mode">form,tree</field> 
+            <field name="context">{'receipts_filter_br':'br'}</field>  
+            <field name="view_id" ref="config_receipts_series_det_tree"/>  
+        </record>
+	
+<!-- Config Receipt Series Details ends here-->
+	
+<!-- 	<menuitem id="base.menu_sale_config" name="Configuration" parent="base.menu_base_partner"
+           sequence="100" groups="base.group_configuration"/> -->
+	
+	<menuitem name="Config Receipts Series"
+           id="config_receipts_series"
+           parent="base.menu_sale_config"
+           action="config_receipts_series_action"/>
+	</data>
+</openerp>

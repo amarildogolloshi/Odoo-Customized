@@ -1,0 +1,147 @@
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="hr_employees_form_view">
+            <field name="name">hr_employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+       			<xpath expr="/form/sheet/notebook/page[2]" position="after">
+					<page string='Performance Monitoring'>
+						<group string="Performance Appraisal Review">	
+							<notebook>
+								<page string="Probationary">
+									<br/>
+									<button name="action_probi_draft" 
+			              		 		 	string="Reset to Draft" 
+			              		 		 	type="object" 
+			              		 		 	class="btn-primary oe_right"
+			              		 		 	attrs="{'invisible': [('probi_state','!=', 'fin')]}"/>
+			              		 		 	
+									<button name="action_probi_final" 
+			              		 		 	string="Finalize" 
+			              		 		 	type="object" 
+			              		 		 	class="btn-primary oe_right"
+			              		 		 	attrs="{'invisible': [('probi_state','!=', 'draft')]}"/>
+			              		 		 	
+									<field name="probitionary_monitoring_ids" nolabel="1" attrs="{'readonly': [('probi_state','=','fin')]}"/>
+									<br/>
+									<field name="probi_state" invisible="1"/>
+									
+			              		 	
+			              		 	<group>
+			              		 		<field name="regularization_date"/>
+<!-- 										<field name="probi_remarks"/> -->
+									</group>
+			              		 	
+								</page>		
+								<page string="Regular">
+									<field name="regular_monitoring_ids" nolabel="1">
+										<tree editable="bottom">
+											<field name="date"/>
+											<field name="rating"/>
+											<field name="description"/>
+											<field name="rater_id"/>
+										</tree>
+									</field>
+									<br/>
+								</page>																
+							</notebook>
+						</group>
+					</page>
+				</xpath>
+				<xpath expr="/form/sheet/notebook/page[4]/group" position="after">
+					<group>
+						<group>
+	                	</group>
+	                	<group string = "Appraisal"> 
+							<field name ="appraisal_evaluation_ids" nolabel="1"/>         	
+	                	</group>
+	                	
+                	</group>
+				</xpath>
+			</field>
+		 </record>
+		 
+<!-- 		 <record model="ir.ui.view" id="hr_employee_appraisal_form_view"> -->
+<!--             <field name="name">hr_employee.appraisal</field> -->
+<!--             <field name="model">hr.employee</field> -->
+<!--             <field name="inherit_id" ref="hr_contract.hr_hr_employee_view_form2"/> -->
+<!--             <field name="arch" type="xml"> -->
+<!-- 				<xpath expr="//group" position="after"> -->
+<!--                 	<group string = "Appraisal"> -->
+<!-- 						<field name ="appraisal_evaluation_ids"/>         	 -->
+<!--                 	</group> -->
+<!--                 </xpath>  -->
+<!-- 			</field> -->
+<!-- 		 </record> -->
+
+<!-- Employee Monitoring	         -->
+        <record model="ir.ui.view" id="probationary_monitoring_form_view">
+            <field name="name">probationary.monitoring.form</field>
+            <field name="model">probationary.monitoring</field>
+            <field name="arch" type="xml">
+                <form string="Probationary">		               
+              		<sheet>
+              			<group>
+              				<field name="hr_emp_id" invisible="1"/>
+							<field name="appraisal_num"/>
+							<field name="dept_id" invisible="1"/>
+							<field name="company_id" invisible="1"/>
+							<field name="appraisal_date" required="1"/>
+							<field name="rating" required="1"/>
+							<field name="description" readonly="1"/>
+							<field name="rater_id" context="{'employee_id':emp_id}"/>
+							<field name="remarks"/>
+							<field name="emp_id" invisible="1"/>
+							<field name="state" invisible="1"/> 
+
+                    	</group>             
+                    </sheet>                 
+                </form>
+            </field>
+        </record>	        
+		
+		<record model="ir.ui.view" id="probationary_monitoring_tree_view">
+            <field name="name">probationary.monitoring.tree</field>
+            <field name="model">probationary.monitoring</field>
+            <field name="arch" type="xml">
+                <tree string="Probationary">		  
+                	<field name="company_id" invisible="1"/>             
+					<field name="appraisal_num" invisible="0"/>
+					<field name="appraisal_date"/>
+					<field name="rating"/>
+					<field name="description"/>
+					<field name="rater_id"/> 
+					<field name="remarks"/>     
+					<field name="state" invisible="1"/>
+					<button 
+							icon="gtk-apply"
+							string="Finalize" 
+          		 		 	type="object" 
+          		 		 	class="btn-primary"
+          		 		 	states="fin"
+          		 	/>
+					<button 
+							icon="gtk-yes"
+          		 		 	string="Reset to Draft" 
+          		 		 	type="object" 
+          		 		 	class="btn-primary"
+          		 		 	states="draft"
+          		 	/>
+					              
+                </tree>
+            </field>
+        </record>
+			
+        <record model="ir.actions.act_window" id="probationary_monitoring_action">
+            <field name="name">Probationary Monitoring</field>
+            <field name="res_model">probationary.monitoring</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+<!--         {'group_by': ['appraisal_date:month']} -->
+
+	
+	</data>
+</openerp>

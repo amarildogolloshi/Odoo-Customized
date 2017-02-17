@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+        <record model="ir.ui.view" id="employee_form_view">
+            <field name="name">employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+            	
+            	<page name="public" position="attributes">
+          			<attribute name="string">Organizational Information</attribute>
+         		</page>
+            
+                <field name="address_id" position="before">
+                	<field name = "emp_lastname"/>
+                	<field name = "emp_firstname"/>
+                	<field name = "emp_middlename"/>
+ 					<field name = "company_name"/>
+                </field>
+                
+                <field name="job_id" position="after">
+                	<field name ="job_level"/>
+                	<field name="employee_status_id"/>
+                </field>
+                
+                <field name="notes" position="before">
+                	<group string = "Date Hired">
+						<field name ="date_hired"/>
+						<field name="payroll_date_hired"/>                	
+                	</group>
+                	
+                	<group string="Reporting To">
+                		<field name="emp_report_to_ids" nolabel="1">
+                			<tree editable="bottom">
+                				<field name="emp_id"/>
+                				<field name="name"/>
+                				<field name="company_name"/>
+                				<field name="job_id"/>
+                			</tree>
+                		</field>                		
+                	</group>
+                </field>
+                
+                <field name="marital" position="after">
+                	<field name = "age_complete"/>
+                	<field name = "religion_id"/>
+ 					<field name = "height"/>
+ 					<field name = "weight"/>
+                </field>
+                
+
+                <field name="address_home_id" position="after">
+                	<field name = "contact1"/>
+                	<field name = "contact2"/>
+                	<field name = "personal_email"/>
+                	<field name = "permanent_address"/>
+                	<field name = "current_address"/>
+<!--                 	<field name = "province_id"/> -->
+<!--                 	<field name = "city_id" domain="[('province_id.id','=',province_id)]"/> -->
+<!--                 	<field name = "barangay_id" domain="[('city_id.id','=',city_id)]"/> -->
+<!--                 	<field name ="city_id"/> -->
+                </field>
+                
+<!--                 <xpath expr="//group" position="after">
+                	<group string = "Person to be contacted in case of emergency">
+                		<field name = "emergency_name"/>
+                		<field name = "emergency_contact1"/>
+                		<field name = "emergency_contact2"/>
+                		<field name = "emergency_address"/>
+                		<field name = "emergency_relationship"/>
+                	</group>
+                </xpath> -->
+                
+                <field name = "weight" position="after">
+                	<group string = "Person to be contacted in case of emergency" colspan = "24">
+                		<field name = "emergency_name"/>
+                		<field name = "emergency_contact1"/>
+                		<field name = "emergency_contact2"/>
+                		<field name = "emergency_address"/>
+                		<field name = "emergency_relationship"/>
+                	</group>
+                </field>
+                
+                <field name="work_phone" position="after">
+          			<field name = "skype"/>
+         		</field>
+                
+                <notebook>
+                    <page string="Educational Background">
+                            <tree string=" ">
+                                <field name="education_id"/>
+                            </tree>
+                    </page>
+
+                    <page string="Medical Information">
+                            <tree string="">
+                             <group>
+                                 <field name="blood_type_id"/>
+                                 <field name="allergy_ids"/>
+								<field name="physical_ids"/>
+								<field name="health_ids"/>
+								<field name="medical_benefits_id"/>
+								<field name="physical_medical_dental_id"/>
+                              </group>
+                            </tree>
+                    </page>
+            
+
+	                <page string="Work Experience">
+	                 	<field name="work_id"/>
+	                </page>
+       
+                    
+
+                
+                    <page string="Family Members">
+                    	<group>
+	                    	<field name="emp_parent_id" widget="many2many" context="{'partner_type':'parent',
+	                    							 'tree_view_ref':'muti_hrms.parents_tree_view',
+	                                                 'form_view_ref':'muti_hrms.parents_form_view'
+	                                                 }"/>
+                   		</group>
+                   		<group>
+                   			<field name="emp_children_id"  widget="many2many" context="{'partner_type':'children',
+                    							 'tree_view_ref':'muti_hrms.children_tree_view',
+                                                 'form_view_ref':'muti_hrms.children_form_view'
+                                                 }"/>
+                   		</group>
+                   		<group>
+                   			<field name="emp_spouse_id" widget="many2many" context="{'partner_type':'spouse',
+                    							 'tree_view_ref':'muti_hrms.spouse_tree_view',
+                                                 'form_view_ref':'muti_hrms.spouse_form_view'
+                                                 }"/>
+                   		</group>
+                    </page>
+                    
+                    <page string="Skills">
+                    	<field name="skill_ids"/>
+                    </page>
+                    
+                    <page string="Government Released Identification">
+                    	<group>
+	                    	<field name = "sss_no"/>
+		 					<field name = "phic_no"/>
+		 					<field name = "hdmf_no"/>
+		 					<field name = "tin_no"/>
+                   		</group>
+                   		<group>
+                   			<field name="emp_license_id"/>
+                   		</group>
+                    </page>
+                    
+                    
+                    <page string="Organisation">
+                    	<field name="emp_organisation_id"/>
+                    </page>
+                    
+                    <page string="External Seminars">
+                    	<field name="external_seminar_id"  widget="many2many" context="{'type':'external',
+                    							 'tree_view_ref':'muti_hrms.external_seminar_tree_view',
+                                                 'form_view_ref':'muti_hrms.external_seminar_form_view'
+                                                 }"/>
+                    </page>
+                    
+                    <page string="Internal Seminars">
+                    	<field name="internal_seminar_id"  widget="many2many" context="{'type': 'internal',
+                                                 'tree_view_ref':'muti_hrms.internal_seminar_tree_view',
+                                                 'form_view_ref':'muti_hrms.internal_seminar_form_view'
+                                                 }"/>
+                    </page>
+                    
+                    <page string="Awards/Recognition">
+                    	<field name="employee_awards_ids"/>
+                    </page>
+                    
+                    <page string = "Benefits">
+                    	<group>
+                    		<field name="medical_benefits_id" required = "False"/>
+							<field name="physical_medical_dental_id" required = "False"/>
+                    	</group>
+                    </page>
+                </notebook>
+                
+                
+                
+                <field name="address_home_id" position="attributes">
+          			<attribute name="invisible">True</attribute>
+         		</field>
+         		
+         		<field name="address_id" position="attributes">
+          			<attribute name="invisible">True</attribute>
+         		</field>
+         		
+         		<field name="work_location" position="attributes">
+          			<attribute name="invisible">True</attribute>
+         		</field>
+         		
+         		<field name="coach_id" position="attributes">
+          			<attribute name="invisible">True</attribute>
+         		</field>
+         		
+         		<field name="department_id" position="attributes">
+          			<attribute name="required">True</attribute>
+         		</field>
+         		
+         		<field name="job_id" position="attributes">
+          			<attribute name="required">True</attribute>
+         		</field>
+         		
+<!--          		<field name="parent_id" position="attributes"> -->
+<!--           			<attribute name="invisible">True</attribute> -->
+<!--          		</field> -->
+         		
+         		<!-- <field name="gender" position="attributes">
+          			<attribute name="required">True</attribute>
+         		</field>
+         		
+         		<field name="marital" position="attributes">
+          			<attribute name="required">True</attribute>
+         		</field>
+         		
+         		<field name="birthday" position="attributes">
+          			<attribute name="required">True</attribute>
+         		</field> -->
+         		
+         		<!--          		<field name="place_of_birth" position="attributes">
+          			<attribute name="required">True</attribute>
+         		</field> -->
+         		
+         		<field name="bank_account_id" position="attributes">
+          			<attribute name="required">True</attribute>
+         		</field>
+         		
+         		<field name="work_email" position="attributes">
+          			<attribute name="placeholder">email@mutigroup.com</attribute>
+         		</field>
+				
+				<field name="name" position="attributes">
+          			<attribute name="required">False</attribute>
+         		</field>
+         		
+         		<field name="name" position="attributes">
+          			<attribute name="readonly">True</attribute>
+         		</field>
+				
+         		<label for="name" position="before">
+         		
+        			<label for="emp_id" class="oe_inline"/>
+        				<h1>
+         					<field name = "emp_id" placeholder = "Employee ID"/>
+         				</h1>
+        			</label>
+				
+                
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="hrms_employee_search_view">
+            <field name="name">hrms.employee.search</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+            	<field name="name" position="replace">
+            		 <field name="name" string="Employees" 
+            		 		filter_domain="['|','|',('work_email','ilike',self),('name','ilike',self),('company_name','ilike',self)]"/>
+            	</field>
+            
+            </field>
+         </record>
+        
+        <record id="view_employee_form_status" model="ir.ui.view">
+            <field name="name">hr.employee.status.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_contract.hr_hr_employee_view_form2"/>
+            <field name="arch" type="xml">
+                <field name="children" position="attributes">
+          			<attribute name="invisible">True</attribute>
+         		</field>
+         		
+
+         		
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="employee_tree_view">
+            <field name="name">employee.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="arch" type="xml">
+                <tree string="Employee List">
+                	<field name="emp_id"/>
+                    <field name="name"/>
+                    <field name="company_name"/>
+                    <field name="department_id"/>
+                </tree>
+            </field>
+        </record>
+        
+
+        <record model="ir.actions.act_window" id="employees_list_action">
+            <field name="name">Employees</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="employee_lst_action">
+        	<field name="name">List of Employees</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">tree</field>
+        </record>
+        
+<!-- Religion -->        
+
+        <record model="ir.ui.view" id="religion_tree_view">
+            <field name="name">religion.tree</field>
+            <field name="model">employee.religion</field>
+            <field name="arch" type="xml">
+                <tree string="Religion">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="religion_form_view">
+            <field name="name">religion.form</field>
+            <field name="model">employee.religion</field>
+            <field name="arch" type="xml">
+                <form string="Religion Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="religion_tree_action">
+            <field name="name">Religion</field>
+            <field name="res_model">employee.religion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first religion
+                </p>
+            </field>
+        </record>
+        
+        
+        
+        
+ <!-- Level -->        
+
+        <record model="ir.ui.view" id="level_tree_view">
+            <field name="name">level.tree</field>
+            <field name="model">employee.education.level</field>
+            <field name="arch" type="xml">
+                <tree string="Level">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="level_form_view">
+            <field name="name">level.form</field>
+            <field name="model">employee.education.level</field>
+            <field name="arch" type="xml">
+                <form string="Level Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="level_tree_action">
+            <field name="name">Level</field>
+            <field name="res_model">employee.education.level</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first level
+                </p>
+            </field>
+        </record>
+        
+        
+        
+      	 <!-- Course -->        
+
+        <record model="ir.ui.view" id="course_tree_view">
+            <field name="name">course.tree</field>
+            <field name="model">employee.education.course</field>
+            <field name="arch" type="xml">
+                <tree string="Course">
+                    <field name="name"/>
+                    <field name="noofyears"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="course_form_view">
+            <field name="name">course.form</field>
+            <field name="model">employee.education.course</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="noofyears"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="course_tree_action">
+            <field name="name">Course</field>
+            <field name="res_model">employee.education.course</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first course
+                </p>
+            </field>
+        </record>
+        
+        
+        
+       	 <!-- Education -->        
+
+        <record model="ir.ui.view" id="education_tree_view">
+            <field name="name">education.tree</field>
+            <field name="model">employee.education</field>
+            <field name="arch" type="xml">
+                <tree string="Education" editable="bottom">
+                    <field name="level_id"/>
+                    <field name="school"/>
+                    <field name="address"/>
+                    <field name="course_id"/>
+                    <field name="major"/>
+                    <field name="year"/>
+                </tree>
+            </field>
+        </record>
+
+
+  
+  
+      	 <!-- Blood Type -->        
+
+        <record model="ir.ui.view" id="blood_tree_view">
+            <field name="name">blood.tree</field>
+            <field name="model">employee.medical.blood</field>
+            <field name="arch" type="xml">
+                <tree string="Blood Type" editable = "bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="blood_form_view">
+            <field name="name">blood.form</field>
+            <field name="model">employee.medical.blood</field>
+            <field name="arch" type="xml">
+                <form string="Blood Type Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="blood_tree_action">
+            <field name="name">Blood Type</field>
+            <field name="res_model">employee.medical.blood</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first blood type
+                </p>
+            </field>
+        </record>
+        
+        
+        <!-- Physical Disorder -->        
+
+        <record model="ir.ui.view" id="physical_tree_view">
+            <field name="name">physical.tree</field>
+            <field name="model">employee.medical.phydisorder</field>
+            <field name="arch" type="xml">
+                <tree string="Physical Disorder" editable = "bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="physical_form_view">
+            <field name="name">physical.form</field>
+            <field name="model">employee.medical.phydisorder</field>
+            <field name="arch" type="xml">
+                <form string="Physical Disorder Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="physical_tree_action">
+            <field name="name">Physical Disorder</field>
+            <field name="res_model">employee.medical.phydisorder</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first physical disorder
+                </p>
+            </field>
+        </record>
+        
+        
+        <!-- Allergy -->        
+
+        <record model="ir.ui.view" id="allergy_tree_view">
+            <field name="name">allergy.tree</field>
+            <field name="model">employee.medical.allergy</field>
+            <field name="arch" type="xml">
+                <tree string="Allergy" editable = "bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="allergy_form_view">
+            <field name="name">allergy.form</field>
+            <field name="model">employee.medical.allergy</field>
+            <field name="arch" type="xml">
+                <form string="Allergy Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="allergy_tree_action">
+            <field name="name">Allergy</field>
+            <field name="res_model">employee.medical.allergy</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first allergy
+                </p>
+            </field>
+        </record>
+        
+        
+        <!-- Health Problem -->        
+
+        <record model="ir.ui.view" id="health_tree_view">
+            <field name="name">health.tree</field>
+            <field name="model">employee.medical.healthprob</field>
+            <field name="arch" type="xml">
+                <tree string="Health Problem" editable = "bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="health_form_view">
+            <field name="name">health.form</field>
+            <field name="model">employee.medical.healthprob</field>
+            <field name="arch" type="xml">
+                <form string="Health Problem Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="health_tree_action">
+            <field name="name">Health Problem</field>
+            <field name="res_model">employee.medical.healthprob</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first health problem
+                </p>
+            </field>
+        </record>
+        
+                <!-- Employee Medical Assistance Benefits -->        
+
+        <record model="ir.ui.view" id="medical_benefits_tree_view">
+            <field name="name">medical.benefits.tree</field>
+            <field name="model">employee.medical.benefits</field>
+            <field name="arch" type="xml">
+                <tree string="Medical Benefits" editable = "bottom">
+                    <field name="date_process" required = "False"/>
+                    <field name="amount" required = "False"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="medical_benefits_form_view">
+            <field name="name">medical.benefits.form</field>
+            <field name="model">employee.medical.benefits</field>
+            <field name="arch" type="xml">
+                <form string="Medical Benefits">
+                    <sheet>
+                    <group>
+                        <field name="date_process"/>
+                        <field name="amount"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+                <!-- Physical Examination -->        
+
+        <record model="ir.ui.view" id="physical_medical_dental_tree_view">
+            <field name="name">physical.medical.dental.tree</field>
+            <field name="model">employee.physical.medical.dental</field>
+            <field name="arch" type="xml">
+                <tree string="Physical/Medical/Dental Examination" editable = "bottom">
+                    <field name="date_process" required = "False"/>
+                    <field name="amount" required = "False"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="physical_medical_dental_form_view">
+            <field name="name">physical.medical.dental.form</field>
+            <field name="model">employee.physical.medical.dental</field>
+            <field name="arch" type="xml">
+                <form string="Physical/Medical/Dental Examination">
+                    <sheet>
+                    <group>
+                        <field name="date_process"/>
+                        <field name="amount"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+
+
+		       <!-- Work Experenience -->        
+
+        <record model="ir.ui.view" id="work_tree_view">
+            <field name="name">work.tree</field>
+            <field name="model">employee.workexperience</field>
+            <field name="arch" type="xml">
+                <tree string="Work Experience" editable = "bottom">
+                    <field name="company"/>
+                    <field name="address"/>
+                    <field name="external_job_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="reason_for_leaving"/>
+                    <field name="length_service"/>
+                </tree>
+            </field>
+        </record>
+
+        
+        
+<!--         		        Parents         -->
+
+<!--         <record model="ir.ui.view" id="parents_tree_view"> -->
+<!--             <field name="name">parents.tree</field> -->
+<!--             <field name="model">employee.parents</field> -->
+<!--             <field name="arch" type="xml"> -->
+<!--                 <tree string="Parents" editable = "bottom"> -->
+<!--                     <field name="first_name"/> -->
+<!--                     <field name="middle_name"/> -->
+<!--                     <field name="last_name"/> -->
+<!--                     <field name="gender"/> -->
+<!--                     <field name="address"/> -->
+<!--                     <field name="occupation"/> -->
+<!--                 </tree> -->
+<!--             </field> -->
+<!--         </record> -->
+        
+        
+        
+<!--          Children         -->
+         
+<!--         <record model="ir.ui.view" id="children_tree_view"> -->
+<!--             <field name="name">children.tree</field> -->
+<!--             <field name="model">employee.children</field> -->
+<!--             <field name="arch" type="xml"> -->
+<!--                 <tree string="Children" editable = "bottom"> -->
+<!--                     <field name="first_name"/> -->
+<!--                     <field name="middle_name"/> -->
+<!--                     <field name="last_name"/> -->
+<!--                     <field name="gender"/> -->
+<!--                     <field name="birthdate"/> -->
+<!--                 </tree> -->
+<!--             </field> -->
+<!--         </record> -->
+        
+        
+<!--         Spouse        
+         
+        <record model="ir.ui.view" id="spouse_tree_view">
+            <field name="name">spouse.tree</field>
+            <field name="model">employee.spouse</field>
+            <field name="arch" type="xml">
+                <tree string="Spouse" editable = "bottom">
+                    <field name="first_name"/>
+                    <field name="middle_name"/>
+                    <field name="last_name"/>
+                    <field name="gender"/>
+                    <field name="occupation"/>
+                </tree>
+            </field>
+        </record> -->
+        
+  
+
+ 		<!-- Skill Category -->       
+
+        <record model="ir.ui.view" id="skill_category_tree_view">
+            <field name="name">skill.tree</field>
+            <field name="model">employee.skills.category</field>
+            <field name="arch" type="xml">
+                <tree string="Skill Category">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="skill_category_form_view">
+            <field name="name">skill.form</field>
+            <field name="model">employee.skills.category</field>
+            <field name="arch" type="xml">
+                <form string="Skill Category Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                     </group>
+                       <notebook>
+	                        <page string="Skill/s">
+	                               <tree string="">
+	                                   <field name="skill_id">
+		                                   	<tree default_order = 'name'>
+		                                   		<field name = 'name'/>
+		                                   		<field name = 'skill_category_id'/>
+		                                   	</tree>
+	                                   </field>
+	                               </tree>
+	                        </page>
+               			</notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="skill_category_tree_action">
+            <field name="name">Skill Category</field>
+            <field name="res_model">employee.skills.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the skill category
+                </p>
+            </field>
+        </record>        
+		
+		
+		
+		<!-- Skills -->        
+
+        <record model="ir.ui.view" id="skill_tree_view">
+            <field name="name">skills.tree</field>
+            <field name="model">employee.skills</field>
+            <field name="arch" type="xml">
+                <tree string="Skills" editable = "bottom">
+                	<field name ="skill_category_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="skill_form_view">
+            <field name="name">skills.form</field>
+            <field name="model">employee.skills</field>
+            <field name="arch" type="xml">
+                <form string="Skills Form">
+                    <sheet>
+                    <group>
+                    	<field name ="skill_category_id"/>
+                        <field name="name"/>
+                        
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+		
+		<record model="ir.actions.act_window" id="skill_tree_action">
+            <field name="name">Skill</field>
+            <field name="res_model">employee.skills</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first skills
+                </p>
+            </field>
+        </record> 
+		
+		<!-- License -->        
+
+        <record model="ir.ui.view" id="license_conf_tree_view">
+            <field name="name">employee.conf.license.tree</field>
+            <field name="model">employee.conf.license</field>
+            <field name="arch" type="xml">
+                <tree string="License">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="license_conf_form_view">
+            <field name="name">employee.conf.license.form</field>
+            <field name="model">employee.conf.license</field>
+            <field name="arch" type="xml">
+                <form string="License Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                     </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="license_conf_tree_action">
+            <field name="name">License Type</field>
+            <field name="res_model">employee.conf.license</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first license
+                </p>
+            </field>
+        </record> 
+        
+        
+        <!-- Employee License -->        
+
+        <record model="ir.ui.view" id="license_conf_tree_view">
+            <field name="name">employee.license.tree</field>
+            <field name="model">employee.license</field>
+            <field name="arch" type="xml">
+                <tree string="Employee License" editable = "bottom">
+                    <field name="license_no"/>
+	                    <field name="license_conf_id"/>
+	                    <field name="restriction_no"/>
+	                    <field name="date_issued"/>
+	                    <field name="date_expiry"/>
+	                    <field name="renewed_by"/>
+                </tree>
+            </field>
+        </record>
+
+	
+		<!-- Organisation -->        
+
+        <record model="ir.ui.view" id="organisation_tree_view">
+            <field name="name">organisation.tree</field>
+            <field name="model">employee.conf.organisation</field>
+            <field name="arch" type="xml">
+                <tree string="Organisation">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="organisation_form_view">
+            <field name="name">organisation.form</field>
+            <field name="model">employee.conf.organisation</field>
+            <field name="arch" type="xml">
+                <form string="Organisation Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                     </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="organisation_conf_tree_action">
+            <field name="name">Organisation</field>
+            <field name="res_model">employee.conf.organisation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first organisation
+                </p>
+            </field>
+        </record>
+
+
+
+		<!-- Employee Organisation -->        
+
+        <record model="ir.ui.view" id="organisation_tree_view">
+            <field name="name">employee.organisation.tree</field>
+            <field name="model">employee.organisation</field>
+            <field name="arch" type="xml">
+                <tree string="Organisation" editable = "bottom">
+                    <field name="organisation_id"/>
+	                    <field name="position"/>
+	                    <field name="date_from"/>
+	                    <field name="date_to"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        
+        <!-- Seminars -->        
+
+        <record model="ir.ui.view" id="seminar_tree_view">
+            <field name="name">seminar.tree</field>
+            <field name="model">employee.conf.seminar</field>
+            <field name="arch" type="xml">
+                <tree string="Seminar">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="seminar_form_view">
+            <field name="name">seminar.form</field>
+            <field name="model">employee.conf.seminar</field>
+            <field name="arch" type="xml">
+                <form string="Seminar Form">
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                     </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="seminar_conf_tree_action">
+            <field name="name">Seminar</field>
+            <field name="res_model">employee.conf.seminar</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first Seminar
+                </p>
+            </field>
+        </record>
+        
+        
+        <!--  External Seminar -->        
+
+        <record model="ir.ui.view" id="external_seminar_tree_view">
+            <field name="name">external.seminar.tree</field>
+            <field name="model">employee.seminar</field>
+            <field name="arch" type="xml">
+                <tree string="External Seminar">
+                    <field name="seminar_id"/>
+                    <field name="agency_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="external_seminar_form_view">
+            <field name="name">external.seminar.form</field>
+            <field name="model">employee.seminar</field>
+            <field name="arch" type="xml">
+                <form string="External Seminar Form">
+                    <sheet>
+                    <group string = "Seminar">
+                    	<field name="seminar_id"/>
+	                    <field name="agency_id"/>
+	                    <field name="date_from"/>
+	                    <field name="date_to"/>
+	                    <field name="address"/>
+                    </group>
+                    <notebook>
+	                    <page string = "Employees">
+	                    	<field name= "emp_seminar_id"/>
+	                    </page>
+	                    </notebook>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="internal_seminar_tree_view">
+            <field name="name">internal.seminar.tree</field>
+            <field name="model">employee.seminar</field>
+            <field name="arch" type="xml">
+                <tree string="Internal Seminar">
+                    <field name="seminar_id"/>
+                    <field name="agency_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="internal_seminar_form_view">
+            <field name="name">internal.seminar.form</field>
+            <field name="model">employee.seminar</field>
+            <field name="arch" type="xml">
+                <form string="Seminar Form">
+                    <sheet>
+                    <group string = "Seminar">
+                    	<field name="seminar_id"/>
+                    	<field name="agency_id"/>
+	                    <field name="date_from"/>
+	                    <field name="date_to"/>
+	                    <field name ="address"/>
+	                 </group>
+	                    <notebook>
+	                    <page string = "Employees">
+	                    	<field name= "emp_seminar_id"/>
+	                    </page>
+	                    </notebook>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+<!-- **************************** -->
+        
+        <record model="ir.actions.act_window" id="external_seminar_view_action">
+            <field name="name">External Seminar</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.seminar</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'type':'external'}</field>
+            
+        </record> 
+        
+        <record model="ir.actions.act_window.view" id="external_seminar_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="external_seminar_tree_view"/>
+            <field name="act_window_id" ref="external_seminar_view_action"/>
+        </record>
+        
+        
+        <record model="ir.actions.act_window.view" id="external_seminar_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="external_seminar_form_view"/>
+            <field name="act_window_id" ref="external_seminar_view_action"/>
+        </record>   
+        
+<!--        ************************************** -->
+        
+        
+        <record model="ir.actions.act_window" id="internal_seminar_view_action">
+            <field name="name">Internal Seminar</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.seminar</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'type':'internal'}</field>
+            
+        </record> 
+        
+        <record model="ir.actions.act_window.view" id="internal_seminar_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="internal_seminar_tree_view"/>
+            <field name="act_window_id" ref="internal_seminar_view_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="internal_seminar_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="internal_seminar_form_view"/>
+            <field name="act_window_id" ref="internal_seminar_view_action"/>
+        </record>   
+
+        
+        <!-- External Jobs/Occupation -->        
+
+        <record model="ir.ui.view" id="external_jobs_tree_view">
+            <field name="name">external.jobs.tree</field>
+            <field name="model">employee.external.jobs</field>
+            <field name="arch" type="xml">
+                <tree string="External Jobs" editable = "bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        
+        <record model="ir.actions.act_window" id="external_jobs_tree_action">
+            <field name="name">External Jobs</field>
+            <field name="res_model">employee.external.jobs</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first external jobs
+                </p>
+            </field>
+        </record>
+        
+                <!-- Job Level -->        
+
+        <record model="ir.ui.view" id="job_level_tree_view">
+            <field name="name">job.level.tree</field>
+            <field name="model">config.job.level</field>
+            <field name="arch" type="xml">
+                <tree string="Job Level">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="job_level_form_view">
+            <field name="name">job.level.form</field>
+            <field name="model">config.job.level</field>
+            <field name="arch" type="xml">
+                <form string="Job Level">	
+                	<sheet>
+                	
+        			<label for="name" class="oe_inline"/>
+        				<h1>
+         					<field name = "name" placeholder = "Name" class="oe_inline"/>
+         				</h1>
+        	
+                   	
+              		<group>
+              				<field name="parent_id"/>
+              				<field name="code"/>	
+              				<field name="complete_name" invisible="1"/>		                    		                     
+	         			</group>	         	
+                    </sheet>                 
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record model="ir.actions.act_window" id="job_level_tree_action">
+            <field name="name">Job Level</field>
+            <field name="res_model">config.job.level</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first job level
+                </p>
+            </field>
+        </record>
+        
+        
+                
+                <!-- Employee Status -->        
+
+        <record model="ir.ui.view" id="employee_status_tree_view">
+            <field name="name">employee.status.tree</field>
+            <field name="model">employee.status</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Status" editable = "bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        
+        <record model="ir.actions.act_window" id="employee_status_action">
+            <field name="name">Employee Status</field>
+            <field name="res_model">employee.status</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first employee status
+                </p>
+            </field>
+        </record>
+        
+                        <!-- Employee Awards -->        
+
+        <record model="ir.ui.view" id="employee_award_tree_view">
+            <field name="name">employee.award.tree</field>
+            <field name="model">employee.awards</field>
+            <field name="arch" type="xml">
+                <tree string= "Awards/Recognition">
+                    <field name="name"/>
+                    <field name="date_awarded"/>
+                    <field name="place_awarded"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="employee_award_form_view">
+            <field name="name">employee.awards.form</field>
+            <field name="model">employee.awards</field>
+            <field name="arch" type="xml">
+                <form string="Awards/Recognitions">
+                    <sheet>
+                    	<group>
+	                    	<field name="name"/>
+		                    <field name="date_awarded"/>
+		                    <field name="place_awarded"/>
+	                    </group>
+	                    <notebook>
+	                    	<page string = "Employees">
+	                    	<field name ="employee_awards_id"/>
+	                    	</page>
+                    	</notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="employee_awards_action">
+            <field name="name">Employee Awards</field>
+            <field name="res_model">employee.awards</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first employee awards
+                </p>
+            </field>
+        </record>
+        
+         <!--     	        Job         -->
+
+        <record model="ir.ui.view" id="job_tree_view">
+            <field name="name">Job</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_tree"/>
+            <field name="arch" type="xml">
+                 	<field name="department_id" position="after">
+	                	<field name = "job_level_id"/>
+	                	<field name = "company_id"/>
+	                </field>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="job_form_view">
+            <field name="name">Job</field>
+            <field name="model">hr.job</field>
+            <field name="type">form</field>
+             <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+            		<field name="department_id" position="after">
+	                	<field name = "job_level_id"/>
+	                	<field name = "company_id"/>
+                	</field>
+                	 <field name="department_id" position="attributes">
+	          			<attribute name="invisible">True</attribute>
+	         		</field>
+                	
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="job_tree_action">
+            <field name="name">Job</field>
+            <field name="res_model">hr.job</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first job
+                </p>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+

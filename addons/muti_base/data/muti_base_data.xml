@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="base.main_partner" model="res.partner">
+            <field name="name">MUTI Group of Companies</field>
+            <field name="email">info@mutigroup.com</field>
+            <field name="website">www.mutigroup.com</field>
+            <field name="image" type="base64" file="muti_base/static/src/img/mutigroup_logo.png"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="base.main_company" model="res.company">
+            <field name="name">MUTI Group of Companies</field>
+            <field name="abbreviation">MUTI-Group</field>
+            <field name="rml_header1">Service is our business.</field>
+            <field name="currency_id" ref="base.PHP"/>
+            <field name="logo" type="base64" file="muti_base/static/src/img/mutigroup_logo.png"/>
+            <field name="partner_id" ref="base.main_partner"/>
+        </record>
+
+        <record model="res.partner" id="base.partner_root">
+            <field name="email">admin@mutigroup.com</field>
+            <field name="image" type="base64" file="muti_base/static/src/img/mutigroup_logo.png"/>
+        </record>
+
+        <!-- res.partner as Vendor -->
+        <record id="res_partner_bu000003id" model="res.partner">
+            <field name="supplier" eval="True"/>
+        </record>
+
+        <!--Adminstrator Multi Company Settings-->
+<!--         <record id="base.user_root" model="res.users"> -->
+<!--             <field name="company_id" ref="base.main_company"/> -->
+<!--             <field name="company_ids" ref="['base.main_company']"/> -->
+<!--             <field name="in_group_6" eval="True"/> -->
+<!--         </record> -->
+
+<!--
+        <record id="res_partner_muti3s_id" model="res.partner">
+            <field name="name">MUTI 3S</field>
+            <field name="company_id" ref="res_company_hondasocsargenincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutibuhangin_id" model="res.partner">
+            <field name="name">MUTI BUHANGIN</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_mutibuhanginid" model="config.branch">
+            <field name="partner_id" ref="res_partner_mutibuhangin_id"/>
+        </record>
+
+        <record id="res_partner_muticalinan_id" model="res.partner">
+            <field name="name">MUTI CALINAN</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutidigos_id" model="res.partner">
+            <field name="name">MUTI DIGOS</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutiisulan_id" model="res.partner">
+            <field name="name">MUTI ISULAN</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutikidapawan_id" model="res.partner">
+            <field name="name">MUTI KIDAPAWAN</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutilapasan_id" model="res.partner">
+            <field name="name">MUTI LAPASAN</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutimain_id" model="res.partner">
+            <field name="name">MUTI MARBEL</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutimati_id" model="res.partner">
+            <field name="name">MUTI MATI</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+
+        <record id="res_partner_mutipanabo_id" model="res.partner">
+            <field name="name">MUTI PANABO</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutipolomolok_id" model="res.partner">
+            <field name="name">MUTI POLOMOLOK</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutisurallah_id" model="res.partner">
+            <field name="name">MUTI SURALLAH</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutitac_id" model="res.partner">
+            <field name="name">MUTI TACURONG</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutitagum_id" model="res.partner">
+            <field name="name">MUTI TAGUM</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutivalencia_id" model="res.partner">
+            <field name="name">MUTI VALENCIA</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_mutiwarehouse_id" model="res.partner">
+            <field name="name">MUTI WAREHOUSE - Great Wall</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_hondawarehouse_id" model="res.partner">
+            <field name="name">HONDA WAREHOUSE - Great Wall</field>
+            <field name="company_id" ref="res_company_hondasocsargenincid"/>
+            <field name="is_company" eval="True"/>
+            <field name="company" eval="True"/>
+        </record>
+
+        <record id="config_branch_muti3sid" model="config.branch">
+            <field name="partner_id" ref="res_partner_muti3s_id"/>
+        </record>
+
+        <record id="res_partner_hondaisulan_id" model="res.partner">
+            <field name="name">HONDA ISULAN</field>
+            <field name="company_id" ref="res_company_hondasocsargenincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_hondaisulanid" model="config.branch">
+            <field name="partner_id" ref="res_partner_hondaisulan_id"/>
+        </record>
+
+        <record id="res_partner_hondamaramag_id" model="res.partner">
+            <field name="name">HONDA MARAMAG</field>
+            <field name="company_id" ref="res_company_hondasocsargenincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_hondamaramagsid" model="config.branch">
+            <field name="partner_id" ref="res_partner_hondamaramag_id"/>
+        </record>
+
+        <record id="res_partner_hondamarbel_id" model="res.partner">
+            <field name="name">HONDA MARBEL</field>
+            <field name="company_id" ref="res_company_hondasocsargenincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_hondamarbel" model="config.branch">
+            <field name="partner_id" ref="res_partner_hondamarbel_id"/>
+        </record>
+
+        <record id="res_partner_hondasurallah_id" model="res.partner">
+            <field name="name">HONDA SURALLAH</field>
+            <field name="company_id" ref="res_company_hondasocsargenincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_hondasurallahid" model="config.branch">
+            <field name="partner_id" ref="res_partner_hondasurallah_id"/>
+        </record>
+
+        <record id="res_partner_mutivillaamor_id" model="res.partner">
+            <field name="name">MUTI VILLA AMOR</field>
+            <field name="company_id" ref="res_company_marbeluniversaltradingincid"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <record id="config_branch_mutivillaamorid" model="config.branch">
+            <field name="partner_id" ref="res_partner_mutivillaamor_id"/>
+        </record>-->
+
+        <!--company partner_id-->
+<!--         <record id="muti_base.res_company_hondasocsargenincid" model="res.company"> -->
+<!--             <field name="partner_id" ref="res_partner_hondasocsargeninc_id"/> -->
+<!--         </record> -->
+
+        <!-- for Email
+        <record id="ir_mail_server_localhost0" model="ir.mail_server">
+            <field name="name">localhost</field>
+            <field name="smtp_host">localhost</field>
+            <field eval="25" name="smtp_port"/>
+            <field eval="10" name="sequence"/>
+        </record>
+        -->
+        <record id="ir_mail_server_mutigroup" model="ir.mail_server">
+            <field name="name">MUTIGROUP</field>
+            <field name="smtp_host">server.mutigroup.com</field>
+            <field name="smtp_encryption">ssl</field>
+            <field name="smtp_port" eval="465"/>
+            <field name="sequence" eval="10"/>
+        </record>
+
+    </data>
+    
+    <data noupdate="0">
+    
+    	<!-- EPFC -->
+    	<record id="res_company_bu000006id" model="res.company">
+            <field name="logo" type="base64" file="muti_base/static/src/img/epfc_logo.png"/>
+        </record>
+        <!-- HSOC -->
+        <record id="res_company_bu000003id" model="res.company">
+            <field name="logo" type="base64" file="muti_base/static/src/img/honda-soc.png"/>
+        </record>
+        <!-- ASI -->
+        <record id="res_company_bu000020id" model="res.company">
+            <field name="logo" type="base64" file="muti_base/static/src/img/auberon_logo.png"/>
+        </record>
+        <!-- INSURANCE -->
+<!--         <record id="res_company_insuranceservices" model="res.company"> -->
+<!--             <field name="logo" type="base64" file="muti_base/static/src/img/insurance_logo.png"/> -->
+<!--         </record> -->
+        <!-- BRDC -->
+        <record id="res_company_bu000010id" model="res.company">
+            <field name="logo" type="base64" file="muti_base/static/src/img/biocielo_logo.png"/>
+        </record>
+        <!-- CBG -->
+        <record id="res_company_bu000008id" model="res.company">
+            <field name="logo" type="base64" file="muti_base/static/src/img/cbgfi_logo.png"/>
+        </record>
+        <!-- CARE -->
+        <record id="res_company_bu000014id" model="res.company">
+            <field name="logo" type="base64" file="muti_base/static/src/img/cfi_logo.png"/>
+        </record>
+        <!-- MSG -->
+<!--         <record id="res_company_managementsupportgroup" model="res.company"> -->
+<!--             <field name="logo" type="base64" file="muti_base/static/src/img/msg_logo.png"/> -->
+<!--         </record> -->
+        <!-- MUTI -->
+        <record id="res_company_bu000001id" model="res.company">
+            <field name="logo" type="base64" file="muti_base/static/src/img/mutigroup_logo.png"/>
+        </record>
+        
+        
+    </data>
+</openerp>

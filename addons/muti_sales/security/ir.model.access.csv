@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sales_customization_sales_customization,sales_customization.sales_customization,model_sales_customization_sales_customization,,1,0,0,0

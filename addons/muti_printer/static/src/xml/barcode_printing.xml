@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="barcode_printer">
+        <div class="oe_application" id="barcode-product-container">
+            <div class="oe-control-panel">
+                <div class="container-fluid">
+                    <form id="data-filter">
+                        <div class="row">
+                            <div class="oe-cp-title col-md-6">
+                                <ol class="oe-view-title breadcrumb">
+                                    <li class="active">
+                                        Product Barcode List
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="oe-cp-search-view col-md-6"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9 content-align-right">
+                                <label for="search_key">Keyword</label>
+                                <input name="search_key"/>
+
+                                <label for="date_from">Updated from</label>
+                                <input name="date_from" class="oe_datepicker_input" type="date"/>
+
+                                <label for="date_to">Updated to</label>
+                                <input name="date_to" class="oe_datepicker_input" type="date"/>
+
+                                <br/>
+                                <input name="with_barcode" type="checkbox" checked="checked"/>
+                                <label for="with_barcode">With barcode</label>
+                            </div>
+                            <div class="col-md-3 oe-button-column">
+                                <div class="oe-cp-buttons">
+                                    <div class="oe_list_buttons">
+                                        <button accesskey="F" class="btn btn-sm btn-primary o_list_button_add" type="submit">
+                                            Filter
+                                        </button>
+                                        <button id="print-barcode" accesskey="P" class="btn btn-default btn-sm o_list_button_add" type="button">
+                                            Print
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 oe-button-column"></div>
+                            <div class="col-md-6">
+                                <div class="oe-right-toolbar">
+                                    <div class="oe-cp-pager">
+                                        <span>
+                                            <div class="oe_pager_value" style="display: inline-block">
+                                                <span class="oe_list_pager_state">
+                                                    <label id="current_page"></label>
+                                                    <select data-current_page="1" data-current_page_storage="1" data-length="0"
+                                                            name='page_limit' style="display: none;">
+                                                        <option value="10">10</option>
+                                                        <option value="80">80</option>
+                                                        <option value="200">200</option>
+                                                        <option value="500">500</option>
+                                                        <option value="2000">2000</option>
+                                                        <option value="NaN">Unlimited</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                            <div class="btn-group btn-group-sm oe-pager-buttons" style="display: inline-block">
+                                                <a class="fa fa-chevron-left btn btn-default oe-pager-button" data-pager-action="previous" type="button" accesskey="O"></a>
+                                                <a class="fa fa-chevron-right btn btn-default oe-pager-button" data-pager-action="next" type="button" accesskey="P"></a>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="oe-view-manager oe_view_manager_current">
+                <div class="oe-view-manager-content">
+                    <div class="oe-view-manager-view-form" style="display: block;">
+                        <div class="oe_formview oe_view oe_cannot_create oe_cannot_edit oe_form_readonly" style="opacity: 1;">
+                            <div class="oe_form_container">
+                                <div class="oe_form">
+                                    <div class="">
+                                        <div class="oe_form_sheetbg">
+                                            <div class="oe_form_sheet oe_form_sheet_width">
+                                                <div class="oe_clear">
+                                                    <div class="oe-view-manager-view-list" style="display: block;">
+                                                        <div class="oe_list o_list_view oe_view" id="mrp-production-list">
+
+                                                            <div class="oe_view_nocontent">
+                                                                <p class="oe_view_nocontent_create">Please enter search parameters.</p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Print Canvas goes here -->
+        <div id="barcode-canvas-container" style="display: none;">
+            <div class="barcode-canvas">
+                <div class="barcode-images"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/muti_printer/static/src/js/library.js"/>
+        <script type="text/javascript" src="/muti_printer/static/src/js/vendor/barcode-util/jquery-barcode.min.js"/>
+        <script type="text/javascript" src="/muti_printer/static/src/js/barcode_printing.js"/>
+
+    </t>
+</templates>

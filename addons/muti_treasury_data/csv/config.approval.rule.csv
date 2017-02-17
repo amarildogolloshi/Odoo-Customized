@@ -1,0 +1,63 @@
+id,request_type_id:id,request_source_id:id
+approval_rule_13'th month_muti head office,request_type_13'th month,request_source_muti head office
+approval_rule_13'th month_pumgas head office,request_type_13'th month,request_source_pumgas head office
+approval_rule_accountable forms_muti head office,request_type_accountable forms,request_source_muti head office
+approval_rule_advances for operation_hsi head office (m),request_type_advances for operation,request_source_hsi head office (m)
+approval_rule_advances for operation_management fund1,request_type_advances for operation,request_source_management fund
+approval_rule_advances for operation_management fund2,request_type_advances for operation,request_source_management fund
+approval_rule_advances for operation_muti head office,request_type_advances for operation,request_source_muti head office
+approval_rule_advances for operation_muti head office (m),request_type_advances for operation,request_source_muti head office (m)
+approval_rule_advances for operation_petty cash fund (h),request_type_advances for operation,request_source_petty cash fund (h)
+approval_rule_advances for operation_pumgas head office,request_type_advances for operation,request_source_pumgas head office
+approval_rule_advances for operation_revolving fund,request_type_advances for operation,request_source_revolving fund
+approval_rule_advances to sister company_management fund,request_type_advances to sister company,request_source_management fund
+approval_rule_dividend_management fund,request_type_dividend,request_source_management fund
+approval_rule_employees incentives_muti head office,request_type_employees incentives,request_source_muti head office
+approval_rule_employees incentives_pumgas head office,request_type_employees incentives,request_source_pumgas head office
+approval_rule_fund transfer_muti head office,request_type_fund transfer,request_source_muti head office
+approval_rule_fund transfer_pumgas head office,request_type_fund transfer,request_source_pumgas head office
+approval_rule_loan payment_muti head office,request_type_loan payment,request_source_muti head office
+approval_rule_loan payment_pumgas head office,request_type_loan payment,request_source_pumgas head office
+approval_rule_payables_muti head office,request_type_payables,request_source_muti head office
+approval_rule_payables_pumgas head office,request_type_payables,request_source_pumgas head office
+approval_rule_payables_revolving fund,request_type_payables,request_source_revolving fund
+approval_rule_petty cash fund replenishment_management fund,request_type_petty cash fund replenishment,request_source_management fund
+approval_rule_petty cash fund replenishment_muti head office,request_type_petty cash fund replenishment,request_source_muti head office
+approval_rule_petty cash fund replenishment_pumgas head office,request_type_petty cash fund replenishment,request_source_pumgas head office
+approval_rule_petty cash fund replenishment_revolving fund,request_type_petty cash fund replenishment,request_source_revolving fund
+approval_rule_purchase ( capex it-equipment )_management fund1,request_type_purchase ( capex it-equipment ),request_source_management fund
+approval_rule_purchase ( capex it-equipment )_management fund2,request_type_purchase ( capex it-equipment ),request_source_management fund
+approval_rule_purchase ( capex it-equipment )_muti head office1,request_type_purchase ( capex it-equipment ),request_source_muti head office
+approval_rule_purchase ( capex it-equipment )_muti head office2,request_type_purchase ( capex it-equipment ),request_source_muti head office
+approval_rule_purchase ( capex it-equipment )_pumgas head office,request_type_purchase ( capex it-equipment ),request_source_pumgas head office
+approval_rule_purchase ( capex )_management fund1,request_type_purchase ( capex ),request_source_management fund
+approval_rule_purchase ( capex )_management fund2,request_type_purchase ( capex ),request_source_management fund
+approval_rule_purchase ( capex )_muti head office1,request_type_purchase ( capex ),request_source_muti head office
+approval_rule_purchase ( capex )_muti head office2,request_type_purchase ( capex ),request_source_muti head office
+approval_rule_purchase ( capex )_pumgas head office,request_type_purchase ( capex ),request_source_pumgas head office
+approval_rule_purchases ( supplies )_management fund1,request_type_purchases ( supplies ),request_source_management fund
+approval_rule_purchases ( supplies )_management fund2,request_type_purchases ( supplies ),request_source_management fund
+approval_rule_purchases ( supplies )_muti head office,request_type_purchases ( supplies ),request_source_muti head office
+approval_rule_purchases ( supplies )_pumgas head office,request_type_purchases ( supplies ),request_source_pumgas head office
+approval_rule_purchases ( supplies )_revolving fund,request_type_purchases ( supplies ),request_source_revolving fund
+approval_rule_purchase - trade inventory (gas and oil)_pumgas head office,request_type_purchase - trade inventory (gas and oil),request_source_pumgas head office
+approval_rule_purchase - trade inventory (mc)_muti head office,request_type_purchase - trade inventory (mc),request_source_muti head office
+approval_rule_purchase - trade inventory (nest)_pumgas head office,request_type_purchase - trade inventory (nest),request_source_pumgas head office
+approval_rule_purchase - trade inventory (sp)_muti head office,request_type_purchase - trade inventory (sp),request_source_muti head office
+approval_rule_rental_muti head office,request_type_rental,request_source_muti head office
+approval_rule_rental_revolving fund,request_type_rental,request_source_revolving fund
+approval_rule_repairs and maintenance_muti head office,request_type_repairs and maintenance,request_source_muti head office
+approval_rule_repairs and maintenance_pumgas head office,request_type_repairs and maintenance,request_source_pumgas head office
+approval_rule_repairs and maintenance_revolving fund,request_type_repairs and maintenance,request_source_revolving fund
+approval_rule_retainer's fee_muti head office,request_type_retainers fee,request_source_muti head office
+approval_rule_retainer's fee_revolving fund,request_type_retainers fee,request_source_revolving fund
+approval_rule_salaries and wages_muti head office,request_type_salaries and wages,request_source_muti head office
+approval_rule_salaries and wages_pumgas head office,request_type_salaries and wages,request_source_pumgas head office
+approval_rule_separation fee_muti head office,request_type_separation fee,request_source_muti head office
+approval_rule_separation fee_pumgas head office,request_type_separation fee,request_source_pumgas head office
+approval_rule_special fund - unit registration_muti head office,request_type_special fund - unit registration,request_source_muti head office
+approval_rule_statutory expenses_muti head office,request_type_statutory expenses,request_source_muti head office
+approval_rule_statutory expenses_pumgas head office,request_type_statutory expenses,request_source_pumgas head office
+approval_rule_trade inventory - mc units_muti head office,request_type_trade inventory - mc units,request_source_muti head office
+approval_rule_trade inventory - spare parts_muti head office,request_type_trade inventory - spare parts,request_source_muti head office
+approval_rule_unit registration fund_revolving fund,request_type_unit registration fund,request_source_revolving fund

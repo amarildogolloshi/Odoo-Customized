@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "ArialNarrow";
+  src: url("/muti_appraisal/static/src/fonts/arial-narrow_d.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ArialBlack";
+  src: url("/muti_appraisal/static/src/fonts/ARIAL_1.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+	font-family:"Arial Narrow"
+	font-size:16px;
+}
+
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th, td{
+	padding:5px;
+}
+
+th{
+	text-align:center;
+	font-size:14px;
+}
+
+td{
+	font-size:12px;
+}
+
+.apptitle{
+	font-family:"ArialBlack"
+}

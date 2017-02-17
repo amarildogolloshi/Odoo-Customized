@@ -1,0 +1,5 @@
+"id","name","job_level_id:id","company_id:id"
+"hr_job_immediate superior","IMMEDIATE SUPERIOR",,
+"hr_job_comptroller","COMPTROLLER",,
+"hr_job_group manager","GROUP MANAGER",,
+"hr_job_area manager","AREA MANAGER",,

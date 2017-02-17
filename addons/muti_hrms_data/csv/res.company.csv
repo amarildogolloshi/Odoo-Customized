@@ -1,0 +1,22 @@
+code,name,area_id:id,is_branch,abbreviation,currency_id:id,parent_id:id,active,id
+,"ARKCLICK TECHNOLOGY, INC.",,,ARKCLICK,base.PHP,base.main_company,false,res_company_bu000015id
+,AXZEEN SECURITY AGENCY,,,ASA,base.PHP,base.main_company,false,res_company_bu000018id
+,CHIU KIM ENTERPRISES INC.,,,CKEI,base.PHP,base.main_company,false,res_company_bu000002id
+,CK UNIVERSAL GROUP MANAGEMENT CORPORATION,,,CKUGMC,base.PHP,base.main_company,false,res_company_bu000011id
+,JOINT VENTURE COOP.,,,ADC,base.PHP,base.main_company,false,res_company_bu000005id
+,MARIA VICTORIA C. TAN HR-B,,,MVCTHR-B,base.PHP,base.main_company,false,res_company_bu000009id
+,PRIORITY SECURITY AGENCY,,,PSA,base.PHP,base.main_company,false,res_company_bu000013id
+,VIAJERO MOTORSALES INC.,,,VMI,base.PHP,base.main_company,false,res_company_bu000004id
+,4M RESOURCES ADVANCED TECHNOLOGIES CORPORATION,,,4MRATCO,base.PHP,base.main_company,true,res_company_bu000021id
+,AUBERON SOLUTIONS INC.,,,ASI,base.PHP,base.main_company,true,res_company_bu000020id
+,BIOCIELO REALTY AND DEVELOPMENT CORP.,,,BRADC,base.PHP,base.main_company,true,res_company_bu000010id
+,"CHIU BUN GIM UNIVERSAL HOLDING, INC.",,,CBG UHI,base.PHP,base.main_company,true,res_company_bu000008id
+,COMMUNITY ACCESS FOR RESOURCES ON ENTREPRENEURSHIP,,,CARE,base.PHP,base.main_company,true,res_company_bu000014id
+,EASY PAY FINANCE CORPORATION,,,EPFC,base.PHP,base.main_company,true,res_company_bu000006id
+,HAPPY LIVING REALTY & DEVELOPMENT CORPORATION,,,HLRDC,base.PHP,base.main_company,true,res_company_bu000007id
+,"HONDA SOCSARGEN, INC.",,,HSI,base.PHP,base.main_company,true,res_company_bu000003id
+,MARBEL UNIVERSAL TRADING INC.,,,MUTI,base.PHP,base.main_company,true,res_company_bu000001id
+,PHOENIX UNIVERSAL MEGA GAS STATION,,,PHOENIX,base.PHP,base.main_company,true,res_company_bu000017id
+,RURAL BANK OF NORALA,,,RBN,base.PHP,base.main_company,true,res_company_bu000016id
+,"SPECIALIST SECURITY AND INVESTIGATION AGENCY, INC.",,,SSAIAI,base.PHP,base.main_company,true,res_company_bu000019id
+,SUPREME INVESTIGATIVE AND SECURITY AGENCY,,,SIASA,base.PHP,base.main_company,true,res_company_bu000012id

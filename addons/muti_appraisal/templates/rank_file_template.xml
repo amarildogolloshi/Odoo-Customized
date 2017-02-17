@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+		<record id="paperformat_legal" model="report.paperformat">
+		    <field name="name">Legal</field>
+		    <field name="default" eval="True"/>
+		    <field name="format">Legal</field>
+		    <field name="orientation">Portrait</field>
+		    <field name="margin_top">5</field>
+		    <field name="margin_bottom">5</field>
+		    <field name="margin_left">5</field>
+		    <field name="margin_right">5</field>
+		    <field name="header_line" eval="False"/>
+		    <field name="header_spacing">0</field>
+		    <field name="dpi">90</field>
+		</record>        
+        
+		<report
+		        id="rank_file_report"
+		        model="muti_appraisal.appraisal"
+		        string="Rank and File and Staff Appraisal"
+		        name="muti_appraisal.rank_file_template"
+		        file="muti_appraisal.rank_file_template"
+		        report_type="qweb-pdf" 
+		        paperformat="paperformat_legal"
+		        />
+				        
+		<template id="rank_file_data">
+				<html style="height: 100%">
+                <head>
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+                    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                    <title>Rank and File and Staff Appraisal</title>
+                    <link rel="stylesheet" href="/muti_appraisal/static/src/css/rank_file_style.css" />
+                </head>	
+				
+				<body>
+			        <t t-call="muti_appraisal.rf_page_1"/>
+					<p style="page-break-before:always;"/> 
+  					<t t-call="muti_appraisal.rf_page_2"/> 
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.rf_page_3"/>
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.rf_page_4"/>
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.rf_page_5"/>
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.rf_page_6"/> 
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.rf_page_7"/>  					 		
+		        </body>
+			</html> 
+		</template>
+
+		<template id="rank_file_template">
+				<t t-call="report.html_container">
+					<t t-foreach="docs" t-as="o">
+						<t t-foreach="o.employee_ids" t-as="emp">
+							<t t-call="muti_appraisal.request_form_layout">
+								<div class="page">
+									<t t-call="muti_appraisal.rank_file_data">
+										<t t-set="rfd" t-value="o" />
+									</t>
+								</div>
+							</t>
+						</t>
+					</t>
+				</t>
+<!-- 			</t> -->
+		</template>	
+
+		
+		<template id="request_form_layout">	
+			<t t-call="muti_appraisal.rank_file_form_layout_header" />
+			<t t-raw="0" />	
+		</template>	        	
+
+
+		<template id="rank_file_form_layout_header">
+		    <div class="header" style="border:1px solid black;border-bottom:0px;">
+		       <div class="row" >		            
+		           <div class="text-center">
+		           	 <span style="font-weight:bold;font-size:10px">
+		           	 MUTI Group of Companies<br/>
+		           	 <span style="font-size:8px"> 
+		           	 	Osmena Street,Koronadal City<br/>
+		           	 	South Cotabato
+		           	 </span>
+		           	 </span>
+		           </div>
+		        </div>
+		    </div>
+		</template>
+		
+		<template id="rf_page_1">
+			<div class="page_border">
+			<div class="text-center">
+				<div class="apptitle">	 
+		 			<h3 style="font-weight:bold">PERFORMANCE APPRAISAL SYSTEM</h3>
+		 			<h4>FOR</h4>
+		 			<h4>RANK AND FILE AND STAFF EMPLOYEES</h4>	
+				    <br/>
+				</div>			         	 			
+         	 	<p>
+	           		Rating Period:
+	           		<t t-if="data['bulk']==False">
+	           			<span id="start_end_date" t-field="o.start_date"/>
+	           		</t>
+	           		<t t-if="data['bulk']==True">
+	           			<span>___________</span>
+	           		</t> 
+	           		to 
+	           		<t t-if="data['bulk']==False">
+	           			<span id="start_end_date" t-field="o.end_date"/>
+	           		</t>
+	           		<t t-if="data['bulk']==True">
+	           			<span>___________</span>
+	           		</t>
+		        </p>
+					           		
+			 </div>
+			<div>		
+				<hr id="page_hr"/>
+				
+				<div class="text-center" style="margin-top:40px;height:45px">
+					<div class="appraisal_info_container_left">
+						<t t-if="emp.name_related">
+							<span t-field="emp.name_related"/>
+						</t>
+						<p>Name of Employee</p>
+						<t t-if="o.rater_id">
+							<span t-field="o.rater_id"/>
+						</t>
+          	  			<p>Name of Rater</p>
+          	  			<t t-if="emp.department_id.name">
+							<span t-field="emp.department_id.name"/>
+						</t>
+						<p>Branch</p>	           	  			
+         	  		</div>
+         	  			
+       	  			<div class="appraisal_info_container_right">
+       	  				<t t-if="emp.job_id">
+       	  					<span t-field="emp.job_id"/>
+						</t>
+						<p>Position Title</p>
+						<t t-if="o.rater_id.job_id">
+       	  					<span t-field="o.rater_id.job_id"/>
+						</t>
+         	  			<p>Position Title</p>
+         	  			<span>.</span>
+         	  			<p>Location</p>	           	  			
+       	  			</div>
+        	  	</div>
+        	 </div>	
+			 <br/>								
+	         <h4 class="text-center" id="page_header" style="margin-top:155px">PART I: ATTITUDE TOWARDS WORK</h4>	
+	         <br/>
+	         <p>Use the following rate the performance of the employee by filling up the point value box.</p>
+	         <br/>
+		         <div align="center">
+					 <table class="table_rating center"> 
+					   	<thead class="cr-th">
+					   		<tr >
+					   			<th class="text-center"></th>
+					   			<th class="text-center">POINT VALUE</th>
+					   		</tr>
+					   	</thead>
+					   	<tbody class="cr-tbody text-center">
+					   		<tr>
+					   			 <td>Excellent</td>
+					   			 <td>5</td>
+					   		</tr>
+					   		<tr>
+					   			 <td>Fully Satisfactory</td>
+					   			 <td>4</td>
+					   		</tr>
+					   		<tr>
+					   			 <td>Satisfactory</td>
+					   			 <td>3</td>
+					   		</tr>
+					   		<tr>
+					   			 <td>Needs Improvement</td>
+					   			 <td>2</td>
+					   		</tr>
+					   		<tr>
+					   			 <td>Poor</td>
+					   			 <td>1</td>
+					   		</tr>
+					   	</tbody>
+					  </table> 
+				  </div>
+							  
+	              <div>
+		              <h5>1. RATING FACTORS</h5>
+		              
+		              <br/>
+		              
+		              <h5 style="font-weight:bold">A. KNOWLEDGE OF WORK</h5>
+		              <span>- The ability of knowing and understanding the nature and details of assigned tasks and applying the necessary skills.</span>
+					  <br/> <br/> 
+					  <ol  style="list-style-type:none;">
+					  	<li> [5] An authority in the assigned job; can do next higher level job</li>
+					  	<li> [4] Possesses complete knowledge of the methods and duties and applies them on the job</li>
+					  	<li> [3] Has sufficient knowledge and can normally carry out jobs as directed or as required</li>
+					  	<li> [2] Has inadequate knowledge, needs reminders and checking</li>
+					  	<li> [1] Lacks a lot of information about the assigned task. Coaching and close monitoring is necessary</li>
+					  </ol>
+					  
+					  <div class="comment">
+					  	Comment:<hr/> <hr/> <hr/>
+					  </div>
+					  
+					  <div class="point_value">
+				  	  	<label>Point Value</label><input type="text" />
+				  	  </div>
+				  												          
+		    		</div>  
+			</div>
+		</template>
+
+
+		<template id="rf_page_2">
+			<div class="page_border">		              
+		              <h5 style="font-weight:bold">B. ATTENDANCE</h5>
+		              <span>- The ability to be punctual and regular in reporting to work date covered:_____________</span>
+					  <br/> <br/> 
+					  <div align="center">
+					  <table class="text-center tbl_attendance" style="width:80%;"> 
+					   	<thead class="cr-th">
+					   		<tr >
+					   			<th></th>
+					   			<th></th>
+					   			<th>Rating</th>
+					   			<th></th>
+					   			<th></th>
+					   			<th></th>
+					   		</tr>
+					   	</thead>
+					   	<tbody>
+					   		<tr>
+					   			 <td style="vertical-align:middle" rowspan="5">Late</td>
+					   			 <td align="left">No Late</td>
+					   			 <td>5</td>
+					   			 <td rowspan="5"></td>
+					   			 <td style="vertical-align:middle" rowspan="5">x40%</td>
+					   			 <td rowspan="5"></td>					   			
+					   			 
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 1 or 2 LATES</td>
+					   			<td>4</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 3 or 4 LATES</td>
+					   			<td>3</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 5 or 6 LATES</td>
+					   			<td>2</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 7 or 9 LATES</td>
+					   			<td>1</td>
+					   		</tr>
+					   		<tr>
+					   			<td style="vertical-align:middle" rowspan="5">ABSENCE</td>
+					   			<td align="left">NO ABSENCE</td>
+					   			<td>5</td>
+					   			<td style="vertical-align:middle;width:10%" rowspan="5"></td>
+					   			<td style="vertical-align:middle" rowspan="5">X30%</td>
+					   			<td style="width:10%;" rowspan="5"></td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred .25-1 day ABSENCE</td>
+					   			<td>4</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 1.25-2 day ABSENCE</td>
+					   			<td>3</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 2.25 days or more ABSENCE</td>
+					   			<td>2</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred unauthorized ABSENCE</td>
+					   			<td>1</td>
+					   		</tr>
+					   		<tr>
+					   			<td style="vertical-align:middle" rowspan="5">UNDERTIME</td>
+					   			<td align="left">NO UNDERTIME OUT</td>
+					   			<td>5</td>
+					   			<td style="vertical-align:middle" rowspan="5"></td>
+					   			<td style="vertical-align:middle" rowspan="5">X30%</td>
+					   			<td rowspan="5"></td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 1-2 UNDERTIME OUT</td>
+					   			<td>4</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 3-4 UNDERTIME OUT</td>
+					   			<td>3</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred 5 or more UNDERTIME OUT</td>
+					   			<td>2</td>
+					   		</tr>
+					   		<tr>
+					   			<td align="left">Incurred unauthorized UNDERTIME OUT</td>
+					   			<td>1</td>
+					   		</tr>
+					   		
+					   	</tbody>
+					  </table> 
+					  </div>
+					  <br/>
+					  
+					  <div class="point_value">
+				  	  	<label>Point Value</label><input type="text" />
+				  	  </div>
+				  	  
+				  	  <br/>
+				  	  
+				  	  <h5 style="font-weight:bold">C. HOUSEKEEPING</h5>
+		              <span>- The ability to practice the 5S of Good Housekeeping or to keep work areas clean and orderly.</span>
+					  <br/> <br/> 			       		  
+		       		  <ol  style="list-style-type:none;">
+					  	<li> [5] Cleanliness and orderliness of the work area exceeds the 5S standards</li>
+					  	<li> [4] Cleanliness and orderliness of the work area is according to the 5S standards</li>
+					  	<li> [3] Work area is most of the time clean and orderly</li>
+					  	<li> [2] Work area is dirty and disorderly sometimes</li>
+					  	<li> [1] Work area is dirty and disorderly most of the time</li>
+					  </ol>
+					  
+					  <div class="comment">
+					  	Comment:<hr/> <hr/> <hr/>
+					  </div>
+					  
+					  <div class="point_value">
+				  	  	<label>Point Value</label><input type="text" />
+				  	  </div>
+					  
+					  <br/>
+					  <h5 style="font-weight:bold">D. WORK ATTITUDE</h5>
+		              <span>- The ability to comply with the company as well as with in-house rules and regulations, 
+            				follow instructions and carry out work assignments as directed or required</span>
+					  <br/> <br/> 			       		  
+		       		  <ol  style="list-style-type:none;">
+					  	<li> [5] Inspires others to abide with all company rules and regulations and encourages co-employees 
+                    		 to finish work assignments in accordance with all the aspects of the requirements</li>
+					  	<li> [4] A model to fellow employees both in personal and work attitude</li>
+					  	<li> [3] Has not violated any company policy, rule or regulation and has no record of unaccomplished
+                    		 job and back job within the rating period</li>
+					  	<li> [2] Has one record of unaccomplished or back job and up to first offense of a minor violation</li>
+					  	<li> [1] Has two or more record of unaccomplished or back job and has a written warning on a minor offense</li>
+					  </ol>
+					  
+					  <div class="comment">
+					  	Comment:<hr/> <hr/> <hr/>
+		              </div>
+		              
+		              <div class="point_value">
+				  	  	<label>Point Value</label><input type="text" />
+				  	  </div>
+			</div>
+		</template>	
+		
+		<template id="rf_page_3">
+			<div class="page_border">
+		        <h5 style="font-weight:bold">E. COOPERATION</h5>
+		        <span>- The ability to relate well with superiors and peers and the willingness to work with the 
+            			team for a common goal</span>
+					  <br/> <br/> 			       		  
+		       		  <ol  style="list-style-type:none;">
+					  	<li> [5] Always amiable, cooperative; encourages others and sets a good example</li>
+					  	<li> [4] Willingly cooperates and works well with others</li>
+					  	<li> [3] Offers the necessary cooperation required</li>
+					  	<li> [2] Offers cooperation with limitation and at times hard to work with</li>
+					  	<li> [1] Has a great problem in dealing and working with others</li>
+					  </ol>
+					  
+					  <div class="comment">
+					  	Comment:<hr/> <hr/> <hr/>
+					  </div>
+					  
+					  <div class="point_value">
+				  	  	<label>Point Value</label><input type="text" />
+				  	  </div>
+				<br/> 
+		        <h5 style="font-weight:bold">F. INITIATIVE</h5>
+		        <span>- The ability to be a self-starter of resourceful thinking, planning and carrying
+            	 		out of the jobs</span>
+					  <br/> <br/> 			       		  
+		       		  <ol  style="list-style-type:none;">
+					  	<li> [5] Encourages others to initiate change for the betterment</li>
+					  	<li> [4] Always a self-starter and good model to fellow employees</li>
+					  	<li> [3] Normally adapts innovation</li>
+					  	<li> [2] Refuses to initiate changes and adapts innovation at times</li>
+					  	<li> [1] No open to innovation and is not a self starter</li>
+					  </ol>
+					  
+					  <div class="comment">
+					  	Comment:<hr/> <hr/> <hr/>
+					  </div>
+					  
+					  <div class="point_value">
+				  	  	<label>Point Value</label><input type="text" />
+				  	  </div>
+				<br/> 
+				
+		        <h5 style="font-weight:bold">G. Personality</h5>
+		        <span>- The ability to behave in a good-natured, courteous, safety-minded cautious manner 
+            			and to carry oneself appropriately to held the position</span>
+					  <br/> <br/> 			       		  
+		       		  <ol  style="list-style-type:none;">
+					  	<li> [5] Personal disposition and behavior inspires others</li>
+					  	<li> [4] Always behaves in good-natured, courteous manner and carries oneself appropriately 
+                    		 which can influence others</li>
+					  	<li> [3] Normally good-natured, courteous, safety-minded, and carries oneself acceptably</li>
+					  	<li> [2] At times careless, tactless and carries oneself unsuitable</li>
+					  	<li> [1] Often times careless,tactless and carries oneself inappropriately</li>
+					  </ol>
+					  
+					  <div class="comment">
+					  	Comment:<hr/> <hr/> <hr/>
+					  </div>
+					  
+					  <div class="point_value">
+				  	  	<label>Point Value</label><input type="text" />
+				  	  </div>
+		    </div>
+		</template>
+
+		<template id="rf_page_4">
+			<div class="page_border">
+		        <h5 style="font-weight:bold">H. FEEDBACKING</h5>
+		        <span>- The ability to practice feedbacking in relation to carrying out assigned tasks, giving suggestions
+            			and recommendations for the betterment of a particular department/branch and of the company as a whole</span>
+					  <br/><br/> 			       		  
+		       		  <ol  style="list-style-type:none;">
+					  	<li> [[5] Generously gives excellent suggestions and recommendations and practices feed backing at all times</li>
+					  	<li> [4] Has a very good suggestions and recommendations and practices feed backing constantly</li>
+					  	<li> [3] Gives suggestions and recommendations and practices feed backing as required</li>
+					  	<li> [2] Sometimes shares ideas and rarely practices feed backing</li>
+					  	<li> [1] Hardly shares ideas and does not practice feed backing</li>
+					  </ol>
+					  
+					  <div class="comment">
+					  	Comment:<hr/> <hr/> <hr/>
+					  </div>
+					  
+					  <div class="point_value">
+				  	  	<label>Point Value</label><input type="text" />
+				  	  </div>	
+				<br/>		
+				<p>Please write your additional comments here. Be as specific as possible.</p>
+				
+				<div class="comment">
+					<hr/><hr/><hr/><hr/><hr/><hr/>
+				</div>
+				
+				<h4  align="center" id="page_header">PART II: GUIDE TO PERFORMANCE APPRAISAL</h4>	
+				<p>LEVEL OF EVALUATION: JOB COMPETENCIES</p>
+				
+				<h6>INSTRUCTIONS</h6>				
+				<p class="text-justify">The purpose of this form is to measure the actual results produced by the individual employee
+            				and other additional assignment during the rating period.</p>
+            	<p class="text-justify">The work rating factors are the principal job requirements of skills and knowledge that have been
+            		determined by the Manager or Supervisor as defined in the employee's job description and/or individual Action
+            		plan based on AIP/MAP of the immediate superior of the employee.</p>
+            	<p class="text-justify">Rate by indicating the corresponding box,the numerical rating that corresponds to description below:</p>
+				
+				<div style="padding-left:15px;">
+					<ol>
+						<li>Meets all performance standards all the time </li>
+						<li>Meets all the performance standards most of the time. Some improvement possible.</li>
+						<li>Satisfactorily meets some of the performance standards most of the time.Requires some improvements.</li>
+						<li>Meets some of the performance standards some of the time. Major improvements needed.</li>
+						<li>Does not meet any of the performance standards. Improvement possibilities unlikely.</li>
+					</ol>
+				</div>
+		
+				
+			</div>
+		</template>
+		
+		<template id="rf_page_5">
+			
+			<div class="page_border">
+				<h4 align="center">Part II: Job Competencies Appraisal</h4>
+				
+				<table class="text-center" style="width:100%;font-size:15px;"> 
+					   	<thead class="cr-th">
+					   		<tr>
+					   			<th style="width:40%">Name:</th>
+					   			<th style="width:30%" colspan="5">Performance Value</th>
+					   			<th style="width:30%" rowspan="2">Remarks</th>					   			
+					   		</tr>
+					   		<tr>
+					   			<th>Position:</th>
+					   			<th colspan="5">See performance rating guidelines for the interpretations of scores</th>							   				   			
+					   		</tr>
+					   		<tr>
+					   			<th>RATING FACTORS</th>
+					   			<th>1</th>
+					   			<th>2</th>
+					   			<th>3</th>
+					   			<th>4</th>
+					   			<th>5</th>
+					   			<th></th>
+					   		</tr>
+					   	</thead>
+					   	<tbody>
+					   		<t t-set="i" t-value="45"/>
+							<tr t-foreach="i" t-as="l">
+							    <t t-call="muti_appraisal.tbl_data"/>					   		                  							
+							    <t t-set="i" t-value="i+1"/>
+							</tr>
+
+					   		<tr >
+					   			<td style="padding:10px">Total Score</td>
+					   			<td></td> <td></td> <td></td> <td></td> <td></td ><td></td>
+					   		</tr>
+					   		<tr >
+					   			<td style="padding:10px">Average Score</td>
+					   			<td></td> <td></td> <td></td> <td></td> <td></td ><td></td>
+					   		</tr>
+					   	</tbody>
+				</table>
+					
+					
+			</div>
+		</template>
+		
+		<template id="rf_page_6">
+			<div class="page_border">
+				<h4 align="center">Part III: EMPLOYEE DEVELOPMENT PLAN</h4>
+				<div>
+					<ol>
+						
+						<li>List competencies where improvement is desired.</li>
+						<div class="hr_line">
+							<hr/><hr/><hr/><hr/>
+						</div>
+						<li>Developmental activities that will be used to enhance competency.</li>
+						<div class="hr_line">
+							<hr/><hr/><hr/><hr/>
+						</div>
+						<li>Expected outcomes or improvement you wish to see(Should relate to achievement of goals).
+							Indicate expected date of completion.</li>
+						<div class="hr_line">
+							<hr/><hr/><hr/><hr/>
+						</div>
+					</ol>
+				</div>
+			
+			
+				<div class="signature_container">
+					<h4 align="center">Part IV: COMMENTS/SIGNATURES</h4>
+					<div class="signature_container_left">
+						<br/><br/>
+						<p>I discuss the appraisal with the employee</p>
+						<p>I confirm that the appraisal was discussed with me</p>
+						<p>I have reviewed the contents of this form</p>
+						<p></p>
+						<p>EMPLOYEE COMMENTS(Use back page if necessary)</p>
+						<p>RATER'S COMMENTS(Use back page if necessary)</p>
+					</div>
+					<div class="signature_container_right text-center">
+						<br/><br/><br/>
+						<t t-if="o.rater_id">
+	           				<span t-field="o.rater_id.name_related"/>
+	           			</t>
+						<p>Rater's Name and Signature</p>
+						<p>Date</p>
+						<t t-if="o.employee_id">
+	           				<span  t-field="o.employee_id.name_related"/>
+	           			</t>
+						<p>Employee's Signature</p>
+						<p>Date</p>
+						<t t-if="o.superior_id">
+	           				<span  t-field="o.superior_id.name_related"/>
+	           			</t>
+						<p>Signature of Rater's Superior</p>
+						<p>Date</p>
+					</div>
+				</div>
+			</div>
+			
+		</template>
+
+		<template id="rf_page_7">
+			<div class="page_border">
+				<h4 align="center">COMPUTATIONS: INDIVIDUAL RATING SUMMARY</h4>
+				<br/><br/>	
+				<p>
+					<span>Name:__________________________________</span>
+					<span>Position:________________________________</span>
+				</p>
+				
+				<p>
+					<span>Branch/Dept:_____________________________</span>
+					<span>Location:________________________________</span>
+				</p>
+		
+				<br/><br/>
+				<table style="width:100%;"> 
+					<tbody>
+				   		<tr>
+				   			<td style="height:30mm;">Part I: Attitude Towards Work (40%)</td>
+				   			<td>Average Rating(AR)</td>
+				   			<td>Weight(W)</td>
+				   			<td>Score(ARxW) Score</td>			   							   					   			 
+				   		</tr>
+				   		<tr>
+				   			<td style="height:30mm;">Part II: Competencies (60%)</td>
+				   			<td></td>
+				   			<td></td>
+				   			<td></td>			   							   					   			 
+				   		</tr>
+				   		<tr>
+				   			<td colspan="4">Total Score (Part I + Part II)</td>		   							   					   			 
+				   		</tr>
+				   		<tr>
+				   			<td>Rating Description</td>
+				   			<td colspan="3"></td>			   							   					   			 
+				   		</tr>
+				   		<tr>
+				   			<td colspan="4">
+				   			Rating Description:
+				   				<div id="rate_desc">
+				   					<p>4.20-5.00   -     Outstanding</p>
+				   					<p>3.40-4.19   -     Fully Satisfactory</p>
+				   					<p>2.60-3.39   -     Satisfactory</p>
+				   					<p>1.80-2.59   -     Needs Improvement</p>
+				   					<p>1.00-1.79   -     Poor</p>
+				   				</div>				   			
+				   			</td>
+				   					   							   					   			 
+				   		</tr>
+				   	 </tbody>
+				</table>
+			</div>
+		</template>
+		
+		<template id="tbl_data">
+			<tr >
+	   			<td style="padding:10px"></td>
+	   			<td></td> <td></td> <td></td> <td></td> <td></td ><td></td>
+	   		</tr>
+		</template>
+				
+	</data>
+</openerp>

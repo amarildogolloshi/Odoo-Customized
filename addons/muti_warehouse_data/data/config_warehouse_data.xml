@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="stock.warehouse0" model="stock.warehouse">
+            <field name="name">Great Wall - MUTI Warehouse</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutiwarehouseid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">GWMW1</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutiwarehouse_id"/>
+        </record>
+
+        <record id="stock.warehouse1" model="stock.warehouse">
+            <field name="name">Great Wall - HONDA Warehouse</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_hsiwarehouseid"/>-->
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+            <field name="code">GWHW1</field>
+            <field name="partner_id" ref="muti_base.res_partner_hsiwarehouse_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_3s_id" model="stock.warehouse">
+            <field name="name">MUTI 3S</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_muti3sid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MKOR02</field>
+            <field name="partner_id" ref="muti_base.res_partner_muti3s_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_buhangin_id" model="stock.warehouse">
+            <field name="name">MUTI BUHANGIN</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutibuhanginid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MBUH01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutibuhangin_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_calinan_id" model="stock.warehouse">
+            <field name="name">MUTI CALINAN</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_muticalinanid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MCAL01</field>
+            <field name="partner_id" ref="muti_base.res_partner_muticalinan_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_digos_id" model="stock.warehouse">
+            <field name="name">MUTI DIGOS</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutidigosid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MDIG01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutidigos_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_isulan_id" model="stock.warehouse">
+            <field name="name">MUTI ISULAN</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutiisulanid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MISU02</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutiisulan_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_kidapawan_id" model="stock.warehouse">
+            <field name="name">MUTI KIDAPAWAN</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutikidapawanid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MKID01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutikidapawan_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_lapasan_id" model="stock.warehouse">
+            <field name="name">MUTI LAPASAN</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutilapasanid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MLAP01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutilapasan_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_main_id" model="stock.warehouse">
+            <field name="name">MUTI MARBEL</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutimainid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MBL01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutimain_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_mati_id" model="stock.warehouse">
+            <field name="name">MUTI MATI</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutimatiid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MMAT01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutimati_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_panabo_id" model="stock.warehouse">
+            <field name="name">MUTI PANABO</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutipanaboid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MPAN01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutipanabo_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_polomolok_id" model="stock.warehouse">
+            <field name="name">MUTI POLOMOLOK</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutipolomolokid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MPOL01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutipolomolok_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_surallah_id" model="stock.warehouse">
+            <field name="name">MUTI SURALLAH</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutisurallahid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MSUR02</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutisurallah_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_tacurong_id" model="stock.warehouse">
+            <field name="name">MUTI TACURONG</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutitacid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MTAC01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutitac_id"/>
+        </record>
+        <record id="stock_warehouse_muti_tagum_id" model="stock.warehouse">
+            <field name="name">MUTI TAGUM</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutitagumid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MTAG01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutitagum_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_valencia_id" model="stock.warehouse">
+            <field name="name">MUTI VALENCIA</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutivalenciaid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MVAL01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutivalencia_id"/>
+        </record>
+
+        <record id="stock_warehouse_honda_isulan_id" model="stock.warehouse">
+            <field name="name">HONDA ISULAN</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_hondaisulanid"/>-->
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+            <field name="code">HISU02</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutiisulan_id"/>
+        </record>
+
+        <record id="stock_warehouse_honda_maramag_id" model="stock.warehouse">
+            <field name="name">HONDA MARAMAG</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_hondamaramagid"/>-->
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+            <field name="code">HMAR01</field>
+            <field name="partner_id" ref="muti_base.res_partner_hondamaramag_id"/>
+        </record>
+
+        <record id="stock_warehouse_honda_marbel_id" model="stock.warehouse">
+            <field name="name">HONDA MARBEL</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_hondamarbelid"/>-->
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+            <field name="code">HKOR01</field>
+            <field name="partner_id" ref="muti_base.res_partner_hondamarbel_id"/>
+        </record>
+
+        <record id="stock_warehouse_honda_surallah_id" model="stock.warehouse">
+            <field name="name">HONDA SURALLAH</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_hondasurallahid"/>-->
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+            <field name="code">HSUR02</field>
+            <field name="partner_id" ref="muti_base.res_partner_hondasurallah_id"/>
+        </record>
+
+        <record id="stock_warehouse_muti_villa_amor_id" model="stock.warehouse">
+            <field name="name">MUTI VILLA AMOR</field>
+            <!--<field name="branch_id" ref="muti_base.config_branch_mutivillaamorid"/>-->
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+            <field name="code">MVA01</field>
+            <field name="partner_id" ref="muti_base.res_partner_mutivillaamor_id"/>
+        </record>
+
+    </data>
+</openerp>

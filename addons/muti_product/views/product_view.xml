@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>  
+
+<!-- 		Spareparts -->
+		<record model="ir.ui.view" id="spare_product_search_view">
+            <field name="name">product.search</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position ="after">
+                	<field name = "group_id"/>
+                </field>
+            </field>
+     	</record>
+     	
+     	<record model="ir.ui.view" id="spare_product_tree_view">
+            <field name="name">product.tree</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field eval="5" name="priority"/>
+            <field name="arch" type="xml">
+            	<field name = "volume" position = "attributes">            		
+            		<attribute name = "invisible">True</attribute>
+            	</field>
+            	<field name = "weight" position = "attributes">            		
+            		<attribute name = "invisible">True</attribute>
+            	</field>
+            	<field name = "categ_id" position = "attributes">            		
+            		<attribute name = "invisible">True</attribute>
+            	</field>
+            	<field name = "type" position = "attributes">            		
+            		<attribute name = "invisible">True</attribute>
+            	</field>
+            	
+            	<field name ="name" position = "before">
+            		<field name = "barcode"/>
+            	</field>
+            	
+            	<field name ="name" position = "after">
+            		<field name = "group_id"/>
+            	</field>
+            	
+            	<field name ="standard_price" position = "after">
+            		<field name = "list_price"/>
+            	</field>
+            	
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="spare_product_form_view">
+            <field name="name">Spare parts</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <field name="type" position="after">
+                	<field name ="group_id" required = "True"/>
+                	<!-- <field name = "addtldesc" required = "True"/> -->
+                	<field name = "model_name"/>
+                	<field name = "part_no"/>
+                </field>
+
+                <field name="barcode" position="after">
+                	<field name = "old_barcode"/>
+                </field>
+
+
+<!--                 <field name ="name" position = "attributes">
+                	<attribute name = "readonly">True</attribute>
+                	<attribute name = "required">False</attribute>
+                </field> -->
+
+                <group name="group_standard_price" position="inside">
+                	<field name = "is_net"/>
+                </group>
+
+                <group name="sale_condition" position="inside">
+                	<field name = "maximum_discount"/>
+                	<field name = "commission"/>
+
+                </group>
+<!--                 <field name = "item_ids" position = "replace">
+	                <field name="item_ids">
+		                  <tree string="Pricelist Items">
+		                      <field name="pricelist_id" string="Pricelist" required='1'/>
+		                      <field name="product_id" string = "Product"/>
+		                      <field name="fixed_price" string="Price" required='1'/>
+		                      <field name="min_quantity"/>
+		                      <field name="date_start"/>
+		                      <field name="date_end"/>
+		                      <field name="applied_on" invisible="1"/>
+		                  </tree>
+		            </field>
+	            </field> -->
+
+<!-- 				<field name = "item_ids" position = "attributes">
+					<attribute name = "context">"{'default_base':'list_price', 'default_applied_on' :'0_product_variant'}"</attribute>
+				</field> -->
+
+				<page name = "notes" position = "before">
+                	<page name = "price_history" string = "Price History">
+                		<field name = "price_history_ids">
+                			<tree string="Pricelist Items" default_order = 'create_date desc'>
+                				<field name="create_date" string = "Date Created"/>
+                                <field name="pricelist_id" string="Pricelist"/>
+                                <field name="product_id"/>
+                                <field name="fixed_price" string="Price"/>
+                                <field name="date_start" string = "Effectivity Date From"/>
+                                <field name="date_end" string = "Effectivity Date To"/>
+                                <field name="applied_on" invisible="1"/>
+                            </tree>
+                		</field>
+
+                	</page>
+                </page>
+
+
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="spare_product_view_action">
+            <field name="name">Spare parts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="context">{'categ_name':'Spareparts'}</field>
+
+        </record>
+
+        <record model="ir.actions.act_window.view" id="spare_product_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product.product_template_tree_view"/>
+            <field name="act_window_id" ref="spare_product_view_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="spare_product_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="spare_product_form_view"/>
+            <field name="act_window_id" ref="spare_product_view_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="spare_product_kanban_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="product.product_template_kanban_view"/>
+            <field name="act_window_id" ref="spare_product_view_action"/>
+        </record>
+
+<!-- 		Spareparts -->
+
+<!-- 		MC -->
+
+		<record model="ir.ui.view" id="mc_product_form_view">
+            <field name="name">Motorcycle</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+
+
+        		<div name = "options" position = "after">
+
+	                <div>
+	                    <field name="is_sold_redeemed"/>
+	                    <label for="is_sold_redeemed"/>
+	                </div>
+
+	                <div>
+	                    <field name="in_transit"/>
+	                    <label for="in_transit"/>
+
+                     </div>
+
+        		</div>
+
+                <field name="type" position="after">
+                	<field name = "type_id" required = "True"/>
+                	<field name = "brand_id" required = "True"/>
+                	<field name = "engineno"/>
+                	<field name = "cash_price"/>
+                	<field name = "loan_price"/>
+                	<field name = "features"/>
+                	<field name = "previous_owner"/>
+
+                </field>
+
+                <field name="type" position="before">
+                	<field name = "is_pnp_clear"/>
+
+                </field>
+                <field name="list_price" position="before">
+                	<field name = "reference_doc"/>
+                	<field name = "mc_classification_id" required = "True"/>
+                	<field name = "model_id" required = "True"/>
+                	<field name = "color_id" required = "True"/>
+                	<field name = "wheel_id"/>
+                	<field name = "transmission_id"/>
+                	<field name = "chassisno"/>
+                	<field name = "last_price"/>
+                	<field name = "min_dp"/>
+
+                </field>
+
+                <group name="sale_condition" position="inside">
+                	<field name = "commission"/>
+
+                </group>
+
+                <field name ="name" position = "attributes">
+                	<attribute name = "readonly">True</attribute>
+                	<attribute name = "required">False</attribute>
+                </field>
+
+                <page name = "notes" position = "before">
+                	<page name = "history" string = "History">
+                		<field name = "move_ids">
+                			<tree string="History" limit="12">
+                                <field name="date"/>
+                                <field name="picking_id" string="Document #"/>
+                                <field name="product_qty"/>
+                                <field name="location_id"/>
+                                <field name="location_dest_id"/>
+                                <field name="state"/>
+                             </tree>
+                		</field>
+
+                	</page>
+                	<page name = "free_item" string = "Free Item/s">
+                		<field name = "product_ids"/>
+                	</page>
+                </page>
+
+<!--                 <page name = "history" position = "before">
+                	<page name = "mid_dp" string = "Minimum Downpayment">
+                		<field name = "mindp_ids"/>
+
+                	</page>
+                </page> -->
+                
+                
+                <xpath expr="//notebook/page[1]" position="after">
+                    <page string="Motorcycle Information">
+                        <group>
+                            <group>
+                                <field name="branch_id" required="True"
+                                       attrs="{'invisible':[('is_repo','=',False),('is_depo','=',False)],'required':[('is_repo','=',True)]}"/>
+                                <field name="branch_location_id"/>
+                                <field name="reference_doc" readonly="True"/>
+                                <!--attrs="{'invisible': [('is_repo', '=', False), ('is_depo', '=', False)]}"/>-->
+                                <field name="type_id" />
+
+                                <field name="mc_classification_id" />
+
+                                <field name="brand_id"/>
+                                <field name="model_id"/>
+                                <field name="color_id"/>
+                                <field name="body_id" />
+                                        <!--attrs="{'required':[('related_type','=','CAB')]}"/>-->
+                                <field name="wheel_id"/>
+                                       <!--attrs="{'required':[('related_type','=','CAB')]}"/>-->
+                                <field name="transmission_id"/>
+                                       <!--attrs="{'required':[('related_type','=','CAB')]}"/>-->
+                                <field name="engineno"/>
+                                        <!--attrs="{'readonly':[('is_repo','!=',True)],'required':[('is_repo','=',True)]}"/>-->
+                                <field name="chassisno"/>
+                                <!--attrs="{'readonly':[('is_repo','!=',True)],'required':[('is_repo','=',True)]}"/>-->
+                                <field name="features"/>
+                                <field name="for_prev"/>
+                            </group>
+                            <group>
+                                <field name="cash_price"/>
+                                <field name="last_price"/>
+                                <field name="loan_price"/>
+                                <field name="min_dp"/>
+                                <field name="previous_owner"/>
+                                       <!--attrs="{'invisible':[('for_prev','!=','BB')],'readonly':[('is_repo','!=',True)]}"/>-->
+                                <field name="related_type" invisible="True"/>
+                                <field name="repo_classification"/>
+                                       <!--attrs="{'invisible':[('is_repo','=',False)]}"/>-->
+                                <field name="assigned_to" attrs="{'invisible':[('repo_classification','!=','service')]}"/>
+                                <field name="is_depo" colspan="2" readonly="True"/>
+                                <field name="is_sold_redeemed" colspan="2" readonly="True"/>
+                                <field name="is_repo" colspan="2"/>
+                                <field name="in_transit" colspan="2"/>
+                                <field name="unit_cost" colspan="2" groups="loan.group_loan_accounting_assistant2"/>
+                                <field name="rel_unit_cost" colspan="2" readonly="True"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Minimum Downpayment">
+                            <field name="mindp_ids" mode="tree" nolabel="1" colspan="4">
+                                <tree string="Minimum Downpayment Per Branch" limit="12" editable="bottom">
+                                    <field name="active"/>
+                                    <!--<field name="customer_type_id"/>-->
+                                    <field name="branch_id"/>
+                                    <field name="cash_price"/>
+                                    <field name="loan_price"/>
+                                    <field name="min_dp"/>
+                                    <field name="start_date"/>
+                                    <field name="end_date"/>
+                                </tree>
+                            </field>
+                    </page>
+                </xpath>
+
+
+
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="mc_product_view_action">
+            <field name="name">Motorcycle Units</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="context">{'categ_name':'Motorcycle'}</field>
+
+        </record>
+
+        <record model="ir.actions.act_window.view" id="mc_product_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product.product_template_tree_view"/>
+            <field name="act_window_id" ref="mc_product_view_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="mc_product_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="mc_product_form_view"/>
+            <field name="act_window_id" ref="mc_product_view_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="mc_product_kanban_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="product.product_template_kanban_view"/>
+            <field name="act_window_id" ref="mc_product_view_action"/>
+        </record>
+
+<!--         MC -->
+
+
+
+<!-- 		NON TRADE -->
+
+		<record model="ir.ui.view" id="nontrade_product_form_view">
+            <field name="name">nontrade.product.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+
+                <field name="type" position="after">
+                	<field name = "type_id"/>
+                	<field name = "brand_id"/>
+                	<field name = "engineno"/>
+
+                </field>
+
+
+                <field name="list_price" position="before">
+                	<field name = "mc_classification_id"/>
+                	<field name = "model_id"/>
+                	<field name = "color_id"/>
+                	<field name = "wheel_id"/>
+                	<field name = "transmission_id"/>
+                	<field name = "chassisno"/>
+
+                </field>
+
+
+                <page name = "notes" position = "before">
+                	<page name = "history" string = "History">
+                		<field name = "move_ids"/>
+
+                	</page>
+                </page>
+
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="nontrade_product_view_action">
+            <field name="name">Non Trade</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="context">{'categ_name':'Non-Trade'}</field>
+
+        </record>
+
+        <record model="ir.actions.act_window.view" id="nontrade_product_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product.product_template_tree_view"/>
+            <field name="act_window_id" ref="nontrade_product_view_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="nontrade_product_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="nontrade_product_form_view"/>
+            <field name="act_window_id" ref="nontrade_product_view_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="nontrade_product_kanban_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="product.product_template_kanban_view"/>
+            <field name="act_window_id" ref="nontrade_product_view_action"/>
+        </record>
+
+<!--         NON TRADE -->
+
+
+<!-- 		FREE ITEMS -->
+
+		<record model="ir.ui.view" id="free_product_form_view">
+            <field name="name">free.product.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+
+                <field name="type" position="after">
+                	<field name = "brand_id"/>
+
+                </field>
+
+                <field name = "list_price" position = "attributes">
+                	<attribute name = "readonly">True</attribute>
+
+                </field>
+
+                <field name = "standard_price" position = "attributes">
+                	<attribute name = "readonly">True</attribute>
+
+                </field>
+
+
+                <page name = "notes" position = "before">
+                	<page name = "history" string = "History">
+                		<field name = "move_ids"/>
+
+                	</page>
+                </page>
+
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="free_product_view_action">
+            <field name="name">Free Items</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="context">{'categ_name':'Free'}</field>
+
+        </record>
+
+        <record model="ir.actions.act_window.view" id="free_product_tree_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product.product_template_tree_view"/>
+            <field name="act_window_id" ref="free_product_view_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="free_product_form_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="free_product_form_view"/>
+            <field name="act_window_id" ref="free_product_view_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="free_product_kanban_act">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="product.product_template_kanban_view"/>
+            <field name="act_window_id" ref="free_product_view_action"/>
+        </record>
+
+<!--         FREE ITEMS -->
+
+
+		<record model="ir.ui.view" id="product_product_view">
+            <field name="name">test</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+            <field name="arch" type="xml">
+                <group name="weight" position="after">
+                	<field name = "item_ids"/>
+                </group>
+
+
+            </field>
+        </record>
+    </data>
+</openerp>

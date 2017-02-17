@@ -1,0 +1,10 @@
+id,class_id/id,name,code,active
+product_make_01,product_major_class_01,Honda,01,TRUE
+product_make_02,product_major_class_01,Kawasaki,02,TRUE
+product_make_03,product_major_class_01,Suzuki,03,TRUE
+product_make_04,product_major_class_01,Yamaha,04,TRUE
+product_make_05,product_major_class_01,Replacement,05,TRUE
+product_make_06,product_major_class_02,Bike,06,TRUE
+product_make_07,product_major_class_03,Multi Cab,07,TRUE
+product_make_08,product_major_class_04,Household & Appliances,08,TRUE
+product_make_09,product_major_class_04,Others,09,TRUE

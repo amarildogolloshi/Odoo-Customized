@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+		<!-- Documentation Menu -->
+        <menuitem
+				id="menu_config_documentation_root"
+				  name="Documentation"/>
+
+        <!--  Menu -->
+        <menuitem name="Configurations"
+				  id="menu_config_docs"
+				  parent="menu_config_documentation_root"/>
+
+        <menuitem
+          action="config_delivery_receipt_series_action"
+		  id="menu_config_delivery_receipt"
+		  name="Delivery Receipt"
+          parent="menu_config_docs"
+		  sequence="1"/>
+	</data>
+  </openerp>

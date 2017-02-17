@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+user_config_branch,muti_base.config.branch,model_config_branch,base.group_user,1,0,0,0
+user_config_province,muti_base.config.province,model_config_province,base.group_user,1,0,0,0
+user_config_city,muti_base.config.city,model_config_city,base.group_user,1,0,0,0
+user_config_barangay,muti_base.config.barangay,model_config_barangay,base.group_user,1,0,0,0
+user_config_area,muti_base.config.area,model_config_area,base.group_user,1,0,0,0
+

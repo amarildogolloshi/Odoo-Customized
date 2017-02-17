@@ -1,0 +1,6 @@
+id,name
+employee_education_level_collegeid,COLLEGE
+employee_education_level_elementaryid,ELEMENTARY
+employee_education_level_highschoolid,HIGHSCHOOL
+employee_education_level_postgraduateid,POST GRADUATE                                     
+employee_education_level_vocationalid,VOCATIONAL

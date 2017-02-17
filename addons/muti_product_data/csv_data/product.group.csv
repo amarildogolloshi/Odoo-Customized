@@ -1,0 +1,31 @@
+id,code,name,active
+product_group_01,01,Accessories,True
+product_group_02,02,Apparel,True
+product_group_03,03,Bearing and Collar,True
+product_group_04,04,BMX,True
+product_group_05,05,Brake,True
+product_group_06,06,Cable,True
+product_group_07,07,Carburetor,True
+product_group_08,08,Damper and Bushing,True
+product_group_09,09,Electricals,True
+product_group_10,10,Engine Parts,True
+product_group_11,11,Frame and Body,True
+product_group_12,12,Gasket,True
+product_group_13,13,Home Decor,True
+product_group_14,14,Hose,True
+product_group_15,15,"Lubricants, Paint and Sealant",True
+product_group_16,16,MTB,True
+product_group_17,17,"Nuts, Bolts, Screw and Washer",True
+product_group_18,18,O Ring,True
+product_group_19,19,Oil Seal,True
+product_group_20,20,Pedal,True
+product_group_21,21,Power Products,True
+product_group_22,22,Seat,True
+product_group_23,23,Shifter,True
+product_group_24,24,Spark Plug,True
+product_group_25,25,Spring,True
+product_group_26,26,Sprocket and Chain,True
+product_group_27,27,Tools,True
+product_group_28,28,Tube Gum,True
+product_group_29,29,Wheel,True
+product_group_99,99,Others,True

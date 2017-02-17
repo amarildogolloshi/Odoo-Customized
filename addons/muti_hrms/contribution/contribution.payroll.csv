@@ -1,0 +1,4 @@
+"id","valid_from","valid_to","cont_type"
+"contribution_payroll_ss","2014-01-01","2020-01-01","ss"
+"contribution_payroll_ph","2014-01-01","2020-01-01","ph"
+"contribution_payroll_hdmf","2007-01-01","2020-01-01","hdmf"

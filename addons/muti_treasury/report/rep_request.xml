@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+<template id="request_data">
+
+            <style type="text/css">
+	            <![CDATA[
+					/* Arial Narrow */
+					@font-face {
+					    font-family: 'Arial Narrow';
+					    font-style: normal;
+					    src:url('/muti_treasury/static/src/fonts/arial-narrow.woff') format('woff'),
+					    	url('/muti_treasury/static/src/fonts/arial-narrow_d.ttf') format('truetype');
+					}
+				]]>
+            
+               	div{
+               		font-size:16px;
+               		font-family: 'Arial Narrow';
+               		margin-top:15px;
+
+               	}
+                                
+                .container1{
+                	width:60%;
+                	float:left;
+                	margin-top:60px;
+                }
+                
+                .container1_left{
+                	width:35%;
+                	float:left;
+                	font-weight:bold;
+                	
+                }
+                
+                .container1_right{
+                	width:65%;
+                	float:right;
+                }
+                
+                .container1_right p{
+                	border-bottom:1px solid;
+                	margin-left:5px;
+                	font-size:16px;
+                }
+                                               
+                .container2{
+                	width:38%;
+                	float:right;
+                	margin-top:60px;
+                }
+                
+                .container2_left{
+                	font-weight:bold;
+	                width:40%;
+	                float:left;
+                }
+                
+                .container2_right{
+	                width:60%;
+	                float:right;
+	             }
+                
+                .container2_right p{
+                	border-bottom:1px solid;
+                	margin-left:5px;
+                	font-size:16px;
+                }
+                
+                .container3 div{
+                	margin-top:15px;
+                	margin-bottom:10px;
+                }
+                
+                .container3_left{
+	                width:20%;
+	                float:left;
+	                margin-top:10px;
+
+                }
+                
+                .container3_left p{
+                	 font-weight:bold;
+                	 min-height:35px;
+                	
+                }
+                
+                .container3_right{
+                	width:80%;
+                	float:right;
+                	margin-top:10px;
+                }
+               
+               .container3_right p{
+	               border: 1px solid #dddddd;
+	               min-height:35px;
+	               font-size:16px;
+               }
+
+           </style>
+          
+           
+          
+           <div>
+       		<div class="container1">
+       	        <div class="container1_left">
+	       			<p>REQUESTOR:</p>
+	       			<p>REQUEST THROUGH:</p>
+	       			<p>REQUEST CATEGORY:</p>
+	       			<p>REQUEST TYPE:</p>
+       		    </div>
+       		    <div  class="container1_right" >
+	   		    	<p><span t-field="o.hr_employee_id"/></p>
+	   		    	<p><span t-field="o.request_through"/></p>
+	   		    	<p><span t-field="o.request_categ_id"/></p>
+	   		    	<p><span t-field="o.request_type_id"/></p>
+       		    </div>
+           	</div>
+			<div>            		
+			<div  class="container2">
+	           	 <div class="container2_left">
+	    			<p>BRANCH/DEPT:</p>
+	    			<p>REQUEST NO:</p>
+	    			<p>REQUEST DATE:</p>
+	    			<p>SOURCE:</p>
+	   		    </div>
+       		    <div  class="container2_right" >
+       		    	<p><span t-field="o.department_id"/></p>
+       		    	<p><span t-field="o.request_no"/></p>
+       		    	<p><span t-field="o.request_date"/></p>
+       		    	<p><span t-field="o.source_id"/></p>
+       		    </div>
+             </div>	
+             </div>		
+            </div>            		
+            
+             <div class="container3">
+             	<div class="container3_left">
+	      			<p>PURPOSE:</p>
+	      			<p>SPECIAL INSTRUCTION:</p>		
+      			</div>
+      			
+	      		<div class="container3_right">
+     		    	<p><span t-field="o.purpose"/></p>
+     		    	<p><span t-field="o.instruction"/></p>
+	     		</div>
+        	  </div>
+        	  
+     		 <div  style="font-size:12px;">
+	              <table class="table table-bordered" style="height:2mm;"> 
+	              	<thead class="cr-th">
+	              		<tr >
+	              			<th class="text-center">UNIT</th>
+	              			<th class="text-center">QTY</th>
+	              			<th class="text-center">ACCOUNT</th>
+	              			<th class="text-center">PARTICULARS</th>
+	              			<th class="text-center">PRICE</th>
+	              			<th class="text-center">AMOUNT</th>
+	              		</tr>
+	              	</thead>
+	              	<tbody class="cr-tbody" style="height:25%;font-size:12px;" >
+	              		<tr t-foreach="o.request_det_ids" t-as="l">
+	              			 <td class="text-right"><span t-field="l.unit"/></td>
+	              			 <td class="text-right"><span t-field="l.qty"/></td>
+	              			 <td class="text-right"><span t-field="l.account"/></td>
+	              			 <td class="text-left"><span t-field="l.particulars"/></td>
+	              			 <td class="text-right"><span t-field="l.price"/></td>
+	              			 <td class="text-right"><span t-field="l.amount"/></td>
+	              		</tr>
+	              	</tbody>
+	              </table>
+	              
+	              <p  style="margin-right:7px;font-weight:bold">
+	                <span class="pull-left">TOTAL AMOUNT</span>
+	              	<span class="pull-right" t-field="o.total_amount"/>
+				  </p>	            
+<!-- 	              <t t-set="total" t-value="0" /> -->
+<!-- 		              <t t-foreach="o.request_det_ids" t-as="f"> -->
+<!-- 		                  <t t-set="total" t-value="total+f.amount" /> -->
+<!-- 		                  <t t-if="f_last"> -->
+<!-- 		                  <strong><p class="text-right" style="margin-right:7px"><t t-esc="'%.2f'%(total)"/></p></strong> -->
+<!-- 		              </t> -->
+<!-- 	              </t> -->
+            </div>
+             
+             
+            <br/> 
+            <br/>  
+            <p><strong>APPROVED BY:</strong></p>		                
+           	<tr  t-foreach='o.request_approval_ids' t-as='a' >          	
+           	  	<div class="col-xs-4 pull-left text-center" style="margin-bottom:15px">
+           	  		<t t-if="a.sudo().user_id.signature">		           	             	  		           		
+           	  			<span class="text-center" t-field="a.sudo().user_id.signature"/>
+           	  		</t>
+           	  		<span class="text-center" style="font-size:14px" t-field="a.sudo().user_id"/>
+           	  		<div  class="text-center" style="border-top:1px solid;margin-top:0px;">	
+           	  			<span t-field="a.hr_job_id"/>
+           	  		</div>
+           	  	</div>
+           	  	
+           	  	
+           	 
+			</tr> 
+
+        </template>
+	
+		<record id="paperformat_legal" model="report.paperformat">
+		    <field name="name">Legal</field>
+		    <field name="default" eval="True"/>
+		    <field name="format">Legal</field>
+		    <field name="page_height">0</field>
+		    <field name="page_width">0</field>
+		    <field name="orientation">Portrait</field>
+		    <field name="margin_top">5</field>
+		    <field name="margin_bottom">5</field>
+		    <field name="margin_left">5</field>
+		    <field name="margin_right">5</field>
+		    <field name="header_line" eval="False"/>
+		    <field name="header_spacing">5</field>
+		    <field name="dpi">90</field>
+		</record>        
+        
+		<report
+		        id="report_request"
+		        model="request.request"
+		        string="Request"
+		        name="muti_treasury.report_request_view"
+		        file="muti_treasury.report_request_view"
+		        report_type="qweb-pdf" 
+		        paperformat="paperformat_legal"
+		        />
+
+
+
+		<template id="report_request_view">
+		    <t t-call="report.html_container">
+		        <t t-foreach="docs" t-as="o">
+		            <t t-call="muti_treasury.request_form_layout">          
+		                <div class="page">
+				           <t t-if="o.state == 'approve' or o.state == 'disapprove'">          							
+								<t t-call="muti_treasury.request_data">
+		                               <t t-set="rd" t-value="o"/>
+		                           </t> 
+				           </t>    	     
+		                </div>
+		             </t>
+		        </t>
+		    </t>
+		</template>
+
+
+		<template id="request_form_layout">
+		    <!-- Multicompany -->
+		    <t t-if="not o and doc">
+		        <t t-set="o" t-value="doc"/>
+		    </t>
+		    <t t-if="o and 'company_id' in o">
+		        <t t-set="company" t-value="o.company_id"></t>
+		    </t>
+		    <t t-if="not o or not 'company_id' in o">
+		        <t t-set="company" t-value="res_company"></t>
+		    </t>
+		
+		    <t t-call="muti_treasury.request_form_layout_header" />
+		    <t t-raw="0" />
+		
+		</template>
+		
+		<template id="request_form_layout_header">
+		    <div class="header" >
+		        <div class="row" >
+		            <div class="col-xs-3" style="margin-top:10px">
+		            	<t t-if="company.logo">
+			                <img t-if="o.department_id.level_id.name != 'MSG' " t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height: 100px;max-width: 200px;"/>
+			           		<img t-if="o.department_id.level_id.name == 'MSG'"  src='/muti_base/static/src/img/msg_logo.png' style="max-height: 100px;max-width: 200px;"/>
+		             	</t>
+		            </div>
+		           
+		           	 <h2 class="text-right" >REQUEST FORM</h2>
+		        </div>
+		        
+		    </div>
+		</template>
+
+
+		
+	
+	</data>
+</openerp>

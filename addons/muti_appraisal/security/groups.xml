@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+	 <record id="module_categ_appraisal" model="ir.module.category">
+            <field name="name">Appraisal</field>
+<!--             <field name="sequence" eval="105" /> -->
+        </record>
+
+        <record id="group_appraisal_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="module_categ_appraisal"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        
+        <record id="group_appraisal_offcr" model="res.groups">
+            <field name="name">Officer</field>
+            <field name="category_id" ref="module_categ_appraisal"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_hr_user'))]"/>
+        </record>
+
+    </data>
+</openerp>

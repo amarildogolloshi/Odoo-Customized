@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets1" name="point_of_sale assets1" inherit_id="point_of_sale.assets">
+<!--         <xpath expr="//link[contains(@src,'[pos.css]')]" position="replace">
+            <link rel="stylesheet" href="/muti_pos/css/pos1.css" id="pos-stylesheet"/>
+        </xpath>   -->  
+        <link id = "pos-stylesheet" position = "replace">
+        	<link rel="stylesheet" href="/muti_pos/css/pos1.css"/>
+        </link>
+             <xpath expr="//script[contains(@src,'models.js')]" position="replace">
+            	<script type="text/javascript" src="/muti_pos/js/models1.js"></script>
+            </xpath>
+            
+             <xpath expr="//script[contains(@src,'chrome.js')]" position="replace">
+            	<script type="text/javascript" src="/muti_pos/js/chrome1.js"></script>
+            </xpath>
+            
+            <xpath expr="//script[contains(@src,'gui.js')]" position="replace">
+            	<script type="text/javascript" src="/muti_pos/js/gui1.js"></script>
+            </xpath>
+            
+        </template>
+    </data>
+</openerp>

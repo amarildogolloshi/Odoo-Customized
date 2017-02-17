@@ -1,0 +1,47 @@
+<openerp>
+	<data>
+		
+<!-- Configuration>Appraisal>			         -->
+        <menuitem id="config_appraisal_menu" 
+		  name="Appraisal"
+          parent="hr.menu_human_resources_configuration"	       
+          sequence="1"
+          
+          /> 
+	          
+        <menuitem id="config_appraisal_assigned_template" 
+		  name="Assigned Type"
+          parent="config_appraisal_menu"	       
+          action="config_appraisal_action"
+          sequence="1"
+          />
+          
+        <menuitem id="config_appraisal_rating" 
+		  name="Rating"
+          parent="config_appraisal_menu"	       
+          action="config_appraisal_rating_action"
+          sequence="1"
+          />
+          
+	          
+<!-- 	          <menuitem id="config_appraisal_rating"  -->
+<!-- 			  name="Rating" -->
+<!-- 	          parent="hr.menu_human_resources_configuration"	        -->
+<!-- 	          action="config_appraisal_action" -->
+<!-- 	          sequence="1" -->
+<!-- 	          />         -->		
+
+<!-- Configuration>Employee>Appraisal			         -->
+        <menuitem id="muti_appraisal_appraisal_main_menu" 
+		  name="Appraisal"
+          parent="hr.menu_hr_root"
+          />
+        
+        <menuitem id="muti_appraisal_appraisal_menu" 
+		  name="Appraisal"
+          parent="muti_appraisal_appraisal_main_menu"
+          action="muti_appraisal_appraisal_action"
+          />
+          
+	</data>
+</openerp>

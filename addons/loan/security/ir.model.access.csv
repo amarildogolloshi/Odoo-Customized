@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+bm_access_res_partner,res.partner,model_res_partner,group_loan_branch_manager,1,1,0,0
+cashier_access_res_partner,res.partner,model_res_partner,group_loan_cashier,1,1,0,0
+ci_access_res_partner,res.partner,model_res_partner,group_loan_ci_collector,1,1,1,0
+loan_user_access_res_partner,res.partner,model_res_partner,group_loan_user,1,0,0,0
+payable_clerk_access_res_partner,res.partner,model_res_partner,group_payable_clerk,1,1,1,0
+processor_access_res_partner,res.partner,model_res_partner,group_loan_processor,1,0,0,0
+readonly_access_res_partner,res.partner,model_res_partner,group_loan_readonly,1,0,0,0
+receptionist_access_res_partner,res.partner,model_res_partner,group_loan_receptionist,1,1,1,0

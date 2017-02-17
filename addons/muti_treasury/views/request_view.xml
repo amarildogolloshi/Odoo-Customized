@@ -1,0 +1,2376 @@
+<openerp>
+	<data>
+
+
+<!-- Request Cash   -->
+   <record model="ir.ui.view" id="request_cash_search_view">
+            <field name="name">request.cash.search</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <search string="Cash Search">
+                
+              		<filter icon="terp-personal" name="myrequest" string="My Request" context="{'action_default':'myrequest'}"/> 
+              		<filter icon="terp-personal" name="branchdept" string="Branch/Dept Request" context="{'action_default':'branchdept'}"/>
+              		<filter icon="terp-personal" name="other" string="Other Request" context="{'action_default':'other'}"/> 
+                    <field name="request_no"/>
+                    <field name="request_date"/>
+                    <field name="hr_employee_id"/>
+                    <field name="department_id"/>
+                    <field name="request_through"/>
+                    <field name="request_type_id"/>
+                                           
+                </search>
+            </field>
+     </record>
+     
+	 <record model="ir.ui.view" id="request_cash_tree_view">
+            <field name="name">request.tree</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="state=='draft'" decoration-info="state == 'confirm'" decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')" string="Cash Tree">
+              
+                    <field name="request_no"/>
+                	<field name="request_date"/>
+                	<field name="hr_employee_id"/>
+                	<field name="request_categ_id"/>
+                    <field name="request_type_id"/>
+                    <field name="total_amount" sum="total"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>
+        
+        
+	  <record model="ir.ui.view" id="request_cash_form_view">
+      		<field name="name">request.form</field>
+      		<field name="model">request.request</field>
+      		<field name="arch" type="xml">
+                <form string="Cash Form">
+                	<header>
+                		<button name="action_draft" type="object"
+                                string="Reset to draft"
+                                states="confirm"/>
+                        <button name="action_confirm_msg_a" type="object"
+		                                string="Confirm"
+		                                attrs="{'invisible': [('btn_msg', '!=', False)]}"
+		                                class="oe_highlight"
+		                                confirm="Please review first the document before confirming the record"
+		                               />
+<!-- 		                <button name="action_confirm_msg_b" type="object" -->
+<!-- 		                                string="Confirm"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Are you sure all support documents are attached?" -->
+<!-- 		                                /> -->
+		                <button name="action_confirm" type="object"
+		                                string="Confirm" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"
+		                                 />
+		                        
+		                 <button name="action_approve_msg_a" type="object"
+		                                string="Approve" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to approve this document?"
+		                                /> 
+<!-- 		                  <button name="action_approve_msg_b" type="object" -->
+<!-- 		                                string="Approve"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Please review the details first to make sure that all requirements are approved" -->
+<!-- 		                                />               -->
+		                 <button name="action_approve" type="object"
+		                                string="Approve"
+		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"
+		                                />
+		                 <button name="action_disapprove" type="object"
+		                                string="Disapprove" states="confirm"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to DISAPPROVED?"
+		                                /> 
+		                <button name="action_void" type="object"
+		                                string="Void" 
+		                                attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to VOID?"
+		                                />
+		                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,disapprove,void"/>
+		                <field name="btn_msg" invisible="1"/>
+		             </header>
+		             
+              		<sheet>
+              		<field name="readonly_req_det" invisible="1"/>
+              		<button name="print_report" 
+              		 		 string="Print" 
+              		 		 type="object" 
+              		 		 class="btn-primary" 
+              		 		 confirm="Are you sure you want to PRINT this document?
+              		 		 Once printed this option will be disabled.Can print only ONCE."
+              		 		 attrs="{'invisible': [('state', 'not in',('approve'))]}"
+              		 		 />
+                      <group>
+                      	<group >
+                      		<field name="company_id" readonly="1"/>
+<!--                       		<field name="image" widget="image" /> -->
+                      	</group>
+                      	<group>
+                      	</group>
+                        <group>
+                            <field name="hr_employee_id" readonly="1" />
+                            <field name="request_through" required="1" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_categ_id" readonly="1"/>
+                            <field name="request_type_id" 
+                             		required="1" 
+                             		attrs="{'readonly': [('state','not in',('draft'))]}"
+                             		domain="[('approval_ids','=',filter_request_type)]"/>
+                             <field name="filter_request_type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_no" readonly="1"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="source_id" readonly="1"/>
+                            <field name="to_approve_by" invisible="0" widget="many2many_tags" /> 
+                        </group>
+                        
+                       </group>  
+                       
+                       <group>
+                       	<group>
+                       		<field name="purpose" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                       	</group>
+                       	<group>
+                       		<field name="instruction" attrs="{'readonly': [('state','not in',('draft'))]}" />
+                       	</group>
+                       </group>                    
+                       
+                       <notebook>
+                       		<page string ="Request">
+                       			<field name="request_det_ids" attrs="{'readonly': [('readonly_req_det','!=',True)]}">
+								    <tree editable='bottom'>
+								        <field name="unit"/>
+								        <field name="qty"/>
+								        <field name="account" invisible="1"/> 
+								        <field name="particulars" required="1"/> 
+								        <field name="price"/>
+								        <field name="amount" readonly="1"/>
+								                                          
+								    </tree>
+								</field>
+								
+								<group class="oe_subtotal_footer oe_right">
+			                    	<field style="font-weight:bold" name="total_amount"/>
+			             		</group> 
+			             		
+                       		</page>
+                       		<page string="Approvals">
+                       			<field name="request_approval_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="hr_job_id"/>
+                       					<field name="user_id"/>
+                       					<field name="allowed_user_ids" widget="many2many_tags"/>
+                       					<field name="approved"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="History">
+                       			<field name="request_history_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="date"/>
+                       					<field name="user_id"/>
+                       					<field name="desc"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="Remarks">
+                       			<field name="remark" />
+                       		</page>
+                       	</notebook> 
+                     </sheet> 
+                                           
+                </form>
+            </field>
+            
+             
+        </record>
+
+        <record model="ir.ui.view" id="request_cash_kanban_view">
+            <field name="name">request.cash.kanban</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="request_categ_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            	                    
+                                
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+<!--                                         <span class="oe_e">request_no</span> -->
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                
+                                <div t-attf-class="oe_kanban_content">
+                                	<div class="o_kanban_image">
+                                    	<img t-att-src="kanban_image('request.request', 'image', record.id.value)" class="img-responsive"/>
+                                	</div> 
+                                    
+                                    <div>
+	                                   <span style="font-weight:bold;font-size:15px"><field name="request_no"/></span>
+	                                    <br/>
+	                                   <span style="font-weight:bold;"><field name="department_id"/></span>
+	                                   <br/>
+	                                    <field name="hr_employee_id"/><br/>
+	                                    <field name="request_type_id"/>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="my_request_cash_action">
+            <field name="name">Cash</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'cash')]</field>
+            <field name="context">{"search_default":'CASH',"action_default":'myrequest'}</field>
+        </record> 
+        
+
+		<record model="ir.actions.act_window.view" id="request_cash_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="request_cash_tree_view"/>
+            <field name="act_window_id" ref="my_request_cash_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="request_cash_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="request_cash_form_view"/>
+            <field name="act_window_id" ref="my_request_cash_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="request_cash_kanban_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="request_cash_kanban_view"/>
+            <field name="act_window_id" ref="my_request_cash_action"/>
+        </record>
+          
+        
+
+<!--         <record model="ir.actions.act_window" id="branchdept_request_cash_action">
+            <field name="name">Cash</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'cash')]</field>
+            <field name="context">{"search_default":'CASH',"action_default":'branchdept'}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="other_request_cash_action">
+            <field name="name">Cash</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'cash')]</field>
+            <field name="context">{"search_default":'CASH',"action_default":'other'}</field>
+        </record> -->
+    
+
+
+<!-- Request Purchase -->
+   <record model="ir.ui.view" id="request_purchase_search_view">
+            <field name="name">request.purchase.search</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <search string="Purchase Search">
+                
+              		<filter icon="terp-personal" name="myrequest" string="My Request" context="{'action_default':'myrequest'}"/> 
+              		<filter icon="terp-personal" name="branchdept" string="Branch/Dept Request" context="{'action_default':'branchdept'}"/>
+              		<filter icon="terp-personal" name="other" string="Other Request" context="{'action_default':'other'}"/> 
+                    <field name="request_no"/>
+                    <field name="request_date"/>
+                    <field name="hr_employee_id"/>
+                    <field name="department_id"/>
+                    <field name="request_through"/>
+                    <field name="request_type_id"/>
+                                           
+                </search>
+            </field>
+     </record>
+
+	 <record model="ir.ui.view" id="request_purchase_tree_view">
+            <field name="name">request.purchase.tree</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="state=='draft'" decoration-info="state == 'confirm'" decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')" string="Purchase Tree">
+              
+                    <field name="request_no"/>
+                	<field name="request_date"/>
+                	<field name="hr_employee_id"/>
+                	<field name="request_categ_id"/>
+                    <field name="request_type_id"/>
+                   	<field name="total_amount" sum="total"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>
+        
+        
+	  <record model="ir.ui.view" id="request_purchase_form_view">
+      		<field name="name">request.purchase.form</field>
+      		<field name="model">request.request</field>
+      		<field name="arch" type="xml">
+                 <form string="Purchase Form">
+                	<header>
+                		<button name="action_draft" type="object"
+                                string="Reset to draft"
+                                states="confirm"/>
+                        <button name="action_confirm_msg_a" type="object"
+		                                string="Confirm"
+		                                attrs="{'invisible': [('btn_msg', '!=', False)]}"
+		                                class="oe_highlight"
+		                                confirm="Please review first the document before confirming the record"
+		                               />
+<!-- 		                <button name="action_confirm_msg_b" type="object" -->
+<!-- 		                                string="Confirm"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Are you sure all support documents are attached?" -->
+<!-- 		                                /> -->
+		                <button name="action_confirm" type="object"
+		                                string="Confirm" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"
+		                                 />
+		                        
+		                 <button name="action_approve_msg_a" type="object"
+		                                string="Approve" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to approve this document?"
+		                                /> 
+<!-- 		                  <button name="action_approve_msg_b" type="object" -->
+<!-- 		                                string="Approve"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Please review the details first to make sure that all requirements are approved" -->
+<!-- 		                                />               -->
+		                 <button name="action_approve" type="object"
+		                                string="Approve"
+		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"
+		                                />
+		                 <button name="action_disapprove" type="object"
+		                                string="Disapprove" states="confirm"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to DISAPPROVED?"
+		                                /> 
+		                <button name="action_void" type="object"
+		                                string="Void" 
+		                                attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to VOID?"
+		                                />
+		                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,disapprove,void"/>
+		                <field name="btn_msg" invisible="1"/>
+		             </header>
+		             
+              		<sheet>
+              		<field name="readonly_req_det" invisible="1"/>
+              		<button name="print_report" 
+              		 		 string="Print" 
+              		 		 type="object" 
+              		 		 class="btn-primary" 
+              		 		 confirm="Are you sure you want to PRINT this document?
+              		 		 Once printed this option will be disabled.Can print only ONCE."
+              		 		 attrs="{'invisible': [('state', 'not in',('approve'))]}"
+              		 		 />
+                      <group>
+                      	<group >
+                      		<field name="company_id" readonly="1"/>
+                      	</group>
+                      	<group>
+                      	</group>
+                        <group>
+                            <field name="hr_employee_id" readonly="1" />
+                            <field name="request_through" required="1" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_categ_id" readonly="1"/>
+                            <field name="request_type_id" 
+                             		required="1" 
+                             		attrs="{'readonly': [('state','not in',('draft'))]}"
+                             		domain="[('approval_ids','=',filter_request_type)]"/>
+                             <field name="filter_request_type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_no" readonly="1"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="source_id" readonly="1"/>
+                            <field name="to_approve_by" invisible="1" widget="many2many_tags" /> 
+                        </group>
+                        
+                       </group>  
+                       
+                       <group>
+                       	<group>
+                       		<field name="purpose" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                       	</group>
+                       	<group>
+                       		<field name="instruction" attrs="{'readonly': [('state','not in',('draft'))]}" />
+                       	</group>
+                       </group>                    
+                       
+                       <notebook>
+                       		<page string ="Request">
+                       			<field name="request_det_ids" attrs="{'readonly': [('readonly_req_det','!=',True)]}">
+								    <tree editable='bottom'>
+								        <field name="unit"/>
+								        <field name="qty"/>
+								        <field name="account" invisible="1"/> 
+								        <field name="particulars" required="1"/> 
+								        <field name="price"/>
+								        <field name="amount" readonly="1"/>
+								                                          
+								    </tree>
+								</field>
+								
+								<group class="oe_subtotal_footer oe_right">
+			                    	<field style="font-weight:bold" name="total_amount"/>
+			             		</group> 
+			             		
+                       		</page>
+                       		<page string="Approvals">
+                       			<field name="request_approval_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="hr_job_id"/>
+                       					<field name="user_id"/>
+                       					<field name="allowed_user_ids" widget="many2many_tags"/>
+                       					<field name="approved"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="History">
+                       			<field name="request_history_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="date"/>
+                       					<field name="user_id"/>
+                       					<field name="desc"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="Remarks">
+                       			<field name="remark" />
+                       		</page>
+                       	</notebook> 
+                     </sheet> 
+                                           
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="request_purchase_kanban_view">
+            <field name="name">request.purchase.kanban</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="request_categ_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            	                    
+                                
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+<!--                                         <span class="oe_e">request_no</span> -->
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                
+                                <div t-attf-class="oe_kanban_content">
+                                	<div class="o_kanban_image">
+                                    	<img t-att-src="kanban_image('request.request', 'image', record.id.value)" class="img-responsive"/>
+                                	</div> 
+                                    
+                                    <div>
+	                                   <span style="font-weight:bold;font-size:15px"><field name="request_no"/></span>
+	                                    <br/>
+	                                   <span style="font-weight:bold;"><field name="department_id"/></span>
+	                                   <br/>
+	                                    <field name="hr_employee_id"/><br/>
+	                                    <field name="request_type_id"/>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="myrequest_purchase_action">
+            <field name="name">Purchase</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'purchase')]</field>
+            <field name="context">{"search_default":'PURCHASE',"action_default":'myrequest'}</field>
+         </record>   
+         
+       <record model="ir.actions.act_window.view" id="request_purchase_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="request_purchase_tree_view"/>
+            <field name="act_window_id" ref="myrequest_purchase_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="request_purchase_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="request_purchase_form_view"/>
+            <field name="act_window_id" ref="myrequest_purchase_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="request_purchase_kanban_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="request_purchase_kanban_view"/>
+            <field name="act_window_id" ref="myrequest_purchase_action"/>
+        </record>  
+        
+         
+       <!--   <record model="ir.actions.act_window" id="branchdept_purchase_action">
+            <field name="name">Purchase</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'purchase')]</field>
+            <field name="context">{"search_default":'PURCHASE',"action_default":'branchdept'}</field>
+         </record> 
+         
+         <record model="ir.actions.act_window" id="other_purchase_action">
+            <field name="name">Purchase</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'purchase')]</field>
+            <field name="context">{"search_default":'PURCHASE',"action_default":'other'}</field>
+         </record> 
+         
+ -->
+
+<!-- Request Payment -->
+   <record model="ir.ui.view" id="request_payment_search_view">
+            <field name="name">request.payment.search</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <search string="Payment Search">
+                
+              		<filter icon="terp-personal" name="myrequest" string="My Request" context="{'action_default':'myrequest'}"/> 
+              		<filter icon="terp-personal" name="branchdept" string="Branch/Dept Request" context="{'action_default':'branchdept'}"/>
+              		<filter icon="terp-personal" name="other" string="Other Request" context="{'action_default':'other'}"/> 
+                    <field name="request_no"/>
+                    <field name="request_date"/>
+                    <field name="hr_employee_id"/>
+                    <field name="department_id"/>
+                    <field name="request_through"/>
+                    <field name="request_type_id"/>
+                                           
+                </search>
+            </field>
+     </record>
+     
+	 <record model="ir.ui.view" id="request_payment_tree_view">
+            <field name="name">request.payment.tree</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                 <tree decoration-muted="state=='draft'" decoration-info="state == 'confirm'" decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')" string="Payment Tree">
+              
+                    <field name="request_no"/>
+                	<field name="request_date"/>
+                	<field name="hr_employee_id"/>
+                	<field name="request_categ_id"/>
+                    <field name="request_type_id"/>
+                    <field name="total_amount" sum="total"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>
+        
+        
+	  <record model="ir.ui.view" id="request_payment_form_view">
+      		<field name="name">request.payment.form</field>
+      		<field name="model">request.request</field>
+      		<field name="arch" type="xml">
+                 <form string="Payment Form">
+                	<header>
+                		<button name="action_draft" type="object"
+                                string="Reset to draft"
+                                states="confirm"/>
+                        <button name="action_confirm_msg_a" type="object"
+		                                string="Confirm"
+		                                attrs="{'invisible': [('btn_msg', '!=', False)]}"
+		                                class="oe_highlight"
+		                                confirm="Please review first the document before confirming the record"
+		                               />
+<!-- 		                <button name="action_confirm_msg_b" type="object" -->
+<!-- 		                                string="Confirm"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Are you sure all support documents are attached?" -->
+<!-- 		                                /> -->
+		                <button name="action_confirm" type="object"
+		                                string="Confirm" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"
+		                                 />
+		                        
+		                 <button name="action_approve_msg_a" type="object"
+		                                string="Approve" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to approve this document?"
+		                                /> 
+<!-- 		                  <button name="action_approve_msg_b" type="object" -->
+<!-- 		                                string="Approve"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Please review the details first to make sure that all requirements are approved" -->
+<!-- 		                                />               -->
+		                 <button name="action_approve" type="object"
+		                                string="Approve"
+		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"
+		                                />
+		                 <button name="action_disapprove" type="object"
+		                                string="Disapprove" states="confirm"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to DISAPPROVED?"
+		                                /> 
+		                <button name="action_void" type="object"
+		                                string="Void" 
+		                                attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to VOID?"
+		                                />
+		                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,disapprove,void"/>
+		                <field name="btn_msg" invisible="1"/>
+		             </header>
+		             
+              		<sheet>
+              		<field name="readonly_req_det" invisible="1"/>
+              		<button name="print_report" 
+              		 		 string="Print" 
+              		 		 type="object" 
+              		 		 class="btn-primary" 
+              		 		 confirm="Are you sure you want to PRINT this document?
+              		 		 Once printed this option will be disabled.Can print only ONCE."
+              		 		 attrs="{'invisible': [('state', 'not in',('approve'))]}"
+              		 		 />
+                      <group>
+                      	<group >
+                      		<field name="company_id" readonly="1"/>
+                      	</group>
+                      	<group>
+                      	</group>
+                        <group>
+                            <field name="hr_employee_id" readonly="1" />
+                            <field name="request_through" required="1" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_categ_id" readonly="1"/>
+                            <field name="request_type_id" 
+                             		required="0" 
+                             		attrs="{'readonly': [('state','not in',('draft'))]}"
+                             		domain="[('approval_ids','=',filter_request_type)]"/>
+                             <field name="filter_request_type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_no" readonly="1"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="source_id" readonly="1"/>
+                            <field name="to_approve_by" invisible="1" widget="many2many_tags" /> 
+                        </group>
+                        
+                       </group>  
+                       
+                       <group>
+                       	<group>
+                       		<field name="purpose" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                       	</group>
+                       	<group>
+                       		<field name="instruction" attrs="{'readonly': [('state','not in',('draft'))]}" />
+                       	</group>
+                       </group>                    
+                       
+                       <notebook>
+                       		<page string ="Request">
+                       			<field name="request_det_ids" attrs="{'readonly': [('readonly_req_det','!=',True)]}">
+								    <tree editable='bottom'>
+								        <field name="unit"/>
+								        <field name="qty"/>
+								        <field name="account" invisible="1"/> 
+								        <field name="particulars" required="1"/> 
+								        <field name="price"/>
+								        <field name="amount" readonly="1"/>
+								                                          
+								    </tree>
+								</field>
+								
+								<group class="oe_subtotal_footer oe_right">
+			                    	<field style="font-weight:bold" name="total_amount"/>
+			             		</group> 
+			             		
+                       		</page>
+                       		<page string="Approvals">
+                       			<field name="request_approval_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="hr_job_id"/>
+                       					<field name="user_id"/>
+                       					<field name="allowed_user_ids" widget="many2many_tags"/>
+                       					<field name="approved"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="History">
+                       			<field name="request_history_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="date"/>
+                       					<field name="user_id"/>
+                       					<field name="desc"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="Remarks">
+                       			<field name="remark" />
+                       		</page>
+                       	</notebook> 
+                     </sheet> 
+                                           
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="request_payment_kanban_view">
+            <field name="name">request.payment.kanban</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="request_categ_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            	                    
+                                
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+<!--                                         <span class="oe_e">request_no</span> -->
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                
+                                <div t-attf-class="oe_kanban_content">
+                                	<div class="o_kanban_image">
+                                    	<img t-att-src="kanban_image('request.request', 'image', record.id.value)" class="img-responsive"/>
+                                	</div> 
+                                    
+                                    <div>
+	                                   <span style="font-weight:bold;font-size:15px"><field name="request_no"/></span>
+	                                    <br/>
+	                                   <span style="font-weight:bold;"><field name="department_id"/></span>
+	                                   <br/>
+	                                    <field name="hr_employee_id"/><br/>
+	                                    <field name="request_type_id"/>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>         
+
+        <record model="ir.actions.act_window" id="myrequest_payment_action">
+            <field name="name">Payment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'payment')]</field>
+            <field name="context">{"search_default":'PAYMENT',"action_default":'myrequest'}}</field>
+        </record>     
+        
+        <record model="ir.actions.act_window.view" id="request_payment_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="request_payment_tree_view"/>
+            <field name="act_window_id" ref="myrequest_payment_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="request_payment_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="request_payment_form_view"/>
+            <field name="act_window_id" ref="myrequest_payment_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="request_payment_kanban_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="request_payment_kanban_view"/>
+            <field name="act_window_id" ref="myrequest_payment_action"/>
+        </record>  
+        
+        
+ <!--        <record model="ir.actions.act_window" id="branchdept_payment_action">
+            <field name="name">Payment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'payment')]</field>
+            <field name="context">{"search_default":'PAYMENT',"action_default":'branchdept'}}</field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="other_payment_action">
+            <field name="name">Payment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'payment')]</field>
+            <field name="context">{"search_default":'PAYMENT',"action_default":'other'}}</field>
+        </record>  -->
+
+
+<!-- Request Travel -->
+   <record model="ir.ui.view" id="request_travel_search_view">
+            <field name="name">request.travel.search</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <search string="Travel Search">
+                
+              		<filter icon="terp-personal" name="myrequest" string="My Request" context="{'action_default':'myrequest'}"/> 
+              		<filter icon="terp-personal" name="branchdept" string="Branch/Dept Request" context="{'action_default':'branchdept'}"/>
+              		<filter icon="terp-personal" name="other" string="Other Request" context="{'action_default':'other'}"/> 
+                    <field name="request_no"/>
+                    <field name="request_date"/>
+                    <field name="hr_employee_id"/>
+                    <field name="department_id"/>
+                    <field name="request_through"/>
+                    <field name="request_type_id"/>
+                                           
+                </search>
+            </field>
+     </record>
+
+	 <record model="ir.ui.view" id="request_travel_tree_view">
+            <field name="name">request.travel.tree</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="state=='draft'" decoration-info="state == 'confirm'" decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')" string="Travel Tree">
+              
+                    <field name="request_no"/>
+                	<field name="request_date"/>
+                	<field name="hr_employee_id"/>
+                	<field name="request_categ_id"/>
+                    <field name="request_type_id"/>
+                    <field name="source_id"/>
+                    <field name="total_amount" sum="total"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>
+        
+        
+	  <record model="ir.ui.view" id="request_travel_form_view">
+      		<field name="name">request.travel.form</field>
+      		<field name="model">request.request</field>
+      		<field name="arch" type="xml">
+                <form string="Travel Form">
+                	<header>
+                		<button name="action_draft" type="object"
+                                string="Reset to draft"
+                                states="confirm"/>
+                        <button name="action_confirm_msg_a" type="object"
+		                                string="Confirm"
+		                                attrs="{'invisible': [('btn_msg', '!=', False)]}"
+		                                class="oe_highlight"
+		                                confirm="Please review first the document before confirming the record"
+		                               />
+<!-- 		                <button name="action_confirm_msg_b" type="object" -->
+<!-- 		                                string="Confirm"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Are you sure all support documents are attached?" -->
+<!-- 		                                /> -->
+		                <button name="action_confirm" type="object"
+		                                string="Confirm" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"
+		                                 />
+		                        
+		                 <button name="action_approve_msg_a" type="object"
+		                                string="Approve" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to approve this document?"
+		                                /> 
+<!-- 		                  <button name="action_approve_msg_b" type="object" -->
+<!-- 		                                string="Approve"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Please review the details first to make sure that all requirements are approved" -->
+<!-- 		                                />               -->
+		                 <button name="action_approve" type="object"
+		                                string="Approve"
+		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"
+		                                />
+		                 <button name="action_disapprove" type="object"
+		                                string="Disapprove" states="confirm"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to DISAPPROVED?"
+		                                /> 
+		                <button name="action_void" type="object"
+		                                string="Void" 
+		                                attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to VOID?"
+		                                />
+		                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,disapprove,void"/>
+		                <field name="btn_msg" invisible="1"/>
+		             </header>
+		             
+              		<sheet>
+              		<field name="readonly_req_det" invisible="1"/>
+              		<button name="print_report" 
+              		 		 string="Print" 
+              		 		 type="object" 
+              		 		 class="btn-primary" 
+              		 		 confirm="Are you sure you want to PRINT this document?
+              		 		 Once printed this option will be disabled.Can print only ONCE."
+              		 		 attrs="{'invisible': [('state', 'not in',('approve'))]}"
+              		 		 />
+                      <group>
+                      	<group >
+                      		<field name="company_id" readonly="1"/>
+                      	</group>
+                      	<group>
+                      	</group>
+                        <group>
+                            <field name="hr_employee_id" readonly="1" />
+                            <field name="request_through" required="1" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_categ_id" readonly="1"/>
+                            <field name="request_type_id" 
+                             		required="1" 
+                             		attrs="{'readonly': [('state','not in',('draft'))]}"
+                             		domain="[('approval_ids','=',filter_request_type)]"/>
+                             <field name="filter_request_type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_no" readonly="1"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="source_id" readonly="1"/>
+                            <field name="to_approve_by" invisible="1" widget="many2many_tags" /> 
+                        </group>
+                        
+                       </group>  
+                       
+                       <group>
+                       	<group>
+                       		<field name="purpose" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                       	</group>
+                       	<group>
+                       		<field name="instruction" attrs="{'readonly': [('state','not in',('draft'))]}" />
+                       	</group>
+                       </group>                    
+                       
+                       <notebook>
+                       		<page string ="Request">
+                       			<field name="request_det_ids" attrs="{'readonly': [('readonly_req_det','!=',True)]}">
+								    <tree editable='bottom'>
+								        <field name="unit"/>
+								        <field name="qty"/>
+								        <field name="account" invisible="1"/> 
+								        <field name="particulars" required="1"/> 
+								        <field name="price"/>
+								        <field name="amount" readonly="1"/>
+								                                          
+								    </tree>
+								</field>
+								
+								<group class="oe_subtotal_footer oe_right">
+			                    	<field style="font-weight:bold" name="total_amount"/>
+			             		</group> 
+			             		
+                       		</page>
+                       		<page string="Approvals">
+                       			<field name="request_approval_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="hr_job_id"/>
+                       					<field name="user_id"/>
+                       					<field name="allowed_user_ids" widget="many2many_tags"/>
+                       					<field name="approved"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="History">
+                       			<field name="request_history_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="date"/>
+                       					<field name="user_id"/>
+                       					<field name="desc"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="Remarks">
+                       			<field name="remark" />
+                       		</page>
+                       	</notebook> 
+                     </sheet> 
+                                           
+                </form>
+            </field>
+        </record>
+         
+        <record model="ir.ui.view" id="request_travel_kanban_view">
+            <field name="name">request.travel.kanban</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+               <kanban default_group_by="request_categ_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            	                    
+                                
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+<!--                                         <span class="oe_e">request_no</span> -->
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                
+                                <div t-attf-class="oe_kanban_content">
+                                	<div class="o_kanban_image">
+                                    	<img t-att-src="kanban_image('request.request', 'image', record.id.value)" class="img-responsive"/>
+                                	</div> 
+                                    
+                                    <div>
+	                                   <span style="font-weight:bold;font-size:15px"><field name="request_no"/></span>
+	                                    <br/>
+	                                   <span style="font-weight:bold;"><field name="department_id"/></span>
+	                                   <br/>
+	                                    <field name="hr_employee_id"/><br/>
+	                                    <field name="request_type_id"/>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="myrequest_travel_action">
+            <field name="name">Travel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'travel')]</field>
+            <field name="context">{"search_default":'TRAVEL',"action_default":'myrequest'}}</field>
+        </record>
+               
+        <record model="ir.actions.act_window.view" id="request_travel_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="request_travel_tree_view"/>
+            <field name="act_window_id" ref="myrequest_travel_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="request_travel_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="request_travel_form_view"/>
+            <field name="act_window_id" ref="myrequest_travel_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="request_travel_kanban_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="request_travel_kanban_view"/>
+            <field name="act_window_id" ref="myrequest_travel_action"/>
+        </record>  
+        
+   <!--      <record model="ir.actions.act_window" id="branchdept_travel_action">
+            <field name="name">Travel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'travel')]</field>
+            <field name="context">{"search_default":'TRAVEL',"action_default":'branchdept'}}</field>
+        </record> 
+        
+        <record model="ir.actions.act_window" id="other_travel_action">
+            <field name="name">Travel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'travel')]</field>
+            <field name="context">{"search_default":'TRAVEL',"action_default":'other'}}</field>
+        </record> 
+ -->
+
+<!-- Request Work Order -->
+   <record model="ir.ui.view" id="request_work_order_search_view">
+            <field name="name">request.workorder.search</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <search string="Work Order Search">
+                
+             	 	<filter icon="terp-personal" name="myrequest" string="My Request" context="{'action_default':'myrequest'}"/> 
+              		<filter icon="terp-personal" name="branchdept" string="Branch/Dept Request" context="{'action_default':'branchdept'}"/>
+              		<filter icon="terp-personal" name="other" string="Other Request" context="{'action_default':'other'}"/> 
+                    <field name="request_no"/>
+                    <field name="request_date"/>
+                    <field name="hr_employee_id"/>
+                    <field name="department_id"/>
+                    <field name="request_through"/>
+                    <field name="request_type_id"/>
+                                           
+                </search>
+            </field>
+     </record>
+
+	 <record model="ir.ui.view" id="request_work_order_tree_view">
+            <field name="name">request.work.order.tree</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                 <tree decoration-muted="state=='draft'" decoration-info="state == 'confirm'" decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')" string="Work Order Tree">
+              
+                    <field name="request_no"/>
+                	<field name="request_date"/>
+                	<field name="hr_employee_id"/>
+                	<field name="request_categ_id"/>
+                    <field name="request_type_id"/>
+                    <field name="total_amount" sum="total"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>
+        
+        
+	  <record model="ir.ui.view" id="request_work_order_form_view">
+      		<field name="name">request.work.order.form</field>
+      		<field name="model">request.request</field>
+      		<field name="arch" type="xml">
+                <form string="Work Order Form">
+                	<header>
+                		<button name="action_draft" type="object"
+                                string="Reset to draft"
+                                states="confirm"/>
+                        <button name="action_confirm_msg_a" type="object"
+		                                string="Confirm"
+		                                attrs="{'invisible': [('btn_msg', '!=', False)]}"
+		                                class="oe_highlight"
+		                                confirm="Please review first the document before confirming the record"
+		                               />
+<!-- 		                <button name="action_confirm_msg_b" type="object" -->
+<!-- 		                                string="Confirm"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Are you sure all support documents are attached?" -->
+<!-- 		                                /> -->
+		                <button name="action_confirm" type="object"
+		                                string="Confirm" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"
+		                                 />
+		                        
+		                 <button name="action_approve_msg_a" type="object"
+		                                string="Approve" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to approve this document?"
+		                                /> 
+<!-- 		                  <button name="action_approve_msg_b" type="object" -->
+<!-- 		                                string="Approve"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Please review the details first to make sure that all requirements are approved" -->
+<!-- 		                                />               -->
+		                 <button name="action_approve" type="object"
+		                                string="Approve"
+		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"
+		                                />
+		                 <button name="action_disapprove" type="object"
+		                                string="Disapprove" states="confirm"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to DISAPPROVED?"
+		                                /> 
+		                <button name="action_void" type="object"
+		                                string="Void" 
+		                                attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to VOID?"
+		                                />
+		                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,disapprove,void"/>
+		                <field name="btn_msg" invisible="1"/>
+		             </header>
+		             
+              		<sheet>
+              		<field name="readonly_req_det" invisible="1"/>
+              		<button name="print_report" 
+              		 		 string="Print" 
+              		 		 type="object" 
+              		 		 class="btn-primary" 
+              		 		 confirm="Are you sure you want to PRINT this document?
+              		 		 Once printed this option will be disabled.Can print only ONCE."
+              		 		 attrs="{'invisible': [('state', 'not in',('approve'))]}"
+              		 		 />
+                      <group>
+                      	<group >
+                      		<field name="company_id" readonly="1"/>
+                      	</group>
+                      	<group>
+                      	</group>
+                        <group>
+                            <field name="hr_employee_id" readonly="1" />
+                            <field name="request_through" required="1" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_categ_id" readonly="1"/>
+                            <field name="request_type_id" 
+                             		required="1" 
+                             		attrs="{'readonly': [('state','not in',('draft'))]}"
+                             		domain="[('approval_ids','=',filter_request_type)]"/>
+                             <field name="filter_request_type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_no" readonly="1"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="source_id" readonly="1"/>
+                            <field name="to_approve_by" invisible="1" widget="many2many_tags" /> 
+                        </group>
+                        
+                       </group>  
+                       
+                       <group>
+                       	<group>
+                       		<field name="purpose" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                       	</group>
+                       	<group>
+                       		<field name="instruction" attrs="{'readonly': [('state','not in',('draft'))]}" />
+                       	</group>
+                       </group>                    
+                       
+                       <notebook>
+                       		<page string ="Request">
+                       			<field name="request_det_ids" attrs="{'readonly': [('readonly_req_det','!=',True)]}">
+								    <tree editable='bottom'>
+								        <field name="unit"/>
+								        <field name="qty"/>
+								        <field name="account" invisible="1"/> 
+								        <field name="particulars" required="1"/> 
+								        <field name="price"/>
+								        <field name="amount" readonly="1"/>
+								                                          
+								    </tree>
+								</field>
+								
+								<group class="oe_subtotal_footer oe_right">
+			                    	<field style="font-weight:bold" name="total_amount"/>
+			             		</group> 
+			             		
+                       		</page>
+                       		<page string="Approvals">
+                       			<field name="request_approval_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="hr_job_id"/>
+                       					<field name="user_id"/>
+                       					<field name="allowed_user_ids" widget="many2many_tags"/>
+                       					<field name="approved"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="History">
+                       			<field name="request_history_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="date"/>
+                       					<field name="user_id"/>
+                       					<field name="desc"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="Remarks">
+                       			<field name="remark" />
+                       		</page>
+                       	</notebook> 
+                     </sheet> 
+                                           
+                </form>
+            </field>
+        </record>
+         
+        <record model="ir.ui.view" id="request_work_order_kanban_view">
+            <field name="name">request.workorder.kanban</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="request_categ_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            	                    
+                                
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+<!--                                         <span class="oe_e">request_no</span> -->
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                
+                                <div t-attf-class="oe_kanban_content">
+                                	<div class="o_kanban_image">
+                                    	<img t-att-src="kanban_image('request.request', 'image', record.id.value)" class="img-responsive"/>
+                                	</div> 
+                                    
+                                    <div>
+	                                   <span style="font-weight:bold;font-size:15px"><field name="request_no"/></span>
+	                                    <br/>
+	                                   <span style="font-weight:bold;"><field name="department_id"/></span>
+	                                   <br/>
+	                                    <field name="hr_employee_id"/><br/>
+	                                    <field name="request_type_id"/>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="myrequest_work_order_action">
+            <field name="name">Work Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'work order')]</field>
+            <field name="context">{"search_default":'WORK ORDER',"action_default":'myrequest'}}</field>
+        </record> 
+                
+        <record model="ir.actions.act_window.view" id="request_work_order_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="request_work_order_tree_view"/>
+            <field name="act_window_id" ref="myrequest_work_order_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="request_work_order_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="request_work_order_form_view"/>
+            <field name="act_window_id" ref="myrequest_work_order_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="request_work_order_kanban_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="request_work_order_kanban_view"/>
+            <field name="act_window_id" ref="myrequest_work_order_action"/>
+        </record> 
+        
+<!--         <record model="ir.actions.act_window" id="branchdept_work_order_action">
+            <field name="name">Work Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'CASH')]</field>
+            <field name="context">{"search_default":'WORK ORDER',"action_default":'branchdept'}}</field>
+        </record> 
+        
+        <record model="ir.actions.act_window" id="other_work_order_action">
+            <field name="name">Work Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'CASH')]</field>
+            <field name="context">{"search_default":'WORK ORDER',"action_default":'other'}}</field>
+        </record>  -->
+
+
+<!-- Request IOU -->
+   <record model="ir.ui.view" id="request_iou_search_view">
+            <field name="name">request.iou.search</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <search string="IOU Search">
+                
+              		<filter icon="terp-personal" name="myrequest" string="My Request" context="{'action_default':'myrequest'}"/> 
+              		<filter icon="terp-personal" name="branchdept" string="Branch/Dept Request" context="{'action_default':'branchdept'}"/>
+              		<filter icon="terp-personal" name="other" string="Other Request" context="{'action_default':'other'}"/> 
+                    <field name="request_no"/>
+                    <field name="request_date"/>
+                    <field name="hr_employee_id"/>
+                    <field name="department_id"/>
+                    <field name="request_through"/>
+                    <field name="request_type_id"/>
+                                           
+                </search>
+            </field>
+     </record>
+     
+	 <record model="ir.ui.view" id="request_iou_tree_view">
+            <field name="name">request.iou.tree</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="state=='draft'" decoration-info="state == 'confirm'" decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')" string="IOU Tree">
+              
+                    <field name="request_no"/>
+                	<field name="request_date"/>
+                	<field name="hr_employee_id"/>
+                	<field name="request_categ_id"/>
+                    <field name="request_type_id"/>
+                    <field name="total_amount" sum="total"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>
+        
+        
+	  <record model="ir.ui.view" id="request_iou_form_view">
+      		<field name="name">request.iou.form</field>
+      		<field name="model">request.request</field>
+      		<field name="arch" type="xml">
+                <form string="IOU Form">
+                	<header>
+                		<button name="action_draft" type="object"
+                                string="Reset to draft"
+                                states="confirm"/>
+                        <button name="action_confirm_msg_a" type="object"
+		                                string="Confirm"
+		                                attrs="{'invisible': [('btn_msg', '!=', False)]}"
+		                                class="oe_highlight"
+		                                confirm="Please review first the document before confirming the record"
+		                               />
+<!-- 		                <button name="action_confirm_msg_b" type="object" -->
+<!-- 		                                string="Confirm"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Are you sure all support documents are attached?" -->
+<!-- 		                                /> -->
+		                <button name="action_confirm" type="object"
+		                                string="Confirm" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"
+		                                 />
+		                        
+		                 <button name="action_approve_msg_a" type="object"
+		                                string="Approve" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to approve this document?"
+		                                /> 
+<!-- 		                  <button name="action_approve_msg_b" type="object" -->
+<!-- 		                                string="Approve"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Please review the details first to make sure that all requirements are approved" -->
+<!-- 		                                />               -->
+		                 <button name="action_approve" type="object"
+		                                string="Approve"
+		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"
+		                                />
+		                 <button name="action_disapprove" type="object"
+		                                string="Disapprove" states="confirm"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to DISAPPROVED?"
+		                                /> 
+		                <button name="action_void" type="object"
+		                                string="Void" 
+		                                attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to VOID?"
+		                                />
+		                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,disapprove,void"/>
+		                <field name="btn_msg" invisible="1"/>
+		             </header>
+		             
+              		<sheet>
+              		<field name="readonly_req_det" invisible="1"/>
+              		<button name="print_report" 
+              		 		 string="Print" 
+              		 		 type="object" 
+              		 		 class="btn-primary" 
+              		 		 confirm="Are you sure you want to PRINT this document?
+              		 		 Once printed this option will be disabled.Can print only ONCE."
+              		 		 attrs="{'invisible': [('state', 'not in',('approve'))]}"
+              		 		 />
+                      <group>
+                      	<group >
+                      		<field name="company_id" readonly="1"/>
+                      	</group>
+                      	<group>
+                      	</group>
+                        <group>
+                            <field name="hr_employee_id" readonly="1" />
+                            <field name="request_through" required="1" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_categ_id" readonly="1"/>
+                            <field name="request_type_id" 
+                             		required="1" 
+                             		attrs="{'readonly': [('state','not in',('draft'))]}"
+                             		domain="[('approval_ids','=',filter_request_type)]"/>
+                             <field name="filter_request_type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_no" readonly="1"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="source_id" readonly="1"/>
+                            <field name="to_approve_by" invisible="1" widget="many2many_tags" /> 
+                        </group>
+                        
+                       </group>  
+                       
+                       <group>
+                       	<group>
+                       		<field name="purpose" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                       	</group>
+                       	<group>
+                       		<field name="instruction" attrs="{'readonly': [('state','not in',('draft'))]}" />
+                       	</group>
+                       </group>                    
+                       
+                       <notebook>
+                       		<page string ="Request">
+                       			<field name="request_det_ids" attrs="{'readonly': [('readonly_req_det','!=',True)]}">
+								    <tree editable='bottom'>
+								        <field name="unit"/>
+								        <field name="qty"/>
+								        <field name="account" invisible="1"/> 
+								        <field name="particulars" required="1"/> 
+								        <field name="price"/>
+								        <field name="amount" readonly="1"/>
+								                                          
+								    </tree>
+								</field>
+								
+								<group class="oe_subtotal_footer oe_right">
+			                    	<field style="font-weight:bold" name="total_amount"/>
+			             		</group> 
+			             		
+                       		</page>
+                       		<page string="Approvals">
+                       			<field name="request_approval_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="hr_job_id"/>
+                       					<field name="user_id"/>
+                       					<field name="allowed_user_ids" widget="many2many_tags"/>
+                       					<field name="approved"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="History">
+                       			<field name="request_history_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="date"/>
+                       					<field name="user_id"/>
+                       					<field name="desc"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="Remarks">
+                       			<field name="remark" />
+                       		</page>
+                       	</notebook> 
+                     </sheet> 
+                                           
+                </form>
+            </field>
+        </record>
+         
+        <record model="ir.ui.view" id="request_iou_kanban_view">
+            <field name="name">request.iou.kanban</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="request_categ_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            	                    
+                                
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+<!--                                         <span class="oe_e">request_no</span> -->
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                
+                                <div t-attf-class="oe_kanban_content">
+                                	<div class="o_kanban_image">
+                                    	<img t-att-src="kanban_image('request.request', 'image', record.id.value)" class="img-responsive"/>
+                                	</div> 
+                                    
+                                    <div>
+	                                   <span style="font-weight:bold;font-size:15px"><field name="request_no"/></span>
+	                                    <br/>
+	                                   <span style="font-weight:bold;"><field name="department_id"/></span>
+	                                   <br/>
+	                                    <field name="hr_employee_id"/><br/>
+	                                    <field name="request_type_id"/>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="myrequest_iou_action">
+            <field name="name">IOU</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'iou')]</field>
+            <field name="context">{"search_default":'IOU',"action_default":'myrequest'}}</field>
+        </record> 
+                
+        <record model="ir.actions.act_window.view" id="request_iou_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="request_iou_tree_view"/>
+            <field name="act_window_id" ref="myrequest_iou_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="request_iou_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="request_iou_form_view"/>
+            <field name="act_window_id" ref="myrequest_iou_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="request_iou_kanban_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="request_iou_kanban_view"/>
+            <field name="act_window_id" ref="myrequest_iou_action"/>
+        </record> 
+        
+<!--         <record model="ir.actions.act_window" id="branchdept_iou_action">
+            <field name="name">IOU</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'iou')]</field>
+            <field name="context">{"search_default":'IOU',"action_default":'branchdept'}}</field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="other_iou_action">
+            <field name="name">IOU</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'iou')]</field>
+            <field name="context">{"search_default":'IOU',"action_default":'other'}}</field>
+        </record>
+ -->
+<!-- Request Others   -->
+   <record model="ir.ui.view" id="request_others_search_view">
+            <field name="name">request.kanban.search</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <search string="Others Search">
+              		<filter icon="terp-personal" name="myrequest" string="My Request" context="{'action_default':'myrequest'}"/> 
+              		<filter icon="terp-personal" name="branchdept" string="Branch/Dept Request" context="{'action_default':'branchdept'}"/>
+              		<filter icon="terp-personal" name="other" string="Other Request" context="{'action_default':'other'}"/> 
+                    <field name="request_no"/>
+                    <field name="request_date"/>
+                    <field name="hr_employee_id"/>
+                    <field name="department_id"/>
+                    <field name="request_through"/>
+                    <field name="request_type_id"/>
+                                           
+                </search>
+            </field>
+     </record>
+
+	 <record model="ir.ui.view" id="request_others_tree_view">
+            <field name="name">request.others.tree</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="state=='draft'" decoration-info="state == 'confirm'" decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')" string="Others Tree">
+              
+                    <field name="request_no"/>
+                	<field name="request_date"/>
+                	<field name="hr_employee_id"/>
+                	<field name="request_categ_id"/>
+                    <field name="request_type_id"/>
+                    <field name="total_amount" sum="total"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>
+        
+        
+	  <record model="ir.ui.view" id="request_others_form_view">
+      		<field name="name">request.others.form</field>
+      		<field name="model">request.request</field>
+      		<field name="arch" type="xml">
+                 <form string="Others Form">
+                	<header>
+                		<button name="action_draft" type="object"
+                                string="Reset to draft"
+                                states="confirm"/>
+                        <button name="action_confirm_msg_a" type="object"
+		                                string="Confirm"
+		                                attrs="{'invisible': [('btn_msg', '!=', False)]}"
+		                                class="oe_highlight"
+		                                confirm="Please review first the document before confirming the record"
+		                               />
+<!-- 		                <button name="action_confirm_msg_b" type="object" -->
+<!-- 		                                string="Confirm"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Are you sure all support documents are attached?" -->
+<!-- 		                                /> -->
+		                <button name="action_confirm" type="object"
+		                                string="Confirm" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"
+		                                 />
+		                        
+		                 <button name="action_approve_msg_a" type="object"
+		                                string="Approve" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to approve this document?"
+		                                /> 
+<!-- 		                  <button name="action_approve_msg_b" type="object" -->
+<!-- 		                                string="Approve"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Please review the details first to make sure that all requirements are approved" -->
+<!-- 		                                />               -->
+		                 <button name="action_approve" type="object"
+		                                string="Approve"
+		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"
+		                                />
+		                 <button name="action_disapprove" type="object"
+		                                string="Disapprove" states="confirm"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to DISAPPROVED?"
+		                                /> 
+		                <button name="action_void" type="object"
+		                                string="Void" 
+		                                attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to VOID?"
+		                                />
+		                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,disapprove,void"/>
+		                <field name="btn_msg" invisible="1"/>
+		             </header>
+		             
+              		<sheet>
+              		<field name="readonly_req_det" invisible="1"/>
+              		<button name="print_report" 
+              		 		 string="Print" 
+              		 		 type="object" 
+              		 		 class="btn-primary" 
+              		 		 confirm="Are you sure you want to PRINT this document?
+              		 		 Once printed this option will be disabled.Can print only ONCE."
+              		 		 attrs="{'invisible': [('state', 'not in',('approve'))]}"
+              		 		 />
+                      <group>
+                      	<group >
+                      		<field name="company_id" readonly="1"/>
+                      	</group>
+                      	<group>
+                      	</group>
+                        <group>
+                            <field name="hr_employee_id" readonly="1" />
+                            <field name="request_through" required="1" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_categ_id" readonly="1"/>
+                            <field name="request_type_id" 
+                             		required="1" 
+                             		attrs="{'readonly': [('state','not in',('draft'))]}"
+                             		domain="[('approval_ids','=',filter_request_type)]"/>
+                             <field name="filter_request_type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_no" readonly="1"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="source_id" readonly="1"/>
+                            <field name="to_approve_by" invisible="1" widget="many2many_tags" /> 
+                        </group>
+                        
+                       </group>  
+                       
+                       <group>
+                       	<group>
+                       		<field name="purpose" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                       	</group>
+                       	<group>
+                       		<field name="instruction" attrs="{'readonly': [('state','not in',('draft'))]}" />
+                       	</group>
+                       </group>                    
+                       
+                       <notebook>
+                       		<page string ="Request">
+                       			<field name="request_det_ids" attrs="{'readonly': [('readonly_req_det','!=',True)]}">
+								    <tree editable='bottom'>
+								        <field name="unit"/>
+								        <field name="qty"/>
+								        <field name="account" invisible="1"/> 
+								        <field name="particulars" required="1"/> 
+								        <field name="price"/>
+								        <field name="amount" readonly="1"/>
+								                                          
+								    </tree>
+								</field>
+								
+								<group class="oe_subtotal_footer oe_right">
+			                    	<field style="font-weight:bold" name="total_amount"/>
+			             		</group> 
+			             		
+                       		</page>
+                       		<page string="Approvals">
+                       			<field name="request_approval_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="hr_job_id"/>
+                       					<field name="user_id"/>
+                       					<field name="allowed_user_ids" widget="many2many_tags"/>
+                       					<field name="approved"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="History">
+                       			<field name="request_history_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="date"/>
+                       					<field name="user_id"/>
+                       					<field name="desc"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="Remarks">
+                       			<field name="remark" />
+                       		</page>
+                       	</notebook> 
+                     </sheet> 
+                                           
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="request_others_kanban_view">
+            <field name="name">request.others.kanban</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="request_categ_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            	                    
+                                
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+<!--                                         <span class="oe_e">request_no</span> -->
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                
+                                <div t-attf-class="oe_kanban_content">
+                                	<div class="o_kanban_image">
+                                    	<img t-att-src="kanban_image('request.request', 'image', record.id.value)" class="img-responsive"/>
+                                	</div> 
+                                    
+                                    <div>
+	                                   <span style="font-weight:bold;font-size:15px"><field name="request_no"/></span>
+	                                    <br/>
+	                                   <span style="font-weight:bold;"><field name="department_id"/></span>
+	                                   <br/>
+	                                    <field name="hr_employee_id"/><br/>
+	                                    <field name="request_type_id"/>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        
+       <record model="ir.actions.act_window" id="myrequest_others_action">
+            <field name="name">Others</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[('request_categ_id', 'ilike', 'others')]</field>
+            <field name="context">{"search_default":'OTHERS',"action_default":'myrequest'}}</field>
+        </record> 
+
+        <record model="ir.actions.act_window.view" id="request_others_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="request_others_tree_view"/>
+            <field name="act_window_id" ref="myrequest_others_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="request_others_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="request_others_form_view"/>
+            <field name="act_window_id" ref="myrequest_others_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="request_others_kanban_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="request_others_kanban_view"/>
+            <field name="act_window_id" ref="myrequest_others_action"/>
+        </record> 
+        
+<!--         <record model="ir.actions.act_window" id="branchdept_others_action"> -->
+<!--             <field name="name">Others</field> -->
+<!--             <field name="type">ir.actions.act_window</field> -->
+<!--             <field name="res_model">request.request</field> -->
+<!--             <field name="view_type">form</field> -->
+<!--             <field name="view_mode">search,tree,form,kanban</field> -->
+<!--             <field name="domain">[('request_categ_id', 'ilike', 'others')]</field> -->
+<!--             <field name="context">{"search_default":'OTHERS',"action_default":'branchdept'}}</field> -->
+<!--         </record>   -->
+        
+<!--         <record model="ir.actions.act_window" id="other_others_action"> -->
+<!--             <field name="name">Others</field> -->
+<!--             <field name="type">ir.actions.act_window</field> -->
+<!--             <field name="res_model">request.request</field> -->
+<!--             <field name="view_type">form</field> -->
+<!--             <field name="view_mode">search,tree,form,kanban</field> -->
+<!--             <field name="domain">[('request_categ_id', 'ilike', 'others')]</field> -->
+<!--             <field name="context">{"search_default":'OTHERS',"action_default":'other'}}</field> -->
+<!--         </record>           -->
+
+
+<!-- Request All   -->
+   <record model="ir.ui.view" id="request_all_search_view">
+            <field name="name">request.all.search</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <search string="Request Search">
+        
+                    <field name="request_no"/>
+                    <field name="request_date"/>
+                    <field name="hr_employee_id"/>
+                    <field name="department_id"/>
+                    <field name="request_through"/>
+                    <field name="request_type_id"/>
+                                           
+                </search>
+            </field>
+     </record>
+     
+	 <record model="ir.ui.view" id="request_all_tree_view">
+            <field name="name">request.all.tree</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                 <tree decoration-muted="state=='draft'" decoration-info="state == 'confirm'" decoration-success="state == 'approve'" decoration-danger="state in ('void','disapprove')" string="Request Tree">
+              
+                    <field name="request_no"/>
+                	<field name="request_date"/>
+                	<field name="hr_employee_id"/>
+                	<field name="request_categ_id"/>
+                    <field name="request_type_id"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>
+        
+        
+	  <record model="ir.ui.view" id="request_all_form_view">
+      		<field name="name">request.all.form</field>
+      		<field name="model">request.request</field>
+      		<field name="arch" type="xml">
+                <form string="Request Form" create="true">
+                	<header>
+                		<button name="action_draft" type="object"
+                                string="Reset to draft"
+                                states="confirm"/>
+                        <button name="action_confirm_msg_a" type="object"
+		                                string="Confirm"
+		                                attrs="{'invisible': [('btn_msg', '!=', False)]}"
+		                                class="oe_highlight"
+		                                confirm="Please review first the document before confirming the record"
+		                               />
+<!-- 		                <button name="action_confirm_msg_b" type="object" -->
+<!-- 		                                string="Confirm"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Are you sure all support documents are attached?" -->
+<!-- 		                                /> -->
+		                <button name="action_confirm" type="object"
+		                                string="Confirm" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure you want to confirm? Once you press(ok), record will be set to Confirmed and now ready for Approval"
+		                                 />
+		                        
+		                 <button name="action_approve_msg_a" type="object"
+		                                string="Approve" 
+		                                attrs="{'invisible': [('btn_msg', '!=', 'confirm')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to approve this document?"
+		                                /> 
+<!-- 		                  <button name="action_approve_msg_b" type="object" -->
+<!-- 		                                string="Approve"  -->
+<!-- 		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}" -->
+<!-- 		                                class="oe_highlight" -->
+<!-- 		                                confirm="Please review the details first to make sure that all requirements are approved" -->
+<!-- 		                                />               -->
+		                 <button name="action_approve" type="object"
+		                                string="Approve"
+		                                attrs="{'invisible': [('btn_msg', '!=', 'approve_msg_a')]}"
+		                                class="oe_highlight"
+		                                confirm="Are you really sure about this? Once you press(ok) means you finally approve the request"
+		                                />
+		                 <button name="action_disapprove" type="object"
+		                                string="Disapprove" states="confirm"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to DISAPPROVED?"
+		                                /> 
+		                <button name="action_void" type="object"
+		                                string="Void" 
+		                                attrs="{'invisible': [('state', 'in', ('disapprove','void'))]}"
+		                                class="oe_highlight"
+		                                confirm="Are you sure you want to set the document to VOID?"
+		                                />
+		                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,disapprove,void"/>
+		                <field name="btn_msg" invisible="1"/>
+		             </header>
+		             
+              		<sheet>
+              		<field name="readonly_req_det" invisible="1"/>
+              		<button name="print_report" 
+              		 		 string="Print" 
+              		 		 type="object" 
+              		 		 class="btn-primary" 
+              		 		 confirm="Are you sure you want to PRINT this document?
+              		 		 Once printed this option will be disabled.Can print only ONCE."
+              		 		 attrs="{'invisible': [('state', 'not in',('approve'))]}"
+              		 		 />
+                      <group>
+                      	<group >
+                      		<field name="company_id" readonly="1"/>
+                      	</group>
+                      	<group>
+                      	</group>
+                        <group>
+                            <field name="hr_employee_id" readonly="1" />
+                            <field name="request_through" required="1" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_categ_id" readonly="1"/>
+                            <field name="request_type_id" 
+                             		required="1" 
+                             		attrs="{'readonly': [('state','not in',('draft'))]}"
+                             		domain="[('approval_ids','=',filter_request_type)]"/>
+                             <field name="filter_request_type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="request_no" readonly="1"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="source_id" readonly="1"/>
+                            <field name="to_approve_by" invisible="1" widget="many2many_tags" /> 
+                        </group>
+                        
+                       </group>  
+                       
+                       <group>
+                       	<group>
+                       		<field name="purpose" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                       	</group>
+                       	<group>
+                       		<field name="instruction" attrs="{'readonly': [('state','not in',('draft'))]}" />
+                       	</group>
+                       </group>                    
+                       
+                       <notebook>
+                       		<page string ="Request">
+                       			<field name="request_det_ids" attrs="{'readonly': [('readonly_req_det','!=',True)]}">
+								    <tree editable='bottom'>
+								        <field name="unit"/>
+								        <field name="qty"/>
+								        <field name="account" invisible="1"/> 
+								        <field name="particulars" required="1"/> 
+								        <field name="price"/>
+								        <field name="amount" readonly="1"/>
+								                                          
+								    </tree>
+								</field>
+								
+								<group class="oe_subtotal_footer oe_right">
+			                    	<field style="font-weight:bold" name="total_amount"/>
+			             		</group> 
+			             		
+                       		</page>
+                       		<page string="Approvals">
+                       			<field name="request_approval_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="hr_job_id"/>
+                       					<field name="user_id"/>
+                       					<field name="allowed_user_ids" widget="many2many_tags"/>
+                       					<field name="approved"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="History">
+                       			<field name="request_history_ids" readonly="1">	
+                       				<tree editable="bottom">
+                       					<field name="date"/>
+                       					<field name="user_id"/>
+                       					<field name="desc"/>
+                       				</tree>
+                       			</field>
+                       		</page>
+                       		<page string="Remarks">
+                       			<field name="remark" />
+                       		</page>
+                       	</notebook> 
+                     </sheet> 
+                                           
+                </form>
+            </field>
+            
+             
+        </record>
+
+        <record model="ir.ui.view" id="request_all_kanban_view">
+            <field name="name">request.all.kanban</field>
+            <field name="model">request.request</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="request_categ_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            	                    
+                                
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+<!--                                         <span class="oe_e">request_no</span> -->
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                
+                                <div t-attf-class="oe_kanban_content">
+                                	<div class="o_kanban_image">
+                                    	<img t-att-src="kanban_image('request.request', 'image', record.id.value)" class="img-responsive"/>
+                                	</div> 
+                                    
+                                    <div>
+	                                    <span style="font-weight:bold;font-size:15px"><field name="request_no"/></span>
+	                                    <br/>
+	                                    <field name="hr_employee_id"/><br/>
+	                                    <field name="request_type_id"/>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="myrequest_all_action">
+            <field name="name">All</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">search,tree,form,kanban</field>
+            <field name="domain">[]</field>
+            <field name="context">{"search_default":'All'}</field>
+        </record>  
+        
+        <record model="ir.actions.act_window.view" id="request_all_tree_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="request_all_tree_view"/>
+            <field name="act_window_id" ref="myrequest_all_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="request_all_form_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="request_all_form_view"/>
+            <field name="act_window_id" ref="myrequest_all_action"/>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="request_all_kanban_action">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="request_all_kanban_view"/>
+            <field name="act_window_id" ref="myrequest_all_action"/>
+        </record> 
+
+
+	
+	</data>
+</openerp>

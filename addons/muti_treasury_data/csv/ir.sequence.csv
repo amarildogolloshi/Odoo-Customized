@@ -1,0 +1,97 @@
+"id","name","code","prefix","padding"
+"ir_sequence_req_code_auberon-55","req_code_auberon-55","req_code_auberon-55","16-55-1-1",5
+"ir_sequence_req_code_park maintenance & development-55","req_code_park maintenance & development-55","req_code_park maintenance & development-55","16-35-1-1",5
+"ir_sequence_req_code_admin & finance-55","req_code_admin & finance-55","req_code_admin & finance-55","16-35-1-2",5
+"ir_sequence_req_code_admin & general services-55","req_code_admin & general services-55","req_code_admin & general services-55","16-35-1-3",5
+"ir_sequence_req_code_finance-55","req_code_finance-55","req_code_finance-55","16-35-1-4",5
+"ir_sequence_req_code_sales & marketing-55","req_code_sales & marketing-55","req_code_sales & marketing-55","16-35-1-5",5
+"ir_sequence_req_code_office of the president-55","req_code_office of the president-55","req_code_office of the president-55","16-35-1-6",5
+"ir_sequence_req_code_care foundation ii-40","req_code_care foundation ii-40","req_code_care foundation ii-40","16-35-1-7",5
+"ir_sequence_req_code_cfi - gensan-40","req_code_cfi - gensan-40","req_code_cfi - gensan-40","16-40-1-1",5
+"ir_sequence_req_code_cfi - isulan-40","req_code_cfi - isulan-40","req_code_cfi - isulan-40","16-40-1-2",5
+"ir_sequence_req_code_care-40","req_code_care-40","req_code_care-40","16-40-1-3",5
+"ir_sequence_req_code_cfi - main-40","req_code_cfi - main-40","req_code_cfi - main-40","16-40-1-4",5
+"ir_sequence_req_code_cfi-koronadal-40","req_code_cfi-koronadal-40","req_code_cfi-koronadal-40","16-40-1-5",5
+"ir_sequence_req_code_isulan-h-25","req_code_isulan-h-25","req_code_isulan-h-25","16-40-1-6",5
+"ir_sequence_req_code_isulan-m-25","req_code_isulan-m-25","req_code_isulan-m-25","16-25-1-1",5
+"ir_sequence_req_code_koronadal-h-25","req_code_koronadal-h-25","req_code_koronadal-h-25","16-25-1-2",5
+"ir_sequence_req_code_koronadal-m-25","req_code_koronadal-m-25","req_code_koronadal-m-25","16-25-1-3",5
+"ir_sequence_req_code_marbel-m-25","req_code_marbel-m-25","req_code_marbel-m-25","16-25-1-4",5
+"ir_sequence_req_code_polomolok-m-25","req_code_polomolok-m-25","req_code_polomolok-m-25","16-25-1-5",5
+"ir_sequence_req_code_surallah-h-25","req_code_surallah-h-25","req_code_surallah-h-25","16-25-1-6",5
+"ir_sequence_req_code_surallah-m-25","req_code_surallah-m-25","req_code_surallah-m-25","16-25-1-7",5
+"ir_sequence_req_code_tacurong-m-25","req_code_tacurong-m-25","req_code_tacurong-m-25","16-25-1-8",5
+"ir_sequence_req_code_planning & design-30","req_code_planning & design-30","req_code_planning & design-30","16-25-1-9",5
+"ir_sequence_req_code_operations-30","req_code_operations-30","req_code_operations-30","16-30-1-10",5
+"ir_sequence_req_code_office of the president-30","req_code_office of the president-30","req_code_office of the president-30","16-30-1-1",5
+"ir_sequence_req_code_admin & finance-30","req_code_admin & finance-30","req_code_admin & finance-30","16-30-1-2",5
+"ir_sequence_req_code_hlrdc-quarry-30","req_code_hlrdc-quarry-30","req_code_hlrdc-quarry-30","16-30-1-3",5
+"ir_sequence_req_code_isulan-20","req_code_isulan-20","req_code_isulan-20","16-30-1-4",5
+"ir_sequence_req_code_maramag-20","req_code_maramag-20","req_code_maramag-20","16-20-1-5",5
+"ir_sequence_req_code_operations group-20","req_code_operations group-20","req_code_operations group-20","16-20-1-1",5
+"ir_sequence_req_code_office of the president-20","req_code_office of the president-20","req_code_office of the president-20","16-20-1-2",5
+"ir_sequence_req_code_parts & services-20","req_code_parts & services-20","req_code_parts & services-20","16-20-1-3",5
+"ir_sequence_req_code_management team-20","req_code_management team-20","req_code_management team-20","16-20-1-4",5
+"ir_sequence_req_code_finance-20","req_code_finance-20","req_code_finance-20","16-20-1-5",5
+"ir_sequence_req_code_koronadal-20","req_code_koronadal-20","req_code_koronadal-20","16-20-1-6",5
+"ir_sequence_req_code_surallah-20","req_code_surallah-20","req_code_surallah-20","16-20-1-7",5
+"ir_sequence_req_code_kitchen-25","req_code_kitchen-25","req_code_kitchen-25","16-20-1-8",5
+"ir_sequence_req_code_suzuki 3s-15","req_code_suzuki 3s-15","req_code_suzuki 3s-15","16-25-1-",5
+"ir_sequence_req_code_isulan-15","req_code_isulan-15","req_code_isulan-15","16-15-1-1",5
+"ir_sequence_req_code_operations group-15","req_code_operations group-15","req_code_operations group-15","16-15-1-2",5
+"ir_sequence_req_code_management team-15","req_code_management team-15","req_code_management team-15","16-15-1-3",5
+"ir_sequence_req_code_marbel-mc-15","req_code_marbel-mc-15","req_code_marbel-mc-15","16-15-1-4",5
+"ir_sequence_req_code_mc services-15","req_code_mc services-15","req_code_mc services-15","16-15-1-5",5
+"ir_sequence_req_code_office of the president-15","req_code_office of the president-15","req_code_office of the president-15","16-15-1-6",5
+"ir_sequence_req_code_spareparts-15","req_code_spareparts-15","req_code_spareparts-15","16-15-1-7",5
+"ir_sequence_req_code_spareparts-retail-15","req_code_spareparts-retail-15","req_code_spareparts-retail-15","16-15-1-8",5
+"ir_sequence_req_code_spareparts-wholesale-15","req_code_spareparts-wholesale-15","req_code_spareparts-wholesale-15","16-15-1-9",5
+"ir_sequence_req_code_finance-15","req_code_finance-15","req_code_finance-15","16-15-1-10",5
+"ir_sequence_req_code_koronadal-15","req_code_koronadal-15","req_code_koronadal-15","16-15-1-11",5
+"ir_sequence_req_code_marbel-15","req_code_marbel-15","req_code_marbel-15","16-15-1-12",5
+"ir_sequence_req_code_polomolok-15","req_code_polomolok-15","req_code_polomolok-15","16-15-1-13",5
+"ir_sequence_req_code_surallah-15","req_code_surallah-15","req_code_surallah-15","16-15-1-14",5
+"ir_sequence_req_code_tacurong-15","req_code_tacurong-15","req_code_tacurong-15","16-15-1-15",5
+"ir_sequence_req_code_villa amor showroom - m-15","req_code_villa amor showroom - m-15","req_code_villa amor showroom - m-15","16-15-1-16",5
+"ir_sequence_req_code_lagao-45","req_code_lagao-45","req_code_lagao-45","16-15-1-17",5
+"ir_sequence_req_code_phoenix-45","req_code_phoenix-45","req_code_phoenix-45","16-45-1-1",5
+"ir_sequence_req_code_operations-45","req_code_operations-45","req_code_operations-45","16-45-1-2",5
+"ir_sequence_req_code_rural bank of norala-","req_code_rural bank of norala-","req_code_rural bank of norala-","16-45-1-3",5
+"ir_sequence_req_code_operations-","req_code_operations-","req_code_operations-","16--1-4",5
+"ir_sequence_req_code_digos-m-25","req_code_digos-m-25","req_code_digos-m-25","16--1-5",5
+"ir_sequence_req_code_kidapawan-m-25","req_code_kidapawan-m-25","req_code_kidapawan-m-25","16-25-2-1",5
+"ir_sequence_req_code_lapasan – m-25","req_code_lapasan – m-25","req_code_lapasan – m-25","16-25-2-2",5
+"ir_sequence_req_code_maramag-h-25","req_code_maramag-h-25","req_code_maramag-h-25","16-25-2-3",5
+"ir_sequence_req_code_valencia-m-25","req_code_valencia-m-25","req_code_valencia-m-25","16-25-2-4",5
+"ir_sequence_req_code_kidapawan-15","req_code_kidapawan-15","req_code_kidapawan-15","16-15-2-5",5
+"ir_sequence_req_code_lapasan-15","req_code_lapasan-15","req_code_lapasan-15","16-15-2-6",5
+"ir_sequence_req_code_valencia-15","req_code_valencia-15","req_code_valencia-15","16-15-2-7",5
+"ir_sequence_req_code_buhangin - m-25","req_code_buhangin - m-25","req_code_buhangin - m-25","16-25-3-1",5
+"ir_sequence_req_code_calinan-m-25","req_code_calinan-m-25","req_code_calinan-m-25","16-25-3-2",5
+"ir_sequence_req_code_panabo-m-25","req_code_panabo-m-25","req_code_panabo-m-25","16-25-3-3",5
+"ir_sequence_req_code_tagum-m-25","req_code_tagum-m-25","req_code_tagum-m-25","16-25-3-4",5
+"ir_sequence_req_code_buhangin-15","req_code_buhangin-15","req_code_buhangin-15","16-15-3-5",5
+"ir_sequence_req_code_calinan-15","req_code_calinan-15","req_code_calinan-15","16-15-3-6",5
+"ir_sequence_req_code_digos-15","req_code_digos-15","req_code_digos-15","16-15-3-7",5
+"ir_sequence_req_code_panabo-15","req_code_panabo-15","req_code_panabo-15","16-15-3-8",5
+"ir_sequence_req_code_tagum-15","req_code_tagum-15","req_code_tagum-15","16-15-3-9",5
+"ir_sequence_req_code_insurance-25","req_code_insurance-25","req_code_insurance-25","16-25-1-1",5
+"ir_sequence_req_code_treasury-25","req_code_treasury-25","req_code_treasury-25","16-25-2-2",5
+"ir_sequence_req_code_human capital development-25","req_code_human capital development-25","req_code_human capital development-25","16-25-3-3",5
+"ir_sequence_req_code_operations group-25","req_code_operations group-25","req_code_operations group-25","16-25-4-4",5
+"ir_sequence_req_code_mis-25","req_code_mis-25","req_code_mis-25","16-25-5-5",5
+"ir_sequence_req_code_audit-25","req_code_audit-25","req_code_audit-25","16-25-6-6",5
+"ir_sequence_req_code_comptrollership-25","req_code_comptrollership-25","req_code_comptrollership-25","16-25-7-7",5
+"ir_sequence_req_code_corporate planning & market research development-25","req_code_corporate planning & market research development-25","req_code_corporate planning & market research development-25","16-25-8-8",5
+"ir_sequence_req_code_execom-25","req_code_execom-25","req_code_execom-25","16-25-9-9",5
+"ir_sequence_req_code_human capital management-25","req_code_human capital management-25","req_code_human capital management-25","16-25-10-10",5
+"ir_sequence_req_code_repair & maintenance-25","req_code_repair & maintenance-25","req_code_repair & maintenance-25","16-25-11-11",5
+"ir_sequence_req_code_credit and collection-25","req_code_credit and collection-25","req_code_credit and collection-25","16-25-12-12",5
+"ir_sequence_req_code_internal control-25","req_code_internal control-25","req_code_internal control-25","16-25-13-13",5
+"ir_sequence_req_code_legal-25","req_code_legal-25","req_code_legal-25","16-25-14-14",5
+"ir_sequence_req_code_mati-m-25","req_code_mati-m-25","req_code_mati-m-25","16-25-15-15",5
+"ir_sequence_req_code_marketing-25","req_code_marketing-25","req_code_marketing-25","16-25-16-16",5
+"ir_sequence_req_code_materials management-25","req_code_materials management-25","req_code_materials management-25","16-25-17-17",5
+"ir_sequence_req_code_finance-25","req_code_finance-25","req_code_finance-25","16-25-18-18",5
+"ir_sequence_req_code_office of the president-25","req_code_office of the president-25","req_code_office of the president-25","16-25-19-19",5
+

@@ -1,0 +1,8 @@
+"id","salary_from","salary_to","fix_tax","percentage","tax_id:id"
+"payroll_tax_line1",0,10000,0,5,"payroll_tax"
+"payroll_tax_line2",10000.00,30000,500,10,"payroll_tax"
+"payroll_tax_line3",30000.00,70000,2500,15,"payroll_tax"
+"payroll_tax_line4",70000.00,140000,8500,20,"payroll_tax"
+"payroll_tax_line5",140000.00,250000,22500,25,"payroll_tax"
+"payroll_tax_line6",250000.00,500000,50000,30,"payroll_tax"
+"payroll_tax_line7",500000.00,900000,125000,32,"payroll_tax"

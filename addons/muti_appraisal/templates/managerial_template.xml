@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	     
+ 		<record id="paperformat_legal_mngr_appraisal" model="report.paperformat">
+		    <field name="name">Legal</field>
+		    <field name="default" eval="True"/>
+		    <field name="format">Legal</field>
+		    <field name="orientation">Portrait</field>
+		    <field name="margin_top">5</field>
+		    <field name="margin_bottom">5</field>
+		    <field name="margin_left">5</field>
+		    <field name="margin_right">5</field>
+		    <field name="header_line" eval="False"/>
+		    <field name="header_spacing">0</field>
+		    <field name="dpi">90</field>
+		</record>         
+		<report
+		        id="managerial_report"
+		        model="muti_appraisal.appraisal"
+		        string="Managerial Appraisal"
+		        name="muti_appraisal.managerial_template"
+		        file="muti_appraisal.managerial_template"
+		        report_type="qweb-pdf" 
+		        paperformat="paperformat_legal_mngr_appraisal"
+		        />
+				        
+		<template id="managerial_data">
+				<html style="height: 100%">
+                <head>
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+                    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                    <title>Managerial Appraisal</title>
+                    <link rel="stylesheet" href="/muti_appraisal/static/src/css/rank_file_style.css" />
+                </head>				
+				<body>
+			        <t t-call="muti_appraisal.mngr_page_1"/>
+					<p style="page-break-before:always;"/> 
+  					<t t-call="muti_appraisal.mngr_page_2"/> 
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.mngr_page_3"/>
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.mngr_page_4"/>
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.mngr_page_5"/>
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.mngr_page_6"/> 
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.mngr_page_7"/> 
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.mngr_page_8"/>  
+					<p style="page-break-before:always;"/>
+					<t t-call="muti_appraisal.performance_summary"/>  					 		
+		        </body> 
+		        </html>
+		</template>
+
+		<template id="managerial_template">
+		    <t t-call="report.html_container">
+		       <t t-foreach="docs" t-as="o"> 
+		       		<t t-foreach="o.employee_ids" t-as="emp"> 
+			       		<t t-call="muti_appraisal.mngr_form_layout">
+			                <div class="page">				            						
+								<t t-call="muti_appraisal.managerial_data"/>
+		                    </div>
+		           		</t>
+	           		</t>
+		        </t>
+		    </t>
+		</template>	
+
+		
+		<template id="mngr_form_layout">	
+			<t t-call="muti_appraisal.mngr_form_layout_header" />
+			<t t-raw="0" />	
+		</template>	        	
+
+
+		<template id="mngr_form_layout_header">
+		    <div class="header" style="border:1px solid black;border-bottom:0px;">
+		       <div class="row" >		            
+		           <div class="text-center">
+		           	 <span style="font-weight:bold;font-size:10px;">
+		           	 MUTI Group of Companies<br/>
+		           	 <span style="font-size:8px"> 
+		           	 	Osmena Street,Koronadal City<br/>
+		           	 	South Cotabato
+		           	 </span>
+		           	 </span>
+		           </div>
+		        </div>
+		    </div>
+		</template>
+		
+		<template id="mngr_page_1">
+			<div class="page_border">
+			<div class="text-center">
+				<div class="apptitle">	 
+		 			<h3 style="font-weight:bold">PERFORMANCE APPRAISAL SYSTEM</h3>
+		 			<h4>FOR</h4>
+		 			<h4>MANAGERIAL EMPLOYEES</h4>
+			    </div>    	 			
+			    <br/>
+			         	 			
+         	 	<p>
+	           		Rating Period:
+	           		<t t-if="data['bulk']==False">
+	           			<span id="start_end_date" t-field="o.start_date"/>
+	           		</t>
+	           		<t t-if="data['bulk']==True">
+	           			<span>___________</span>
+	           		</t> 
+	           		to 
+	           		<t t-if="data['bulk']==False">
+	           			<span id="start_end_date" t-field="o.end_date"/>
+	           		</t>
+	           		<t t-if="data['bulk']==True">
+	           			<span>___________</span>
+	           		</t>
+		        </p>
+					           		
+			 </div>
+			<div>		
+				<hr id="page_hr"/>
+				
+				<div class="text-center" style="margin-top:40px">
+					<div class="appraisal_info_container_left">
+						<t t-if="emp.name_related">
+							<span t-field="emp.name_related"/>
+						</t>
+						<p>Name of Employee</p>
+						<t t-if="o.rater_id">
+							<span t-field="o.rater_id"/>
+						</t>
+          	  			<p>Name of Rater</p>
+          	  			<t t-if="emp.department_id.name">
+							<span t-field="emp.department_id.name"/>
+						</t>
+						<p>Branch</p>	           	  			
+         	  		</div>
+         	  			
+       	  			<div class="appraisal_info_container_right">
+       	  				<t t-if="emp.job_id">
+       	  					<span t-field="emp.job_id"/>
+						</t>
+						<p>Position Title</p>
+						<t t-if="o.rater_id.job_id">
+       	  					<span t-field="o.rater_id.job_id"/>
+						</t>
+         	  			<p>Position Title</p>
+         	  			<span>.</span>
+         	  			<p>Location</p>	           	  			
+       	  			</div>
+        	  	</div>
+        	 </div>	
+			 <br/>								
+	         <br/>								
+	         <h4 class="text-center" id="page_header" style="margin-top:150px">INSTRUCTIONS TO THE RATER</h4>
+	         <p>This form has six(6) parts, namely:</p>
+	         <ol style="font-weight:bold">
+	         	<li>INDIVIDUAL OUTPUT PORTION</li>
+	         	<li>CO-WORKER EFFECTIVENESS PORTION</li>
+	         	<li>OTHER MANAGERIAL TRAITS</li>
+	         	<li>KEY RESULTS AREAS</li>
+	         	<li>EMPLOYEE DEVELOPMENTAL PLAN</li>
+	         	<li>COMMENTS/SIGNATURES</li>
+	         </ol>
+	         <p>Observe the following procedures in completing this form</p>
+	         <ol>
+	         	<li>In accomplishing the Rating Sheet read carefully the Performance Appraisal Rating guidelines</li>
+	         	<li>Indicate the numerical rating in the box provided</li>
+	         	<li>Sign the form and put your comments in the "Signatures/Comments" portion. Complete the Employee Development Plan for the next six-month period.</li>
+				<li>Discuss and review rating and plan with your immediate superior</li>
+				<li>After the discussion, have the employee sign the form and write in his/her comments in the space provided.</li>
+				<li>Forward the form to your Group Manager, Human resources not later than the designated date.</li>
+	         </ol>
+	         <hr id="page_hr"/>
+	         <h5 align="center">(TO BE ACCOMPLISHED BY THE HUMAN RESOURCES DEPARTMENT)</h5>
+	         <br/>
+	         <span>Submission Deadline__________________</span>
+	         <span>This form was received on:___________________</span>
+	         <br/><br/>
+	         <p>Human Resources Manager's Comments:</p>
+	         <br/><br/><br/>
+	         <span id="hr_comment">Name</span>
+	         <span id="hr_comment">Signature</span>
+	         <span id="hr_comment">Date</span>
+	         
+	         
+			</div>
+		</template>
+
+
+		<template id="mngr_page_2">
+			<div class="page_border">
+				<h4 align="center">PERFORMANCE RATING PORTION</h4>
+				<br/>
+				<table class="text-center tbl_mngr_rating_portion" style="width:100%;"> 
+					   	<thead class="cr-th">
+					   		<tr>
+					   			<th style="width:40%">Name:</th>
+					   			<th style="width:5%">Weight(%)</th>
+					   			<th style="width:20%" colspan="5">RATING SCALE</th>
+					   			<th rowspan="2">Remarks</th>					   			
+					   		</tr>					   		
+					   	</thead>
+					   	<tbody class="text-left">
+					   		<tr class="text-center">
+					   			<td id="row_question">PART I: INDIVIDUAL OUTPUT PORTION</td>
+					   			<td >20%</td>
+					   			<td>1</td>
+					   			<td>2</td>
+					   			<td>3</td>
+					   			<td>4</td>
+					   			<td>5</td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">A. Planning</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Objectives/targets</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Resources Utilization Plan</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>3. Work Programs/Operating Plans</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">B. Organizing</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Manpower Deployment</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Delegated Responsibilities</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">C. Facilitating Subordinate Effectiveness</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Employment Motivation</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Group Morale</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>3. Operating Systems and Processes</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">D. Controlling</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Performance Standards</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Work Performance Assessment</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr> 
+					   			<td>3. Action on Performance Problems</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>4. Budget/Disbursement</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">E. Communicating</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Written Communication</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Oral Communication</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">F. Problem Analysis and Decision Making</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Problem Analysis</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Problem Solution</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>3. Decisions</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">G. Customer Service</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Customer Handling</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Handling Complaint</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>3. Service Delivery</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">Part II: CO-WORKER EFFECTIVENESS PORTION</td>
+					   			<td class="text-center">5%</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Contribution/Support to Peers</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Contribution/Support to Superiors</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>3. Availability on the Job</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">Part III: OTHER MANAGERIAL TRAITS</td>
+					   			<td class="text-center">15%</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>1. Consciousness in Developing Staff</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>2. Creativity/Innovation</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>3. Professionalism</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>4. Leadership</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>5. Assertive Skills</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>6. Openness</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>7. Ethics and Values</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td style="height:20px"></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td id="row_question">Part IV: KEY RESULTS AREAS(KRA)</td>
+					   			<td class="text-center">60%</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>KRA 1:</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>KRA 2:</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>KRA 3:</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>KRA 4:</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   		<tr>
+					   			<td>KRA 5:</td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   			<td></td>
+					   		</tr>
+					   	</tbody>
+				</table>
+					
+					
+			</div>
+		</template>	
+		
+		<template id="mngr_page_3">
+			<div class="page_border">
+				<h4 class="text-center" style="font-weight:bold">KRA RECORD SHEET</h4>	
+		        <table class="kra_table"> 
+		        	<tbody>						
+		        		<tr style="height:70px;">		        		    
+		        			<td >No</td>
+		        			<td id="row_question" colspan="6">KEY RESULT AREA</td>
+		        		</tr>
+		        		<tr style="height:100px;">
+		        			<td>Weight</td>
+		        			<td id="row_question" colspan="6">SPECIFIC OBJECTIVE</td>
+		        		</tr>
+		        		<tr style="height:100px;">
+		        			<td></td>
+		        			<td id="row_question" colspan="6">PERFORMANCE STANDARDS</td>
+		        		</tr>
+		        		<tr align="center">
+		        			<td>No.</td>
+		        			<td>ACTION PLAN TO ACHIEVE SPECIFIC OBJECTIVE</td>
+		        			<td>RESPONSIBILITY</td>
+		        			<td>TARGET COMPLETION DATE</td>
+		        			<td>ACTUAL COMPLETION DATE</td>
+		        			<td>BUDGET</td>
+		        			<td>ACTUAL</td>
+		        		</tr>
+		        		<tr style="height:650px">
+		        			<td></td>
+		        			<td></td>
+		        			<td></td>
+		        			<td></td>
+		        			<td></td>
+		        			<td></td>
+		        			<td></td>
+		        		</tr>
+		        		<tr>
+		        			<td></td>
+		        			<td style="height:100px;" colspan="6">ACCOMPLISHMENT AND RESULTS(use back page if necessary)</td>
+		        		</tr>
+		        		
+		        	</tbody>
+		        </table>
+		        <br/>
+		        <div class="point_value">
+					<label>Rating</label><input type="text" />
+				</div>
+			</div>
+		</template>
+
+		<template id="mngr_page_4">
+			<t t-call="muti_appraisal.mngr_page_3"/>
+		</template>
+		
+		<template id="mngr_page_5">
+			<t t-call="muti_appraisal.mngr_page_3"/>
+		</template>
+		
+		<template id="mngr_page_6">
+			<t t-call="muti_appraisal.mngr_page_3"/>
+		</template>
+		
+		<template id="mngr_page_7">
+			<t t-call="muti_appraisal.mngr_page_3"/>
+		</template>
+		
+		<template id="mngr_page_8">
+			<div class="page_border">
+				<h4 class="text-center" id="page_header">PART V: EMPLOYEE DEVELOPMENTAL PLAN</h4>
+				<div>
+					<ol>
+						
+						<li>List competencies where improvement is desired.</li>
+						<div class="hr_line">
+							<hr/><hr/><hr/><hr/>
+						</div>
+						<li>Developmental activities that will be used to enhance competency.</li>
+						<div class="hr_line">
+							<hr/><hr/><hr/><hr/>
+						</div>
+						<li>Expected outcomes or improvement you wish to see(Should relate to achievement of goals).
+							Indicate expected date of completion.</li>
+						<div class="hr_line">
+							<hr/><hr/><hr/><hr/>
+						</div>
+					</ol>
+				</div>
+				<h4 class="text-center" id="page_header">PART VI: COMMENTS/SIGNATURES</h4>
+				<div class="signature_container">
+					<div class="signature_container_left">
+						<br/><br/>
+						<p>I discuss the appraisal with the employee</p>
+						<p>I confirm that the appraisal was discussed with me</p>
+						<p>I have reviewed the contents of this form</p>
+						<p></p>
+						<p>EMPLOYEE COMMENTS(Use back page if necessary)</p>
+						<p>RATER'S COMMENTS(Use back page if necessary)</p>
+					</div>
+					<div class="signature_container_right text-center">
+						<br/><br/><br/>
+						<t t-if="o.rater_id">
+	           				<span  t-field="o.rater_id.name_related"/>
+	           			</t>
+						<p>Rater's Name and Signature</p>
+						<p>Date</p>
+						<t t-if="o.employee_id">
+	           				<span  t-field="o.employee_id.name_related"/>
+	           			</t>
+						<p>Employee's Signature</p>
+						<p>Date</p>
+						<t t-if="o.superior_id">
+	           				<span  t-field="o.superior_id.name_related"/>
+	           			</t>
+						<p>Signature of Rater's Superior</p>
+						<p>Date</p>
+					</div>
+				</div>
+			</div>
+		</template>
+		
+		<template id="performance_summary">
+			<div class="page_border">
+				<h4 class="text-center" id="page_header">PERFORMANCE SUMMARY</h4>	
+				<div align="center">
+					<div class="summary_container" style="height:650px">
+						<div class="summary_container_left">
+							<table class="text-center performance_summary" align="left">
+								<thead>
+									<tr class="center_text">
+										<th style="width:20%;">20%</th>
+										<th style="width:10%">Rating Factor</th>
+										<th style="width:30%">Rating</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="border:none">PART I:</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none" class="text-right">A</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>2</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>3</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none" class="text-right">B</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>2</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none" class="text-right">C</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>2</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>3</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none" class="text-right">D</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>2</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>3</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>4</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none" class="text-right">E</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>2</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>3</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none" class="text-right">G</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>2</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="border:none"></td>
+										<td>3</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2">Average Score(AS)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2">Weight(W)</td>
+										<td>0.20</td>
+									</tr>
+									<tr>
+										<td colspan="2">Total Score(ASxW)</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+							<div class="summary_container_right">
+							<table class="text-center performance_summary">
+								<thead>
+									<tr class="center_text">
+										<th style="width:20%">5%</th>
+										<th style="width:10%">Rating Factor</th>
+										<th style="width:30%">Rating</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="3">Part II</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2">Average Score(AS)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2">Weight(W)</td>
+										<td>0.05</td>
+									</tr>
+									<tr>
+										<td colspan="2">Total Score(ASxW)</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<br/>
+							<table class="text-center performance_summary">
+								<thead>
+									<tr>
+										<th class="text-center" style="width:20%">5%</th>
+										<th class="text-center" style="width:10%">Rating Factor</th>
+										<th class="text-center" style="width:30%">Rating</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="7">Part III</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2">Average Score(AS)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2">Weight(W)</td>
+										<td>0.15</td>
+									</tr>
+									<tr>
+										<td colspan="2">Total Score(ASxW)</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<br/>
+							<table class="text-center performance_summary">
+								<tbody>
+									<tr>
+										<td style="width:33%">Average Total Score<br/>(Parts I, II, III)</td>
+										<td style="width:30%"></td>
+									</tr>
+								</tbody>
+							</table>
+							<br/>
+							<table class="text-center performance_summary" >
+								<thead>
+									<tr class="center_text">
+										<th style="width:35%" colspan="2">PART IV: KRA</th>
+										<th style="width:15%"></th>
+										<th style="width:15%"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>KRA</td>
+										<td>KRA Weight</td>
+										<td>Rating</td>
+										<td>Score(WxR)</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td></td>
+										<td>1 2 3 4 5</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td></td>
+										<td>1 2 3 4 5</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td></td>
+										<td>1 2 3 4 5</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td></td>
+										<td>1 2 3 4 5</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td></td>
+										<td>1 2 3 4 5</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td>Total Score</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>	
+					<div class="summary_container">
+						<div class="summary_container_left text-left" style="margin-top:35px;">	
+							<h6 style="font-weight:bold">OVERALL PERFORMANCE RATING</h6>
+							<p>Average Total Score (Parts I, II, III)</p>		
+							<br/>
+							<p>Total Score - Part IV</p>
+							<span style="padding-left:30px">Overall Performance Rating (A + B)</span><br/>
+							<span style="padding-left:30px">Performance Description</span>
+						</div>
+						<div class="summary_container_right text-left"  >	
+							<div>
+								<div class="summary_container_left">
+									<br/><br/><br/><br/>	
+									<span id="rating"></span> x.60 
+									
+								</div>
+
+								<div class="summary_container_right">
+									<br/><br/>
+									<span id="rating"></span> A
+									<br/>
+									<span id="rating"></span> B
+									<br/>
+									<span id="rating"></span>
+								</div>
+								
+								<div class="summary_container_left">
+									<p>4.50 - 5.00    -</p>
+									<p>4.00 - 4.49    -</p>
+									<p>3.00 - 3.99    -</p>
+									<p>2.00 - 2.99    -</p>
+									<p>1.00 - 1.99    -</p>
+								</div>	
+								
+								<div class="summary_container_right">
+									<p>OUTSTANDING</p>
+									<p>FULLY SATISFACTORY</p>
+									<p>SATISFACTORY</p>
+									<p>NEEDS IMPROVEMENT</p>
+									<p>POOR</p>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>																
+				</div>
+												
+			</div>
+			
+		</template>
+				
+	</data>
+</openerp>

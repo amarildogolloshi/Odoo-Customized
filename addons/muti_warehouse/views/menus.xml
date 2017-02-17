@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <openerp>
+    <data>
+
+  	    <!-- Warehouse Menu -->
+        <menuitem id="menu_muti_warehouse_root" name="Warehouse"/>
+
+        <!-- Inventory Control Menu -->
+        <menuitem name="Inventory Control" id="menu_warehouse_inventory_control" parent="menu_muti_warehouse_root"/>
+
+        <!-- copy from stock/Inventory Menu for Products-->
+        <menuitem
+          action="product.product_template_action_product" id="menu_product_variant_config_warehouse_stock" name="Products"
+          parent="menu_warehouse_inventory_control" sequence="1"/>
+
+        <!-- move from stock/Inventory Menu for Reordering Rules-->
+       <menuitem id="stock.menu_reordering_rules_config"
+                 name="Reordering Rules" parent="menu_warehouse_inventory_control"/>
+
+        <!-- move from stock/Inventory Menu for Inventory Control-->
+       <menuitem id="stock.menu_action_inventory_form"
+                 name="Inventory Adjustment" parent="menu_warehouse_inventory_control"/>
+
+        <!-- move from stock/Inventory Menu -->
+       <menuitem id="stock.menu_stock_sched"
+         name="Schedulers" parent="menu_muti_warehouse_root"/>
+
+        <!-- move from stock/Inventory Menu for Configurations-->
+       <menuitem id="stock.menu_stock_config_settings"
+         name="Configurations" parent="menu_muti_warehouse_root"/>
+
+        <!-- move from stock/Inventory Menu for Warehouse Management-->
+       <menuitem id="stock.menu_warehouse_config"
+         name="Warehouse Management" parent="stock.menu_stock_config_settings"/>
+
+        <!-- Inventory Control Menu -->
+        <menuitem name="Reports" id="menu_warehouse_inventory_reports" parent="menu_muti_warehouse_root"/>
+        <menuitem name="Latest Inventories &amp; Moves" id="stock.menu_report_stock_line_date"
+                  parent="menu_warehouse_inventory_reports"/>
+        <menuitem action="procurement.procurement_order_action_exceptions" id="menu_stock_procurement_action"
+                  parent="menu_warehouse_inventory_reports" sequence="150" groups="stock.group_stock_manager"/>
+        <menuitem action="stock.action_move_form2" id="menu_action_move_form2" parent="menu_warehouse_inventory_reports"
+                  sequence="130"/>
+        <menuitem id="menu_quants" name="Inventory Valuation" parent="menu_warehouse_inventory_reports"
+                  sequence="120" action="stock.quantsact"/>
+                  
+         <!-- Price Adjustment Menu -->         
+                  
+         <menuitem id="price_adjustment_menu" name="Price Adjustment" parent="stock.menu_stock_config_settings" action="price_adjustment_action"/>
+
+    </data>
+  </openerp>

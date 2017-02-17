@@ -1,0 +1,16 @@
+<openerp>
+	<data>
+		<!-- EMAIL TEMPLATE	 -->
+		 <record id="email_temp_probi_reminder" model="mail.template">
+	            <field name="name">Probationary Appraisal Reminder</field>
+	            <field name="subject">Probationary Appraisal Reminder</field>
+	            <field name="email_from">${object.hr_emp_id.name_related} (${(object.hr_emp_id.work_email|safe})</field>
+	            <field name="email_to">${object.hr_emp_id.work_email}</field>
+	            <field name="partner_to">${object.hr_emp_id.resource_id.user_id.partner_id.id}</field>
+	            <field name="model_id" ref="muti_appraisal.model_probationary_monitoring"/>
+	            <field name="auto_delete" eval="True"/>
+	            <field name="mail_server_id" ref="muti_base.ir_mail_server_mutigroup"/>
+	       </record>	
+	
+	</data>
+</openerp>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+
+<!-- DETAILS -->
+		
+		<record model="ir.ui.view" id="details_tree_view">
+            <field name="name">details.tree</field>
+            <field name="model">mc.details</field>
+            <field name="arch" type="xml">
+                <tree string="Details">
+                    <field name="name"/>
+                    <field name="engine_no"/>
+                    <field name="brand"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+       <record model="ir.ui.view" id="details_form_view">
+            <field name="name">details.form</field>
+            <field name="model">mc.details</field>
+            <field name="arch" type="xml">
+              <form string="Details Form">
+                  <group>
+                	<group>
+                    	<field name = "name" required = "True"/>
+                    	<field name="engine_no" required = "True"/>
+                    	<field name="brand" required = "True"/>
+                        <field name="is_repo"/>
+                    </group>
+                    <group>
+                       	<field name="batch_id" required= "True"/>
+                        <field name="chassis_no" required= "True"/>
+                        <field name="model" required= "True"/>
+                    </group>
+                  </group>
+                  <group string="Release">
+                    <group>
+                        <field name="or_cr" string="OR/CR Number" required= "True"/>
+                        <field name="plate_no" string="Plate Number"/>
+                        <field name="claimed_date" string="Date Claimed"/>
+                    </group>
+                    <group>
+               			<field name="or_cr_date" string="OR/CR Date" required= "True"/>
+                        <field name="claimed_date" string="OR/CR-Plate Claimed By" required= "True"/>
+                    </group>
+                  </group>  
+              </form>    
+            </field> 
+       </record>        
+
+        <record model="ir.actions.act_window" id="details_tree_action">
+            <field name="name">Details</field>
+            <field name="res_model">mc.details</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first department
+                </p>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

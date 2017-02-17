@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <menuitem
+            parent="stock.menu_stock_config_settings"
+            id="branch_info_menu"
+            name="Branch Information"
+            sequence="20"/>
+
+        <!-- Configuration/Branch Location -->
+        <record model="ir.ui.view" id="config_branch_form">
+            <field name="name">config.branch.form</field>
+            <field name="model">config.branch</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Branch Location">
+                    <sheet>
+                        <group colspan="1">
+                            <field name="active"/>
+                        </group>
+                        <group colspan="2">
+                            <group>
+                                <field name="branch_code" attrs="{'required': True}"/>
+                                <field name="name" attrs="{'required': True}"/>
+                                <field name="partner_id" attrs="{'required': True}"/>
+                            </group>
+                            <group>
+                                <field name="is_central"/>
+                                <field name="mailing_list" attrs="{'required': True}"/>
+                            </group>
+                        </group>
+                        <group colspan="1">
+                            <field name="address" attrs="{'required': True}"/>
+                        </group>
+                        <group colspan="2">
+                            <group>
+                                <field name="area_id" attrs="{'required': True}"/>
+                                <field name="telno" attrs="{'required': True}"/>
+                            </group>
+                            <group>
+                                <field name="manager" attrs="{'required': True}"/>
+                            </group>
+                        </group>
+                        <group string="Operations" colspan="1">
+                            <field name="bracket_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="config_branch_tree">
+            <field name="name">config.branch.tree</field>
+            <field name="model">config.branch</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Branch Locations">
+                    <field name="active"/>
+	                <field name="branch_code"/>
+	                <field name="name"/>
+	                <field name="address"/>
+	                <field name="area_id"/>
+	                <field name="telno"/>
+	                <field name="mailing_list"/>
+	                <field name="manager"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="config_branch_search" model="ir.ui.view">
+            <field name="name">config.branch.search</field>
+            <field name="model">config.branch</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Branch Locations">
+                   <filter icon="terp-dialog-close" domain="[('active','=',False)]" name="active" string="Inactive"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="config_branch_action">
+            <field name="name">Branch Location</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.branch</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree,search</field>
+            <field name="view_id" ref="config_branch_tree"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            parent="branch_info_menu"
+            id="branch_location_menu"
+            name="Branch Location"
+            action="config_branch_action"/>
+
+<!-- Configuration/Branch Witness -->
+        <record model="ir.ui.view" id="config_witness_form">
+            <field name="name">config.witness.form</field>
+            <field name="model">config.witness</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Witness">
+                    <sheet>
+
+                        <group>
+                            <field name="active"/>
+                            <field name="branch_id" readonly="True"/>
+                        </group>
+                        <group string="Witness 1 - Receptionist">
+                            <field name="witness1"/>
+                            <field name="witness1_ctc"/>
+                            <field name="witness1_ctc_date"/>
+                            <field name="witness1_ctc_place"/>
+                        </group>
+
+                        <group string="Witness 2 - Default if Witness Representative is not indicated at Loan Release">
+                            <field name="witness2"/>
+                            <field name="witness2_ctc"/>
+                            <field name="witness2_ctc_date"/>
+                            <field name="witness2_ctc_place"/>
+                        </group>
+                        <group string="Branch Manager">
+                            <field name="bm_id"/>
+                            <field name="bm_ctc_address"/>
+                            <field name="bm_ctc"/>
+                            <field name="bm_ctc_date"/>
+                            <field name="bm_ctc_place"/>
+                        </group>
+                        <group>
+                            <group string="Internal Auditor">
+                                <field name="internal_auditor"/>
+                            </group>
+                            <group string="Branch Municipality/City">
+                                <field name="city_id"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="config_witness_tree">
+            <field name="name">config.witness.tree</field>
+            <field name="model">config.witness</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Witness">
+                    <field name="active"/>
+                    <field name="branch_id"/>
+                    <field name="witness1"/>
+                    <field name="witness2"/>
+                    <field name="internal_auditor"/>
+                    <field name='city_id'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="config_witness_search">
+            <field name="name">config.witness.search</field>
+            <field name="model">config.witness</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Witness">
+                    <filter icon="terp-dialog-close" domain="[('active','=',False)]" name="active" string="Inactive"/>
+                    <field name="active"/>
+                    <field name="branch_id" select="1"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="config_witness_action">
+            <field name="name">Witness</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.witness</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree,search</field>
+            <field name="view_id" ref="config_witness_tree"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            parent="branch_info_menu"
+            id="branch_witness_menu"
+            name="Branch Witnesses"
+            action="config_witness_action"/>
+
+<!-- Configuration/Branch Information/Area -->
+        <record model="ir.ui.view" id="config_area_form">
+            <field name="name">config.area.form</field>
+            <field name="model">config.area</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Branch Areas">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="branch_list" nolabel="1" readonly="1" colspan="4"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="config_area_tree">
+            <field name="name">config.area.tree</field>
+            <field name="model">config.area</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Branch Areas">
+                    <field name="name"/>
+                    <field name="branch_list"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="branch_area_action">
+            <field name="name">Branch Areas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.area</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree,search</field>
+            <field name="view_id" ref="config_area_tree"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            parent="branch_info_menu"
+            id="branch_area_menu"
+            name="Branch Area"
+            action="branch_area_action"/>
+
+
+<!-- Configuration/Branch Information/Bracket -->
+        <record model="ir.ui.view" id="config_bracket_form">
+            <field name="name">config.bracket.form</field>
+            <field name="model">config.bracket</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Brackets">
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="name"/>
+                            <newline/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="config_bracket_tree">
+            <field name="name">config.bracket.tree</field>
+            <field name="model">config.bracket</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Brackets">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="branch_bracket_action">
+            <field name="name">Brackets</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.bracket</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree,search</field>
+            <field name="view_id" ref="config_bracket_tree"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            parent="branch_info_menu"
+            id="branch_bracket_menu"
+            name="Brackets"
+            action="branch_bracket_action"/>
+
+
+        <!-- for res.users -->
+        <record model="ir.ui.view" id="res_users_form">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Branches">
+                        <group>
+                            <field name="branch_id" />
+                            <field name="nickname" />
+<!--                             <field name="partner_id" /> -->
+                        </group>
+                        <group>
+                            <field name="assigned_branches" widget="one2many_list" mode="tree" nolabel="1" colspan="4">
+                                <tree string="Assigned Branches" editable="top">
+                                    <field name="branch_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Scheduler">
+                    	<group col="8" colspan="6">
+	                        <separator colspan="8" string="Deactivation"/>
+	                        <field name="deactivate_date" colspan='2'/>
+	                        <field name="deactivate_reason" colspan='4'/>
+	                        <separator colspan="8" string="Scheduler"/>
+	                        <field name="scheduler" mode="tree" nolabel="1" colspan="4">
+		                        <tree string="Scheduler" editable="top">
+		                            <field name="group_id"/>
+		                            <field name="start_date"/>
+		                            <field name="end_date"/>
+		                        </tree>
+                    		</field>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+       	<!--<record model="ir.ui.view" id="res_users_tree">-->
+            <!--<field name="name">res.users.tree</field>-->
+            <!--<field name="model">res.users</field>-->
+            <!--<field name="inherit_id" ref="base.view_users_tree"/>-->
+            <!--<field name="type">tree</field>-->
+            <!--<field name="arch" type="xml">-->
+            <!--<field name="name" position="after">-->
+            	<!--<field name="nickname" />-->
+            <!--</field>-->
+            <!--</field>-->
+        <!--</record>-->
+
+    </data>
+</openerp>

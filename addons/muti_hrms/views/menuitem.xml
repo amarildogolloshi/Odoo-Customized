@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+	
+<!-- 		<menuitem id="employee_lst_menu" name="Employee List" -->
+<!-- 		                  parent="muti_treasury.partner_menu" action = "employee_lst_action"/> -->
+		
+<!-- 		<record id="hr.menu_hr_department_tree" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(3,ref('base.group_user'))]"/>
+		</record>
+		
+		<record id="hr.menu_hr_department_tree" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(3,ref('base.group_hr_manager'))]"/>
+		</record>
+		
+		<record id="hr.menu_hr_department_tree" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(3,ref('base.group_hr_user'))]"/>
+		</record> -->
+		
+		<!--<menuitem id="hr.menu_hr_department_tree" groups="base.group_no_one"/>-->
+
+<!--    	Company Information -->
+		<menuitem id="company_info_menu" name="Company Information"
+   			      parent="hr.menu_human_resources_configuration"/>
+   			  
+		<menuitem id="bu_class_menu" name="BU Classification"
+   			      parent="company_info_menu" action="bu_class_action"/>
+   			  
+   			  
+<!--    	Employee Information -->
+		
+		<menuitem id="employee_info_menu" name="Employee Information"
+   			      parent="hr.menu_human_resources_configuration"/>
+		
+		<menuitem id="employee_status_menu" name="Employee Status"
+   			      parent="employee_info_menu" action="employee_status_action"/>
+   			  
+   		<menuitem id="employee_awards" name="Awards/Recognitions"
+   			      parent="employee_info_menu" action="employee_awards_action"/>
+                  
+        <menuitem id="religion_menu" name="Religion"
+       			  parent="employee_info_menu" action="religion_tree_action"/>
+       			  
+        <menuitem id="level_menu" name="Level"
+       			  parent="employee_info_menu" action="level_tree_action"/>
+       			  
+       	<menuitem id="course_menu" name="Course"
+       			  parent="employee_info_menu" action="course_tree_action"/>
+         
+       			  
+       	<menuitem id="skill_category_menu" name="Skills Category" 
+       			  parent="employee_info_menu" action="skill_category_tree_action"/>
+       			  
+       	<menuitem id="skill_menu" name="Skills"
+       			  parent="employee_info_menu" action="skill_tree_action"/>
+       			  
+       	<menuitem id="license_menu" name="License"
+       			  parent="employee_info_menu" action="license_conf_tree_action"/>
+       			  
+       	<menuitem id="organisation_menu" name="Organisation"
+       			  parent="employee_info_menu" action="organisation_conf_tree_action"/>
+		
+		<menuitem id="seminar_menu" name="Seminar"
+       			  parent="employee_info_menu" action="seminar_conf_tree_action"/>
+       	
+       	<menuitem id="external_jobs_menu" name="External Jobs"
+       			  parent="employee_info_menu" action="external_jobs_tree_action"/>
+       			  
+       	<menuitem id="parents_menu" name="Parents"
+       			  parent="employee_info_menu" action="parent_view_action"/>
+       			  
+       	<menuitem id="children_menu" name="Children"
+       			  parent="employee_info_menu" action="children_view_action"/>
+       			 
+   		<menuitem id="spouse_menu" name="Spouse"
+   			  	  parent="employee_info_menu" action="spouse_view_action"/>		  
+       	
+<!--        	Medical Information -->
+       	
+       	<menuitem id="medical_conf_menu" name="Medical Information"
+       				parent = "hr.menu_human_resources_configuration"/>
+       				
+        <menuitem id="health_menu" name="Health Problems"
+       			  parent="medical_conf_menu" action="health_tree_action"/>
+       			  
+       	<menuitem id="physical_menu" name="Blood Type"
+       			  parent="medical_conf_menu" action="blood_tree_action"/>
+       			  
+       	<menuitem id="blood_menu" name="Physical Disorder"
+       			  parent="medical_conf_menu" action="physical_tree_action"/>
+       			  
+       	<menuitem id="allergy_menu" name="Allergy"
+       			  parent="medical_conf_menu" action="allergy_tree_action"/>       
+       			  
+       	<menuitem id="external_seminar_menu" name="External"
+       			  parent="seminar_menu" action="external_seminar_view_action"/>
+       			  
+       	<menuitem id="internal_seminar_menu" name="Internal"
+       			  parent="seminar_menu" action="internal_seminar_view_action"/>       			  
+   			  
+   		<menuitem id="company_menu" name="Companies"
+   			  parent="hr.menu_hr_root" action="muti_base.companies_tree_action" sequence = "0"/>
+   			 
+   		
+   		<menuitem id="branch_info_menu" name="Branch Information"
+       			  parent="hr.menu_human_resources_configuration" />
+   		
+   		<menuitem id="area_menu" name="Branch Area"
+   			  parent="branch_info_menu" action="muti_base.area_tree_action" sequence = "1"/>
+   			  
+   		<menuitem id="branch_menu" name="Branch"
+   			  parent="branch_info_menu" action="muti_base.config_branch_action" sequence = "2"/>
+   			  
+   		<menuitem id="department_menu" name="Department"
+   			  parent="hr.menu_hr_root" action="department_tree_action"/>
+   			  
+   		<menuitem id="localization_menu" name="Localization"
+   			  parent="hr.menu_human_resources_configuration"/>
+   		
+   		<menuitem id="province_menu" name="Province"
+   			  parent="localization_menu" action="muti_base.province_tree_action"/>
+   			  
+   		<menuitem id="city_menu" name="City"
+   			  parent="localization_menu" action="muti_base.city_tree_action"/>
+		
+		<menuitem id="barangay_menu" name="Barangay"
+   			  parent="localization_menu" action="muti_base.barangay_tree_action"/>
+   			  
+   		<menuitem id="job_menu" name="Job/Position"
+   			  parent="hr.menu_human_resources_configuration"/>
+   			  
+   		<menuitem id="job_menu" name="Job/Position"
+   			  parent="hr.menu_human_resources_configuration"/>
+   			  
+   		<menuitem id="job_level_menu" name="Job Level"
+   			  parent="job_menu" action="job_level_tree_action"/>
+   			  
+   		<menuitem id="hr_job_menu" name="Job"
+   			  parent="job_menu" action="job_tree_action"/>
+   			  
+
+<!-- Employees > Reports -->
+	<menuitem 
+	       id="menu_monthly_reports" 
+	       name="Monthly Reports"
+	       parent="hr.menu_hr_reporting_timesheet"
+	       action="hrms_monthly_report_action"/>   		
+		
+    </data>
+  </openerp>

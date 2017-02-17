@@ -1,0 +1,1156 @@
+id,code,name,group_id/id,active
+product_partgroup_01,001,Adaptor,product_group_01,TRUE
+product_partgroup_02,002,Adjuster,product_group_01,TRUE
+product_partgroup_03,003,Air Pump,product_group_01,TRUE
+product_partgroup_04,004,Alarm,product_group_01,TRUE
+product_partgroup_05,005,Antena,product_group_01,TRUE
+product_partgroup_06,006,Bar End,product_group_01,TRUE
+product_partgroup_07,007,Basket,product_group_01,TRUE
+product_partgroup_08,008,Battery Band,product_group_01,TRUE
+product_partgroup_09,009,Bell,product_group_01,TRUE
+product_partgroup_10,010,Blank Key,product_group_01,TRUE
+product_partgroup_11,011,Blinker,product_group_01,TRUE
+product_partgroup_12,012,Bolt Cover,product_group_01,TRUE
+product_partgroup_13,013,Brake Adjuster,product_group_01,TRUE
+product_partgroup_14,014,Cable Adjuster,product_group_01,TRUE
+product_partgroup_15,015,Cable End,product_group_01,TRUE
+product_partgroup_16,016,Cable Tie,product_group_01,TRUE
+product_partgroup_17,017,Cage,product_group_01,TRUE
+product_partgroup_18,018,Cap,product_group_01,TRUE
+product_partgroup_19,019,Cargo Net,product_group_01,TRUE
+product_partgroup_20,020,Carrier,product_group_01,TRUE
+product_partgroup_21,021,Casing,product_group_01,TRUE
+product_partgroup_22,022,Chain Adjuster,product_group_01,TRUE
+product_partgroup_23,023,Chain Protector,product_group_01,TRUE
+product_partgroup_24,024,Charger,product_group_01,TRUE
+product_partgroup_25,025,Chian Lock,product_group_01,TRUE
+product_partgroup_26,026,Clamp,product_group_01,TRUE
+product_partgroup_27,027,Cleaner,product_group_01,TRUE
+product_partgroup_28,028,Cleat Set Aligner,product_group_01,TRUE
+product_partgroup_29,029,Clip,product_group_01,TRUE
+product_partgroup_30,030,Clip Toe,product_group_01,TRUE
+product_partgroup_31,031,Connector,product_group_01,TRUE
+product_partgroup_32,032,Cord,product_group_01,TRUE
+product_partgroup_33,033,Cover,product_group_01,TRUE
+product_partgroup_34,034,Crash Guard,product_group_01,TRUE
+product_partgroup_35,035,Cycle Trainer,product_group_01,TRUE
+product_partgroup_36,036,Display Stand,product_group_01,TRUE
+product_partgroup_37,037,Door Opener,product_group_01,TRUE
+product_partgroup_38,038,Dual Seat Cover,product_group_01,TRUE
+product_partgroup_39,039,Duck Tail,product_group_01,TRUE
+product_partgroup_40,040,Elbow and Knee Pads,product_group_01,TRUE
+product_partgroup_41,041,Elbow Guard,product_group_01,TRUE
+product_partgroup_42,042,Electrical Tape,product_group_01,TRUE
+product_partgroup_43,043,Elestic Strap,product_group_01,TRUE
+product_partgroup_44,044,Emblem,product_group_01,TRUE
+product_partgroup_45,045,Engine Cover,product_group_01,TRUE
+product_partgroup_46,046,Expander,product_group_01,TRUE
+product_partgroup_47,047,Fan Drive,product_group_01,TRUE
+product_partgroup_48,048,Fender Extension,product_group_01,TRUE
+product_partgroup_49,049,Floor Pump,product_group_01,TRUE
+product_partgroup_50,050,Fog Lamp,product_group_01,TRUE
+product_partgroup_51,051,Foot Pump,product_group_01,TRUE
+product_partgroup_52,052,Footrest,product_group_01,TRUE
+product_partgroup_53,053,Fork Extension,product_group_01,TRUE
+product_partgroup_54,054,Front Fork Cover,product_group_01,TRUE
+product_partgroup_55,055,Gasket,product_group_01,TRUE
+product_partgroup_56,056,Glow Plug,product_group_01,TRUE
+product_partgroup_57,057,Goggles,product_group_01,TRUE
+product_partgroup_58,058,Grommet,product_group_01,TRUE
+product_partgroup_59,059,"Grommet, Plug Tspark Cap",product_group_01,TRUE
+product_partgroup_60,060,"Grommet, Spark Tsleeve Plug",product_group_01,TRUE
+product_partgroup_61,061,Guard Knuckle,product_group_01,TRUE
+product_partgroup_62,062,Guide Ring,product_group_01,TRUE
+product_partgroup_63,063,Hand Guard,product_group_01,TRUE
+product_partgroup_64,064,Hand Pump,product_group_01,TRUE
+product_partgroup_65,065,Handle Bar Extension,product_group_01,TRUE
+product_partgroup_66,066,Handle Grip,product_group_01,TRUE
+product_partgroup_67,067,Handle Grip Cover,product_group_01,TRUE
+product_partgroup_68,068,Helmet,product_group_01,TRUE
+product_partgroup_69,069,Holder,product_group_01,TRUE
+product_partgroup_70,070,Horn,product_group_01,TRUE
+product_partgroup_71,071,Hydraulic Fittings,product_group_01,TRUE
+product_partgroup_72,072,Key,product_group_01,TRUE
+product_partgroup_73,073,Key Chain,product_group_01,TRUE
+product_partgroup_74,074,Lamp,product_group_01,TRUE
+product_partgroup_75,075,Leatherette,product_group_01,TRUE
+product_partgroup_76,076,License Frame,product_group_01,TRUE
+product_partgroup_77,077,License Plate Cover,product_group_01,TRUE
+product_partgroup_78,078,Light,product_group_01,TRUE
+product_partgroup_79,079,Lock,product_group_01,TRUE
+product_partgroup_80,080,Cleat Set  ,product_group_01,TRUE
+product_partgroup_81,081,Mask,product_group_01,TRUE
+product_partgroup_82,082,Masking Tape,product_group_01,TRUE
+product_partgroup_83,083,Matting,product_group_01,TRUE
+product_partgroup_84,084,Mirror,product_group_01,TRUE
+product_partgroup_85,085,Mudguard,product_group_01,TRUE
+product_partgroup_86,086,Packing Tape,product_group_01,TRUE
+product_partgroup_87,087,Pad,product_group_01,TRUE
+product_partgroup_88,088,Park Light,product_group_01,TRUE
+product_partgroup_89,089,Patch,product_group_01,TRUE
+product_partgroup_90,090,Pivot Guard,product_group_01,TRUE
+product_partgroup_91,091,PM S1 Kit Common,product_group_01,TRUE
+product_partgroup_92,092,Protector,product_group_01,TRUE
+product_partgroup_93,093,Reflector,product_group_01,TRUE
+product_partgroup_94,094,Rivet,product_group_01,TRUE
+product_partgroup_95,095,Rubber,product_group_01,TRUE
+product_partgroup_96,096,Rubber Boots,product_group_01,TRUE
+product_partgroup_97,097,Screw Knob,product_group_01,TRUE
+product_partgroup_98,098,Screw Set,product_group_01,TRUE
+product_partgroup_99,099,Seat Belt,product_group_01,TRUE
+product_partgroup_100,100,Shark Fin,product_group_01,TRUE
+product_partgroup_101,101,Shifter,product_group_01,TRUE
+product_partgroup_102,102,Shock Extension,product_group_01,TRUE
+product_partgroup_103,103,Side Stand,product_group_01,TRUE
+product_partgroup_104,104,Speedometer,product_group_01,TRUE
+product_partgroup_105,105,Spring Extension,product_group_01,TRUE
+product_partgroup_106,106,Steering Boots,product_group_01,TRUE
+product_partgroup_107,107,Step Nut,product_group_01,TRUE
+product_partgroup_108,108,Sticker,product_group_01,TRUE
+product_partgroup_109,109,Stopper,product_group_01,TRUE
+product_partgroup_110,110,Tail Light,product_group_01,TRUE
+product_partgroup_111,111,Temperature Guage,product_group_01,TRUE
+product_partgroup_112,112,Tensioner,product_group_01,TRUE
+product_partgroup_113,113,Tool Band,product_group_01,TRUE
+product_partgroup_114,114,Underneath,product_group_01,TRUE
+product_partgroup_115,115,Utator,product_group_01,TRUE
+product_partgroup_116,116,Valve cap,product_group_01,TRUE
+product_partgroup_117,117,Valve Extension,product_group_01,TRUE
+product_partgroup_118,118,Waist Coat,product_group_01,TRUE
+product_partgroup_119,119,Water Cage,product_group_01,TRUE
+product_partgroup_120,120,Water Container,product_group_01,TRUE
+product_partgroup_121,121,Wheel Builder Stand,product_group_01,TRUE
+product_partgroup_122,122,Window Riser,product_group_01,TRUE
+product_partgroup_123,123,Racing Manifold,product_group_01,TRUE
+product_partgroup_124,124,Tankpad,product_group_01,TRUE
+product_partgroup_125,999,Others,product_group_01,TRUE
+product_partgroup_126,001,Bag,product_group_02,TRUE
+product_partgroup_127,002,Bonet,product_group_02,TRUE
+product_partgroup_128,003,Bottle,product_group_02,TRUE
+product_partgroup_129,004,Cap,product_group_02,TRUE
+product_partgroup_130,005,Gloves,product_group_02,TRUE
+product_partgroup_131,006,Hydration Pack,product_group_02,TRUE
+product_partgroup_132,007,Jacket,product_group_02,TRUE
+product_partgroup_133,008,Mask,product_group_02,TRUE
+product_partgroup_134,009,Protector,product_group_02,TRUE
+product_partgroup_135,010,Rainwear,product_group_02,TRUE
+product_partgroup_136,011,Sandal,product_group_02,TRUE
+product_partgroup_137,012,Scarf,product_group_02,TRUE
+product_partgroup_138,013,Shirt,product_group_02,TRUE
+product_partgroup_139,014,Shoes,product_group_02,TRUE
+product_partgroup_140,015,Shorts,product_group_02,TRUE
+product_partgroup_141,016,Sunglasses,product_group_02,TRUE
+product_partgroup_142,017,Uniform,product_group_02,TRUE
+product_partgroup_143,018,Warmer,product_group_02,TRUE
+product_partgroup_144,019,Water Cage,product_group_02,TRUE
+product_partgroup_145,001,Ball Bearing,product_group_03,TRUE
+product_partgroup_146,002,Ball Race,product_group_03,TRUE
+product_partgroup_147,003,Ball Retainer,product_group_03,TRUE
+product_partgroup_148,004,Ball Steel,product_group_03,TRUE
+product_partgroup_149,005,Collar,product_group_03,TRUE
+product_partgroup_150,006,Needle Bearing,product_group_03,TRUE
+product_partgroup_151,007,Race Cone,product_group_03,TRUE
+product_partgroup_152,001,#10,product_group_04,TRUE
+product_partgroup_153,002,#12,product_group_04,TRUE
+product_partgroup_154,003,#14,product_group_04,TRUE
+product_partgroup_155,004,#16,product_group_04,TRUE
+product_partgroup_156,005,#20,product_group_04,TRUE
+product_partgroup_157,006,BMX,product_group_04,TRUE
+product_partgroup_158,001,Boot,product_group_05,TRUE
+product_partgroup_159,002,Boot Caliper,product_group_05,TRUE
+product_partgroup_160,003,Brake,product_group_05,TRUE
+product_partgroup_161,004,Brake Anchor,product_group_05,TRUE
+product_partgroup_162,005,Brake Arm,product_group_05,TRUE
+product_partgroup_163,006,"Bracket, Brake Assembly",product_group_05,TRUE
+product_partgroup_164,007,Brake Band,product_group_05,TRUE
+product_partgroup_165,008,Brake Booster,product_group_05,TRUE
+product_partgroup_166,009,Brake Caliper,product_group_05,TRUE
+product_partgroup_167,010,Brake Cam,product_group_05,TRUE
+product_partgroup_168,011,Brake Camshaft,product_group_05,TRUE
+product_partgroup_169,012,"Brake Clamper, Front",product_group_05,TRUE
+product_partgroup_170,013,Brake Drum,product_group_05,TRUE
+product_partgroup_171,014,Brake Guide,product_group_05,TRUE
+product_partgroup_172,015,Brake Lever,product_group_05,TRUE
+product_partgroup_173,016,Brake Lining,product_group_05,TRUE
+product_partgroup_174,017,Brake Master,product_group_05,TRUE
+product_partgroup_175,018,Brake Pads,product_group_05,TRUE
+product_partgroup_176,019,Brake Panel,product_group_05,TRUE
+product_partgroup_177,020,Brake Rod,product_group_05,TRUE
+product_partgroup_178,021,Brake Set,product_group_05,TRUE
+product_partgroup_179,022,Brake Shoe,product_group_05,TRUE
+product_partgroup_180,023,Brake Switch,product_group_05,TRUE
+product_partgroup_181,024,"Brake, Piston",product_group_05,TRUE
+product_partgroup_182,025,Caliper,product_group_05,TRUE
+product_partgroup_183,026,Disc Brake,product_group_05,TRUE
+product_partgroup_184,027,Hook,product_group_05,TRUE
+product_partgroup_185,028,Hydrovac,product_group_05,TRUE
+product_partgroup_186,029,"Joint, Brake Arm",product_group_05,TRUE
+product_partgroup_187,030,"Pin, Brake Rod",product_group_05,TRUE
+product_partgroup_188,031,"Pin, Pad",product_group_05,TRUE
+product_partgroup_189,032,"Repair Kit, Master Cylinder ",product_group_05,TRUE
+product_partgroup_190,033,"Seal Set, Piston",product_group_05,TRUE
+product_partgroup_191,034,"Sub Assembly, Front Brake",product_group_05,TRUE
+product_partgroup_192,035,U Brake,product_group_05,TRUE
+product_partgroup_193,036,V Brake,product_group_05,TRUE
+product_partgroup_194,037,Piston,product_group_05,TRUE
+product_partgroup_195,038,"Sub Assembly, Rear",product_group_05,TRUE
+product_partgroup_196,039,"Cup, Complete Oil",product_group_05,TRUE
+product_partgroup_197,040,Lines Meter Assembly,product_group_05,TRUE
+product_partgroup_198,001,Accelerator Cable,product_group_06,TRUE
+product_partgroup_199,002,Brake Cable,product_group_06,TRUE
+product_partgroup_200,003,Choke Cable,product_group_06,TRUE
+product_partgroup_201,004,Cable Clip,product_group_06,TRUE
+product_partgroup_202,005,Clutch Cable,product_group_06,TRUE
+product_partgroup_203,006,Decompression Cable,product_group_06,TRUE
+product_partgroup_204,007,Derailleur Cable,product_group_06,TRUE
+product_partgroup_205,008,Earth Cable,product_group_06,TRUE
+product_partgroup_206,009,Guide Cable,product_group_06,TRUE
+product_partgroup_207,010,Holder,product_group_06,TRUE
+product_partgroup_208,011,Housing,product_group_06,TRUE
+product_partgroup_209,012,Ignition Cable,product_group_06,TRUE
+product_partgroup_210,013,Oaxial Cable,product_group_06,TRUE
+product_partgroup_211,014,Pump Cable,product_group_06,TRUE
+product_partgroup_212,015,"Seat Lock, Cable",product_group_06,TRUE
+product_partgroup_213,016,Selector Cable,product_group_06,TRUE
+product_partgroup_214,017,Shifter Cable,product_group_06,TRUE
+product_partgroup_215,018,Spark Plug Cable,product_group_06,TRUE
+product_partgroup_216,019,Speedometer Cable,product_group_06,TRUE
+product_partgroup_217,020,Starter Cable,product_group_06,TRUE
+product_partgroup_218,021,Tachometer Cable,product_group_06,TRUE
+product_partgroup_219,022,Throttle Cable,product_group_06,TRUE
+product_partgroup_220,001,"Air, Adjuster",product_group_07,TRUE
+product_partgroup_221,002,Body Complete,product_group_07,TRUE
+product_partgroup_222,003,Cap,product_group_07,TRUE
+product_partgroup_223,004,"Cap, Starter",product_group_07,TRUE
+product_partgroup_224,005,Carburetor Assembly,product_group_07,TRUE
+product_partgroup_225,006,Carburetor Cap,product_group_07,TRUE
+product_partgroup_226,007,Carburetor Duct,product_group_07,TRUE
+product_partgroup_227,008,Carburetor Float,product_group_07,TRUE
+product_partgroup_228,009,Carburetor Holder,product_group_07,TRUE
+product_partgroup_229,010,Carburetor Joint,product_group_07,TRUE
+product_partgroup_230,011,Carburetor Magnetic Switch,product_group_07,TRUE
+product_partgroup_231,012,Carburetor Plug,product_group_07,TRUE
+product_partgroup_232,013,Cover,product_group_07,TRUE
+product_partgroup_233,014,Diaphragm,product_group_07,TRUE
+product_partgroup_234,015,"Diaphragm, Cover",product_group_07,TRUE
+product_partgroup_235,016,"Duct, Air Box",product_group_07,TRUE
+product_partgroup_236,017,Float Valve,product_group_07,TRUE
+product_partgroup_237,018,Fuel Cock,product_group_07,TRUE
+product_partgroup_238,019,Fuel Injector,product_group_07,TRUE
+product_partgroup_239,020,Fuel Pump Assembly,product_group_07,TRUE
+product_partgroup_240,022,Holder Guide,product_group_07,TRUE
+product_partgroup_241,023,"Holder, Carburetor",product_group_07,TRUE
+product_partgroup_242,024,"Holder, Jet",product_group_07,TRUE
+product_partgroup_243,025,Holderwire,product_group_07,TRUE
+product_partgroup_244,026,"Insulator, Carburetor",product_group_07,TRUE
+product_partgroup_245,027,Intake Pipe,product_group_07,TRUE
+product_partgroup_246,028,"Joint, Fuel Hose",product_group_07,TRUE
+product_partgroup_247,029,Main Jet,product_group_07,TRUE
+product_partgroup_248,030,Mixing Chamber,product_group_07,TRUE
+product_partgroup_249,031,Needle Jet,product_group_07,TRUE
+product_partgroup_250,032,"Needle, Valve Assembly",product_group_07,TRUE
+product_partgroup_251,033,Nozzle,product_group_07,TRUE
+product_partgroup_252,034,Pilot Jet,product_group_07,TRUE
+product_partgroup_253,035,"Pin, Floater",product_group_07,TRUE
+product_partgroup_254,036,Piston,product_group_07,TRUE
+product_partgroup_255,037,"Piston, Valve Assembly",product_group_07,TRUE
+product_partgroup_256,038,Plunger,product_group_07,TRUE
+product_partgroup_257,039,Racing Cam,product_group_07,TRUE
+product_partgroup_258,040,"Rod, Throttle Valve",product_group_07,TRUE
+product_partgroup_259,041,Sleeve Carburetor,product_group_07,TRUE
+product_partgroup_260,042,Starter Body,product_group_07,TRUE
+product_partgroup_261,043,Throttle Rod,product_group_07,TRUE
+product_partgroup_262,044,Throttle Screw,product_group_07,TRUE
+product_partgroup_263,045,Throttle Valve,product_group_07,TRUE
+product_partgroup_264,046,Throttle Valve Set,product_group_07,TRUE
+product_partgroup_265,048,Valve Reed,product_group_07,TRUE
+product_partgroup_266,049,"Valve, Stater",product_group_07,TRUE
+product_partgroup_267,050,"Valve, Throttle",product_group_07,TRUE
+product_partgroup_268,001,Bushing,product_group_08,TRUE
+product_partgroup_269,002,Clutch Damper,product_group_08,TRUE
+product_partgroup_270,003,Damper,product_group_08,TRUE
+product_partgroup_271,004,"Damper, Fork Assembly",product_group_08,TRUE
+product_partgroup_272,005,Hub Damper,product_group_08,TRUE
+product_partgroup_273,006,"Rubber, Mount",product_group_08,TRUE
+product_partgroup_274,007,Tank Damper,product_group_08,TRUE
+product_partgroup_275,008,Wheel Damper,product_group_08,TRUE
+product_partgroup_276,001,Battery,product_group_09,TRUE
+product_partgroup_277,002,Battery Terminal,product_group_09,TRUE
+product_partgroup_278,003,Beam Light,product_group_09,TRUE
+product_partgroup_279,004,Brake Switch ,product_group_09,TRUE
+product_partgroup_280,005,Brush Terminal,product_group_09,TRUE
+product_partgroup_281,006,Bulb,product_group_09,TRUE
+product_partgroup_282,007,CDI,product_group_09,TRUE
+product_partgroup_283,008,Charging Coil,product_group_09,TRUE
+product_partgroup_284,009,Circuit Breaker,product_group_09,TRUE
+product_partgroup_285,010,Coil Assembly,product_group_09,TRUE
+product_partgroup_286,011,Coil Pulser,product_group_09,TRUE
+product_partgroup_287,012,Condenser,product_group_09,TRUE
+product_partgroup_288,013,"Contact Assembly, Change Switch",product_group_09,TRUE
+product_partgroup_289,014,Contact Breaker,product_group_09,TRUE
+product_partgroup_290,015,Contact Point,product_group_09,TRUE
+product_partgroup_291,016,"Dimmer, Switch Unit",product_group_09,TRUE
+product_partgroup_292,017,Distributor,product_group_09,TRUE
+product_partgroup_293,018,Flasher,product_group_09,TRUE
+product_partgroup_294,019,Flywheel Complete,product_group_09,TRUE
+product_partgroup_295,020,Fuel Meter Sender Assembly,product_group_09,TRUE
+product_partgroup_296,021,Fuse,product_group_09,TRUE
+product_partgroup_297,022,Gear Shift Terminal,product_group_09,TRUE
+product_partgroup_298,023,Generator,product_group_09,TRUE
+product_partgroup_299,024,Generator Cover,product_group_09,TRUE
+product_partgroup_300,025,Headlight Socket,product_group_09,TRUE
+product_partgroup_301,026,Horn,product_group_09,TRUE
+product_partgroup_302,027,"Horn, Switch Unit",product_group_09,TRUE
+product_partgroup_303,028,Igniter,product_group_09,TRUE
+product_partgroup_304,030,Ignition Cap,product_group_09,TRUE
+product_partgroup_305,031,Ignition Coil ,product_group_09,TRUE
+product_partgroup_306,032,Lamp Coil,product_group_09,TRUE
+product_partgroup_307,033,Led Light,product_group_09,TRUE
+product_partgroup_308,034,Light Coil,product_group_09,TRUE
+product_partgroup_309,035,Magneto,product_group_09,TRUE
+product_partgroup_310,036,Magneto Cover,product_group_09,TRUE
+product_partgroup_311,037,Pilot Box,product_group_09,TRUE
+product_partgroup_312,038,Primary Coil,product_group_09,TRUE
+product_partgroup_313,039,Rapid Relay,product_group_09,TRUE
+product_partgroup_314,040,Rectifier,product_group_09,TRUE
+product_partgroup_315,041,Regulator,product_group_09,TRUE
+product_partgroup_316,042,Relay Starting Motor Assembly,product_group_09,TRUE
+product_partgroup_317,043,"Relay, Signal Light",product_group_09,TRUE
+product_partgroup_318,044,"Relay, Starter",product_group_09,TRUE
+product_partgroup_319,045,Resistor,product_group_09,TRUE
+product_partgroup_320,046,Rotor,product_group_09,TRUE
+product_partgroup_321,047,Spark Plug Cap,product_group_09,TRUE
+product_partgroup_322,048,"Spark, Advancer",product_group_09,TRUE
+product_partgroup_323,049,"Starter, Motor",product_group_09,TRUE
+product_partgroup_324,050,Stator Assembly,product_group_09,TRUE
+product_partgroup_325,051,Strobe Light,product_group_09,TRUE
+product_partgroup_326,052,Switch Assembly,product_group_09,TRUE
+product_partgroup_327,053,"Switch Change, Set",product_group_09,TRUE
+product_partgroup_328,054,Switch Control,product_group_09,TRUE
+product_partgroup_329,055,Switch Light,product_group_09,TRUE
+product_partgroup_330,056,"Switch, Ignition Assembly",product_group_09,TRUE
+product_partgroup_331,057,"Switch, Jelly ",product_group_09,TRUE
+product_partgroup_332,058,"Switch, Key Set",product_group_09,TRUE
+product_partgroup_333,059,"Switch, Neutral  Indicator",product_group_09,TRUE
+product_partgroup_334,060,"Switch, Oil Level",product_group_09,TRUE
+product_partgroup_335,061,"Switch, Stop Light",product_group_09,TRUE
+product_partgroup_336,062,Voltage Regulator,product_group_09,TRUE
+product_partgroup_337,063,Voltmeter,product_group_09,TRUE
+product_partgroup_338,064,Weight Governor,product_group_09,TRUE
+product_partgroup_339,065,"Winker, Switch Set",product_group_09,TRUE
+product_partgroup_340,066,Wire,product_group_09,TRUE
+product_partgroup_341,067,Wire Harness,product_group_09,TRUE
+product_partgroup_342,068,Wire Lead,product_group_09,TRUE
+product_partgroup_343,069,"Wire, High Tension Cord",product_group_09,TRUE
+product_partgroup_344,070,Signal Light,product_group_09,TRUE
+product_partgroup_345,071,Signal Light Lens,product_group_09,TRUE
+product_partgroup_346,072,Sensor,product_group_09,TRUE
+product_partgroup_347,073,Switch Clutch,product_group_09,TRUE
+product_partgroup_348,074,Room Light,product_group_09,TRUE
+product_partgroup_349,075,Terminal Assembly,product_group_09,TRUE
+product_partgroup_350,001,Air Cleaner,product_group_10,TRUE
+product_partgroup_351,002,Air Cleaner Element,product_group_10,TRUE
+product_partgroup_352,003,"Arm, Gear Shift",product_group_10,TRUE
+product_partgroup_353,004,Axle,product_group_10,TRUE
+product_partgroup_354,005,Crank Balancer,product_group_10,TRUE
+product_partgroup_355,006,Belt,product_group_10,TRUE
+product_partgroup_356,007,Bendix Drive,product_group_10,TRUE
+product_partgroup_357,008,"Blind, Plug Shift Cam",product_group_10,TRUE
+product_partgroup_358,009,Bracket,product_group_10,TRUE
+product_partgroup_359,010,Breather,product_group_10,TRUE
+product_partgroup_360,011,Cam Follower,product_group_10,TRUE
+product_partgroup_361,012,Cam Lobe,product_group_10,TRUE
+product_partgroup_362,013,"Cam Shift, Selector",product_group_10,TRUE
+product_partgroup_363,014,Cam Stopper Assembly,product_group_10,TRUE
+product_partgroup_364,015,"Cam, Decompression",product_group_10,TRUE
+product_partgroup_365,016,"Cam, Drum Change",product_group_10,TRUE
+product_partgroup_366,017,"Cam, Gear Shift",product_group_10,TRUE
+product_partgroup_367,018,Camshaft Complete,product_group_10,TRUE
+product_partgroup_368,019,"Camshaft, Exhaust",product_group_10,TRUE
+product_partgroup_369,020,Cap,product_group_10,TRUE
+product_partgroup_370,021,Center Clutch,product_group_10,TRUE
+product_partgroup_371,022,Chain Cam Follower,product_group_10,TRUE
+product_partgroup_372,023,Check Valve,product_group_10,TRUE
+product_partgroup_373,024,Clutch Boss,product_group_10,TRUE
+product_partgroup_374,025,Clutch Cover,product_group_10,TRUE
+product_partgroup_375,026,Clutch Disc,product_group_10,TRUE
+product_partgroup_376,027,Clutch Housing Assembly,product_group_10,TRUE
+product_partgroup_377,028,Clutch Lever,product_group_10,TRUE
+product_partgroup_378,029,Clutch Lifter,product_group_10,TRUE
+product_partgroup_379,030,Clutch Lining,product_group_10,TRUE
+product_partgroup_380,031,Clutch Nipple,product_group_10,TRUE
+product_partgroup_381,032,Clutch Oneway,product_group_10,TRUE
+product_partgroup_382,033,Clutch Plate,product_group_10,TRUE
+product_partgroup_383,034,Clutch Release,product_group_10,TRUE
+product_partgroup_384,035,Clutch Shoe,product_group_10,TRUE
+product_partgroup_385,036,Clutch Weight,product_group_10,TRUE
+product_partgroup_386,037,Clutch Wheel,product_group_10,TRUE
+product_partgroup_387,038,"Clutch, Outer Complete",product_group_10,TRUE
+product_partgroup_388,039,Collet,product_group_10,TRUE
+product_partgroup_389,040,Connecting Rod,product_group_10,TRUE
+product_partgroup_390,041,Connector,product_group_10,TRUE
+product_partgroup_391,042,Contact Breaker,product_group_10,TRUE
+product_partgroup_392,043,Cotter Pin,product_group_10,TRUE
+product_partgroup_393,044,Cotter Valve,product_group_10,TRUE
+product_partgroup_394,045,Counter Shaft ,product_group_10,TRUE
+product_partgroup_395,046,Cover Shifter,product_group_10,TRUE
+product_partgroup_396,047,"Cover, Engine",product_group_10,TRUE
+product_partgroup_397,048,"Cover, Oil Filter",product_group_10,TRUE
+product_partgroup_398,049,Crank Case Cover,product_group_10,TRUE
+product_partgroup_399,050,Crank Pin,product_group_10,TRUE
+product_partgroup_400,051,Crankcase,product_group_10,TRUE
+product_partgroup_401,052,Crankshaft,product_group_10,TRUE
+product_partgroup_402,053,Cylinder Head,product_group_10,TRUE
+product_partgroup_403,054,Cylinder head Cover,product_group_10,TRUE
+product_partgroup_404,055,Decompression Rod,product_group_10,TRUE
+product_partgroup_405,056,Dowel Pin,product_group_10,TRUE
+product_partgroup_406,057,Drain Plug,product_group_10,TRUE
+product_partgroup_407,058,Drive Plate Friction,product_group_10,TRUE
+product_partgroup_408,059,"Drum Assembly, Gear Change",product_group_10,TRUE
+product_partgroup_409,060,"Drum, Gear Shift",product_group_10,TRUE
+product_partgroup_410,061,"Duct, Air Box",product_group_10,TRUE
+product_partgroup_411,062,Engine Protector,product_group_10,TRUE
+product_partgroup_412,063,Engine Support,product_group_10,TRUE
+product_partgroup_413,064,Exhaust Valve,product_group_10,TRUE
+product_partgroup_414,065,Face Fixed Drive,product_group_10,TRUE
+product_partgroup_415,066,Face Movable Drive,product_group_10,TRUE
+product_partgroup_416,067,Fan Cover,product_group_10,TRUE
+product_partgroup_417,068,"Fan, Cooler",product_group_10,TRUE
+product_partgroup_418,069,"Fan, Cooling Cap",product_group_10,TRUE
+product_partgroup_419,070,"Fan, Cover Complete",product_group_10,TRUE
+product_partgroup_420,071,Filter,product_group_10,TRUE
+product_partgroup_421,072,Float,product_group_10,TRUE
+product_partgroup_422,073,Flywheel,product_group_10,TRUE
+product_partgroup_423,074,Fork Guide,product_group_10,TRUE
+product_partgroup_424,075,Fork Shift,product_group_10,TRUE
+product_partgroup_425,076,"Fork, Gear Shift",product_group_10,TRUE
+product_partgroup_426,077,Friction Plate,product_group_10,TRUE
+product_partgroup_427,078,Fuel Cap,product_group_10,TRUE
+product_partgroup_428,079,Fuel Cock,product_group_10,TRUE
+product_partgroup_429,080,Fuel Filter,product_group_10,TRUE
+product_partgroup_430,081,Fuel Kit,product_group_10,TRUE
+product_partgroup_431,082,Fuel Pump,product_group_10,TRUE
+product_partgroup_432,083,Fuel Tank,product_group_10,TRUE
+product_partgroup_433,084,Fuel Tank Cap,product_group_10,TRUE
+product_partgroup_434,085,Fuel Tap,product_group_10,TRUE
+product_partgroup_435,086,"Gauge, Oil Level",product_group_10,TRUE
+product_partgroup_436,087,Gear,product_group_10,TRUE
+product_partgroup_437,088,"Gear, Oil Pump",product_group_10,TRUE
+product_partgroup_438,089,"Gear, Casemeter",product_group_10,TRUE
+product_partgroup_439,090,"Gear, Counter Shaft",product_group_10,TRUE
+product_partgroup_440,091,"Gear, Idle Starter",product_group_10,TRUE
+product_partgroup_441,092,"Gear, Kick Starter Set",product_group_10,TRUE
+product_partgroup_442,093,"Gear, Primary Drive",product_group_10,TRUE
+product_partgroup_443,094,"Gear, Primary Starter",product_group_10,TRUE
+product_partgroup_444,095,"Gear, Reduction",product_group_10,TRUE
+product_partgroup_445,096,"Gear, Starter",product_group_10,TRUE
+product_partgroup_446,097,"Gear, Third Set",product_group_10,TRUE
+product_partgroup_447,098,Guide Stopper,product_group_10,TRUE
+product_partgroup_448,099,"Guide, Plate Oil",product_group_10,TRUE
+product_partgroup_449,100,Head Tensioner,product_group_10,TRUE
+product_partgroup_450,101,"Holder, Shift Cam",product_group_10,TRUE
+product_partgroup_451,102,Idle Gear,product_group_10,TRUE
+product_partgroup_452,103,Inlet Pipe,product_group_10,TRUE
+product_partgroup_453,104,Intake Pipe,product_group_10,TRUE
+product_partgroup_454,105,Intake Valve,product_group_10,TRUE
+product_partgroup_455,106,"Joint, Air Cleaner",product_group_10,TRUE
+product_partgroup_456,107,Knock Ring,product_group_10,TRUE
+product_partgroup_457,108,"Lens, Oil Tank Vewer",product_group_10,TRUE
+product_partgroup_458,109,Lever,product_group_10,TRUE
+product_partgroup_459,110,Limiter,product_group_10,TRUE
+product_partgroup_460,111,"Lock, Drum Plate",product_group_10,TRUE
+product_partgroup_461,112,Magneto Cover,product_group_10,TRUE
+product_partgroup_462,113,Main Shaft,product_group_10,TRUE
+product_partgroup_463,114,Motor Starter,product_group_10,TRUE
+product_partgroup_464,115,Oil Cap,product_group_10,TRUE
+product_partgroup_465,116,Oil Filter,product_group_10,TRUE
+product_partgroup_466,117,Oil Gauge,product_group_10,TRUE
+product_partgroup_467,118,Oil Pan,product_group_10,TRUE
+product_partgroup_468,119,Oil Pipe,product_group_10,TRUE
+product_partgroup_469,120,Oil Plate,product_group_10,TRUE
+product_partgroup_470,121,Oil Plug,product_group_10,TRUE
+product_partgroup_471,122,Oil Pump,product_group_10,TRUE
+product_partgroup_472,123,"Oil Pump, Cover",product_group_10,TRUE
+product_partgroup_473,124,Oil Tank,product_group_10,TRUE
+product_partgroup_474,125,Oil Tank Cap,product_group_10,TRUE
+product_partgroup_475,126,"Oil, Guide",product_group_10,TRUE
+product_partgroup_476,127,"Oil, Inlet",product_group_10,TRUE
+product_partgroup_477,128,Outer Clutch,product_group_10,TRUE
+product_partgroup_478,129,"Piece Set, Slide",product_group_10,TRUE
+product_partgroup_479,130,Pin,product_group_10,TRUE
+product_partgroup_480,131,"Pinion, Speedometer",product_group_10,TRUE
+product_partgroup_481,132,Piece Oil Lock,product_group_10,TRUE
+product_partgroup_482,133,Piston,product_group_10,TRUE
+product_partgroup_483,134,Piston Kit,product_group_10,TRUE
+product_partgroup_484,135,Piston Kit S1,product_group_10,TRUE
+product_partgroup_485,136,Piston Kit S2,product_group_10,TRUE
+product_partgroup_486,137,Piston Kit S3,product_group_10,TRUE
+product_partgroup_487,138,Piston Kit S4,product_group_10,TRUE
+product_partgroup_488,139,Piston Kit STD,product_group_10,TRUE
+product_partgroup_489,140,Piston Pin,product_group_10,TRUE
+product_partgroup_490,141,Piston Ring S1,product_group_10,TRUE
+product_partgroup_491,142,Piston Ring S2,product_group_10,TRUE
+product_partgroup_492,143,Piston Ring S3,product_group_10,TRUE
+product_partgroup_493,144,Piston Ring S4,product_group_10,TRUE
+product_partgroup_494,145,Piston Ring STD,product_group_10,TRUE
+product_partgroup_495,146,Piston S1,product_group_10,TRUE
+product_partgroup_496,147,Piston S2,product_group_10,TRUE
+product_partgroup_497,148,Piston S3,product_group_10,TRUE
+product_partgroup_498,149,Piston S4,product_group_10,TRUE
+product_partgroup_499,150,Piston STD,product_group_10,TRUE
+product_partgroup_500,151,Plate,product_group_10,TRUE
+product_partgroup_501,152,"Plug, Crankshaft Hole",product_group_10,TRUE
+product_partgroup_502,153,Pressure Plate,product_group_10,TRUE
+product_partgroup_503,154,Propeller,product_group_10,TRUE
+product_partgroup_504,155,Push Lever,product_group_10,TRUE
+product_partgroup_505,156,Push Plug Holder,product_group_10,TRUE
+product_partgroup_506,157,Push Rod,product_group_10,TRUE
+product_partgroup_507,158,Racing Cam,product_group_10,TRUE
+product_partgroup_508,159,Radiator,product_group_10,TRUE
+product_partgroup_509,160,Ratchet,product_group_10,TRUE
+product_partgroup_510,161,Retainer,product_group_10,TRUE
+product_partgroup_511,162,Ring Set,product_group_10,TRUE
+product_partgroup_512,163,Rocker Arm,product_group_10,TRUE
+product_partgroup_513,164,Rod,product_group_10,TRUE
+product_partgroup_514,165,Roller,product_group_10,TRUE
+product_partgroup_515,166,Rotary Cover,product_group_10,TRUE
+product_partgroup_516,167,Rotary Valve,product_group_10,TRUE
+product_partgroup_517,168,Rotor,product_group_10,TRUE
+product_partgroup_518,169,Screen,product_group_10,TRUE
+product_partgroup_519,170,Screw Valve,product_group_10,TRUE
+product_partgroup_520,171,"Segment, Shift Cam",product_group_10,TRUE
+product_partgroup_521,172,Selector Drum Assembly,product_group_10,TRUE
+product_partgroup_522,173,Set Ring,product_group_10,TRUE
+product_partgroup_523,174,Shaft,product_group_10,TRUE
+product_partgroup_524,175,Shift Cam Fork,product_group_10,TRUE
+product_partgroup_525,176,"Shift Cam, Stopper",product_group_10,TRUE
+product_partgroup_526,177,"Shim, Tappet",product_group_10,TRUE
+product_partgroup_527,178,Shroud,product_group_10,TRUE
+product_partgroup_528,179,"Snap Ring,",product_group_10,TRUE
+product_partgroup_529,180,"Speedometer, Gear",product_group_10,TRUE
+product_partgroup_530,181,Spindle Gear Shift,product_group_10,TRUE
+product_partgroup_531,182,Stopper,product_group_10,TRUE
+product_partgroup_532,183,Tap Assembly,product_group_10,TRUE
+product_partgroup_533,184,Tensioner,product_group_10,TRUE
+product_partgroup_534,185,Tie Rod,product_group_10,TRUE
+product_partgroup_535,186,Timing Cover,product_group_10,TRUE
+product_partgroup_536,187,"Torque, Link",product_group_10,TRUE
+product_partgroup_537,188,Valve Guide,product_group_10,TRUE
+product_partgroup_538,189,"Valve, Air Cut",product_group_10,TRUE
+product_partgroup_539,190,"Valve, Air Switch",product_group_10,TRUE
+product_partgroup_540,191,"Valve, Exhaust",product_group_10,TRUE
+product_partgroup_541,192,"Valve, Inner Seat",product_group_10,TRUE
+product_partgroup_542,193,"Valve, Intake",product_group_10,TRUE
+product_partgroup_543,194,"Valve, Kit",product_group_10,TRUE
+product_partgroup_544,195,"Valve, Lifter",product_group_10,TRUE
+product_partgroup_545,196,"Valve, Reed",product_group_10,TRUE
+product_partgroup_546,197,"Valve, Repair Kit",product_group_10,TRUE
+product_partgroup_547,198,"Valve, Retainer",product_group_10,TRUE
+product_partgroup_548,199,"Valve, Rocker Arm",product_group_10,TRUE
+product_partgroup_549,200,"Valve, Seal",product_group_10,TRUE
+product_partgroup_550,201,"Valve, Spring",product_group_10,TRUE
+product_partgroup_551,202,"Valve, Stem",product_group_10,TRUE
+product_partgroup_552,203,Water Pump,product_group_10,TRUE
+product_partgroup_553,204,"Weight, Decompression",product_group_10,TRUE
+product_partgroup_554,205,Woodruff Key,product_group_10,TRUE
+product_partgroup_555,001,"Arm, Suspension",product_group_11,TRUE
+product_partgroup_556,002,Axle,product_group_11,TRUE
+product_partgroup_557,003,Balancer,product_group_11,TRUE
+product_partgroup_558,004,Battery Box,product_group_11,TRUE
+product_partgroup_559,005,BMX Frame,product_group_11,TRUE
+product_partgroup_560,006,Body Cap,product_group_11,TRUE
+product_partgroup_561,007,Body Cover,product_group_11,TRUE
+product_partgroup_562,008,Boots,product_group_11,TRUE
+product_partgroup_563,009,Bottom Bracket,product_group_11,TRUE
+product_partgroup_564,010,"Bottom Case, Front",product_group_11,TRUE
+product_partgroup_565,011,Bracket,product_group_11,TRUE
+product_partgroup_566,012,Bush,product_group_11,TRUE
+product_partgroup_567,013,Cap,product_group_11,TRUE
+product_partgroup_568,014,"Cap, Fuel Tank",product_group_11,TRUE
+product_partgroup_569,015,"Cap, Master Cylinder",product_group_11,TRUE
+product_partgroup_570,016,"Cap, Steering ",product_group_11,TRUE
+product_partgroup_571,017,"Cap, Swing Arm",product_group_11,TRUE
+product_partgroup_572,018,"Cap, Throttle Grip",product_group_11,TRUE
+product_partgroup_573,019,"Case, Speedometer",product_group_11,TRUE
+product_partgroup_574,020,"Case, Under Chain",product_group_11,TRUE
+product_partgroup_575,021,Center Cover,product_group_11,TRUE
+product_partgroup_576,022,Center Post,product_group_11,TRUE
+product_partgroup_577,023,Chain Cover,product_group_11,TRUE
+product_partgroup_578,024,Chain Guide,product_group_11,TRUE
+product_partgroup_579,025,Chassis,product_group_11,TRUE
+product_partgroup_580,026,Choke,product_group_11,TRUE
+product_partgroup_581,027,"Control, Housing Assembly ",product_group_11,TRUE
+product_partgroup_582,028,"Cover, Headlight",product_group_11,TRUE
+product_partgroup_583,029,"Cover, Front Fork",product_group_11,TRUE
+product_partgroup_584,030,"Cover, Head Pipe",product_group_11,TRUE
+product_partgroup_585,031,"Cover, Ignition Switch",product_group_11,TRUE
+product_partgroup_586,032,"Cover, Lower",product_group_11,TRUE
+product_partgroup_587,033,"Cover, Main Pipe",product_group_11,TRUE
+product_partgroup_588,034,"Cover, Outer",product_group_11,TRUE
+product_partgroup_589,035,"Cover, Reservoir",product_group_11,TRUE
+product_partgroup_590,036,"Cover, Speedometer Case",product_group_11,TRUE
+product_partgroup_591,037,"Cover, Steering Head",product_group_11,TRUE
+product_partgroup_592,038,"Cover, Upper",product_group_11,TRUE
+product_partgroup_593,039,"Cover,Front Fork",product_group_11,TRUE
+product_partgroup_594,040,"Cover, Tappet",product_group_11,TRUE
+product_partgroup_595,041,Cowling,product_group_11,TRUE
+product_partgroup_596,042,Crank Arm,product_group_11,TRUE
+product_partgroup_597,043,Crank Axle,product_group_11,TRUE
+product_partgroup_598,044,Crank Case Cover,product_group_11,TRUE
+product_partgroup_599,045,Crank Cone,product_group_11,TRUE
+product_partgroup_600,046,Crank Pin,product_group_11,TRUE
+product_partgroup_601,047,Crank Set,product_group_11,TRUE
+product_partgroup_602,048,Cross Joint,product_group_11,TRUE
+product_partgroup_603,049,Cushion,product_group_11,TRUE
+product_partgroup_604,050,"Decals, Seat Cover",product_group_11,TRUE
+product_partgroup_605,051,Diaphragm,product_group_11,TRUE
+product_partgroup_606,052,Disc Cover,product_group_11,TRUE
+product_partgroup_607,053,Door Knob,product_group_11,TRUE
+product_partgroup_608,054,Drop Out,product_group_11,TRUE
+product_partgroup_609,055,Dual Seat Assembly,product_group_11,TRUE
+product_partgroup_610,057,Exhaust Pipe,product_group_11,TRUE
+product_partgroup_611,058,Exhaust Pipe Holder,product_group_11,TRUE
+product_partgroup_612,059,Fender,product_group_11,TRUE
+product_partgroup_613,060,Flap ,product_group_11,TRUE
+product_partgroup_614,061,"Floor, Under Seat",product_group_11,TRUE
+product_partgroup_615,062,Footrest,product_group_11,TRUE
+product_partgroup_616,063,Fork,product_group_11,TRUE
+product_partgroup_617,064,"Fork Inner Tube, Guide",product_group_11,TRUE
+product_partgroup_618,065,"Fork, Assembly",product_group_11,TRUE
+product_partgroup_619,066,"Fork, Guide Cover",product_group_11,TRUE
+product_partgroup_620,067,"Fork, Inner Tube",product_group_11,TRUE
+product_partgroup_621,068,"Fork, Outer Tube",product_group_11,TRUE
+product_partgroup_622,069,"Fork, Top Bridge",product_group_11,TRUE
+product_partgroup_623,070,Frame Cover,product_group_11,TRUE
+product_partgroup_624,071,Fuel Gauge,product_group_11,TRUE
+product_partgroup_625,072,Fuel Tank,product_group_11,TRUE
+product_partgroup_626,073,Fuel Tank Cover,product_group_11,TRUE
+product_partgroup_627,074,"Gear Box Assembly, Speedometer",product_group_11,TRUE
+product_partgroup_628,075,Grab Rail,product_group_11,TRUE
+product_partgroup_629,076,"Grip, Handle",product_group_11,TRUE
+product_partgroup_630,077,"Grip, Pipe",product_group_11,TRUE
+product_partgroup_631,078,"Grip, Throttle",product_group_11,TRUE
+product_partgroup_632,079,"Grip, Throttle Pipe",product_group_11,TRUE
+product_partgroup_633,080,Group Set,product_group_11,TRUE
+product_partgroup_634,081,"Guide, Cam Chain",product_group_11,TRUE
+product_partgroup_635,082,Handle Bar,product_group_11,TRUE
+product_partgroup_636,083,Handle Cover,product_group_11,TRUE
+product_partgroup_637,084,Handle Crown,product_group_11,TRUE
+product_partgroup_638,085,Handle Pillion,product_group_11,TRUE
+product_partgroup_639,086,Handle Post,product_group_11,TRUE
+product_partgroup_640,087,Handle Stem,product_group_11,TRUE
+product_partgroup_641,088,Handle Switch,product_group_11,TRUE
+product_partgroup_642,089,Head Frame,product_group_11,TRUE
+product_partgroup_643,090,Head Light Assembly,product_group_11,TRUE
+product_partgroup_644,091,Head Parts,product_group_11,TRUE
+product_partgroup_645,092,Head Set,product_group_11,TRUE
+product_partgroup_646,093,Headlight,product_group_11,TRUE
+product_partgroup_647,094,Headlight Assembly,product_group_11,TRUE
+product_partgroup_648,095,Headlight Case,product_group_11,TRUE
+product_partgroup_649,096,Headlight Lens,product_group_11,TRUE
+product_partgroup_650,097,Headlight Rim,product_group_11,TRUE
+product_partgroup_651,098,Hinge Seat,product_group_11,TRUE
+product_partgroup_652,099,Holder,product_group_11,TRUE
+product_partgroup_653,100,Inner Cover,product_group_11,TRUE
+product_partgroup_654,101,Inner Tube,product_group_11,TRUE
+product_partgroup_655,102,Joint,product_group_11,TRUE
+product_partgroup_656,103,Leg Shield,product_group_11,TRUE
+product_partgroup_657,104,Lever,product_group_11,TRUE
+product_partgroup_658,105,"Lever, Bracket",product_group_11,TRUE
+product_partgroup_659,106,"Lever, Brake",product_group_11,TRUE
+product_partgroup_660,107,"Lever, Choke ",product_group_11,TRUE
+product_partgroup_661,108,"Lever, Clutch",product_group_11,TRUE
+product_partgroup_662,109,"Lever, Handle",product_group_11,TRUE
+product_partgroup_663,110,"Lever, Holder",product_group_11,TRUE
+product_partgroup_664,111,"Lever, Steering",product_group_11,TRUE
+product_partgroup_665,112,Lock Set  ,product_group_11,TRUE
+product_partgroup_666,113,Luggage Box,product_group_11,TRUE
+product_partgroup_667,114,Metal Slide,product_group_11,TRUE
+product_partgroup_668,115,Mirror,product_group_11,TRUE
+product_partgroup_669,116,MTB Frame,product_group_11,TRUE
+product_partgroup_670,117,Mud Guard,product_group_11,TRUE
+product_partgroup_671,118,Muffler Assembly,product_group_11,TRUE
+product_partgroup_672,119,Muffler Connector,product_group_11,TRUE
+product_partgroup_673,120,Muffler Holder,product_group_11,TRUE
+product_partgroup_674,121,Muffler Protector,product_group_11,TRUE
+product_partgroup_675,122,Oil Guage,product_group_11,TRUE
+product_partgroup_676,123,Panel Linner,product_group_11,TRUE
+product_partgroup_677,124,Pillion Step,product_group_11,TRUE
+product_partgroup_678,125,Pillion Step Holder,product_group_11,TRUE
+product_partgroup_679,126,Pin,product_group_11,TRUE
+product_partgroup_680,127,Pipe,product_group_11,TRUE
+product_partgroup_681,128,Piston,product_group_11,TRUE
+product_partgroup_682,129,Pivot Axle,product_group_11,TRUE
+product_partgroup_683,130,"Pivot, Tensioner",product_group_11,TRUE
+product_partgroup_684,131,"Plate Number, Bracket",product_group_11,TRUE
+product_partgroup_685,132,Plate Under,product_group_11,TRUE
+product_partgroup_686,133,"Plate, Seat Lock Assembly",product_group_11,TRUE
+product_partgroup_687,134,"Plate, Top Bridge",product_group_11,TRUE
+product_partgroup_688,135,"Race, Steering Bottom Cone",product_group_11,TRUE
+product_partgroup_689,136,"Race, Steering Kit",product_group_11,TRUE
+product_partgroup_690,137,"Race, Steering Outer, Lower",product_group_11,TRUE
+product_partgroup_691,138,"Race, Steering Outer, Upper",product_group_11,TRUE
+product_partgroup_692,139,"Race, Steering Top Cone",product_group_11,TRUE
+product_partgroup_693,140,"Race, Streering Inner, Lower",product_group_11,TRUE
+product_partgroup_694,141,"Race, Streering Inner, Upper",product_group_11,TRUE
+product_partgroup_695,142,Rear Lamp Assembly,product_group_11,TRUE
+product_partgroup_696,143,Reservoir,product_group_11,TRUE
+product_partgroup_697,144,Retension,product_group_11,TRUE
+product_partgroup_698,145,"Ring, Stopper",product_group_11,TRUE
+product_partgroup_699,146,Rubber Mount,product_group_11,TRUE
+product_partgroup_700,147,Seat Cover,product_group_11,TRUE
+product_partgroup_701,148,Seat Lock,product_group_11,TRUE
+product_partgroup_702,149,"Shaft, Main Stand",product_group_11,TRUE
+product_partgroup_703,150,"Shaft, Pivot",product_group_11,TRUE
+product_partgroup_704,151,"Shaft, Swing Arm",product_group_11,TRUE
+product_partgroup_705,152,Shield Under Cowling,product_group_11,TRUE
+product_partgroup_706,153,Shock Absorber,product_group_11,TRUE
+product_partgroup_707,154,Shroud Cover,product_group_11,TRUE
+product_partgroup_708,155,Side Cover,product_group_11,TRUE
+product_partgroup_709,156,Side Stand,product_group_11,TRUE
+product_partgroup_710,157,Silencer,product_group_11,TRUE
+product_partgroup_711,158,Sleeve,product_group_11,TRUE
+product_partgroup_712,159,Speedometer,product_group_11,TRUE
+product_partgroup_713,160,Spoiler Central,product_group_11,TRUE
+product_partgroup_714,161,Stand,product_group_11,TRUE
+product_partgroup_715,162,Stay,product_group_11,TRUE
+product_partgroup_716,163,Steering,product_group_11,TRUE
+product_partgroup_717,164,Steering Pipe Handle,product_group_11,TRUE
+product_partgroup_718,165,Steering Stem,product_group_11,TRUE
+product_partgroup_719,166,"Steering, Stem Sum Assembly",product_group_11,TRUE
+product_partgroup_720,167,Stem Post,product_group_11,TRUE
+product_partgroup_721,168,Step Arm,product_group_11,TRUE
+product_partgroup_722,169,"Stay, Bottom Bridge",product_group_11,TRUE
+product_partgroup_723,170,Sub Assembly,product_group_11,TRUE
+product_partgroup_724,171,Suspension Arm,product_group_11,TRUE
+product_partgroup_725,172,Swing Arm,product_group_11,TRUE
+product_partgroup_726,173,Tachometer,product_group_11,TRUE
+product_partgroup_727,174,Tail Cover,product_group_11,TRUE
+product_partgroup_728,175,Tail Light,product_group_11,TRUE
+product_partgroup_729,176,Tail Light Lens,product_group_11,TRUE
+product_partgroup_730,177,Tail Light Protector,product_group_11,TRUE
+product_partgroup_731,178,"Thread Complete, Steering Head",product_group_11,TRUE
+product_partgroup_732,179,Throttle Grip,product_group_11,TRUE
+product_partgroup_733,180,Throttle Housing,product_group_11,TRUE
+product_partgroup_734,181,Throttle Pipe,product_group_11,TRUE
+product_partgroup_735,182,Torque,product_group_11,TRUE
+product_partgroup_736,183,Transmission Support,product_group_11,TRUE
+product_partgroup_737,184,Tube Guide,product_group_11,TRUE
+product_partgroup_738,185,Under Cover,product_group_11,TRUE
+product_partgroup_739,186,Wind Shield,product_group_11,TRUE
+product_partgroup_740,187,Wiper,product_group_11,TRUE
+product_partgroup_741,001,Gasket ,product_group_12,TRUE
+product_partgroup_742,002,"Gasket, Base",product_group_12,TRUE
+product_partgroup_743,003,"Gasket, Carburetor",product_group_12,TRUE
+product_partgroup_744,004,"Gasket, Clutch Cover ",product_group_12,TRUE
+product_partgroup_745,005,"Gasket, Cover",product_group_12,TRUE
+product_partgroup_746,006,"Gasket, Crankcase ",product_group_12,TRUE
+product_partgroup_747,007,"Gasket, Cylinder Head",product_group_12,TRUE
+product_partgroup_748,008,"Gasket, Drain Plug",product_group_12,TRUE
+product_partgroup_749,009,"Gasket, Elbow",product_group_12,TRUE
+product_partgroup_750,010,"Gasket, Exhaust Pipe",product_group_12,TRUE
+product_partgroup_751,011,"Gasket, Float ",product_group_12,TRUE
+product_partgroup_752,012,"Gasket, Fuel Tank  Cover",product_group_12,TRUE
+product_partgroup_753,013,"Gasket, Generator Cover",product_group_12,TRUE
+product_partgroup_754,014,"Gasket, Oil Filter",product_group_12,TRUE
+product_partgroup_755,015,Intake Gasket,product_group_12,TRUE
+product_partgroup_756,016,"Gasket, Magneto Cover",product_group_12,TRUE
+product_partgroup_757,017,"Gasket, Overhauling",product_group_12,TRUE
+product_partgroup_758,018,"Gasket, Tensioner",product_group_12,TRUE
+product_partgroup_759,019,"Gasket, Top Set",product_group_12,TRUE
+product_partgroup_760,020,"Gasket, Transmission",product_group_12,TRUE
+product_partgroup_761,021,"Gasket, Valve Cover",product_group_12,TRUE
+product_partgroup_762,001,Air Pot,product_group_13,TRUE
+product_partgroup_763,002,Basket,product_group_13,TRUE
+product_partgroup_764,003,Bed Cover,product_group_13,TRUE
+product_partgroup_765,004,Blender,product_group_13,TRUE
+product_partgroup_766,005,Chair,product_group_13,TRUE
+product_partgroup_767,006,Electric Kettle,product_group_13,TRUE
+product_partgroup_768,007,Fan,product_group_13,TRUE
+product_partgroup_769,008,Flat Iron,product_group_13,TRUE
+product_partgroup_770,009,Flower Pot,product_group_13,TRUE
+product_partgroup_771,010,Gas Stove,product_group_13,TRUE
+product_partgroup_772,011,Heat Repellant,product_group_13,TRUE
+product_partgroup_773,012,Juicer,product_group_13,TRUE
+product_partgroup_774,013,Kitchen Utensils,product_group_13,TRUE
+product_partgroup_775,014,Lamp,product_group_13,TRUE
+product_partgroup_776,015,Micro Wave Oven,product_group_13,TRUE
+product_partgroup_777,016,Oven Toaster,product_group_13,TRUE
+product_partgroup_778,017,Pillow,product_group_13,TRUE
+product_partgroup_779,018,Pressure Cooker,product_group_13,TRUE
+product_partgroup_780,019,Rice Cooker,product_group_13,TRUE
+product_partgroup_781,020,Sharpening Stone,product_group_13,TRUE
+product_partgroup_782,021,Steamer,product_group_13,TRUE
+product_partgroup_783,022,Steel Kalan Stove,product_group_13,TRUE
+product_partgroup_784,023,Table,product_group_13,TRUE
+product_partgroup_785,024,Tiles,product_group_13,TRUE
+product_partgroup_786,025,Towel,product_group_13,TRUE
+product_partgroup_787,026,Trash Can,product_group_13,TRUE
+product_partgroup_788,027,Umbrella,product_group_13,TRUE
+product_partgroup_789,028,Wachine Machine,product_group_13,TRUE
+product_partgroup_790,029,Water Dispenser,product_group_13,TRUE
+product_partgroup_791,999,Others,product_group_13,TRUE
+product_partgroup_792,001,Air Cleaner Hose,product_group_14,TRUE
+product_partgroup_793,002,Carburetor Hose,product_group_14,TRUE
+product_partgroup_794,003,Front Brake Hose,product_group_14,TRUE
+product_partgroup_795,004,Fuel Hose,product_group_14,TRUE
+product_partgroup_796,005,Hose,product_group_14,TRUE
+product_partgroup_797,006,Hydraulic Hose,product_group_14,TRUE
+product_partgroup_798,007,Inlet Hose,product_group_14,TRUE
+product_partgroup_799,008,Joint Vacuum Hose,product_group_14,TRUE
+product_partgroup_800,009,Radiator Hose,product_group_14,TRUE
+product_partgroup_801,010,"Tube, Breather",product_group_14,TRUE
+product_partgroup_802,001,Brake Fluid,product_group_15,TRUE
+product_partgroup_803,002,Coolant,product_group_15,TRUE
+product_partgroup_804,003,Gasket Maker,product_group_15,TRUE
+product_partgroup_805,004,Glue,product_group_15,TRUE
+product_partgroup_806,005,Grease,product_group_15,TRUE
+product_partgroup_807,006,Oil,product_group_15,TRUE
+product_partgroup_808,007,Paint,product_group_15,TRUE
+product_partgroup_809,008,Silicon Gasket Maker,product_group_15,TRUE
+product_partgroup_810,009,Thinner,product_group_15,TRUE
+product_partgroup_811,010,Wax,product_group_15,TRUE
+product_partgroup_812,011,Tire Black,product_group_15,TRUE
+product_partgroup_813,001,#16,product_group_16,TRUE
+product_partgroup_814,002,#20,product_group_16,TRUE
+product_partgroup_815,003,#24,product_group_16,TRUE
+product_partgroup_816,004,#26,product_group_16,TRUE
+product_partgroup_817,005,#27.5,product_group_16,TRUE
+product_partgroup_818,006,Fat Bike,product_group_16,TRUE
+product_partgroup_819,007,Road Bike,product_group_16,TRUE
+product_partgroup_820,008,Tandem Bike,product_group_16,TRUE
+product_partgroup_821,001,Allen Bolt,product_group_17,TRUE
+product_partgroup_822,002,Blind Nut,product_group_17,TRUE
+product_partgroup_823,003,Bolt,product_group_17,TRUE
+product_partgroup_824,004,Bolt BH,product_group_17,TRUE
+product_partgroup_825,005,"Bolt, Hex",product_group_17,TRUE
+product_partgroup_826,006,"Bolt, Hi-Tensil",product_group_17,TRUE
+product_partgroup_827,007,Circlip,product_group_17,TRUE
+product_partgroup_828,008,Clip,product_group_17,TRUE
+product_partgroup_829,009,Cone,product_group_17,TRUE
+product_partgroup_830,010,Cup,product_group_17,TRUE
+product_partgroup_831,011,"Bolt, Flange",product_group_17,TRUE
+product_partgroup_832,012,Nut,product_group_17,TRUE
+product_partgroup_833,013,"Nut, Axle Sleeve",product_group_17,TRUE
+product_partgroup_834,014,"Nut, Cap ",product_group_17,TRUE
+product_partgroup_835,015,"Nut, Cap Screw",product_group_17,TRUE
+product_partgroup_836,016,"Nut, Castle",product_group_17,TRUE
+product_partgroup_837,017,"Nut, Clip",product_group_17,TRUE
+product_partgroup_838,018,"Nut, Flange",product_group_17,TRUE
+product_partgroup_839,019,"Nut, Hex",product_group_17,TRUE
+product_partgroup_840,020,"Nut, Hi-Tensil",product_group_17,TRUE
+product_partgroup_841,021,"Nut, Lock",product_group_17,TRUE
+product_partgroup_842,022,"Nut, Steering Stem",product_group_17,TRUE
+product_partgroup_843,023,"Nut, Tappet",product_group_17,TRUE
+product_partgroup_844,024,"Ring, Lock",product_group_17,TRUE
+product_partgroup_845,025,Screw,product_group_17,TRUE
+product_partgroup_846,026,Screw Cap,product_group_17,TRUE
+product_partgroup_847,027,Screw JF,product_group_17,TRUE
+product_partgroup_848,028,Screw JO,product_group_17,TRUE
+product_partgroup_849,029,Screw JP,product_group_17,TRUE
+product_partgroup_850,030,Screw Pan,product_group_17,TRUE
+product_partgroup_851,031,Screw Set,product_group_17,TRUE
+product_partgroup_852,032,Screw Tappet,product_group_17,TRUE
+product_partgroup_853,033,"Screw, Pilot Air",product_group_17,TRUE
+product_partgroup_854,034,"Screw, Plug Straight",product_group_17,TRUE
+product_partgroup_855,035,"Screw, Push",product_group_17,TRUE
+product_partgroup_856,036,"Screw, Throttle",product_group_17,TRUE
+product_partgroup_857,037,Snap Ring,product_group_17,TRUE
+product_partgroup_858,038,"Bolt, Stud",product_group_17,TRUE
+product_partgroup_859,039,Washer,product_group_17,TRUE
+product_partgroup_860,040,"Washer, Crank Pin",product_group_17,TRUE
+product_partgroup_861,041,"Washer, Flat",product_group_17,TRUE
+product_partgroup_862,042,"Washer, Lock",product_group_17,TRUE
+product_partgroup_863,043,"Washer, Screw",product_group_17,TRUE
+product_partgroup_864,044,"Washer, Sealing",product_group_17,TRUE
+product_partgroup_865,045,"Washer, Spline",product_group_17,TRUE
+product_partgroup_866,046,"Washer, Thrust",product_group_17,TRUE
+product_partgroup_867,047,"Washer, Tongue",product_group_17,TRUE
+product_partgroup_868,001,"O Ring, Tappet",product_group_18,TRUE
+product_partgroup_869,002,O Ring,product_group_18,TRUE
+product_partgroup_870,001,Dust Seal,product_group_19,TRUE
+product_partgroup_871,002,Front Fork Seal,product_group_19,TRUE
+product_partgroup_872,003,Oil Seal,product_group_19,TRUE
+product_partgroup_873,004,Packing Cock,product_group_19,TRUE
+product_partgroup_874,005,Seal Gasket,product_group_19,TRUE
+product_partgroup_875,006,"Seal Set, Piston",product_group_19,TRUE
+product_partgroup_876,007,Spark Plug Seal,product_group_19,TRUE
+product_partgroup_877,001,Bike Pedal,product_group_20,TRUE
+product_partgroup_878,002,Brake Pedal,product_group_20,TRUE
+product_partgroup_879,003,Change Gear Pedal,product_group_20,TRUE
+product_partgroup_880,004,Kick Pedal,product_group_20,TRUE
+product_partgroup_881,005,Pedal,product_group_20,TRUE
+product_partgroup_882,001,Brush Cutter,product_group_21,TRUE
+product_partgroup_883,002,Generator Set,product_group_21,TRUE
+product_partgroup_884,003,Water Pump,product_group_21,TRUE
+product_partgroup_885,001,Saddle,product_group_22,TRUE
+product_partgroup_886,002,Seat Clamp,product_group_22,TRUE
+product_partgroup_887,003,Seat Pillar,product_group_22,TRUE
+product_partgroup_888,004,Seat Post,product_group_22,TRUE
+product_partgroup_889,001,Derailleur,product_group_23,TRUE
+product_partgroup_890,002,Derailleur Roller,product_group_23,TRUE
+product_partgroup_891,003,Rapid Fire,product_group_23,TRUE
+product_partgroup_892,001,Spark Plug,product_group_24,TRUE
+product_partgroup_893,001,Spring,product_group_25,TRUE
+product_partgroup_894,002,"Spring, Beam Adjuster",product_group_25,TRUE
+product_partgroup_895,003,"Spring, Beta",product_group_25,TRUE
+product_partgroup_896,004,"Spring, Brake Pedal",product_group_25,TRUE
+product_partgroup_897,005,"Spring, Brake Rod",product_group_25,TRUE
+product_partgroup_898,006,"Spring, Brake Shoe",product_group_25,TRUE
+product_partgroup_899,007,"Spring, Center Stand",product_group_25,TRUE
+product_partgroup_900,008,"Spring, Change Friction",product_group_25,TRUE
+product_partgroup_901,009,"Spring, Change Gear",product_group_25,TRUE
+product_partgroup_902,010,"Spring, Change Pedal",product_group_25,TRUE
+product_partgroup_903,011,"Spring, Clutch",product_group_25,TRUE
+product_partgroup_904,012,"Spring, Coil",product_group_25,TRUE
+product_partgroup_905,013,"Spring, Compression",product_group_25,TRUE
+product_partgroup_906,014,"Spring, Decompression",product_group_25,TRUE
+product_partgroup_907,015,"Spring, Fork Guide",product_group_25,TRUE
+product_partgroup_908,016,"Spring, Front Fork",product_group_25,TRUE
+product_partgroup_909,017,"Spring, Gear Shift",product_group_25,TRUE
+product_partgroup_910,018,"Spring, Inhibitor",product_group_25,TRUE
+product_partgroup_911,019,"Spring, Judder",product_group_25,TRUE
+product_partgroup_912,020,"Spring, Kick Starter",product_group_25,TRUE
+product_partgroup_913,021,"Spring, Oil Filter",product_group_25,TRUE
+product_partgroup_914,022,"Spring, One Way Clutch ",product_group_25,TRUE
+product_partgroup_915,023,"Spring, Pad",product_group_25,TRUE
+product_partgroup_916,024,"Spring, Position lever",product_group_25,TRUE
+product_partgroup_917,025,"Spring, Rebound",product_group_25,TRUE
+product_partgroup_918,026,"Spring, Return",product_group_25,TRUE
+product_partgroup_919,027,"Spring, Seat",product_group_25,TRUE
+product_partgroup_920,028,"Spring, Side Stand",product_group_25,TRUE
+product_partgroup_921,029,"Spring, Stop Switch",product_group_25,TRUE
+product_partgroup_922,030,"Spring, Stopper",product_group_25,TRUE
+product_partgroup_923,031,"Spring, Tensioner",product_group_25,TRUE
+product_partgroup_924,032,"Spring, Throttle",product_group_25,TRUE
+product_partgroup_925,033,"Spring, Throttle Screw",product_group_25,TRUE
+product_partgroup_926,034,"Spring, Throttle Valve",product_group_25,TRUE
+product_partgroup_927,035,"Spring, Timing Sprocket",product_group_25,TRUE
+product_partgroup_928,036,"Spring, Torsion",product_group_25,TRUE
+product_partgroup_929,037,"Spring, Valve ",product_group_25,TRUE
+product_partgroup_930,001,Belt Drive,product_group_26,TRUE
+product_partgroup_931,002,Chain Adjuster,product_group_26,TRUE
+product_partgroup_932,003,Chain Cam,product_group_26,TRUE
+product_partgroup_933,004,Chain Cam Roller,product_group_26,TRUE
+product_partgroup_934,005,Chain Cam Tensioner,product_group_26,TRUE
+product_partgroup_935,006,"Chain Cam, Drum",product_group_26,TRUE
+product_partgroup_936,007,"Chain Cam, Guide",product_group_26,TRUE
+product_partgroup_937,008,Chain Case,product_group_26,TRUE
+product_partgroup_938,009,Chain Cover,product_group_26,TRUE
+product_partgroup_939,010,Chain Guard,product_group_26,TRUE
+product_partgroup_940,011,Chain Guide,product_group_26,TRUE
+product_partgroup_941,012,Chain Link,product_group_26,TRUE
+product_partgroup_942,013,Chain Lock,product_group_26,TRUE
+product_partgroup_943,014,Chain Slider,product_group_26,TRUE
+product_partgroup_944,015,Chain Slipper,product_group_26,TRUE
+product_partgroup_945,016,Chain Tensioner,product_group_26,TRUE
+product_partgroup_946,017,"Chain, Camshaft",product_group_26,TRUE
+product_partgroup_947,018,Chainwheel,product_group_26,TRUE
+product_partgroup_948,019,Drive Chain,product_group_26,TRUE
+product_partgroup_949,020,Drive Chain kit,product_group_26,TRUE
+product_partgroup_950,021,"Joint, Drive Chain",product_group_26,TRUE
+product_partgroup_951,022,"Lock, Engine Sprocket",product_group_26,TRUE
+product_partgroup_952,023,"Pin, Sprocket Knock",product_group_26,TRUE
+product_partgroup_953,024,"Retainer, Rear Sprocket",product_group_26,TRUE
+product_partgroup_954,025,"Sprocket, Camshaft",product_group_26,TRUE
+product_partgroup_955,026,"Sprocket, Cassette",product_group_26,TRUE
+product_partgroup_956,027,"Sprocket, Chain Cam",product_group_26,TRUE
+product_partgroup_957,028,"Sprocket, Crankshaft",product_group_26,TRUE
+product_partgroup_958,029,"Sprocket, Engine",product_group_26,TRUE
+product_partgroup_959,030,"Sprocket, Free Wheel",product_group_26,TRUE
+product_partgroup_960,031,"Sprocket, Hanger",product_group_26,TRUE
+product_partgroup_961,032,"Sprocket, Holder",product_group_26,TRUE
+product_partgroup_962,033,"Sprocket, Industrial",product_group_26,TRUE
+product_partgroup_963,034,"Sprocket, Oil Pump",product_group_26,TRUE
+product_partgroup_964,035,"Sprocket, RR",product_group_26,TRUE
+product_partgroup_965,036,"Sprocket, Set",product_group_26,TRUE
+product_partgroup_966,037,"Sprocket, Crankshaft",product_group_26,TRUE
+product_partgroup_967,038,Starter Chain,product_group_26,TRUE
+product_partgroup_968,039,Starter Sprocket,product_group_26,TRUE
+product_partgroup_969,040,Timing Chain,product_group_26,TRUE
+product_partgroup_970,041,Timing Sprocket,product_group_26,TRUE
+product_partgroup_971,001,Air Compressor,product_group_27,TRUE
+product_partgroup_972,002,Air Duster Gun,product_group_27,TRUE
+product_partgroup_973,003,Allen Wrench,product_group_27,TRUE
+product_partgroup_974,004,Bearing Remover,product_group_27,TRUE
+product_partgroup_975,005,Bottom Bracket Remover,product_group_27,TRUE
+product_partgroup_976,006,Carbide,product_group_27,TRUE
+product_partgroup_977,007,Chain Cutter,product_group_27,TRUE
+product_partgroup_978,008,Chainwheel Remover,product_group_27,TRUE
+product_partgroup_979,009,Cone Wrench,product_group_27,TRUE
+product_partgroup_980,010,Crank Extractor,product_group_27,TRUE
+product_partgroup_981,011,Cross Wrench,product_group_27,TRUE
+product_partgroup_982,012,Cutter,product_group_27,TRUE
+product_partgroup_983,013,Feeler Gauge,product_group_27,TRUE
+product_partgroup_984,014,Flywheel Fuller,product_group_27,TRUE
+product_partgroup_985,015,Flywheel Holder,product_group_27,TRUE
+product_partgroup_986,016,Freewheel Remover,product_group_27,TRUE
+product_partgroup_987,017,Grinder,product_group_27,TRUE
+product_partgroup_988,018,Hacksaw,product_group_27,TRUE
+product_partgroup_989,019,Hammer,product_group_27,TRUE
+product_partgroup_990,020,Honing Kit,product_group_27,TRUE
+product_partgroup_991,021,Impact Bit,product_group_27,TRUE
+product_partgroup_992,022,Impact Driver,product_group_27,TRUE
+product_partgroup_993,023,Jack,product_group_27,TRUE
+product_partgroup_994,024,Magneto Puller,product_group_27,TRUE
+product_partgroup_995,025,Mallet,product_group_27,TRUE
+product_partgroup_996,026,Mini Tools,product_group_27,TRUE
+product_partgroup_997,027,Nailer,product_group_27,TRUE
+product_partgroup_998,028,Oil Seal Remover,product_group_27,TRUE
+product_partgroup_999,029,Rotor Remover,product_group_27,TRUE
+product_partgroup_1000,030,Sand Paper,product_group_27,TRUE
+product_partgroup_1001,031,Scissor,product_group_27,TRUE
+product_partgroup_1002,032,Screw Driver,product_group_27,TRUE
+product_partgroup_1003,033,Sharpening Stone,product_group_27,TRUE
+product_partgroup_1004,034,Shovel,product_group_27,TRUE
+product_partgroup_1005,035,Spark Plug Wrench,product_group_27,TRUE
+product_partgroup_1006,036,Spoke Wrench,product_group_27,TRUE
+product_partgroup_1007,037,Sprocket Remover,product_group_27,TRUE
+product_partgroup_1008,038,Super Tools,product_group_27,TRUE
+product_partgroup_1009,039,T Wrench,product_group_27,TRUE
+product_partgroup_1010,040,Tachometer,product_group_27,TRUE
+product_partgroup_1011,041,Tire Remover,product_group_27,TRUE
+product_partgroup_1012,042,Tool Case,product_group_27,TRUE
+product_partgroup_1013,043,Tool Set,product_group_27,TRUE
+product_partgroup_1014,044,Tweak,product_group_27,TRUE
+product_partgroup_1015,045,Universal Holder,product_group_27,TRUE
+product_partgroup_1016,046,Valve Spring Compressor,product_group_27,TRUE
+product_partgroup_1017,047,Welding Machine,product_group_27,TRUE
+product_partgroup_1018,048,Welding Rod,product_group_27,TRUE
+product_partgroup_1019,049,Working Stand,product_group_27,TRUE
+product_partgroup_1020,050,Wrench,product_group_27,TRUE
+product_partgroup_1021,001,Tube Gum,product_group_28,TRUE
+product_partgroup_1022,001,"Axle, Front",product_group_29,TRUE
+product_partgroup_1023,002,"Case Assembly, Meter Gear",product_group_29,TRUE
+product_partgroup_1024,003,Clutch Hub,product_group_29,TRUE
+product_partgroup_1025,004,"Flange, Sub Assembly",product_group_29,TRUE
+product_partgroup_1026,005,Front Axle,product_group_29,TRUE
+product_partgroup_1027,006,"Hub, Front",product_group_29,TRUE
+product_partgroup_1028,007,"Gear, Speedometer",product_group_29,TRUE
+product_partgroup_1029,008,Holder,product_group_29,TRUE
+product_partgroup_1030,009,Hub,product_group_29,TRUE
+product_partgroup_1031,010,Hub Lock,product_group_29,TRUE
+product_partgroup_1032,011,Hub Set,product_group_29,TRUE
+product_partgroup_1033,012,Hub Sidewheel,product_group_29,TRUE
+product_partgroup_1034,013,"Hub, Rear",product_group_29,TRUE
+product_partgroup_1035,014,Magwheels,product_group_29,TRUE
+product_partgroup_1036,015,Pivot Axle,product_group_29,TRUE
+product_partgroup_1037,016,Rear Axle,product_group_29,TRUE
+product_partgroup_1038,017,Rear Drum,product_group_29,TRUE
+product_partgroup_1039,018,Rear Hub,product_group_29,TRUE
+product_partgroup_1040,019,Rear Hub Sleeve,product_group_29,TRUE
+product_partgroup_1041,020,Rear Wheel Sleeve,product_group_29,TRUE
+product_partgroup_1042,021,Rim ,product_group_29,TRUE
+product_partgroup_1043,022,Rim Assembly,product_group_29,TRUE
+product_partgroup_1044,023,Rim Tape,product_group_29,TRUE
+product_partgroup_1045,024,Dust Shield,product_group_29,TRUE
+product_partgroup_1046,025,Speedometer Receiver,product_group_29,TRUE
+product_partgroup_1047,026,Spoke,product_group_29,TRUE
+product_partgroup_1048,027,Spoke Nipple,product_group_29,TRUE
+product_partgroup_1049,028,Tire,product_group_29,TRUE
+product_partgroup_1050,029,Tube,product_group_29,TRUE
+product_partgroup_1051,030,Valve Core,product_group_29,TRUE
+product_partgroup_1052,031,Valve Stem,product_group_29,TRUE
+product_partgroup_1053,032,Weight Balance,product_group_29,TRUE
+product_partgroup_1054,033,Wheel Assembly,product_group_29,TRUE
+product_partgroup_1055,034,Wheel Ratchet,product_group_29,TRUE
+product_partgroup_1056,035,Tire 700C,product_group_29,TRUE
+product_partgroup_1057,036,"Tire, 16X2.125",product_group_29,TRUE
+product_partgroup_1058,037,"Tire, 2.25X17",product_group_29,TRUE
+product_partgroup_1059,038,"Tire, 2.50X16",product_group_29,TRUE
+product_partgroup_1060,039,"Tire, 2.50X17",product_group_29,TRUE
+product_partgroup_1061,040,"Tire, 2.50X18",product_group_29,TRUE
+product_partgroup_1062,041,"Tire, 2.75X10",product_group_29,TRUE
+product_partgroup_1063,042,"Tire, 2.75X14",product_group_29,TRUE
+product_partgroup_1064,043,"Tire, 2.75X16",product_group_29,TRUE
+product_partgroup_1065,044,"Tire, 2.75X17",product_group_29,TRUE
+product_partgroup_1066,045,"Tire, 2.75X18",product_group_29,TRUE
+product_partgroup_1067,046,"Tire, 2.75X19",product_group_29,TRUE
+product_partgroup_1068,047,"Tire, 2.75X21",product_group_29,TRUE
+product_partgroup_1069,048,"Tire, 20X1 3/8",product_group_29,TRUE
+product_partgroup_1070,049,"Tire, 20X1.75",product_group_29,TRUE
+product_partgroup_1071,050,"Tire, 20X1.85",product_group_29,TRUE
+product_partgroup_1072,051,"Tire, 20X1.90",product_group_29,TRUE
+product_partgroup_1073,052,"Tire, 20X1.95",product_group_29,TRUE
+product_partgroup_1074,053,"Tire, 20X2.00",product_group_29,TRUE
+product_partgroup_1075,054,"Tire, 20X2.10",product_group_29,TRUE
+product_partgroup_1076,055,"Tire, 20X2.125",product_group_29,TRUE
+product_partgroup_1077,056,"Tire, 24X1 3/8",product_group_29,TRUE
+product_partgroup_1078,057,"Tire, 24X1.75",product_group_29,TRUE
+product_partgroup_1079,058,"Tire, 24X1.85",product_group_29,TRUE
+product_partgroup_1080,059,"Tire, 24X1.95",product_group_29,TRUE
+product_partgroup_1081,060,"Tire, 24X2.125",product_group_29,TRUE
+product_partgroup_1082,061,"Tire, 26X1 3/8",product_group_29,TRUE
+product_partgroup_1083,062,"Tire, 26X1.00",product_group_29,TRUE
+product_partgroup_1084,063,"Tire, 26X1.15",product_group_29,TRUE
+product_partgroup_1085,064,"Tire, 26X1.38",product_group_29,TRUE
+product_partgroup_1086,065,"Tire, 26X1.50",product_group_29,TRUE
+product_partgroup_1087,066,"Tire, 26X1.60",product_group_29,TRUE
+product_partgroup_1088,067,"Tire, 26X1.75",product_group_29,TRUE
+product_partgroup_1089,068,"Tire, 26X1.80",product_group_29,TRUE
+product_partgroup_1090,069,"Tire, 26X1.85",product_group_29,TRUE
+product_partgroup_1091,070,"Tire, 26X1.90",product_group_29,TRUE
+product_partgroup_1092,071,"Tire, 26X1.95",product_group_29,TRUE
+product_partgroup_1093,072,"Tire, 26X2.00",product_group_29,TRUE
+product_partgroup_1094,073,"Tire, 26X2.10",product_group_29,TRUE
+product_partgroup_1095,074,"Tire, 26X2.125",product_group_29,TRUE
+product_partgroup_1096,075,"Tire, 26X2.15",product_group_29,TRUE
+product_partgroup_1097,076,"Tire, 26X2.20",product_group_29,TRUE
+product_partgroup_1098,077,"Tire, 26X2.25",product_group_29,TRUE
+product_partgroup_1099,078,"Tire, 26X2.35",product_group_29,TRUE
+product_partgroup_1100,079,"Tire, 26X2.40",product_group_29,TRUE
+product_partgroup_1101,080,"Tire, 26X2.50",product_group_29,TRUE
+product_partgroup_1102,081,"Tire, 27.5X1.95",product_group_29,TRUE
+product_partgroup_1103,082,"Tire, 27.5X2.00",product_group_29,TRUE
+product_partgroup_1104,083,"Tire, 27.5X2.20",product_group_29,TRUE
+product_partgroup_1105,084,"Tire, 27.5X2.25",product_group_29,TRUE
+product_partgroup_1106,085,"Tire, 29X2.00",product_group_29,TRUE
+product_partgroup_1107,086,"Tire, 29X2.10",product_group_29,TRUE
+product_partgroup_1108,087,"Tire, 29X2.20",product_group_29,TRUE
+product_partgroup_1109,088,"Tire, 29X2.25",product_group_29,TRUE
+product_partgroup_1110,089,"Tire, 3.00X10",product_group_29,TRUE
+product_partgroup_1111,090,"Tire, 3.00X14",product_group_29,TRUE
+product_partgroup_1112,091,"Tire, 3.00X16",product_group_29,TRUE
+product_partgroup_1113,092,"Tire, 3.00X17",product_group_29,TRUE
+product_partgroup_1114,093,"Tire, 3.00X18",product_group_29,TRUE
+product_partgroup_1115,094,"Tire, 3.25X16",product_group_29,TRUE
+product_partgroup_1116,095,"Tire, 3.50X16",product_group_29,TRUE
+product_partgroup_1117,096,"Tire, 3.50X18",product_group_29,TRUE
+product_partgroup_1118,097,"Tire, 4.00X18",product_group_29,TRUE
+product_partgroup_1119,098,"Tire, 4.10X10",product_group_29,TRUE
+product_partgroup_1120,099,"Tire, 4.10X14",product_group_29,TRUE
+product_partgroup_1121,100,"Tire, 4.10X18",product_group_29,TRUE
+product_partgroup_1122,101,"Tire, 50/100",product_group_29,TRUE
+product_partgroup_1123,102,"Tire, 50/80",product_group_29,TRUE
+product_partgroup_1124,103,"Tire, 50/90",product_group_29,TRUE
+product_partgroup_1125,104,"Tire, 500X12",product_group_29,TRUE
+product_partgroup_1126,105,"Tire, 60/100",product_group_29,TRUE
+product_partgroup_1127,106,"Tire, 60/70",product_group_29,TRUE
+product_partgroup_1128,107,"Tire, 60/80",product_group_29,TRUE
+product_partgroup_1129,108,"Tire, 60/90",product_group_29,TRUE
+product_partgroup_1130,109,"Tire, 70/100",product_group_29,TRUE
+product_partgroup_1131,110,"Tire, 70/80",product_group_29,TRUE
+product_partgroup_1132,111,"Tire, 70/90",product_group_29,TRUE
+product_partgroup_1133,112,"Tire, 700X23",product_group_29,TRUE
+product_partgroup_1134,113,"Tire, 80/90",product_group_29,TRUE
+product_partgroup_1135,114,"Tire, 90/90",product_group_29,TRUE
+product_partgroup_1136,115,"Tire, IRC",product_group_29,TRUE
+product_partgroup_1137,116,"Tire, OTR",product_group_29,TRUE
+product_partgroup_1138,117,"Tire, Radial",product_group_29,TRUE
+product_partgroup_1139,118,"Tire, Tubeless",product_group_29,TRUE
+product_partgroup_1140,119,"Tire, TVS",product_group_29,TRUE
+product_partgroup_1141,001,ATV,product_group_99,TRUE
+product_partgroup_1142,002,Balance Wheel,product_group_99,TRUE
+product_partgroup_1143,003,Cart,product_group_99,TRUE
+product_partgroup_1144,004,Crusher,product_group_99,TRUE
+product_partgroup_1145,005,Fireworks,product_group_99,TRUE
+product_partgroup_1146,006,Mannequin,product_group_99,TRUE
+product_partgroup_1147,007,Module,product_group_99,TRUE
+product_partgroup_1148,008,Motor Bike,product_group_99,TRUE
+product_partgroup_1149,009,Safety Deposit Box,product_group_99,TRUE
+product_partgroup_1150,010,Shampoo,product_group_99,TRUE
+product_partgroup_1151,011,Toys,product_group_99,TRUE
+product_partgroup_1152,012,Vibrator,product_group_99,TRUE
+,,,,
+,,,,
+,,,,

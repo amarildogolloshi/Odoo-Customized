@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+		
+		<menuitem id="main_treasury_menu" 
+				  name="Treasury"
+				  />
+                  
+        <menuitem id="configuration_menu" 
+        		  name="Configuration"
+                  parent="main_treasury_menu"
+                  sequence="3"
+                  groups="base.group_erp_manager,group_request_admin"
+                  />
+    			  
+    			  
+    	<menuitem id="bypass_user_menu" 
+        		  name="Bypass Activation"
+                  parent="main_treasury_menu"
+                  sequence="1"
+                  action = "bypass_activation_act_window"
+                  />
+    			  
+<!-- Request>Request>-->
+	   <menuitem id="request_menu" 
+        		  name="Request"
+                  parent="main_treasury_menu"
+                  sequence="2" 
+                  />
+                  
+       <menuitem id="request_cash_menu" 
+        		  name="Cash"
+                  parent="request_menu" 
+                  action="my_request_cash_action"
+                  /> 
+
+       <menuitem id="request_purchase_menu" 
+        		  name="Purchase"
+                  parent="request_menu" 
+                  action="myrequest_purchase_action"
+                  /> 
+
+       <menuitem id="request_payment_menu" 
+        		  name="Payment"
+                  parent="request_menu" 
+                  action="myrequest_payment_action"
+                  /> 
+
+<!--        <menuitem id="request_travel_menu"  -->
+<!--         		  name="Travel" -->
+<!--                   parent="request_menu"  -->
+<!--                   action="myrequest_travel_action" -->
+<!--                   /> -->
+
+       <menuitem id="request_work_order_menu" 
+        		  name="Work Order"
+                  parent="request_menu" 
+                  action="myrequest_work_order_action"
+                  />
+
+<!--        <menuitem id="request_iou_menu"  -->
+<!--         		  name="IOU" -->
+<!--                   parent="request_menu"  -->
+<!--                   action="myrequest_iou_action" -->
+<!--                   /> -->
+
+       <menuitem id="request_others_menu" 
+        		  name="Others"
+                  parent="request_menu" 
+                  action="myrequest_others_action"
+                  />
+                  
+       <menuitem id="request_all_menu" 
+        		  name="All"
+                  parent="request_menu" 
+                  action="myrequest_all_action"
+                  groups="group_request_admin"
+                  />                  
+                         			  
+<!-- Request>Configuration>Department -->
+	   <menuitem id="config_department_main_menu" 
+        		  name="Department"
+                  parent="configuration_menu" 
+                  /> 
+	
+		<menuitem id="config_department_level_menu" 
+        		  name="Level"
+                  parent="config_department_main_menu" 
+                  action="config_department_level_action"
+                  />
+                  
+		<menuitem id="config_department_approver_menu" 
+        		  name="Approvers"
+                  parent="config_department_main_menu" 
+                  action="config_department_approver_action"
+                  />                          			  
+
+
+		<menuitem id="config_assigned_code_menu" 
+        		  name="Assigned Code"
+                  parent="config_department_main_menu" 
+                  action="config_assigned_code_action"
+                  groups="group_request_admin"
+                  />
+                  
+                  
+        <menuitem id="config_request_series_menu" 
+        		  name="Request Series"
+                  parent="config_department_main_menu" 
+                  action="config_request_series_action"
+                  groups="group_request_admin"
+                  />          
+                  
+                  
+<!-- 		<menuitem id="config_department_area_menu"  -->
+<!--         		  name="Area" -->
+<!--                   parent="config_department_main_menu"  -->
+<!--                   action="config_department_area_action" -->
+<!--                   /> -->
+                  
+<!-- Request>Configuration>Request -->                  
+        <menuitem id="config_request_menu" 
+        		  name="Request"
+                  parent="configuration_menu" 
+                  />
+        
+        <menuitem id="config_request_categ_menu" 
+        		  name="Category"
+                  parent="config_request_menu" 
+                  action="config_request_categ_action"
+                  />
+                  
+        <menuitem id="config_request_type_menu" 
+        		  name="Type"
+                  parent="config_request_menu" 
+                  action="config_request_type_action"
+                  />
+                  
+        <menuitem id="config_request_source_menu" 
+        		  name="Source of Fund"
+                  parent="config_request_menu" 
+                  action="config_request_source_action"
+                  />
+
+<!-- Request>Configuration>IOU -->                  
+<!--         <menuitem id="config_iou_menu"  -->
+<!--         		  name="IOU" -->
+<!--                   parent="configuration_menu"  -->
+<!--                   /> -->
+
+<!--         <menuitem id="config_iou_purpose_menu"  -->
+<!--         		  name="Purpose" -->
+<!--                   parent="config_iou_menu"  -->
+<!--                   action="config_iou_purpose_action" -->
+<!--                   /> -->
+
+<!-- Request>Configuration>Approval -->                  
+        <menuitem id="config_approval_menu" 
+        		  name="Approval"
+                  parent="configuration_menu"
+                   />
+
+        <menuitem id="config_request_approval_menu" 
+        		  name="Request"
+                  parent="config_approval_menu" 
+                  action="config_approval_action"
+                  />
+ 
+        <menuitem id="config_approval_rule_menu" 
+        		  name="Rules"
+                  parent="config_approval_menu" 
+                  action="config_approval_rule_action"
+                  /> 
+                  
+
+       
+    </data>
+  </openerp>

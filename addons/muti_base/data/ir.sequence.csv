@@ -1,0 +1,52 @@
+id,implementation,name,number_next,prefix,code,padding,number_increment
+__export__.ir_sequence_1,No gap,Check Enchashment SP,1,CE-SP-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_2,No gap,Check Enchashment MC,1,CE-MC-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_3,No gap,Sales Return SP,1,SR-SP-%(branch)-%(y)s,,6,1
+__export__.ir_sequence_4,No gap,Sales Return MC,1,SR-MC-%(branch)-%(y)s,,6,1
+__export__.ir_sequence_5,No gap,Reconcilation of Daily Cash Count SP,1,RDCC-SP-%(branch)-%(y)s,,6,1
+__export__.ir_sequence_6,No gap,Reconcilation of Daily Cash Count MC,1,RDCC-MC-%(branch)-%(y)s,,6,1
+__export__.ir_sequence_7,No gap,Cash Count SP,1,CC-SP-%(branch)-%(y)s,,6,1
+__export__.ir_sequence_8,No gap,Cash Count MC,1,CC-MC-%(branch)-%(y)s,,6,1
+__export__.ir_sequence_9,No gap,Certificate of Sale,1,CS-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_10,No gap,Delivery Receipt ,1,DR-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_11,No gap,Credit Sales Receivable,1,CSR-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_12,No gap,Warranty Coupon,1,WC-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_13,No gap,Supplier Subsidy SP,1,SS-SP-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_14,No gap,Supplier Subsidy MC,1,SS-MC-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_15,No gap,Job Order Repair and Fabrication,1,JORF-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_16,No gap,Job Order Assembly,1,JOA-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_17,No gap,MC Registration,1,UR-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_18,No gap,Purchase Requisition SP,1,PR-SP-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_19,No gap,Purchase Requisition MC,1,PR-MC-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_20,No gap,Purchase Order SP,1,PO-SP-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_21,No gap,Purchase Order MC,1,PO-MC-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_22,No gap,Purchase Receiving Report SP,1,PRR-SP-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_23,No gap,Purchase Receiving Report MC,1,PRR-MC-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_24,No gap,Purchase Return SP,1,PU-SP-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_25,No gap,Purchase Return MC,1,PU-MC-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_26,No gap,Stock Transfer Request,1,STR-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_27,No gap,Stock Transfer Delivery,1,STD-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_28,No gap,Stock Transfer Receipt,1,STRR-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_29,No gap,Stock Reversal,1,SR-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_30,No gap,Inventory Disposal,1,INVD-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_31,No gap,Inventory Continuance,1,INVC-%(brnach)-%(y)s,,8,1
+__export__.ir_sequence_32,No gap,Inventory Taking,1,INVT-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_33,No gap,Inventory Adjustment,1,INVA-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_34,No gap,Price Adjustment,1,PA-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_35,No gap,Sales Journal ,1,SJ-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_36,No gap,Purchase Journal,1,PJ-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_37,No gap,Journal Voucher,1,JV-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_38,No gap,Cash Receipt Journal,1,CRJ-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_39,No gap,Cash Disbursement Journal,1,CDJ-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_40,No gap,Check Voucher,1,CV-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_41,No gap,Check Disbursement,1,CD-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_42,No gap,Cancel CV,1,CCV-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_43,No gap,Bank Transaction Journal,1,BTJ-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_44,No gap,Petty Cash Fund,1,PCF-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_45,No gap,Cash Advance Request,1,CAR-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_46,No gap,Account Slip,1,AS-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_47,No gap,PPE Receiving,1,PPER-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_48,No gap,PPE Assigment,1,PPEA-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_49,No gap,PPE Dispense,1,PPED-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_50,No gap,PPE Revaulation,1,PPERV-%(branch)-%(y)s,,8,1
+__export__.ir_sequence_51,No gap,PPE Depreciation,1,PPEDEP-%(branch)-%(y)s,,8,1

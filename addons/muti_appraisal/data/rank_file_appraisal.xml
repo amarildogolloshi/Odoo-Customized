@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--  Rank & File and Staff Appraisal PART I -->
+        <record model="survey.survey" id="rank_file_appraisal">
+            <field name="title">Rank and File and Staff Appraisal</field>
+            <field name="stage_id" ref="survey.stage_draft" />
+            <field name="auth_required" eval="False" />
+            <field name="users_can_go_back" eval="True" />
+            <field name="description"></field>
+            <field name="quizz_mode" eval="True"/>
+            <field name="thank_you_message">&lt;p&gt;&lt;/p&gt;</field>
+        </record>
+        <!-- Page 1 -->
+        <record model="survey.page" id="rank_file_appraisal_1">
+            <field name="title">APPRAISAL INFO</field>
+            <field name="survey_id" ref="rank_file_appraisal" />
+            <field name="sequence">1</field>
+            <field name="description"></field>
+        </record>
+         <!-- Question 1 -->
+        <record model="survey.question" id="rank_file_appraisal_1_1">
+            <field name="page_id" ref="rank_file_appraisal_1" />
+            <field name="sequence">1</field>
+            <field name="question">Rating Period</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 2 -->
+        <record model="survey.question" id="rank_file_appraisal_1_2">
+            <field name="page_id" ref="rank_file_appraisal_1" />
+            <field name="sequence">2</field>
+            <field name="question">Position Title</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 3 -->
+        <record model="survey.question" id="rank_file_appraisal_1_3">
+            <field name="page_id" ref="rank_file_appraisal_1" />
+            <field name="sequence">3</field>
+            <field name="question">Name of Rater</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 4 -->
+        <record model="survey.question" id="rank_file_appraisal_1_4">
+            <field name="page_id" ref="rank_file_appraisal_1" />
+            <field name="sequence">4</field>
+            <field name="question">Position Title</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 5 -->
+        <record model="survey.question" id="rank_file_appraisal_1_5">
+            <field name="page_id" ref="rank_file_appraisal_1" />
+            <field name="sequence">5</field>
+            <field name="question">Branch</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 6 -->
+        <record model="survey.question" id="rank_file_appraisal_1_6">
+            <field name="page_id" ref="rank_file_appraisal_1" />
+            <field name="sequence">6</field>
+            <field name="question">Location</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Page 2 -->
+        <record model="survey.page" id="rank_file_appraisal_2">
+            <field name="title">PART I: ATTITUDE TOWARDS WORK</field>
+            <field name="survey_id" ref="rank_file_appraisal" />
+            <field name="sequence">2</field>
+            <field name="description">
+            		&lt;p&gt;Use the following scale to rate the performance of the employee 
+            		by selecting one of the given choices&lt;/p&gt;
+            		            		
+            		
+            		&lt;table class="table table-bordered" style="width:60%"&gt;
+            		
+					  &lt;tr&gt;
+					    &lt;th&gt;RATING&lt;/th&gt;
+					    &lt;th&gt;POINT VALUE &lt;/th&gt; 
+					  &lt;/tr&gt;
+					  
+					  &lt;br/&gt;
+					  
+					  &lt;tr&gt;
+					    &lt;th&gt;Excellent&lt;/th&gt;
+					    &lt;th&gt;5&lt;/th&gt; 
+					  &lt;/tr&gt;
+					  			
+					  &lt;tr&gt;
+					    &lt;th&gt;Fully Satisfactory&lt;/th&gt;
+					    &lt;th&gt;4&lt;/th&gt; 
+					  &lt;/tr&gt;
+					  
+					  &lt;tr&gt;
+					    &lt;th&gt;Satisfactory&lt;/th&gt;
+					    &lt;th&gt;3&lt;/th&gt; 
+					  &lt;/tr&gt;
+
+					  &lt;tr&gt;
+					    &lt;th&gt;Needs Improvement&lt;/th&gt;
+					    &lt;th&gt;2&lt;/th&gt; 
+					  &lt;/tr&gt;
+
+					  &lt;tr&gt;
+					    &lt;th&gt;Poor&lt;/th&gt;
+					    &lt;th&gt;1&lt;/th&gt; 
+					  &lt;/tr&gt;
+					  
+					&lt;/table&gt;
+            		
+            		
+            		</field>
+        </record>
+       
+        <!-- Question 1 -->
+        <record model="survey.question" id="rank_file_appraisal_2_1">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">1</field>
+            <field name="question">A. KNOWLEDGE OF WORK</field>
+            <field name="description">The ability of knowing and understanding the nature and details of assigned tasks
+            							and applying the necessary skills</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_1_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_1"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] An authority in the assigned job; can do next higher level job</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_1_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_1"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Possesses complete knowledge of the methods and duties and applies them on the job</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_1_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_1"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Has sufficient knowledge and can normally carry out jobs as directed or as required</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_1_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_1"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Has inadequate knowledge, needs reminders and checking</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_1_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_1"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Lacks a lot of information about the assigned task. Coaching and close monitoring is necessary</field>
+                    <field name="quizz_mark">1</field>
+                </record>
+        <!-- Question 2 -->
+        <record model="survey.question" id="rank_file_appraisal_2_2">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">2</field>
+            <field name="question">B. ATTENDANCE</field>
+            <field name="description">The ability to be punctual and regular in reporting to work date covered
+            						
+            						&lt;h2 style="color:black"&gt;Late (40%)&lt;/h2&gt;
+            						
+            						
+            						</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_2_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_2"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] No LATE</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_2_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_2"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Incurred 1 or 2 LATES</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_2_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_2"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Incurred 3 or 4 LATES</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_2_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_2"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Incurred 5 or 6 LATES</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_2_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_2"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Incurred 7 or 9 LATES</field>
+                    <field name="quizz_mark">1</field>
+                </record>
+        <!-- Question 3 -->
+        <record model="survey.question" id="rank_file_appraisal_2_3">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">3</field>
+            <field name="question">Absence(30%)</field>
+            <field name="description"></field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_3_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_3"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] No ABSENCE</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_3_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_3"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Incurred .25-1 day ABSENCE</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_3_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_3"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Incurred 1.25-2 days ABSENCE</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_3_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_3"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Incurred 2.25 days or more ABSENCE</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_3_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_3"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Incurred unauthorized ABSENCE</field>
+                    <field name="quizz_mark">1</field>
+                </record>                
+        <!-- Question 4 -->
+        <record model="survey.question" id="rank_file_appraisal_2_4">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">4</field>
+            <field name="question">Undertime(30%)</field>
+            <field name="description"></field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_4_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_4"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] No UNDERTIME OUT</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_4_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_4"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Incurred 1-2 UNDERTIME OUT</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_4_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_4"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Incurred 3-4 UNDERTIME OUT</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_4_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_4"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Incurred 5 or more UNDERTIME OUT</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_4_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_4"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Incurred unauthorized UNDERTIME OUT</field>
+                    <field name="quizz_mark">1</field>
+                </record>
+        <!-- Question 5 -->
+        <record model="survey.question" id="rank_file_appraisal_2_5">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">5</field>
+            <field name="question">C. HOUSEKEEPING</field>
+            <field name="description">The ability to practice the 5S of Good Housekeeping or to keep work areas clean and orderly</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_5_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_5"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] Cleanliness and orderliness of the work area exceeds the 5S standards</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_5_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_5"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Cleanliness and orderliness of the work area is according to the 5S standards</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_5_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_5"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Work area is most of the time clean and orderly</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_5_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_5"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Work area is dirty and disorderly sometimes</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_5_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_5"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Work area is dirty and disorderly most of the time</field>
+                    <field name="quizz_mark">1</field>
+                </record>              
+        <!-- Question 6 -->
+        <record model="survey.question" id="rank_file_appraisal_2_6">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">6</field>
+            <field name="question">D. WORK ATTITUDE</field>
+            <field name="description">The ability to comply with the company as well as with in-house rules and regulations, 
+            							follow instructions and carry out work assignments as directed or required</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_6_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_6"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] Inspires others to abide with all company rules and regulations and encourages co-employees 
+                    					to finish work assignments in accordance with all the aspects of the requirements</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_6_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_6"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] A model to fellow employees both in personal and work attitude</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_6_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_6"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Has not violated any company policy, rule or regulation and has no record of unaccomplished
+                    					job and back job within the rating period</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_6_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_6"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Has one record of unaccomplished or back job and up to first offense of a minor violation</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_6_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_6"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Has two or more record of unaccomplished or back job and has a written warning on a minor offense</field>
+                    <field name="quizz_mark">1</field>
+                </record>
+        <!-- Question 7 -->
+        <record model="survey.question" id="rank_file_appraisal_2_7">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">7</field>
+            <field name="question">E. COOPERATION</field>
+            <field name="description">The ability to relate well with superiors and peers and the willingness to work with the 
+            							team for a common goal</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_7_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_7"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] Always amiable, cooperative; encourages others and sets a good example</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_7_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_7"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Willingly cooperates and works well with others</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_7_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_7"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Offers the necessary cooperation required</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_7_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_7"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Offers cooperation with limitation and at times hard to work with</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_7_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_7"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Has a great problem in dealing and working with others</field>
+                    <field name="quizz_mark">1</field>
+                </record> 
+        <!-- Question 8 -->
+        <record model="survey.question" id="rank_file_appraisal_2_8">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">8</field>
+            <field name="question">F. INITIATIVE</field>
+            <field name="description">The ability to be a self-starter of resourceful thinking, planning and carrying
+            	 						out of the jobs</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_8_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_8"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] Encourages others to initiate change for the betterment</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_8_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_8"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Always a self-starter and good model to fellow employees</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_8_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_8"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Normally adapts innovation</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_8_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_8"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Refuses to initiate changes and adapts innovation at times</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_8_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_8"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] No open to innovation and is not a self starter</field>
+                    <field name="quizz_mark">1</field>
+                </record> 
+        <!-- Question 9 -->
+        <record model="survey.question" id="rank_file_appraisal_2_9">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">9</field>
+            <field name="question">G. PERSONALITY</field>
+            <field name="description">The ability to behave in a good-natured, courteous, safety-minded cautious manner 
+            							and to carry oneself appropriately to held the position</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_9_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_9"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] Personal disposition and behavior inspires others</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_9_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_9"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Always behaves in good-natured, courteous manner and carries oneself appropriately 
+                    					which can influence others</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_9_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_9"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Normally good-natured, courteous, safety-minded, and carries oneself acceptably</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_9_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_9"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] At times careless, tactless and carries oneself unsuitable</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_9_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_9"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Often times careless,tactless and carries oneself inappropriately</field>
+                    <field name="quizz_mark">1</field>
+                </record>
+        <!-- Question 10 -->
+        <record model="survey.question" id="rank_file_appraisal_2_10">
+            <field name="page_id" ref="rank_file_appraisal_2" />
+            <field name="sequence">10</field>
+            <field name="question">H. FEEDBACKING</field>
+            <field name="description">The ability to practice feedbacking in relation to carrying out assigned tasks, giving suggestions
+            							and recommendations for the betterment of a particular department/branch and of the
+            							company as a whole</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_10_1">
+                    <field name="question_id" ref="rank_file_appraisal_2_10"/>
+                    <field name="sequence">1</field>
+                    <field name="value">[5] Generously gives excellent suggestions and recommendations and practices feed backing at all times</field>
+                    <field name="quizz_mark">5</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_10_2">
+                    <field name="question_id" ref="rank_file_appraisal_2_10"/>
+                    <field name="sequence">2</field>
+                    <field name="value">[4] Has a very good suggestions and recommendations and practices feed backing constantly</field>
+                    <field name="quizz_mark">4</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_10_3">
+                    <field name="question_id" ref="rank_file_appraisal_2_10"/>
+                    <field name="sequence">3</field>
+                    <field name="value">[3] Gives suggestions and recommendations and practices feed backing as required</field>
+                    <field name="quizz_mark">3</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_10_4">
+                    <field name="question_id" ref="rank_file_appraisal_2_10"/>
+                    <field name="sequence">4</field>
+                    <field name="value">[2] Sometimes shares ideas and rarely practices feed backing</field>
+                    <field name="quizz_mark">2</field>
+                </record>
+                <record model="survey.label" id="choice_rank_file_appraisal_2_10_5">
+                    <field name="question_id" ref="rank_file_appraisal_2_10"/>
+                    <field name="sequence">5</field>
+                    <field name="value">[1] Hardly shares ideas and does not practice feed backing</field>
+                    <field name="quizz_mark">1</field>
+                </record>                
+
+        <!-- Page 3 -->
+        <record model="survey.page" id="rank_file_appraisal_3">
+            <field name="title">PART II: GUIDE TO PERFORMANCE APPRAISAL</field>
+            <field name="survey_id" ref="rank_file_appraisal" />
+            <field name="sequence">3</field>
+            <field name="description">
+            		&lt;p&gt;LEVEL OF EVALUATION: JOB COMPETENCIES&lt;/p&gt;
+            		
+            		&lt;br/&gt;
+            		
+            		&lt;h4&gt;INSTRUCTIONS&lt;/h4&gt;
+            		
+            		&lt;p&gt;The purpose of this form is to measure the actual results produced by the individual employee
+            				and other additional assignment during the rating period.&lt;/p&gt;
+            				
+            		&lt;p&gt;The work rating factors are the principal job requirements of skills and knowledge that have been
+            		determined by the Manager or Supervisor as defined in the employee's job description and/or individual Action
+            		plan based on AIP/MAP of the immediate superior of the employee. &lt;/p&gt;
+            		
+            		&lt;p&gt;Rate by indicating the corresponding box,the numerical rating that corresponds to description below:&lt;/p&gt;
+            		
+            		&lt;p style="padding-left:25px;"&gt;5. Meets all performance standards all the time &lt;/p&gt;
+            		&lt;p style="padding-left:25px;"&gt;4. Meets all the performance standards most of the time. Some improvement possible. &lt;/p&gt;
+            		&lt;p style="padding-left:25px;"&gt;3. Satisfactorily meets some of the performance standards most of the time.
+            												Requires some improvements. &lt;/p&gt;
+            		&lt;p style="padding-left:25px;"&gt;2. Meets some of the performance standards some of the time. Major improvements needed. &lt;/p&gt;
+            		&lt;p style="padding-left:25px;"&gt;1. Does not meet any of the performance standards. Improvement possibilities unlikely. &lt;/p&gt;          
+            		</field>
+        </record>
+        
+                
+        <!-- Page 4 -->
+        <record model="survey.page" id="rank_file_appraisal_4">
+            <field name="title">PART III: EMPLOYEE DEVELOPMENT PLAN</field>
+            <field name="survey_id" ref="rank_file_appraisal" />
+            <field name="sequence">4</field>
+            <field name="description"></field>
+        </record>
+         <!-- Question 1 -->
+        <record model="survey.question" id="rank_file_appraisal_4_1">
+            <field name="page_id" ref="rank_file_appraisal_4" />
+            <field name="sequence">1</field>
+            <field name="question">1. List competencies where improvement is desired.</field>
+            <field name="type">free_text</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <record model="survey.question" id="rank_file_appraisal_4_2">
+            <field name="page_id" ref="rank_file_appraisal_4" />
+            <field name="sequence">1</field>
+            <field name="question">2. Developmental activities that will be used to enhance competency.</field>
+            <field name="type">free_text</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <record model="survey.question" id="rank_file_appraisal_4_3">
+            <field name="page_id" ref="rank_file_appraisal_4" />
+            <field name="sequence">1</field>
+            <field name="question">3. Expected outcomes or improvement you wish to see (Should relate achievement of goals).
+            						Indicate expected date of completion</field>
+            <field name="type">free_text</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        
+                                 
+                                            
+    </data>
+</openerp>

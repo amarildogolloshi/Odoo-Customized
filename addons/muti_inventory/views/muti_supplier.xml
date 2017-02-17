@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<!-- Supplier -->
+		<record id="view_supplier_inherit_tree" model="ir.ui.view">
+			<field name="name">muti_supplier.tree</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='display_name']" position="after">
+								
+				</xpath>
+			</field>
+		</record>
+		
+		<record id="view_customer_form_inherit" model="ir.ui.view">
+			<field name="name">muti_supplier.form.inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+
+				<xpath expr="//field[@name='name']" position="replace">
+					<div>
+						<field name="supplier_id" placeholder="Supplier ID" />
+						<field name="name" placeholder="Company Name"
+							attrs="{'readonly': [('company_type','=', 'person')]}"
+							on_change="on_change_company_type(company_type)" />
+
+						<field name="first_name" placeholder="First Name"
+							attrs="{'invisible': [('is_company','=', True)]}" on_change="onchange_parent_id(parent_id)" />
+						<field name="middle_name" placeholder="Middle Name"
+							attrs="{'invisible': [('is_company','=', True)]}" on_change="onchange_parent_id(parent_id)" />
+
+						<field name="last_name" placeholder="Last Name"
+							attrs="{'invisible': [('is_company','=', True)]}" on_change="onchange_parent_id(parent_id)" />
+
+						<field name="suffix" placeholder="Suffix Name"
+							style="width:33%%;font-size:15px;" attrs="{'invisible': [('is_company','=', True)]}"
+							on_change="onchange_parent_id(parent_id)" />
+					</div>
+
+				</xpath>
+				
+				<group name = "fiscal_information" position = "after">
+					<group name = "group_mode_payment" string = "Mode of Payment">
+						<field name = "mode_payment"/>
+					</group>
+				</group>
+				
+<!-- 				<data>
+					<xpath expr="//page[1]" position="attributes">
+						<attribute name='invisible'>1</attribute>
+					</xpath>
+					<xpath expr="//page[2]" position="attributes">
+						<attribute name='invisible'>1</attribute>
+					</xpath>
+					<xpath expr="//page[3]" position="attributes">
+						<attribute name='invisible'>1</attribute>
+					</xpath>
+					<xpath expr="//field[@name='child_ids']" position="attributes">
+						<attribute name='invisible'>1</attribute>
+					</xpath>
+
+					<xpath expr="//notebook" position="inside">
+						<page string="Sales">
+							<group col="3">
+								<group col='1'>
+									<div>
+										<label string="Is a Customer?" />
+									</div>
+									<div>
+										<field name="wholesale" />
+										<label for="wholesale" />
+									</div>
+
+									<div>
+										<field name="retail" />
+										<label for="retail" />
+									</div>
+
+									<div>
+										<field name="employee" />
+										<label for="employee" />
+									</div>
+
+								</group>
+								<group col="1">
+
+									<div>
+										<label string="Point of Sale:" />
+									</div>
+
+									<div>
+										<label for="barcode" />
+										<field name="barcode" />
+									</div>
+
+								</group>
+
+								<group col="1">
+									<div>
+										<label string="Payments:" />
+										<group col="1">
+											<xpath expr="//group[@name=&quot;banks&quot;]"
+												position="inside">
+												<button type="action" class="btn-link" name="61"
+													context="{'search_default_partner_id': active_id,'default_partner_id': active_id}">
+													<field name="bank_account" widget="statinfo" string="Bank account(s)" />
+												</button>
+											</xpath>
+
+											<xpath expr="//group[@name=&quot;banks&quot;]"
+												position="inside">
+												<button type="action" class="btn-link" name="340"
+													context="{'search_default_partner_id': active_id}">
+													<field name="credit_card" widget="statinfo" string="Credit card(s)" />
+												</button>
+											</xpath>
+										</group>
+									</div>
+								</group>
+							</group>
+						</page>
+
+						<page string="Purchases">
+							<group col="3">
+
+								<group col="1">
+									<div>
+										<label string="Is a Vendor?" />
+										<field name="vendor" />
+									</div>
+								</group>
+
+								<group col="1">
+
+									<div>
+										<label for="barcode" string="Point of Sale:" />
+									</div>
+									<div>
+										<label for="barcode" />
+										<field name="barcode" />
+									</div>
+								</group>
+
+								<group col="1">
+									<div>
+										<label string="Payments:" />
+										<group col="1">
+											<xpath expr="//group[@name=&quot;banks&quot;]"
+												position="inside">
+												<button type="action" class="btn-link" name="61"
+													context="{'search_default_partner_id': active_id,'default_partner_id': active_id}">
+													<field name="bank_account" widget="statinfo" string="Bank account(s)" />
+												</button>
+											</xpath>
+
+											<xpath expr="//group[@name=&quot;banks&quot;]"
+												position="inside">
+												<button type="action" class="btn-link" name="340"
+													context="{'search_default_partner_id': active_id}">
+													<field name="credit_card" widget="statinfo" string="Credit card(s)" />
+												</button>
+											</xpath>
+										</group>
+									</div>
+								</group>
+
+							</group>
+						</page>
+
+						<page string="Accounting">
+							<group col="3">
+								<group col="1">
+									<group>
+
+										<div>
+											<label string="SALE:" style="font-size:14pt;" />
+										</div>
+
+									</group>
+
+									<group>
+										<div>
+											<label for="customer_payment_term" />
+											<field name="customer_payment_term" widget="Selection" />
+										</div>
+									</group>
+
+								</group>
+								<group col="1">
+
+									<group>
+										<div>
+											<label string="PURCHASE:" style="font-size:14pt;" />
+										</div>
+									</group>
+
+									<group>
+										<div>
+											<label for="vendor_payment_term" />
+											<field name="vendor_payment_term" widget="Selection" />
+										</div>
+									</group>
+
+								</group>
+
+							</group>
+							<group>
+								<div>
+									<label for="discount" />
+									<field name="discount" />
+								</div>
+							</group>
+						</page>
+					</xpath>
+				</data> -->
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="muti_supplier_tree_action">
+			<field name="name">Supplier</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="domain">[('supplier', '=', True)]</field>
+			<field name="domain">[('supplier_id', '!=', ' ')]</field>
+			<field name="context">{'default_active':'supplier'}</field>
+		</record>
+
+	</data>
+</openerp>

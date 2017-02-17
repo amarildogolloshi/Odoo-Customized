@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "ArialBlack";
+  src: url("/muti_appraisal/static/src/fonts/ARIAL_1.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.apptitle{
+	font-family:"ArialBlack";
+	margin-top:30px;
+}
+
+.container {
+	font-size:16px;
+	font-family: Arial, sans-serif;
+}
+
+.page_border{
+	border: 1px solid black;
+	padding:40px 10px 10px 10px;
+	height:335mm;
+}
+ 				 
+.appraisal_info_container_left{
+	width:40%;
+	float:left;
+	font-size:12px;
+}
+
+.appraisal_info_container_right{
+	width:40%;
+	float:right;
+	font-size:12px;
+}
+
+.appraisal_info_container_left p, .appraisal_info_container_right p{
+	border-top:1px solid;
+	margin-bottom:30px;
+}
+
+.signature_container_left{
+	width:60%;
+	float:left;	
+}
+
+.signature_container_right{
+	width:40%;
+	float:right;
+	font-size:14px;
+}
+
+.signature_container_left p{
+	margin-bottom:100px;
+}
+
+.signature_container_right p{
+	border-top:1px solid;
+	margin-bottom:30px;	
+	font-size:16px;
+}
+
+#start_end_date{
+	text-decoration:underline;
+	padding:0px 15px 0px 15px;
+}
+
+#page_header{
+	color:white;
+	background-color:#333;
+	padding:5px 0px 5px 0px;
+	font-weight:bold;
+}
+
+#page_hr{
+	height:1px;
+	border:none;
+	color:#333;
+	background-color:#333;
+}
+
+.table_rating{
+	height:2mm;
+	width:50%;
+	margin-top:10px;
+}
+
+.table_rating tbody{
+	height:2mm;
+	font-size:16px;
+	font-family: Arial, sans-serif;
+}
+
+.container_left{
+	width:35%;
+	float:left;
+}
+
+.container_right {
+	width:35%;
+	float:right;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th, td{
+	padding:2px;
+}
+
+
+.comment hr{
+	margin-bottom:10px;
+	margin-top:0px;
+	border-top:1px solid;
+}
+
+.point_value label{
+	font-weight: normal;
+}
+
+.point_value input{
+	margin-left:10px;
+	width:10%;
+}
+
+#rate_desc{
+	padding-left:50px;
+	margin-top:10px;
+}
+
+.page_border ol{
+	padding-left:50px;
+}
+
+body{
+	font-size:16px;
+	font-family: Arial, sans-serif;
+}
+
+#row_question{
+	text-align:left;
+	font-weight:bold;
+	
+}
+
+.kra_table{
+	width:100%;
+	font-size:14px;
+	font-family: Arial, sans-serif;
+	font-weight:bold;
+	margin-top:50px;
+}
+
+#hr_comment{
+	border-top:1px solid;
+	padding:0px 80px 0px 80px;
+}
+
+.center_text th{
+	text-align:center;
+}
+
+#rating{
+	width:40%;
+	height:25px; 
+	margin:0px; 
+	display: inline-block; 
+	border: 1px solid black; 
+}
+
+.summary_container{
+	width:80%;
+	font-size:14px;
+	font-family: Arial, sans-serif;
+}
+
+.summary_container_left{
+	width:40%;
+	float:left;
+	font-size:12px;
+	margin-bottom:45px;
+}
+
+
+.summary_container_right{
+	width:50%;
+	float:right;
+	font-size:12px;
+	margin-bottom:25px;
+}
+
+.tbl_attendance{
+	font-size:12px;
+}
+
+.hr_line hr{
+	border-top:1px solid;
+
+}
+
+.tbl_mngr_rating_portion{
+
+	font-size:14px;
+}
+
+.performance_summary{
+	font-size:12px;
+}

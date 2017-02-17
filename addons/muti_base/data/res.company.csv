@@ -1,0 +1,275 @@
+code,name,partner_id:id,area_id:id,is_branch,abbreviation,currency_id:id,parent_id:id,active,id
+,"ARKCLICK TECHNOLOGY, INC.",res_partner_bu000015id,,False,ARKCLICK,base.PHP,base.main_company,false,res_company_bu000015id
+,AXZEEN SECURITY AGENCY,res_partner_bu000018id,,False,ASA,base.PHP,base.main_company,false,res_company_bu000018id
+,CHIU KIM ENTERPRISES INC.,res_partner_bu000002id,,False,CKEI,base.PHP,base.main_company,false,res_company_bu000002id
+,CK UNIVERSAL GROUP MANAGEMENT CORPORATION,res_partner_bu000011id,,False,CKUGMC,base.PHP,base.main_company,false,res_company_bu000011id
+,JOINT VENTURE COOP.,res_partner_bu000005id,,False,ADC,base.PHP,base.main_company,false,res_company_bu000005id
+,MARIA VICTORIA C. TAN HR-B,res_partner_bu000009id,,False,MVCTHR-B,base.PHP,base.main_company,false,res_company_bu000009id
+,PRIORITY SECURITY AGENCY,res_partner_bu000013id,,False,PSA,base.PHP,base.main_company,false,res_company_bu000013id
+,VIAJERO MOTORSALES INC.,res_partner_bu000004id,,False,VMI,base.PHP,base.main_company,false,res_company_bu000004id
+,4M RESOURCES ADVANCED TECHNOLOGIES CORPORATION,res_partner_bu000021id,,False,4MRATCO,base.PHP,base.main_company,true,res_company_bu000021id
+,ARGO SECURITY AND INVESTIGATION AGENCY,res_partner_bu000022id,,False,AGAIA,base.PHP,base.main_company,true,res_company_bu000022id
+,AUBERON SOLUTIONS INC.,res_partner_bu000020id,,False,ASI,base.PHP,base.main_company,true,res_company_bu000020id
+,BIOCIELO REALTY AND DEVELOPMENT CORP.,res_partner_bu000010id,,False,BRADC,base.PHP,base.main_company,true,res_company_bu000010id
+,"CHIU BUN GIM UNIVERSAL HOLDING, INC.",res_partner_bu000008id,,False,CBG UHI,base.PHP,base.main_company,true,res_company_bu000008id
+,COMMUNITY ACCESS FOR RESOURCES ON ENTREPRENEURSHIP,res_partner_bu000014id,,False,CARE,base.PHP,base.main_company,true,res_company_bu000014id
+,EASY PAY FINANCE CORPORATION,res_partner_bu000006id,,False,EPFC,base.PHP,base.main_company,true,res_company_bu000006id
+,HAPPY LIVING REALTY & DEVELOPMENT CORPORATION,res_partner_bu000007id,,False,HLRDC,base.PHP,base.main_company,true,res_company_bu000007id
+,"HONDA SOCSARGEN, INC.",res_partner_bu000003id,,False,HSI,base.PHP,base.main_company,true,res_company_bu000003id
+,MARBEL UNIVERSAL TRADING INC.,res_partner_bu000001id,,False,MUTI,base.PHP,base.main_company,true,res_company_bu000001id
+,PHOENIX UNIVERSAL MEGA GAS STATION,res_partner_bu000017id,,False,PHOENIX,base.PHP,base.main_company,true,res_company_bu000017id
+,RURAL BANK OF NORALA,res_partner_bu000016id,,False,RBN,base.PHP,base.main_company,true,res_company_bu000016id
+,"SPECIALIST SECURITY AND INVESTIGATION AGENCY, INC.",res_partner_bu000019id,,False,SSAIAI,base.PHP,base.main_company,true,res_company_bu000019id
+,SUPREME INVESTIGATIVE AND SECURITY AGENCY,res_partner_bu000012id,,False,SIASA,base.PHP,base.main_company,true,res_company_bu000012id
+,ARKCLICK DAVAO DEL SUR AREAS,res_partner_15000004id,,true,,base.PHP,res_company_bu000015id,false,res_company_branch_15000004id
+,ASA AGDAO-M,res_partner_18000006id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000006id
+,ASA BUHANGIN,res_partner_18000011id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000011id
+,ASA BUHANGIN - M,res_partner_18000012id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000012id
+,ASA CAGAYAN DE ORO-M,res_partner_18000009id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000009id
+,ASA CALINAN - M,res_partner_18000013id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000013id
+,ASA CALINAN-M,res_partner_18000001id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000001id
+,ASA DIGOS - M,res_partner_18000014id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000014id
+,ASA DIGOS-M,res_partner_18000005id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000005id
+,ASA KIDAPAWAN-M,res_partner_18000004id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000004id
+,ASA MARAMAG - H,res_partner_18000015id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000015id
+,ASA MARAMAG-H,res_partner_18000010id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000010id
+,ASA MATI-M,res_partner_18000003id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000003id
+,ASA PANABO-M,res_partner_18000002id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000002id
+,ASA TAGUM-M,res_partner_18000007id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000007id
+,ASA VALENCIA-M,res_partner_18000008id,,true,,base.PHP,res_company_bu000018id,false,res_company_branch_18000008id
+,CARE CFI - GENSAN,res_partner_14000005id,,true,,base.PHP,res_company_bu000014id,false,res_company_branch_14000005id
+,CKUGMC DIGOS,res_partner_11000015id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000015id
+,CKUGMC GENSAN I,res_partner_11000016id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000016id
+,CKUGMC GENSAN II,res_partner_11000017id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000017id
+,CKUGMC ISULAN I,res_partner_11000023id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000023id
+,CKUGMC ISULAN II,res_partner_11000024id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000024id
+,CKUGMC KORONADAL I,res_partner_11000019id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000019id
+,CKUGMC KORONADAL II,res_partner_11000020id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000020id
+,CKUGMC MAIN,res_partner_11000001id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000001id
+,CKUGMC MARBEL,res_partner_11000021id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000021id
+,CKUGMC POLOMOLOK,res_partner_11000018id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000018id
+,CKUGMC SURALLAH,res_partner_11000022id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000022id
+,CKUGMC TACURONG,res_partner_11000025id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000025id
+,CKUGMC TORIL,res_partner_11000014id,,true,,base.PHP,res_company_bu000011id,false,res_company_branch_11000014id
+,EPFC AGDAO-M,res_partner_06000073id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000073id
+,EPFC BUHANGIN - M,res_partner_06000101id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000101id
+,EPFC BUTUAN-M,res_partner_06000083id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000083id
+,EPFC CAGAYAN DE ORO-M,res_partner_06000076id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000076id
+,EPFC COUNTER,res_partner_06000018id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000018id
+,EPFC DIGOS-M,res_partner_06000055id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000055id
+,EPFC GENSAN I,res_partner_06000003id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000003id
+,EPFC GENSAN II,res_partner_06000004id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000004id
+,EPFC ILIGAN-M,res_partner_06000075id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000075id
+,EPFC ISULAN-H,res_partner_06000057id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000057id
+,EPFC ISULAN-M,res_partner_06000052id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000052id
+,EPFC KORONADAL-H,res_partner_06000050id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000050id
+,EPFC KORONADAL-M,res_partner_06000054id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000054id
+,EPFC M'LANG-M,res_partner_06000072id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000072id
+,EPFC MALAYBALAY-M,res_partner_06000077id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000077id
+,EPFC MARBEL-M,res_partner_06000049id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000049id
+,EPFC NABUNTURAN-M,res_partner_06000084id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000084id
+,EPFC OZAMIZ-M,res_partner_06000081id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000081id
+,EPFC PAGADIAN-M,res_partner_06000082id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000082id
+,EPFC POLOMOLOK-M,res_partner_06000053id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000053id
+,EPFC SAN FRANCISCO-M,res_partner_06000086id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000086id
+,EPFC SURALLAH,res_partner_06000009id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000009id
+,EPFC TACURONG CONSTRUCTION,res_partner_06000034id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000034id
+,EPFC TACURONG-M,res_partner_06000051id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000051id
+,EPFC TORIL,res_partner_06000001id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000001id
+,EPFC-PANABO,res_partner_06000070id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000070id
+,EPFC-TAGUM,res_partner_06000062id,,true,,base.PHP,res_company_bu000006id,false,res_company_branch_06000062id
+,HLRDC PHOENIX,res_partner_07000003id,,true,,base.PHP,res_company_bu000007id,false,res_company_branch_07000003id
+,HSI MARBEL,res_partner_03000009id,,true,,base.PHP,res_company_bu000003id,false,res_company_branch_03000009id
+,HSI MUTI TORIL,res_partner_03000006id,,true,,base.PHP,res_company_bu000003id,false,res_company_branch_03000006id
+,MUTI AGDAO,res_partner_01000059id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000059id
+,MUTI ALABEL PROPER,res_partner_01000092id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000092id
+,MUTI BUTUAN,res_partner_01000065id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000065id
+,MUTI CAGAYAN CITY PROPER ( DO NOT USE),res_partner_01000064id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000064id
+,MUTI CAGAYAN DE ORO,res_partner_01000070id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000070id
+,MUTI CALINAN (DON'T USE),res_partner_01000072id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000072id
+,MUTI CARE FOUNDATION,res_partner_01000063id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000063id
+,MUTI CFI-ISULAN BRANCH,res_partner_01000095id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000095id
+,MUTI COTABATO CITY PROPER,res_partner_01000062id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000062id
+,MUTI DAVAO CITY PROPER,res_partner_01000066id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000066id
+,MUTI DIGOS (DON'T USE),res_partner_01000046id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000046id
+,MUTI DIPOLOG,res_partner_01000081id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000081id
+,MUTI FGMG MOTOR PARTS,res_partner_01000086id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000086id
+,MUTI GENSAN,res_partner_01000003id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000003id
+,MUTI GLAN UNICORN HARDWARE,res_partner_01000085id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000085id
+,MUTI GREATWALL,res_partner_01000104id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000104id
+,MUTI HSOC SUR,res_partner_01000053id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000053id
+,MUTI ILIGAN,res_partner_01000068id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000068id
+,MUTI IPIL,res_partner_01000082id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000082id
+,MUTI KABACAN,res_partner_01000079id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000079id
+,MUTI KIDAPAWAN CITY PROPER,res_partner_01000043id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000043id
+,MUTI KORONADAL II,res_partner_01000032id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000032id
+,MUTI LAKE SEBU,res_partner_01000100id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000100id
+,MUTI LAPASAN (CDO),res_partner_01000073id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000073id
+,MUTI M'LANG,res_partner_01000060id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000060id
+,MUTI MALAYBALAY,res_partner_01000071id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000071id
+,MUTI MARBEL,res_partner_01000040id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000040id
+,MUTI METRO MANILA,res_partner_01000088id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000088id
+,MUTI NABUNTURAN,res_partner_01000074id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000074id
+,MUTI OZAMIZ,res_partner_01000077id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000077id
+,MUTI PAGADIAN,res_partner_01000080id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000080id
+,MUTI POL (DON'T USE),res_partner_01000051id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000051id
+,MUTI RURAL BANK OF NORALA,res_partner_01000084id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000084id
+,MUTI SAN FRANCISCO,res_partner_01000075id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000075id
+,MUTI SURALAH,res_partner_01000103id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000103id
+,MUTI SURALLAH,res_partner_01000101id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000101id
+,MUTI TAGUM 2,res_partner_01000078id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000078id
+,MUTI TAMPAKAN,res_partner_01000087id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000087id
+,MUTI TANTANGAN,res_partner_01000054id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000054id
+,MUTI TORIL,res_partner_01000002id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000002id
+,MUTI TUPI,res_partner_01000052id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000052id
+,MUTI ZAMBOANGA,res_partner_01000083id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000083id
+,MUTI ZAMBOANGA DEL NORTE PROPER,res_partner_01000097id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000097id
+,MUTI ZAMBOANGA DEL SUR PROPER,res_partner_01000098id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000098id
+,MUTI-MATI (DON'T USE),res_partner_01000050id,,true,,base.PHP,res_company_bu000001id,false,res_company_branch_01000050id
+,PSA AGDAO-M,res_partner_13000016id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000016id
+,PSA BRDC,res_partner_13000011id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000011id
+,PSA DIGOS-M,res_partner_13000003id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000003id
+,PSA HLRDC,res_partner_13000012id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000012id
+,PSA HLRDC-PHOENIX,res_partner_13000017id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000017id
+,PSA ISULAN-H,res_partner_13000010id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000010id
+,PSA ISULAN-M,res_partner_13000002id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000002id
+,PSA KIDAPAWAN-M,res_partner_13000013id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000013id
+,PSA KORONADAL-H,res_partner_13000008id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000008id
+,PSA KORONADAL-M,res_partner_13000005id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000005id
+,PSA MARBEL-M,res_partner_13000004id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000004id
+,PSA POLOMOLOK-M,res_partner_13000007id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000007id
+,PSA RURAL BANK OF NORALA,res_partner_13000018id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000018id
+,PSA SURALLAH-H,res_partner_13000009id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000009id
+,PSA TACURONG-M,res_partner_13000006id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000006id
+,PSA TAGUM-M,res_partner_13000014id,,true,,base.PHP,res_company_bu000013id,false,res_company_branch_13000014id
+,SIASA CAGAYAN DE ORO-M,res_partner_12000023id,,true,,base.PHP,res_company_bu000012id,false,res_company_branch_12000023id
+,SIASA HLRDC-PHOENIX,res_partner_12000022id,,true,,base.PHP,res_company_bu000012id,false,res_company_branch_12000022id
+,VMI DIGOS,res_partner_04000002id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000002id
+,VMI GENSAN,res_partner_04000010id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000010id
+,VMI GENSAN I,res_partner_04000005id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000005id
+,VMI GENSAN II,res_partner_04000003id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000003id
+,VMI KIDAPAWAN-M,res_partner_04000013id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000013id
+,VMI KORONADAL I,res_partner_04000006id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000006id
+,VMI KORONADAL II,res_partner_04000007id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000007id
+,VMI MAIN,res_partner_04000001id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000001id
+,VMI MARBEL,res_partner_04000011id,,true,,base.PHP,res_company_bu000004id,false,res_company_branch_04000011id
+,AGAIA BUHANGIN,res_partner_22000001id,,true,,base.PHP,res_company_bu000022id,true,res_company_branch_22000001id
+,AGAIA CAGAYAN DE ORO,res_partner_22000002id,,true,,base.PHP,res_company_bu000022id,true,res_company_branch_22000002id
+,AGAIA CALINAN,res_partner_22000003id,,true,,base.PHP,res_company_bu000022id,true,res_company_branch_22000003id
+,AGAIA MARAMAG,res_partner_22000004id,,true,,base.PHP,res_company_bu000022id,true,res_company_branch_22000004id
+,AGAIA MATI,res_partner_22000005id,,true,,base.PHP,res_company_bu000022id,true,res_company_branch_22000005id
+,AGAIA PANABO,res_partner_22000006id,,true,,base.PHP,res_company_bu000022id,true,res_company_branch_22000006id
+,AGAIA TAGUM,res_partner_22000007id,,true,,base.PHP,res_company_bu000022id,true,res_company_branch_22000007id
+,AGAIA VALENCIA,res_partner_22000008id,,true,,base.PHP,res_company_bu000022id,true,res_company_branch_22000008id
+,ASI AUBERON,res_partner_20000001id,,true,,base.PHP,res_company_bu000020id,true,res_company_branch_20000001id
+,BRDC BIOCIELO,res_partner_10000002id,,true,,base.PHP,res_company_bu000010id,true,res_company_branch_10000002id
+,BRDC BRDC,res_partner_10000001id,,true,,base.PHP,res_company_bu000010id,true,res_company_branch_10000001id
+,BRDC MONTECIELO,res_partner_10000003id,,true,,base.PHP,res_company_bu000010id,true,res_company_branch_10000003id
+,CARE CFI - ISULAN,res_partner_14000004id,,true,,base.PHP,res_company_bu000014id,true,res_company_branch_14000004id
+,CARE CFI - MAIN,res_partner_14000006id,,true,,base.PHP,res_company_bu000014id,true,res_company_branch_14000006id
+,CARE CFI-KORONADAL,res_partner_14000003id,,true,,base.PHP,res_company_bu000014id,true,res_company_branch_14000003id
+,CARE FOUNDATION II,res_partner_14000002id,,true,,base.PHP,res_company_bu000014id,true,res_company_branch_14000002id
+,EPFC BUHANGIN,res_partner_06000074id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000074id
+,EPFC CALINAN-M,res_partner_06000080id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000080id
+,EPFC DIGOS,res_partner_06000002id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000002id
+,EPFC ISULAN I,res_partner_06000010id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000010id
+,EPFC ISULAN II,res_partner_06000040id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000040id
+,EPFC KIDAPAWAN-M,res_partner_06000058id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000058id
+,EPFC KORONADAL I,res_partner_06000007id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000007id
+,EPFC KORONADAL II,res_partner_06000006id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000006id
+,EPFC LAPASAN CDO-M,res_partner_06000085id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000085id
+,EPFC MARAMAG-H,res_partner_06000079id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000079id
+,EPFC MARBEL,res_partner_06000041id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000041id
+,EPFC MATI-M,res_partner_06000063id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000063id
+,EPFC PANABO-M,res_partner_06000064id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000064id
+,EPFC POLOMOLOK,res_partner_06000005id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000005id
+,EPFC SURALLAH-H,res_partner_06000056id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000056id
+,EPFC SURALLAH-M,res_partner_06000092id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000092id
+,EPFC TACURONG,res_partner_06000011id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000011id
+,EPFC TAGUM-M,res_partner_06000065id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000065id
+,EPFC VALENCIA-M,res_partner_06000071id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000071id
+,EPFC-MATI,res_partner_06000067id,,true,,base.PHP,res_company_bu000006id,true,res_company_branch_06000067id
+,HLRDC,res_partner_07000001id,,true,,base.PHP,res_company_bu000007id,true,res_company_branch_07000001id
+,HLRDC-QUARRY,res_partner_07000004id,,true,,base.PHP,res_company_bu000007id,true,res_company_branch_07000004id
+,HSI HSOC-MARAMAG,res_partner_03000014id,,true,,base.PHP,res_company_bu000003id,true,res_company_branch_03000014id
+,HSI ISULAN,res_partner_03000003id,,true,,base.PHP,res_company_bu000003id,true,res_company_branch_03000003id
+,HSI KORONADAL,res_partner_03000011id,,true,,base.PHP,res_company_bu000003id,true,res_company_branch_03000011id
+,HSI MAIN,res_partner_03000001id,,true,,base.PHP,res_company_bu000003id,true,res_company_branch_03000001id
+,HSI MARAMAG,res_partner_03000012id,,true,,base.PHP,res_company_bu000003id,true,res_company_branch_03000012id
+,HSI PARTS & SERVICES,res_partner_03000016id,,true,,base.PHP,res_company_bu000003id,true,res_company_branch_03000016id
+,HSI SURALLAH,res_partner_03000002id,,true,,base.PHP,res_company_bu000003id,true,res_company_branch_03000002id
+,MUTI BUHANGIN,res_partner_01000069id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000069id
+,MUTI CALINAN,res_partner_01000067id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000067id
+,MUTI DIGOS,res_partner_01000009id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000009id
+,MUTI HSI MAIN,res_partner_01000039id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000039id
+,MUTI ISULAN,res_partner_01000005id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000005id
+,MUTI KIDAPAWAN,res_partner_01000044id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000044id
+,MUTI KORONADAL,res_partner_01000029id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000029id
+,MUTI MARAMAG,res_partner_01000076id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000076id
+,MUTI MATI,res_partner_01000048id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000048id
+,MUTI PANABO,res_partner_01000049id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000049id
+,MUTI PARTS & SERVICES,res_partner_01000099id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000099id
+,MUTI POLOMOLOK,res_partner_01000004id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000004id
+,MUTI SURALLAH,res_partner_01000102id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000102id
+,MUTI SUZUKI 3S,res_partner_01000037id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000037id
+,MUTI TACURONG,res_partner_01000006id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000006id
+,MUTI TAGUM,res_partner_01000047id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000047id
+,MUTI VALENCIA,res_partner_01000061id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000061id
+,MUTI VILLA AMOR SHOWROOM - M,res_partner_01000109id,,true,,base.PHP,res_company_bu000001id,true,res_company_branch_01000109id
+,PHOENIX LAGAO,res_partner_17000004id,,true,,base.PHP,res_company_bu000017id,true,res_company_branch_17000004id
+,PHOENIX PUMGAS,res_partner_17000003id,,true,,base.PHP,res_company_bu000017id,true,res_company_branch_17000003id
+,RBN RURAL BANK OF NORALA,res_partner_16000001id,,true,,base.PHP,res_company_bu000016id,true,res_company_branch_16000001id
+,RBN SUPREME INVESTIGATIVE AND SECURITY AGENCY,res_partner_16000003id,,true,,base.PHP,res_company_bu000016id,true,res_company_branch_16000003id
+,SIASA BRDC,res_partner_12000011id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000011id
+,SIASA CALINAN-M,res_partner_12000021id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000021id
+,SIASA DIGOS-M,res_partner_12000002id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000002id
+,SIASA HLRDC,res_partner_12000012id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000012id
+,SIASA ISULAN-H,res_partner_12000010id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000010id
+,SIASA ISULAN-M,res_partner_12000003id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000003id
+,SIASA KIDAPAWAN-M,res_partner_12000013id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000013id
+,SIASA KORONADAL-H,res_partner_12000008id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000008id
+,SIASA KORONADAL-M,res_partner_12000005id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000005id
+,SIASA M-DIGOS,res_partner_12000028id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000028id
+,SIASA MARBEL-M,res_partner_12000004id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000004id
+,SIASA MATI-M,res_partner_12000017id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000017id
+,SIASA PANABO-M,res_partner_12000015id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000015id
+,SIASA PHOENIX,res_partner_12000024id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000024id
+,SIASA POLOMOLOK-M,res_partner_12000007id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000007id
+,SIASA RURAL BANK OF NORALA,res_partner_12000025id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000025id
+,SIASA SURALLAH-H,res_partner_12000009id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000009id
+,SIASA SURALLAH-M,res_partner_12000026id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000026id
+,SIASA TACURONG-M,res_partner_12000006id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000006id
+,SIASA TAGUM-M,res_partner_12000014id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000014id
+,SIASA VALENCIA-M,res_partner_12000020id,,true,,base.PHP,res_company_bu000012id,true,res_company_branch_12000020id
+,SSAIAI BRDC,res_partner_19000013id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000013id
+,SSAIAI BUHANGIN,res_partner_19000017id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000017id
+,SSAIAI CAGAYAN DE ORO - M,res_partner_19000018id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000018id
+,SSAIAI CALINAN - M,res_partner_19000024id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000024id
+,SSAIAI DIGOS-M,res_partner_19000001id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000001id
+,SSAIAI GREATWALL,res_partner_19000002id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000002id
+,SSAIAI HLRDC,res_partner_19000005id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000005id
+,SSAIAI ISULAN-H,res_partner_19000004id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000004id
+,SSAIAI ISULAN-M,res_partner_19000008id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000008id
+,SSAIAI KIDAPAWAN-M,res_partner_19000012id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000012id
+,SSAIAI KORONADAL-H,res_partner_19000010id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000010id
+,SSAIAI KORONADAL-M,res_partner_19000011id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000011id
+,SSAIAI MARAMAG - H,res_partner_19000019id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000019id
+,SSAIAI MARBEL-M,res_partner_19000006id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000006id
+,SSAIAI MATI - M,res_partner_19000020id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000020id
+,SSAIAI PANABO - M,res_partner_19000021id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000021id
+,SSAIAI PHOENIX,res_partner_19000003id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000003id
+,SSAIAI PHOENIX-LAGAO,res_partner_19000016id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000016id
+,SSAIAI POLOMOLOK-M,res_partner_19000007id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000007id
+,SSAIAI SURALLAH-H,res_partner_19000014id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000014id
+,SSAIAI TACURONG-M,res_partner_19000009id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000009id
+,SSAIAI TAGUM - M,res_partner_19000022id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000022id
+,SSAIAI VALENCIA - M,res_partner_19000023id,,true,,base.PHP,res_company_bu000019id,true,res_company_branch_19000023id
+,MUTI HOME OFFICE,muti_base.res_partner_mutihomeoffice,,True,,base.PHP,muti_base.res_company_bu000006id,True,res_company_branch_mutihomeoffice
+,EPFC HOME OFFICE,muti_base.res_partner_epfchomeoffice,,True,,base.PHP,muti_base.res_company_bu000006id,True,res_company_branch_epfchomeoffice
+,HONDA HOME OFFICE,muti_base.res_partner_hondahomeoffice,,True,,base.PHP,muti_base.res_company_bu000003id,True,res_company_branch_hondahomeoffice
+,SIASA GREATWALL,muti_base.res_partner_siasagreatwall,,True,,base.PHP,muti_base.res_company_bu000012id,True,res_company_branch_siasagreatwall
+,SIASA HOME OFFICE,muti_base.res_partner_siasahomeoffice,,True,,base.PHP,muti_base.res_company_bu000012id,True,res_company_branch_siasahomeoffice
+,SSAIAI HOME OFFICE,muti_base.res_partner_ssaiaihomeoffice,,True,,base.PHP,muti_base.res_company_bu000019id,True,res_company_branch_ssaiaihomeoffice
+,4MRATCO HOME OFFICE,muti_base.res_partner_4mratcohomeoffice,,True,,base.PHP,muti_base.res_company_bu000021id,True,res_company_branch_4mratcohomeoffice
+,PUMGAS HOME OFFICE,muti_base.res_partner_pumgashomeoffice,,True,,base.PHP,muti_base.res_company_bu000017id,True,res_company_branch_pumgashomeoffice
+,CBG,muti_base.res_partner_cbg,,True,,base.PHP,muti_base.res_company_bu000008id,True,res_company_branch_cbg

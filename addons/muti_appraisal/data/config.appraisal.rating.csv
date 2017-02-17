@@ -1,0 +1,6 @@
+"id","start_rate","end_rate","description"
+"config_appraisal_rating_needs improvement",1.80,2.59,"NEEDS IMPROVEMENT"
+"config_appraisal_rating_poor",1.00,1.79,"POOR"
+"config_appraisal_rating_satisfactory",2.60,3.39,"SATISFACTORY"
+"config_appraisal_rating_fully satisfactory",3.40,4.19,"FULLY SATISFACTORY"
+"config_appraisal_rating_outstanding",4.20,5.00,"OUTSTANDING"

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+        <record model="ir.ui.view" id="inventory_adjustment_tree_view">
+            <field name="name">Inventory Adjustment</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"/>
+            <field name="arch" type="xml">
+                <field name="theoretical_qty" position="attributes">
+	          			<attribute name="string">Expected</attribute>
+	         	</field>
+	         	
+	         	<field name="line_ids" position="after">
+	         			<separator string="Remarks" colspan="4"/>
+	          			<field name = "remark" placeholder = "Note/Remarks"/>
+	         	</field>
+                
+	    	</field>  
+	    </record>
+	</data>
+</openerp>
+                

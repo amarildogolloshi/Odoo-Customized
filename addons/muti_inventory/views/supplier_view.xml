@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+
+<!-- Supplier -->  
+        
+        <record model="ir.ui.view" id="supplier_tree_view">
+            <field name="name">supplier.tree</field>
+            <field name="model">supplier.info</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Supplier">
+                    <field name="supplier_company"/>
+                    <field name="supplier_agentorsalesrepresentative"/>
+                    <field name="supplier_phone"/>
+                    <field name="supplier_mobile"/>
+                    <field name="supplier_street1"/>
+                    <field name="supplier_street2"/>
+                    <field name="supplier_city"/>
+                    <field name="supplier_province"/>
+                    <field name="supplier_email"/>
+                    <field name="supplier_status"/>                  
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="supplier_form_view">
+            <field name="name">Supplier.form</field>
+            <field name="model">supplier.info</field>
+            <field name="type">form</field>
+            
+            <field name="arch" type="xml">
+                <form string="Supplier Form">
+                  <sheet>   
+                  		 		<group>
+                    			<field name="supplier_id"/> 
+                    			</group>
+                    				<group>                     				                                                                          	    
+                    	    			 <field name="supplier_lname"/>                 	    
+                    					 <field name="supplier_mname"/>                  		
+                    					 <field name="supplier_fname"/>  
+                    				</group> 
+                    			<group>                  				                  	    		                       
+								<field name="supplier_company"/>	
+						  		</group>				
+                 	 <group>                    
+                  		 <field name="supplier_street1"/>
+                    	 <field name="supplier_street2"/>                  		
+                   		 <field name = "supplier_city"/>
+                   		 <field name="supplier_province"/>
+                   		 <field name="supplier_country"/>
+                   	</group>
+                   
+                   	<group>
+                   	     <field name="supplier_jobposition"/>
+                   		 <field name="supplier_phone"/>
+                    	 <field name="supplier_mobile"/>
+                    	 <field name="supplier_fax"/>
+                    	 <field name="supplier_email"/>
+                    	 <field name="supplier_tags"/>
+                    	 <field name="supplier_agentorsalesrepresentative"/>
+                   	</group>
+                   	
+                   <notebook>
+                   <page string="Sales">
+                   		<group>
+                   		 <field name="supplier_customer"/> 
+						 <field name="supplier_barcode"/> 
+						 <field name="supplier_payment"/>  
+                   		</group>
+            		</page>
+            		
+            		<page string="Purchases">
+            		<group>
+            		<field name="supplier_vendor"/>  
+            		<field name="supplier_barcode"/> 
+					<field name="supplier_payment"/>  
+            		</group>
+            		</page>
+            		
+            		<page string="Accounting">
+            		<group>
+            		    <field name="supplier_paymentterm" string="Customer Payment Term"/>  
+            			<field name="supplier_paymentterm" string="Vendor Payment Term"/>  
+						<field name="supplier_discount"/> 
+					</group>
+            		</page>
+                  </notebook>
+                </sheet>
+              </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="supplier_tree_action">
+            <field name="name">Supplier</field>
+            <field name="res_model">supplier.info</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first supplier
+                </p>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+

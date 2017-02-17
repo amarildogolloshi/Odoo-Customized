@@ -1,0 +1,183 @@
+"id","approval_rule_id:id","hr_job_id:id","amount","priority"
+"approval_chain_1","approval_rule_petty cash fund replenishment_revolving fund","muti_hrms_data.14005",0,1
+"approval_chain_2","approval_rule_petty cash fund replenishment_revolving fund","muti_hrms_data.1135",0,2
+"approval_chain_3","approval_rule_petty cash fund replenishment_management fund","muti_hrms_data.6129",0,1
+"approval_chain_4","approval_rule_petty cash fund replenishment_management fund","muti_hrms_data.11033",0,2
+"approval_chain_5","approval_rule_petty cash fund replenishment_management fund","muti_hrms_data.6186",0,3
+"approval_chain_6","approval_rule_advances for operation_management fund1","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_7","approval_rule_advances for operation_management fund1","muti_hrms_data.11033",0,2
+"approval_chain_8","approval_rule_advances for operation_management fund1","muti_hrms_data.6186",0,3
+"approval_chain_9","approval_rule_advances for operation_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_10","approval_rule_advances for operation_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_11","approval_rule_petty cash fund replenishment_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_12","approval_rule_petty cash fund replenishment_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_13","approval_rule_fund transfer_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_14","approval_rule_fund transfer_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_15","approval_rule_13'th month_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_16","approval_rule_13'th month_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_17","approval_rule_13'th month_pumgas head office","muti_treasury_data.hr_job_comptroller",0,3
+"approval_chain_18","approval_rule_loan payment_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_19","approval_rule_loan payment_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_20","approval_rule_loan payment_pumgas head office","muti_hrms_data.1043",0,3
+"approval_chain_21","approval_rule_employees incentives_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_22","approval_rule_employees incentives_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_23","approval_rule_employees incentives_pumgas head office","muti_hrms_data.1043",0,3
+"approval_chain_24","approval_rule_payables_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_25","approval_rule_payables_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_26","approval_rule_salaries and wages_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_27","approval_rule_salaries and wages_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_28","approval_rule_salaries and wages_pumgas head office","muti_treasury_data.hr_job_comptroller",0,3
+"approval_chain_29","approval_rule_advances for operation_management fund2","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_30","approval_rule_advances for operation_management fund2","muti_treasury_data.hr_job_group manager",0,2
+"approval_chain_31","approval_rule_advances for operation_management fund2","muti_hrms_data.11033",0,3
+"approval_chain_32","approval_rule_advances for operation_management fund2","muti_hrms_data.6186",0,4
+"approval_chain_33","approval_rule_separation fee_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_34","approval_rule_separation fee_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_35","approval_rule_separation fee_pumgas head office","muti_treasury_data.hr_job_comptroller",0,3
+"approval_chain_36","approval_rule_statutory expenses_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_37","approval_rule_statutory expenses_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_38","approval_rule_statutory expenses_pumgas head office","muti_treasury_data.hr_job_comptroller",0,3
+"approval_chain_39","approval_rule_purchase ( capex )_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_40","approval_rule_purchase ( capex )_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_41","approval_rule_purchase ( capex )_pumgas head office","muti_hrms_data.1043",0,3
+"approval_chain_42","approval_rule_purchase ( capex it-equipment )_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_43","approval_rule_purchase ( capex it-equipment )_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_44","approval_rule_purchase ( capex it-equipment )_pumgas head office","muti_hrms_data.6222",0,3
+"approval_chain_45","approval_rule_purchase ( capex it-equipment )_pumgas head office","muti_hrms_data.1043",0,4
+"approval_chain_46","approval_rule_purchases ( supplies )_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_47","approval_rule_purchases ( supplies )_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_48","approval_rule_purchase - trade inventory (gas and oil)_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_49","approval_rule_purchase - trade inventory (gas and oil)_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_50","approval_rule_purchase - trade inventory (nest)_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_51","approval_rule_purchase - trade inventory (nest)_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_52","approval_rule_repairs and maintenance_pumgas head office","muti_hrms_data.6208",0,1
+"approval_chain_53","approval_rule_repairs and maintenance_pumgas head office","muti_hrms_data.1136",0,2
+"approval_chain_54","approval_rule_purchase ( capex )_management fund1","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_55","approval_rule_purchase ( capex )_management fund1","muti_hrms_data.6222",0,2
+"approval_chain_56","approval_rule_purchase ( capex )_management fund1","muti_hrms_data.11033",0,3
+"approval_chain_57","approval_rule_purchase ( capex )_management fund1","muti_hrms_data.6186",0,4
+"approval_chain_58","approval_rule_purchase ( capex )_management fund2","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_59","approval_rule_purchase ( capex )_management fund2","muti_treasury_data.hr_job_group manager",0,2
+"approval_chain_60","approval_rule_purchase ( capex )_management fund2","muti_hrms_data.11033",0,3
+"approval_chain_61","approval_rule_purchase ( capex )_management fund2","muti_hrms_data.6186",0,4
+"approval_chain_62","approval_rule_purchase ( capex it-equipment )_management fund1","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_63","approval_rule_purchase ( capex it-equipment )_management fund1","muti_treasury_data.hr_job_group manager",0,2
+"approval_chain_64","approval_rule_purchase ( capex it-equipment )_management fund1","muti_hrms_data.11033",0,3
+"approval_chain_65","approval_rule_purchase ( capex it-equipment )_management fund1","muti_hrms_data.6222",0,4
+"approval_chain_66","approval_rule_purchase ( capex it-equipment )_management fund1","muti_hrms_data.6186",0,5
+"approval_chain_67","approval_rule_purchase ( capex it-equipment )_management fund2","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_68","approval_rule_purchase ( capex it-equipment )_management fund2","muti_hrms_data.6222",0,2
+"approval_chain_69","approval_rule_purchase ( capex it-equipment )_management fund2","muti_hrms_data.11033",0,3
+"approval_chain_70","approval_rule_purchase ( capex it-equipment )_management fund2","muti_hrms_data.6186",0,4
+"approval_chain_71","approval_rule_purchases ( supplies )_management fund1","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_72","approval_rule_purchases ( supplies )_management fund1","muti_treasury_data.hr_job_group manager",0,2
+"approval_chain_73","approval_rule_purchases ( supplies )_management fund1","muti_hrms_data.11033",0,3
+"approval_chain_74","approval_rule_purchases ( supplies )_management fund1","muti_hrms_data.6186",0,4
+"approval_chain_75","approval_rule_purchases ( supplies )_management fund2","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_76","approval_rule_purchases ( supplies )_management fund2","muti_hrms_data.6222",0,2
+"approval_chain_77","approval_rule_purchases ( supplies )_management fund2","muti_hrms_data.11033",0,3
+"approval_chain_78","approval_rule_rental_revolving fund","muti_hrms_data.14005",0,1
+"approval_chain_79","approval_rule_rental_revolving fund","muti_hrms_data.1135",0,2
+"approval_chain_80","approval_rule_retainer's fee_revolving fund","muti_hrms_data.14005",0,1
+"approval_chain_81","approval_rule_retainer's fee_revolving fund","muti_hrms_data.1135",0,2
+"approval_chain_82","approval_rule_petty cash fund replenishment_muti head office","muti_hrms_data.6129",0,1
+"approval_chain_83","approval_rule_petty cash fund replenishment_muti head office","muti_hrms_data.11033",0,2
+"approval_chain_84","approval_rule_petty cash fund replenishment_muti head office","muti_hrms_data.6208",0,3
+"approval_chain_85","approval_rule_fund transfer_muti head office","muti_hrms_data.6208",0,1
+"approval_chain_86","approval_rule_fund transfer_muti head office","muti_hrms_data.1136",0,2
+"approval_chain_87","approval_rule_unit registration fund_revolving fund","muti_hrms_data.14005",0,1
+"approval_chain_88","approval_rule_unit registration fund_revolving fund","muti_hrms_data.1135",0,2
+"approval_chain_89","approval_rule_rental_muti head office","muti_hrms_data.11033",0,1
+"approval_chain_90","approval_rule_rental_muti head office","muti_hrms_data.6208",0,2
+"approval_chain_91","approval_rule_retainer's fee_muti head office","muti_hrms_data.11033",0,1
+"approval_chain_92","approval_rule_retainer's fee_muti head office","muti_hrms_data.6208",0,2
+"approval_chain_93","approval_rule_salaries and wages_muti head office","muti_hrms_data.11033",0,1
+"approval_chain_94","approval_rule_salaries and wages_muti head office","muti_hrms_data.6208",0,2
+"approval_chain_95","approval_rule_salaries and wages_muti head office","muti_hrms_data.1136",0,3
+"approval_chain_96","approval_rule_salaries and wages_muti head office","muti_treasury_data.hr_job_comptroller",0,4
+"approval_chain_97","approval_rule_statutory expenses_muti head office","muti_hrms_data.11033",0,1
+"approval_chain_98","approval_rule_statutory expenses_muti head office","muti_hrms_data.6208",0,2
+"approval_chain_99","approval_rule_statutory expenses_muti head office","muti_hrms_data.1136",0,3
+"approval_chain_100","approval_rule_statutory expenses_muti head office","muti_treasury_data.hr_job_comptroller",0,4
+"approval_chain_101","approval_rule_employees incentives_muti head office","muti_hrms_data.11033",0,1
+"approval_chain_102","approval_rule_employees incentives_muti head office","muti_hrms_data.6208",0,2
+"approval_chain_103","approval_rule_employees incentives_muti head office","muti_hrms_data.1136",0,30
+"approval_chain_104","approval_rule_13'th month_muti head office","muti_hrms_data.11033",0,1
+"approval_chain_105","approval_rule_13'th month_muti head office","muti_hrms_data.6208",0,2
+"approval_chain_106","approval_rule_13'th month_muti head office","muti_hrms_data.1136",0,3
+"approval_chain_107","approval_rule_13'th month_muti head office","muti_treasury_data.hr_job_comptroller",0,4
+"approval_chain_108","approval_rule_payables_muti head office","muti_hrms_data.11033",0,1
+"approval_chain_109","approval_rule_payables_muti head office","muti_hrms_data.6208",0,2
+"approval_chain_110","approval_rule_payables_muti head office","muti_hrms_data.1136",0,3
+"approval_chain_111","approval_rule_separation fee_muti head office","muti_hrms_data.6099",0,1
+"approval_chain_112","approval_rule_separation fee_muti head office","muti_hrms_data.11033",0,2
+"approval_chain_113","approval_rule_separation fee_muti head office","muti_hrms_data.6208",0,3
+"approval_chain_114","approval_rule_separation fee_muti head office","muti_hrms_data.1136",0,4
+"approval_chain_115","approval_rule_separation fee_muti head office","muti_treasury_data.hr_job_comptroller",0,5
+"approval_chain_116","approval_rule_loan payment_muti head office","muti_hrms_data.6208",0,1
+"approval_chain_117","approval_rule_loan payment_muti head office","muti_hrms_data.1136",0,2
+"approval_chain_118","approval_rule_repairs and maintenance_muti head office","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_119","approval_rule_repairs and maintenance_muti head office","muti_hrms_data.11033",0,2
+"approval_chain_120","approval_rule_repairs and maintenance_muti head office","muti_hrms_data.6208",0,3
+"approval_chain_121","approval_rule_payables_revolving fund","muti_hrms_data.14005",0,1
+"approval_chain_122","approval_rule_payables_revolving fund","muti_hrms_data.6141",0,2
+"approval_chain_123","approval_rule_purchase - trade inventory (mc)_muti head office","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_124","approval_rule_purchase - trade inventory (mc)_muti head office","muti_hrms_data.11033",0,2
+"approval_chain_125","approval_rule_purchase - trade inventory (mc)_muti head office","muti_hrms_data.6208",0,3
+"approval_chain_126","approval_rule_purchase - trade inventory (mc)_muti head office","muti_hrms_data.1136",0,4
+"approval_chain_127","approval_rule_purchase - trade inventory (sp)_muti head office","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_128","approval_rule_purchase - trade inventory (sp)_muti head office","muti_hrms_data.11033",0,2
+"approval_chain_129","approval_rule_purchase - trade inventory (sp)_muti head office","muti_hrms_data.6208",0,3
+"approval_chain_130","approval_rule_purchase - trade inventory (sp)_muti head office","muti_hrms_data.1136",0,4
+"approval_chain_131","approval_rule_special fund - unit registration_muti head office","muti_hrms_data.14005",0,1
+"approval_chain_132","approval_rule_special fund - unit registration_muti head office","muti_hrms_data.1135",0,2
+"approval_chain_133","approval_rule_special fund - unit registration_muti head office","muti_hrms_data.11033",0,3
+"approval_chain_134","approval_rule_special fund - unit registration_muti head office","muti_hrms_data.6208",0,4
+"approval_chain_135","approval_rule_special fund - unit registration_muti head office","muti_hrms_data.1136",0,5
+"approval_chain_136","approval_rule_accountable forms_muti head office","muti_hrms_data.1135",0,1
+"approval_chain_137","approval_rule_trade inventory - mc units_muti head office","muti_hrms_data.1135",0,1
+"approval_chain_138","approval_rule_trade inventory - mc units_muti head office","muti_hrms_data.6005",0,2
+"approval_chain_139","approval_rule_trade inventory - spare parts_muti head office","muti_hrms_data.1135",0,1
+"approval_chain_140","approval_rule_trade inventory - spare parts_muti head office","muti_hrms_data.6005",0,2
+"approval_chain_141","approval_rule_advances for operation_muti head office","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_142","approval_rule_advances for operation_muti head office","muti_hrms_data.11033",0,2
+"approval_chain_143","approval_rule_advances for operation_muti head office","muti_hrms_data.6208",0,3
+"approval_chain_144","approval_rule_purchase ( capex )_muti head office1","muti_hrms_data.14005",0,1
+"approval_chain_145","approval_rule_purchase ( capex )_muti head office1","muti_hrms_data.1135",0,2
+"approval_chain_146","approval_rule_purchase ( capex )_muti head office1","muti_hrms_data.11033",0,3
+"approval_chain_147","approval_rule_purchase ( capex )_muti head office1","muti_hrms_data.6208",0,4
+"approval_chain_148","approval_rule_purchase ( capex )_muti head office1","muti_hrms_data.1136",0,5
+"approval_chain_149","approval_rule_purchase ( capex )_muti head office2","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_150","approval_rule_purchase ( capex )_muti head office2","muti_hrms_data.11033",0,2
+"approval_chain_151","approval_rule_purchase ( capex )_muti head office2","muti_hrms_data.6208",0,3
+"approval_chain_152","approval_rule_purchase ( capex )_muti head office2","muti_hrms_data.1136",0,4
+"approval_chain_153","approval_rule_purchase ( capex it-equipment )_muti head office1","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_154","approval_rule_purchase ( capex it-equipment )_muti head office1","muti_hrms_data.11033",0,2
+"approval_chain_155","approval_rule_purchase ( capex it-equipment )_muti head office1","muti_hrms_data.6208",0,3
+"approval_chain_156","approval_rule_purchase ( capex it-equipment )_muti head office1","muti_hrms_data.6222",0,4
+"approval_chain_157","approval_rule_purchase ( capex it-equipment )_muti head office1","muti_hrms_data.1136",0,5
+"approval_chain_158","approval_rule_repairs and maintenance_revolving fund","muti_hrms_data.1135",0,1
+"approval_chain_159","approval_rule_purchase ( capex it-equipment )_muti head office2","muti_hrms_data.14005",0,1
+"approval_chain_160","approval_rule_purchase ( capex it-equipment )_muti head office2","muti_hrms_data.1135",0,2
+"approval_chain_161","approval_rule_purchase ( capex it-equipment )_muti head office2","muti_hrms_data.11033",0,3
+"approval_chain_162","approval_rule_purchase ( capex it-equipment )_muti head office2","muti_hrms_data.6208",0,4
+"approval_chain_163","approval_rule_purchase ( capex it-equipment )_muti head office2","muti_hrms_data.6222",0,5
+"approval_chain_164","approval_rule_purchase ( capex it-equipment )_muti head office2","muti_hrms_data.1136",0,6
+"approval_chain_165","approval_rule_purchases ( supplies )_muti head office","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_166","approval_rule_purchases ( supplies )_muti head office","muti_hrms_data.11033",0,2
+"approval_chain_167","approval_rule_purchases ( supplies )_muti head office","muti_hrms_data.6208",0,3
+"approval_chain_168","approval_rule_advances for operation_revolving fund","muti_hrms_data.14005",0,1
+"approval_chain_169","approval_rule_advances for operation_revolving fund","muti_hrms_data.1135",0,2
+"approval_chain_170","approval_rule_purchases ( supplies )_revolving fund","muti_hrms_data.14005",0,1
+"approval_chain_171","approval_rule_purchases ( supplies )_revolving fund","muti_hrms_data.1135",0,2
+"approval_chain_172","approval_rule_advances for operation_petty cash fund (h)","muti_hrms_data.11033",0,1
+"approval_chain_173","approval_rule_advances for operation_muti head office (m)","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_174","approval_rule_advances for operation_muti head office (m)","muti_treasury_data.hr_job_group manager",0,2
+"approval_chain_175","approval_rule_advances for operation_muti head office (m)","muti_hrms_data.11033",0,3
+"approval_chain_176","approval_rule_advances for operation_muti head office (m)","muti_hrms_data.6208",0,4
+"approval_chain_177","approval_rule_advances for operation_hsi head office (m)","muti_treasury_data.hr_job_immediate superior",0,1
+"approval_chain_178","approval_rule_advances for operation_hsi head office (m)","muti_treasury_data.hr_job_group manager",0,2
+"approval_chain_179","approval_rule_advances for operation_hsi head office (m)","muti_hrms_data.6208",0,3
+"approval_chain_180","approval_rule_dividend_management fund","muti_hrms_data.6186",0,1
+"approval_chain_181","approval_rule_dividend_management fund","muti_treasury_data.hr_job_group manager",0,2
+"approval_chain_182","approval_rule_advances to sister company_management fund","muti_hrms_data.6186",0,1

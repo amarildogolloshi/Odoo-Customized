@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+user_muti_appraisal_appraisal,muti_appraisal.appraisal,model_muti_appraisal_appraisal,base.group_user,1,1,1,0
+user_access_config_appraisal,muti_appraisal.config.appraisal,model_config_appraisal,base.group_user,1,0,0,0
+user_access_config_appraisal_rating,muti_appraisal.config.appraisal.rating,model_config_appraisal_rating,base.group_user,1,0,0,0
+user_access_config_appraisal_evaluation,muti_appraisal.config.appraisal.evaluation,model_config_appraisal_evaluation,base.group_user,1,0,0,0
+user_access_probationary_monitoring,muti_appraisal.probationary.monitoring,model_probationary_monitoring,base.group_user,1,0,0,0
+user_access_regular_monitoring,muti_appraisal.regular.monitoring,model_regular_monitoring,base.group_user,1,0,0,0
+
+offcr_muti_appraisal_appraisal,muti_appraisal.appraisal,model_muti_appraisal_appraisal,base.group_hr_user,1,1,0,
+offcr_access_config_appraisal,muti_appraisal.config.appraisal,model_config_appraisal,base.group_hr_user,1,1,1,0
+offcr_access_config_appraisal_rating,muti_appraisal.config.appraisal.rating,model_config_appraisal_rating,base.group_hr_user,1,1,1,0
+offcr_access_config_appraisal_evaluation,muti_appraisal.config.appraisal.evaluation,model_config_appraisal_evaluation,base.group_hr_user,1,1,1,0
+offcr_access_probationary_monitoring,muti_appraisal.probationary.monitoring,model_probationary_monitoring,base.group_hr_user,1,1,1,0
+offcr_access_regular_monitoring,muti_appraisal.regular.monitoring,model_regular_monitoring,base.group_hr_user,1,1,1,0

@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--  Managerial Appraisal -->
+        <record model="survey.survey" id="managerial_appraisal">
+            <field name="title">Managerial Appraisal</field>
+            <field name="stage_id" ref="survey.stage_draft" />
+            <field name="auth_required" eval="False" />
+            <field name="users_can_go_back" eval="True" />
+            <field name="description"></field>
+            <field name="quizz_mode" eval="True"/>
+            <field name="thank_you_message">&lt;p&gt;&lt;/p&gt;</field>
+        </record>
+        <!-- Page 1 -->
+        <record model="survey.page" id="managerial_appraisal_1">
+            <field name="title">APPRAISAL INFO</field>
+            <field name="survey_id" ref="managerial_appraisal" />
+            <field name="sequence">1</field>
+            <field name="description"></field>
+        </record>
+         <!-- Question 1 -->
+        <record model="survey.question" id="managerial_appraisal_1_1">
+            <field name="page_id" ref="managerial_appraisal_1" />
+            <field name="sequence">1</field>
+            <field name="question">Rating Period</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 2 -->
+        <record model="survey.question" id="managerial_appraisal_1_2">
+            <field name="page_id" ref="managerial_appraisal_1" />
+            <field name="sequence">2</field>
+            <field name="question">Position Title</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 3 -->
+        <record model="survey.question" id="managerial_appraisal_1_3">
+            <field name="page_id" ref="managerial_appraisal_1" />
+            <field name="sequence">3</field>
+            <field name="question">Name of Rater</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 4 -->
+        <record model="survey.question" id="managerial_appraisal_1_4">
+            <field name="page_id" ref="managerial_appraisal_1" />
+            <field name="sequence">4</field>
+            <field name="question">Position Title</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 5 -->
+        <record model="survey.question" id="managerial_appraisal_1_5">
+            <field name="page_id" ref="managerial_appraisal_1" />
+            <field name="sequence">5</field>
+            <field name="question">Branch</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Question 6 -->
+        <record model="survey.question" id="managerial_appraisal_1_6">
+            <field name="page_id" ref="managerial_appraisal_1" />
+            <field name="sequence">6</field>
+            <field name="question">Location</field>
+            <field name="description"></field>
+            <field name="type">textbox</field>
+            <field name="display_mode">columns</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+        <!-- Page 2 -->
+        <record model="survey.page" id="managerial_appraisal_2">
+            <field name="title">INSTRUCTIONS TO THE RATER</field>
+            <field name="survey_id" ref="managerial_appraisal" />
+            <field name="sequence">2</field>
+            <field name="description">
+            		&lt;p&gt;This form has six(6) parts, namely:&lt;/p&gt;
+            		
+            		&lt;ol&gt;
+            			&lt;li style="padding-left:20px;"&gt;INDIVIDUAL OUTPUT PORTION&lt;/li&gt;
+            			&lt;li style="padding-left:20px;"&gt;CO-WORKER EFFECTIVENESS PORTION&lt;/li&gt;
+            			&lt;li style="padding-left:20px;"&gt;OTHER MANAGERIAL TRAITS&lt;/li&gt;
+            			&lt;li style="padding-left:20px;"&gt;KEY RESULTS AREAS&lt;/li&gt;
+            			&lt;li style="padding-left:20px;"&gt;EMPLOYEE DEVELOPMENT PLAN&lt;/li&gt;
+            			&lt;li style="padding-left:20px;"&gt;COMMENTS/SIGNATURES&lt;/li&gt;
+            		&lt;/ol&gt;
+            		
+            		&lt;p&gt;Observe the following procedures in completing this form:&lt;/p&gt;
+            		&lt;ol&gt;
+            			&lt;li style="padding-left:10px;"&gt;In accomplishing the Rating Sheet read carefully Performance Appraisal Rating guidelines&lt;/li&gt;
+            			&lt;li style="padding-left:10px;"&gt;Indicate the numerical rating in the box provided&lt;/li&gt;
+            			&lt;li style="padding-left:10px;"&gt;Sign the form and put your comments in the "Signatures/Comments" portion.
+            												Complete the Employee Development Plan for the for the next six-month period.&lt;/li&gt;
+            			&lt;li style="padding-left:10px;"&gt;Discuss and review your rating and plan with your immediate superior&lt;/li&gt;
+            			&lt;li style="padding-left:10px;"&gt;Have your superior sign the form and write his/her comments in the space provided.&lt;/li&gt;
+            			&lt;li style="padding-left:10px;"&gt;Discuss your ratings and the Employee Development Plan with employee concerned.t&lt;/li&gt;
+            			&lt;li style="padding-left:10px;"&gt;After the discussion, have the employee sign the form and write in his/her comments 
+            												in the space provided.&lt;/li&gt;
+            			&lt;li style="padding-left:10px;"&gt;Forward the form to your Group Manager, Human Resources not later than the designated date.&lt;/li&gt;
+            		&lt;/ol&gt;
+            		            		
+            		</field>
+        </record>
+        
+        <!-- Page 3 -->
+        <record model="survey.page" id="managerial_appraisal_3">
+            <field name="title">PERFORMANCE RATING PORTION</field>
+            <field name="survey_id" ref="managerial_appraisal" />
+            <field name="sequence">3</field>
+            <field name="description"></field>
+        </record>
+        <!-- Question 1 -->
+        <record model="survey.question" id="managerial_appraisal_3_1">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">1</field>
+            <field name="question">Part I: INDIVIDUAL OUTPUT PORTION</field>
+            <field name="description">&lt;h1&gt;A. Planning&lt;/h1&gt;</field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_1_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_1"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Objectives/targets</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_1_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_1"/>
+	                    <field name="sequence">2</field>
+	                    <field name="value">Resources Utilization Plan</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_1_3">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_1"/>
+	                    <field name="sequence">3</field>
+	                    <field name="value">Work Programs/Operating Plans</field>
+	            </record>    
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_1_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_1"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_1_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_1"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_1_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_1"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_1_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_1"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_1_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_1"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>
+        <!-- Question 2 -->
+        <record model="survey.question" id="managerial_appraisal_3_2">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">2</field>
+            <field name="question">B. Organizing</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_2_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_2"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Manpower Deployment</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_2_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_2"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Delegated Responsibilities</field>
+	            </record>	           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_2_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_2"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_2_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_2"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_2_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_2"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_2_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_2"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_2_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_2"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>
+        <!-- Question 3 -->
+        <record model="survey.question" id="managerial_appraisal_3_3">
+            <field name="page_id" ref="managerial_appraisal_3"/>
+            <field name="sequence">3</field>
+            <field name="question">C. Facilitating Subordinate Effectiveness</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_3_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_3"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Employee Motivation</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_3_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_3"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Group Morale</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_3_3">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_3"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Operating Systems and Processes</field>
+	            </record>	           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_3_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_3"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_3_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_3"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_3_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_3"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_3_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_3"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_3_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_3"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>	            
+        <!-- Question 4 -->
+        <record model="survey.question" id="managerial_appraisal_3_4">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">4</field>
+            <field name="question">D. Controlling</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_4_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Performance Standards</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_4_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Work Performance Assessment</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_4_3">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Action on Performance Assessment</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_4_4">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Budget/Disbursement</field>
+	            </record>	           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_4_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_4_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_4_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_4_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_4_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_4"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>
+        <!-- Question 5 -->
+        <record model="survey.question" id="managerial_appraisal_3_5">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">5</field>
+            <field name="question">E. Communicating</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_5_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_5"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Written Communication</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_5_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_5"/>
+	                    <field name="sequence">2</field>
+	                    <field name="value">Oral Communication</field>
+	            </record>           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_5_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_5"/>
+	                    <field name="sequence">3</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_5_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_5"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_5_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_5"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_5_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_5"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_5_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_5"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>
+        <!-- Question 6 -->
+        <record model="survey.question" id="managerial_appraisal_3_6">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">6</field>
+            <field name="question">F. Problem Analysis and Decision Making</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_6_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_6"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Problem Analysis</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_6_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_6"/>
+	                    <field name="sequence">2</field>
+	                    <field name="value">Problem Solution</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_6_3">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_6"/>
+	                    <field name="sequence">3</field>
+	                    <field name="value">Decisions</field>
+	            </record>	           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_6_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_6"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_6_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_6"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_6_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_6"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_6_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_6"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_6_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_6"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>
+        <!-- Question 7 -->
+        <record model="survey.question" id="managerial_appraisal_3_7">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">7</field>
+            <field name="question">G. Customer Service</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_7_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_7"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Customer Handling</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_7_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_7"/>
+	                    <field name="sequence">2</field>
+	                    <field name="value">Handling Complaint</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_7_3">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_7"/>
+	                    <field name="sequence">3</field>
+	                    <field name="value">Service Delivery</field>
+	            </record>	           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_7_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_7"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_7_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_7"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_7_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_7"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_7_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_7"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_7_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_7"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>
+        <!-- Question 8 -->
+        <record model="survey.question" id="managerial_appraisal_3_8">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">8</field>
+            <field name="question">Part II: CO-WORKER EFFECTIVENESS PORTION</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_8_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_8"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Contribution/Support to Peers</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_8_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_8"/>
+	                    <field name="sequence">2</field>
+	                    <field name="value">Contribution/Support to Superiors</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_8_3">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_8"/>
+	                    <field name="sequence">3</field>
+	                    <field name="value">Availability on the Job</field>
+	            </record>	           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_8_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_8"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_8_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_8"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_8_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_8"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_8_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_8"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_8_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_8"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>
+        <!-- Question 9 -->
+        <record model="survey.question" id="managerial_appraisal_3_9">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">9</field>
+            <field name="question">Part III: OTHER MANAGERIAL TRAITS</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_9_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">Consciousness in Developing Staff</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_9_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">2</field>
+	                    <field name="value">Creativity/Innovation</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_9_3">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">3</field>
+	                    <field name="value">Professionalism</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_9_4">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Leadership</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_9_5">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">Assertiveness Skills</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_9_6">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Openness</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_9_6">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Ethics and Values</field>
+	            </record>	           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_9_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_9_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">9</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_9_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">10</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_9_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">11</field>
+	                    <field name="value">Fully Statisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_9_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_9"/>
+	                    <field name="sequence">12</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>	               	                
+        <!-- Question 10 -->
+        <record model="survey.question" id="managerial_appraisal_3_10">
+            <field name="page_id" ref="managerial_appraisal_3" />
+            <field name="sequence">10</field>
+            <field name="question">Part IV: KEY RESULTS AREAS (KRA)</field>
+            <field name="description"></field>
+            <field name="type">matrix</field>
+            <field name="display_mode">columns</field>
+             <field name="comments_message">Remarks</field>
+            <field name="constr_mandatory" eval="True" />
+        </record>
+	            <record model="survey.label" id="managerial_appraisal_3_10_1">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">1</field>
+	                    <field name="value">KRA 1</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_10_2">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">2</field>
+	                    <field name="value">KRA 2</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_10_3">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">3</field>
+	                    <field name="value">KRA 3</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_10_4">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">KRA 4</field>
+	            </record>
+	            <record model="survey.label" id="managerial_appraisal_3_10_5">
+	                    <field name="question_id_2" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">5</field>
+	                    <field name="value">KRA 5</field>
+	            </record>	           
+	        	<record model="survey.label" id="choice_managerial_appraisal_3_10_1">
+	                    <field name="question_id" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">4</field>
+	                    <field name="value">Poor</field>
+	                    <field name="quizz_mark">1</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_10_2">
+	                    <field name="question_id" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">6</field>
+	                    <field name="value">Needs Improvement</field>
+	                    <field name="quizz_mark">2</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_10_3">
+	                    <field name="question_id" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">7</field>
+	                    <field name="value">Satisfactory</field>
+	                    <field name="quizz_mark">3</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_10_4">
+	                    <field name="question_id" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">8</field>
+	                    <field name="value">Fully Satisfactory</field>
+	                    <field name="quizz_mark">4</field>
+	            </record>
+	            <record model="survey.label" id="choice_managerial_appraisal_3_10_5">
+	                    <field name="question_id" ref="managerial_appraisal_3_10"/>
+	                    <field name="sequence">9</field>
+	                    <field name="value">Outstanding</field>
+	                    <field name="quizz_mark">5</field>
+	            </record>
+
+    </data>
+</openerp>

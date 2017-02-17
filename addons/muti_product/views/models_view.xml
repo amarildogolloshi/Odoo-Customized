@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+    
+<!--     Major Class          
+
+        <record model="ir.ui.view" id="major_class_tree_view">
+            <field name="name">major.class.tree</field>
+            <field name="model">product.major.class</field>
+            <field name="arch" type="xml">
+                <tree string="Major Class">
+                	<field name="active"/>
+                	<field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="major_class_form_view">
+            <field name="name">major.class.form</field>
+            <field name="model">product.major.class</field>
+            <field name="arch" type="xml">
+                <form string="Major Class Form">
+                    <sheet>
+                    <group>
+                    
+                        <field name="active"/>
+                        <field name="code"/>
+	                    <field name="name"/>
+                    
+                   
+                        <field name="make_id"/>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="major_class_tree_action">
+            <field name="name">Major Class</field>
+            <field name="res_model">product.major.class</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first major class
+                </p>
+            </field>
+        </record>
+    
+	Major Class  -->
+	
+
+    
+     <!-- Brand -->          
+
+        <record model="ir.ui.view" id="brand_tree_view">
+            <field name="name">brand.tree</field>
+            <field name="model">product.brand</field>
+            <field name="arch" type="xml">
+                <tree string="Brand">
+                    <field name="active"/>
+                    <field name="old_brand_code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="brand_form_view">
+            <field name="name">brand.form</field>
+            <field name="model">product.brand</field>
+            <field name="arch" type="xml">
+                <form string="Brand Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+	                    <field name="name"/>
+	                    <field name="brand_id"/>
+                    </group>
+                    <group>
+                        <field name="old_brand_code"/>
+                    </group>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="brand_tree_action">
+            <field name="name">Brand</field>
+            <field name="res_model">product.brand</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first brand
+                </p>
+            </field>
+        </record>
+    
+	<!-- Brand --> 
+	
+	
+	<!-- Model -->          
+
+        <record model="ir.ui.view" id="model_tree_view">
+            <field name="name">model.tree</field>
+            <field name="model">product.model</field>
+            <field name="arch" type="xml">
+                <tree string="Model">
+                    <field name="active"/>
+                    <field name="vecmodel_id"/>
+                    <field name="brand_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="model_form_view">
+            <field name="name">model.form</field>
+            <field name="model">product.model</field>
+            <field name="arch" type="xml">
+                <form string="Model Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+	                    <field name="vecmodel_id"/>
+	                    <field name="name"/>
+	                    <field name="brand_id"/>
+                    </group>
+                    <group>
+                        <field name="old_model_code"/>
+                    </group>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="model_tree_action">
+            <field name="name">Model</field>
+            <field name="res_model">product.model</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first model
+                </p>
+            </field>
+        </record>
+    
+	<!-- Model --> 
+	
+	<!-- Color -->          
+
+        <record model="ir.ui.view" id="color_tree_view">
+            <field name="name">color.tree</field>
+            <field name="model">product.color</field>
+            <field name="arch" type="xml">
+                <tree string="Color">
+                    <field name="active"/>
+                    <field name="veccolor_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="color_form_view">
+            <field name="name">color.form</field>
+            <field name="model">product.color</field>
+            <field name="arch" type="xml">
+                <form string="Color Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+                    <field name="veccolor_id"/>
+                    <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="old_color_code"/>
+                    </group>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="color_tree_action">
+            <field name="name">Color</field>
+            <field name="res_model">product.color</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first color
+                </p>
+            </field>
+        </record>
+    
+	<!-- Color --> 
+	
+	
+	<!-- Body -->          
+
+        <record model="ir.ui.view" id="body_tree_view">
+            <field name="name">body.tree</field>
+            <field name="model">product.body</field>
+            <field name="arch" type="xml">
+                <tree string="Body">
+                    <field name="active"/>
+                    <field name="vecbody_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="body_form_view">
+            <field name="name">body.form</field>
+            <field name="model">product.body</field>
+            <field name="arch" type="xml">
+                <form string="Body Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+                    <field name="vecbody_id"/>
+                    <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="old_body_code"/>
+                    </group>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="body_tree_action">
+            <field name="name">Body</field>
+            <field name="res_model">product.body</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first body
+                </p>
+            </field>
+        </record>
+    
+	<!-- Body --> 
+	
+	<!-- MC Classification -->          
+
+        <record model="ir.ui.view" id="mc_classification_tree_view">
+            <field name="name">mcclassification.tree</field>
+            <field name="model">product.mc.classification</field>
+            <field name="arch" type="xml">
+                <tree string="MC Classification">
+                    <field name="active"/>
+                    <field name="mc_classification"/>
+                    <field name="breaking_period"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="mc_classification_form_view">
+            <field name="name">mcclassification.tre</field>
+            <field name="model">product.mc.classification</field>
+            <field name="arch" type="xml">
+                <form string="MC Classification Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+	                    <field name="mc_classification"/>
+                    </group>
+                    <group>
+                        <field name="breaking_period"/>
+                    </group>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="mc_classification_tree_action">
+            <field name="name">MC Classification</field>
+            <field name="res_model">product.mc.classification</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first MC Classification
+                </p>
+            </field>
+        </record>
+    
+	<!-- MC Classification --> 
+	
+	
+	<!-- Wheel -->          
+
+        <record model="ir.ui.view" id="wheel_tree_view">
+            <field name="name">wheel.tree</field>
+            <field name="model">product.wheel</field>
+            <field name="arch" type="xml">
+                <tree string="Wheel">
+                    <field name="active"/>
+                    <field name="vecwheel_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="wheel_form_view">
+            <field name="name">wheel.form</field>
+            <field name="model">product.wheel</field>
+            <field name="arch" type="xml">
+                <form string="Wheel Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+	                    <field name="vecwheel_id"/>
+	                    <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="old_wheel_code"/>
+                    </group>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="wheel_tree_action">
+            <field name="name">Wheel</field>
+            <field name="res_model">product.wheel</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first wheel]
+                </p>
+            </field>
+        </record>
+    
+	<!-- Wheel -->
+	
+	<!-- Type -->          
+
+        <record model="ir.ui.view" id="type_tree_view">
+            <field name="name">product.tree</field>
+            <field name="model">product.type</field>
+            <field name="arch" type="xml">
+                <tree string="Type">
+                    <field name="active"/>
+                    <field name="vectype_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="type_form_view">
+            <field name="name">type.form</field>
+            <field name="model">product.type</field>
+            <field name="arch" type="xml">
+                <form string="Type Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+	                    <field name="vectype_id"/>
+	                    <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="old_vehicle_code"/>
+                    </group>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="type_tree_action">
+            <field name="name">Type</field>
+            <field name="res_model">product.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first type
+                </p>
+            </field>
+        </record>
+    
+	<!-- Type -->
+	
+	
+	<!-- Transmission -->          
+
+        <record model="ir.ui.view" id="transmission_tree_view">
+            <field name="name">transmission.tree</field>
+            <field name="model">product.transmission</field>
+            <field name="arch" type="xml">
+                <tree string="Wheel">
+                    <field name="active"/>
+                    <field name="vectrans_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="transmission_form_view">
+            <field name="name">transmission.form</field>
+            <field name="model">product.transmission</field>
+            <field name="arch" type="xml">
+                <form string="Transmission Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+	                    <field name="vectrans_id"/>
+	                    <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="old_transmission_code"/>
+                    </group>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="transmission_tree_action">
+            <field name="name">Transmission</field>
+            <field name="res_model">product.transmission</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first transmission
+                </p>
+            </field>
+        </record>
+    
+	<!-- Transmission -->
+	
+	
+	
+	
+	<!-- Minimum DP -->          
+
+        <record model="ir.ui.view" id="minumum_dp_tree_view">
+            <field name="name">minimum.dp.tree</field>
+            <field name="model">product.minimum.dp</field>
+            <field name="arch" type="xml">
+                <tree string="Minimum Downpayment">
+                    <field name="active"/>
+                    <field name="branch_id"/>
+                    <field name="cash_price"/>
+                    <field name="loan_price"/>
+                    <field name="min_dp"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="minimum_dp_form_view">
+            <field name="name">minimum.dp.form</field>
+            <field name="model">product.minimum.dp</field>
+            <field name="arch" type="xml">
+                <form string="Minimum Downpayment Form">
+                    <sheet>
+                    <group>
+                    <group>
+                        <field name="active"/>
+                        <field name="product_id"/>
+	                    <field name="branch_id"/>
+	                    <field name="cash_price"/>
+	                    <field name="loan_price"/>
+                    </group>
+                    <group>
+                        <field name="min_dp"/>
+                        <field name="wh_interest_promo_id"/>
+	                    <field name="start_date"/>
+	                    <field name="end_date"/>
+                    </group>
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+	<!-- Minimum DP -->
+	
+	
+	
+
+	
+	<!-- 		Product Category -->
+		<record model="ir.ui.view" id="product_category_form">
+            <field name="name">Product Category</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+                <label for="name" position = "before">
+                	<label for = "group_code" string = "Group Code"/>
+	               	<field name = "group_code"/>
+	               	<label for = "barcode_affix" string = "Barcode Affix"/>
+	               	<field name = "barcode_affix" required = "True"/>
+	            </label>
+	            
+	            <group name = "first" position="after">
+	            	<group string = "Products">
+	            		<field name = "group_ids">
+	            		
+	            		<tree string ="Product" default_order = "barcode">
+	            			<field name ="barcode"/>
+	            			<field name="name"/>
+	            		</tree>
+	            	</field>
+	            </group>
+	            </group>
+
+            </field>
+        </record>
+       
+
+<!-- 		Product Category -->
+
+    
+    </data>
+</openerp>

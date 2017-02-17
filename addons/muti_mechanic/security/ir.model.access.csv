@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_muti_mechanic,muti_mechanic,model_muti_mechanic,,1,0,0,0
+access_muti_commission_record,muti_commission_record,model_muti_commission_record,,1,1,1,0

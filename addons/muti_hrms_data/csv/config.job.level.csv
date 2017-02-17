@@ -1,0 +1,26 @@
+parent_id:id,code,id,name
+,M00,config_job_level_m00id,MANAGERIAL
+,PT0,config_job_level_pt0id,Professional Technical
+,RF0,config_job_level_rf0id,Rank and File
+config_job_level_m00,M01,config_job_level_m01id,MANAGERIAL 1
+config_job_level_m00,M02,config_job_level_m02id,MANAGERIAL 2
+config_job_level_m00,M03,config_job_level_m03id,MANAGERIAL 3
+config_job_level_m00,M04,config_job_level_m04id,MANAGERIAL 4
+config_job_level_m00,M05,config_job_level_m05id,MANAGERIAL 5
+config_job_level_m00,M06,config_job_level_m06id,MANAGERIAL 6
+config_job_level_m00,M07,config_job_level_m07id,MANAGERIAL 7
+config_job_level_m00,M08,config_job_level_m08id,MANAGERIAL 8
+config_job_level_m00,M09,config_job_level_m09id,MANAGERIAL 9
+config_job_level_m00,M10,config_job_level_m10id,MANAGERIAL 10
+config_job_level_m00,M11,config_job_level_m11id,MANAGERIAL 11
+config_job_level_m00,M12,config_job_level_m12id,MANAGERIAL 12
+config_job_level_m00,M13,config_job_level_m13id,MANAGERIAL 13
+config_job_level_pt0,PT1,config_job_level_pt1id,PROFESSIONAL/TECHNICAL 1
+config_job_level_pt0,PT2,config_job_level_pt2id,PROFESSIONAL/TECHNICAL 2
+config_job_level_pt0,PT3,config_job_level_pt3id,PROFESSIONAL/TECHNICAL 3
+config_job_level_pt0,PT4,config_job_level_pt4id,PROFESSIONAL/TECHNICAL 4
+config_job_level_rf0,RF1,config_job_level_rf1id,RANK AND FILE 1
+config_job_level_rf0,RF2,config_job_level_rf2id,RANK AND FILE 2
+config_job_level_rf0,RF3,config_job_level_rf3id,RANK AND FILE 3
+config_job_level_rf0,RF4,config_job_level_rf4id,RANK AND FILE 4
+config_job_level_rf0,RF5,config_job_level_rf5id,RANK AND FILE 5

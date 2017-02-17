@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+    
+    	<record id="account_journal01" model="account.journal">
+            <field name="name">MUTI Cash</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="code">CSH1</field>
+			<field name="type">cash</field>
+			<field name="journal_user">True</field>
+		</record>
+    	
+    	
+<!--     	<record id="account_journal02" model="account.journal">
+            <field name="name">MUTI Credit</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="code">CSH2</field>
+			<field name="type">cash</field>
+			<field name="journal_user">True</field>
+		</record> -->
+		
+		
+		
+		<record id="account_journal03" model="account.journal">
+            <field name="name">MUTI Customer Invoices</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+				<field name="code">MUINV</field>
+				<field name="type">sale</field>
+				<field name="journal_user">False</field>
+				<field name="type">sale</field>
+		</record>
+		
+		<record id="account_journal04" model="account.journal">
+            <field name="name">Honda Customer Invoices</field>
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+				<field name="code">HOINV</field>
+				<field name="type">Sale</field>
+				<field name="journal_user">False</field>
+				<field name="type">sale</field>
+		</record>
+		
+		
+		<record id="account_journal05" model="account.journal">
+            <field name="name">Honda Cash</field>
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+			<field name="type">cash</field>
+			<field name="journal_user">True</field>
+		</record>
+		
+<!-- 		<record id="account_journal06" model="account.journal">
+            <field name="name">Honda Credit</field>
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+			<field name="type">cash</field>
+			<field name="journal_user">True</field>
+		</record> -->
+		
+		
+		
+		
+		<record id="pos_config_01" model="pos.config">
+            <field name="name">HONDA ISULAN</field>
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal04"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_hondaisulan"/>
+			<field name="stock_location_id">231</field>
+			<field name="picking_type_id">88</field>
+			<field name="branch_id" ref ="muti_base.config_branch_hondaisulanid"/>
+		</record>
+		
+		<record id="pos_config_02" model="pos.config">
+            <field name="name">HONDA MARAMAG</field>
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal04"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_hondamaramag"/>
+			<field name="stock_location_id">237</field>
+			<field name="picking_type_id">93</field>
+			<field name="branch_id" ref ="muti_base.config_branch_hondamaramagid"/>
+		</record>
+		
+		
+		<record id="pos_config_03" model="pos.config">
+            <field name="name">HONDA MARBEL</field>
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal04"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_hondamarbel"/>
+			<field name="stock_location_id">243</field>
+			<field name="picking_type_id">98</field>
+			<field name="branch_id" ref ="muti_base.config_branch_hondamarbelid"/>
+		</record>
+		
+		<record id="pos_config_04" model="pos.config">
+            <field name="name">HONDA SURALLAH</field>
+            <field name="company_id" ref="muti_base.res_company_hondasocsargenincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal04"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_hondamarbel"/>
+			<field name="stock_location_id">249</field>
+			<field name="picking_type_id">104</field>
+			<field name="branch_id" ref ="muti_base.config_branch_hondasurallahid"/>
+		</record>
+		
+		<record id="pos_config_05" model="pos.config">
+            <field name="name">MUTI 3S KORONADAL</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_muti3s"/>
+			<field name="stock_location_id">141</field>
+			<field name="picking_type_id">13</field>
+			<field name="branch_id" ref ="muti_base.config_branch_muti3sid"/>
+		</record>
+		
+		<record id="pos_config_06" model="pos.config">
+            <field name="name">MUTI BUHANGIN</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutibuhangin"/>
+			<field name="stock_location_id">147</field>
+			<field name="picking_type_id">18</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutibuhanginid"/>
+		</record>
+		
+		<record id="pos_config_07" model="pos.config">
+            <field name="name">MUTI CALINAN</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_muticalinan"/>
+			<field name="stock_location_id">153</field>
+			<field name="picking_type_id">23</field>
+			<field name="branch_id" ref ="muti_base.config_branch_muticalinanid"/>
+		</record>
+		
+		<record id="pos_config_08" model="pos.config">
+            <field name="name">MUTI DIGOS</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutidigos"/>
+			<field name="stock_location_id">159</field>
+			<field name="picking_type_id">28</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutidigosid"/>
+		</record>
+		
+		<record id="pos_config_09" model="pos.config">
+            <field name="name">MUTI ISULAN</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutiisulan"/>
+			<field name="stock_location_id">165</field>
+			<field name="picking_type_id">33</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutiisulanid"/>
+		</record>
+		
+		<record id="pos_config_10" model="pos.config">
+            <field name="name">MUTI KIDAPAWAN</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutikidapawan"/>
+			<field name="stock_location_id">171</field>
+			<field name="picking_type_id">38</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutikidapawanid"/>
+		</record>
+		
+		<record id="pos_config_11" model="pos.config">
+            <field name="name">MUTI LAPASAN</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutilapasan"/>
+			<field name="stock_location_id">177</field>
+			<field name="picking_type_id">43</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutilapasanid"/>
+		</record>
+		
+		<record id="pos_config_12" model="pos.config">
+            <field name="name">MUTI MARBEL</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutimarbel"/>
+			<field name="stock_location_id">183</field>
+			<field name="picking_type_id">48</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutimainid"/>
+		</record>
+		
+		<record id="pos_config_13" model="pos.config">
+            <field name="name">MUTI MATI</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutimati"/>
+			<field name="stock_location_id">189</field>
+			<field name="picking_type_id">53</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutimatiid"/>
+		</record>
+		
+		<record id="pos_config_14" model="pos.config">
+            <field name="name">MUTI PANABO</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutipanabo"/>
+			<field name="stock_location_id">195</field>
+			<field name="picking_type_id">58</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutipanaboid"/>
+		</record>
+		
+		<record id="pos_config_15" model="pos.config">
+            <field name="name">MUTI POLOMOLOK</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutipolomolok"/>
+			<field name="stock_location_id">201</field>
+			<field name="picking_type_id">63</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutipolomolokid"/>
+		</record>
+		
+		<record id="pos_config_16" model="pos.config">
+            <field name="name">MUTI SURALLAH</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutitacurong"/>
+			<field name="stock_location_id">207</field>
+			<field name="picking_type_id">68</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutisurallahid"/>
+		</record>
+		
+		<record id="pos_config_17" model="pos.config">
+            <field name="name">MUTI TACURONG</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutitacurong"/>
+			<field name="stock_location_id">213</field>
+			<field name="picking_type_id">73</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutitacid"/>
+		</record>
+		
+		<record id="pos_config_18" model="pos.config">
+            <field name="name">MUTI TAGUM</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutitagum"/>
+			<field name="stock_location_id">219</field>
+			<field name="picking_type_id">78</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutitagumid"/>
+		</record>
+		
+		<record id="pos_config_19" model="pos.config">
+            <field name="name">MUTI VALENCIA</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutivalencia"/>
+			<field name="stock_location_id">225</field>
+			<field name="picking_type_id">83</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutivalenciaid"/>
+		</record>
+		
+		<record id="pos_config_20" model="pos.config">
+            <field name="name">MUTI VILLAMOR</field>
+            <field name="company_id" ref="muti_base.res_company_marbeluniversaltradingincid"/>
+			<field name="journal_id" ref = "muti_pos.account_journal03"/>
+			<field name="pricelist_id" ref = "muti_warehouse_data.product_pricelist_mutivillamor"/>
+			<field name="stock_location_id">255</field>
+			<field name="picking_type_id">108</field>
+			<field name="branch_id" ref ="muti_base.config_branch_mutivillaamorid"/>
+		</record>
+		
+		<record id="point_of_sale.rule_pos_config_multi_company" model="ir.rule">
+            <field name="domain_force">[('branch_id','=',user.branch_id.id)]</field>
+		</record>
+		
+		
+		
+
+    </data>
+</openerp>

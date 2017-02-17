@@ -1,0 +1,52 @@
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="hrms_monthly_report_tree_view">
+            <field name="name">muti_hrms.monthly.report.tree</field>
+            <field name="model">muti_hrms.monthly.report</field>
+            <field name="arch" type="xml">
+                <tree string="Monthly Reports">	
+       				<field name="report_id"/>
+       				<field name="date_from"/>
+       				<field name="date_to"/>
+       				<field name="company_id"/>
+       				<field name="hr_dept_id"/>
+                </tree>
+            </field>
+        </record>	
+		
+		<record model="ir.ui.view" id="hrms_monthly_report_form_view">
+            <field name="name">muti_hrms.monthly.report.form</field>
+            <field name="model">muti_hrms.monthly.report</field>
+            <field name="arch" type="xml">
+                <form string="Monthly Reports">		               
+              		<sheet>
+              			<group>
+              				<field name="report_id" required="1"/>
+              				<field name="rep_option"/>
+              				<field name="date_as_of" attrs="{'invisible': [('rep_option','not in','as_of')], 'required': [('rep_option','in','as_of')]}"/>
+              				<field name="date_from" attrs="{'invisible': [('rep_option','not in','range')],'required': [('rep_option','in','range')]}"/>
+              				<field name="date_to" attrs="{'invisible': [('rep_option','not in','range')],'required': [('rep_option','in','range')]}"/>
+              				<field name="company_id"/>
+              				<field name="hr_dept_id"/>
+                    	</group>             
+                    	<button name="action_generate" 
+              		 		 	string="Generate" 
+              		 		 	type="object" 
+              		 		 	class="btn-primary" 
+              		 		 	/>
+                    </sheet>                 
+                </form>
+            </field>
+        </record>	
+
+        <act_window
+        	id="hrms_monthly_report_action"
+            name="Monthly Reports"
+            res_model="muti_hrms.monthly.report"
+            src_model="muti_hrms.monthly.report"
+            view_id="hrms_monthly_report_form_view"
+            view_mode="form"            
+            target="new" />
+	
+	</data>
+</openerp>

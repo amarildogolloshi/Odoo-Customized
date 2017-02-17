@@ -1,0 +1,275 @@
+active,id,is_company,name
+false,res_partner_bu000015id,False,"ARKCLICK TECHNOLOGY, INC."
+false,res_partner_bu000018id,False,AXZEEN SECURITY AGENCY
+false,res_partner_bu000002id,False,CHIU KIM ENTERPRISES INC.
+false,res_partner_bu000011id,False,CK UNIVERSAL GROUP MANAGEMENT CORPORATION
+false,res_partner_bu000005id,False,JOINT VENTURE COOP.
+false,res_partner_bu000009id,False,MARIA VICTORIA C. TAN HR-B
+false,res_partner_bu000013id,False,PRIORITY SECURITY AGENCY
+false,res_partner_bu000004id,False,VIAJERO MOTORSALES INC.
+true,res_partner_bu000021id,False,4M RESOURCES ADVANCED TECHNOLOGIES CORPORATION
+true,res_partner_bu000022id,False,ARGO SECURITY AND INVESTIGATION AGENCY
+true,res_partner_bu000020id,False,AUBERON SOLUTIONS INC.
+true,res_partner_bu000010id,False,BIOCIELO REALTY AND DEVELOPMENT CORP.
+true,res_partner_bu000008id,False,"CHIU BUN GIM UNIVERSAL HOLDING, INC."
+true,res_partner_bu000014id,False,COMMUNITY ACCESS FOR RESOURCES ON ENTREPRENEURSHIP
+true,res_partner_bu000006id,False,EASY PAY FINANCE CORPORATION
+true,res_partner_bu000007id,False,HAPPY LIVING REALTY & DEVELOPMENT CORPORATION
+true,res_partner_bu000003id,False,"HONDA SOCSARGEN, INC."
+true,res_partner_bu000001id,False,MARBEL UNIVERSAL TRADING INC.
+true,res_partner_bu000017id,False,PHOENIX UNIVERSAL MEGA GAS STATION
+true,res_partner_bu000016id,False,RURAL BANK OF NORALA
+true,res_partner_bu000019id,False,"SPECIALIST SECURITY AND INVESTIGATION AGENCY, INC."
+true,res_partner_bu000012id,False,SUPREME INVESTIGATIVE AND SECURITY AGENCY
+false,res_partner_15000004id,true,ARKCLICK DAVAO DEL SUR AREAS
+false,res_partner_18000006id,true,ASA AGDAO-M
+false,res_partner_18000011id,true,ASA BUHANGIN
+false,res_partner_18000012id,true,ASA BUHANGIN - M
+false,res_partner_18000009id,true,ASA CAGAYAN DE ORO-M
+false,res_partner_18000013id,true,ASA CALINAN - M
+false,res_partner_18000001id,true,ASA CALINAN-M
+false,res_partner_18000014id,true,ASA DIGOS - M
+false,res_partner_18000005id,true,ASA DIGOS-M
+false,res_partner_18000004id,true,ASA KIDAPAWAN-M
+false,res_partner_18000015id,true,ASA MARAMAG - H
+false,res_partner_18000010id,true,ASA MARAMAG-H
+false,res_partner_18000003id,true,ASA MATI-M
+false,res_partner_18000002id,true,ASA PANABO-M
+false,res_partner_18000007id,true,ASA TAGUM-M
+false,res_partner_18000008id,true,ASA VALENCIA-M
+false,res_partner_14000005id,true,CARE CFI - GENSAN
+false,res_partner_11000015id,true,CKUGMC DIGOS
+false,res_partner_11000016id,true,CKUGMC GENSAN I
+false,res_partner_11000017id,true,CKUGMC GENSAN II
+false,res_partner_11000023id,true,CKUGMC ISULAN I
+false,res_partner_11000024id,true,CKUGMC ISULAN II
+false,res_partner_11000019id,true,CKUGMC KORONADAL I
+false,res_partner_11000020id,true,CKUGMC KORONADAL II
+false,res_partner_11000001id,true,CKUGMC MAIN
+false,res_partner_11000021id,true,CKUGMC MARBEL
+false,res_partner_11000018id,true,CKUGMC POLOMOLOK
+false,res_partner_11000022id,true,CKUGMC SURALLAH
+false,res_partner_11000025id,true,CKUGMC TACURONG
+false,res_partner_11000014id,true,CKUGMC TORIL
+false,res_partner_06000073id,true,EPFC AGDAO-M
+false,res_partner_06000101id,true,EPFC BUHANGIN - M
+false,res_partner_06000083id,true,EPFC BUTUAN-M
+false,res_partner_06000076id,true,EPFC CAGAYAN DE ORO-M
+false,res_partner_06000018id,true,EPFC COUNTER
+false,res_partner_06000055id,true,EPFC DIGOS-M
+false,res_partner_06000003id,true,EPFC GENSAN I
+false,res_partner_06000004id,true,EPFC GENSAN II
+false,res_partner_06000075id,true,EPFC ILIGAN-M
+false,res_partner_06000057id,true,EPFC ISULAN-H
+false,res_partner_06000052id,true,EPFC ISULAN-M
+false,res_partner_06000050id,true,EPFC KORONADAL-H
+false,res_partner_06000054id,true,EPFC KORONADAL-M
+false,res_partner_06000072id,true,EPFC M'LANG-M
+false,res_partner_06000077id,true,EPFC MALAYBALAY-M
+false,res_partner_06000049id,true,EPFC MARBEL-M
+false,res_partner_06000084id,true,EPFC NABUNTURAN-M
+false,res_partner_06000081id,true,EPFC OZAMIZ-M
+false,res_partner_06000082id,true,EPFC PAGADIAN-M
+false,res_partner_06000053id,true,EPFC POLOMOLOK-M
+false,res_partner_06000086id,true,EPFC SAN FRANCISCO-M
+false,res_partner_06000009id,true,EPFC SURALLAH
+false,res_partner_06000034id,true,EPFC TACURONG CONSTRUCTION
+false,res_partner_06000051id,true,EPFC TACURONG-M
+false,res_partner_06000001id,true,EPFC TORIL
+false,res_partner_06000070id,true,EPFC-PANABO
+false,res_partner_06000062id,true,EPFC-TAGUM
+false,res_partner_07000003id,true,HLRDC PHOENIX
+false,res_partner_03000009id,true,HSI MARBEL
+false,res_partner_03000006id,true,HSI MUTI TORIL
+false,res_partner_01000059id,true,MUTI AGDAO
+false,res_partner_01000092id,true,MUTI ALABEL PROPER
+false,res_partner_01000065id,true,MUTI BUTUAN
+false,res_partner_01000064id,true,MUTI CAGAYAN CITY PROPER ( DO NOT USE)
+false,res_partner_01000070id,true,MUTI CAGAYAN DE ORO
+false,res_partner_01000072id,true,MUTI CALINAN (DON'T USE)
+false,res_partner_01000063id,true,MUTI CARE FOUNDATION
+false,res_partner_01000095id,true,MUTI CFI-ISULAN BRANCH
+false,res_partner_01000062id,true,MUTI COTABATO CITY PROPER
+false,res_partner_01000066id,true,MUTI DAVAO CITY PROPER
+false,res_partner_01000046id,true,MUTI DIGOS (DON'T USE)
+false,res_partner_01000081id,true,MUTI DIPOLOG
+false,res_partner_01000086id,true,MUTI FGMG MOTOR PARTS
+false,res_partner_01000003id,true,MUTI GENSAN
+false,res_partner_01000085id,true,MUTI GLAN UNICORN HARDWARE
+false,res_partner_01000104id,true,MUTI GREATWALL
+false,res_partner_01000053id,true,MUTI HSOC SUR
+false,res_partner_01000068id,true,MUTI ILIGAN
+false,res_partner_01000082id,true,MUTI IPIL
+false,res_partner_01000079id,true,MUTI KABACAN
+false,res_partner_01000043id,true,MUTI KIDAPAWAN CITY PROPER
+false,res_partner_01000032id,true,MUTI KORONADAL II
+false,res_partner_01000100id,true,MUTI LAKE SEBU
+false,res_partner_01000073id,true,MUTI LAPASAN (CDO)
+false,res_partner_01000060id,true,MUTI M'LANG
+false,res_partner_01000071id,true,MUTI MALAYBALAY
+false,res_partner_01000040id,true,MUTI MARBEL
+false,res_partner_01000088id,true,MUTI METRO MANILA
+false,res_partner_01000074id,true,MUTI NABUNTURAN
+false,res_partner_01000077id,true,MUTI OZAMIZ
+false,res_partner_01000080id,true,MUTI PAGADIAN
+false,res_partner_01000051id,true,MUTI POL (DON'T USE)
+false,res_partner_01000084id,true,MUTI RURAL BANK OF NORALA
+false,res_partner_01000075id,true,MUTI SAN FRANCISCO
+false,res_partner_01000103id,true,MUTI SURALAH
+false,res_partner_01000101id,true,MUTI SURALLAH
+false,res_partner_01000078id,true,MUTI TAGUM 2
+false,res_partner_01000087id,true,MUTI TAMPAKAN
+false,res_partner_01000054id,true,MUTI TANTANGAN
+false,res_partner_01000002id,true,MUTI TORIL
+false,res_partner_01000052id,true,MUTI TUPI
+false,res_partner_01000083id,true,MUTI ZAMBOANGA
+false,res_partner_01000097id,true,MUTI ZAMBOANGA DEL NORTE PROPER
+false,res_partner_01000098id,true,MUTI ZAMBOANGA DEL SUR PROPER
+false,res_partner_01000050id,true,MUTI-MATI (DON'T USE)
+false,res_partner_13000016id,true,PSA AGDAO-M
+false,res_partner_13000011id,true,PSA BRDC
+false,res_partner_13000003id,true,PSA DIGOS-M
+false,res_partner_13000012id,true,PSA HLRDC
+false,res_partner_13000017id,true,PSA HLRDC-PHOENIX
+false,res_partner_13000010id,true,PSA ISULAN-H
+false,res_partner_13000002id,true,PSA ISULAN-M
+false,res_partner_13000013id,true,PSA KIDAPAWAN-M
+false,res_partner_13000008id,true,PSA KORONADAL-H
+false,res_partner_13000005id,true,PSA KORONADAL-M
+false,res_partner_13000004id,true,PSA MARBEL-M
+false,res_partner_13000007id,true,PSA POLOMOLOK-M
+false,res_partner_13000018id,true,PSA RURAL BANK OF NORALA
+false,res_partner_13000009id,true,PSA SURALLAH-H
+false,res_partner_13000006id,true,PSA TACURONG-M
+false,res_partner_13000014id,true,PSA TAGUM-M
+false,res_partner_12000023id,true,SIASA CAGAYAN DE ORO-M
+false,res_partner_12000022id,true,SIASA HLRDC-PHOENIX
+false,res_partner_04000002id,true,VMI DIGOS
+false,res_partner_04000010id,true,VMI GENSAN
+false,res_partner_04000005id,true,VMI GENSAN I
+false,res_partner_04000003id,true,VMI GENSAN II
+false,res_partner_04000013id,true,VMI KIDAPAWAN-M
+false,res_partner_04000006id,true,VMI KORONADAL I
+false,res_partner_04000007id,true,VMI KORONADAL II
+false,res_partner_04000001id,true,VMI MAIN
+false,res_partner_04000011id,true,VMI MARBEL
+true,res_partner_22000001id,true,AGAIA BUHANGIN
+true,res_partner_22000002id,true,AGAIA CAGAYAN DE ORO
+true,res_partner_22000003id,true,AGAIA CALINAN
+true,res_partner_22000004id,true,AGAIA MARAMAG
+true,res_partner_22000005id,true,AGAIA MATI
+true,res_partner_22000006id,true,AGAIA PANABO
+true,res_partner_22000007id,true,AGAIA TAGUM
+true,res_partner_22000008id,true,AGAIA VALENCIA
+true,res_partner_20000001id,true,ASI AUBERON
+true,res_partner_10000002id,true,BRDC BIOCIELO
+true,res_partner_10000001id,true,BRDC BRDC
+true,res_partner_10000003id,true,BRDC MONTECIELO
+true,res_partner_14000004id,true,CARE CFI - ISULAN
+true,res_partner_14000006id,true,CARE CFI - MAIN
+true,res_partner_14000003id,true,CARE CFI-KORONADAL
+true,res_partner_14000002id,true,CARE FOUNDATION II
+true,res_partner_06000074id,true,EPFC BUHANGIN
+true,res_partner_06000080id,true,EPFC CALINAN-M
+true,res_partner_06000002id,true,EPFC DIGOS
+true,res_partner_06000010id,true,EPFC ISULAN I
+true,res_partner_06000040id,true,EPFC ISULAN II
+true,res_partner_06000058id,true,EPFC KIDAPAWAN-M
+true,res_partner_06000007id,true,EPFC KORONADAL I
+true,res_partner_06000006id,true,EPFC KORONADAL II
+true,res_partner_06000085id,true,EPFC LAPASAN CDO-M
+true,res_partner_06000079id,true,EPFC MARAMAG-H
+true,res_partner_06000041id,true,EPFC MARBEL
+true,res_partner_06000063id,true,EPFC MATI-M
+true,res_partner_06000064id,true,EPFC PANABO-M
+true,res_partner_06000005id,true,EPFC POLOMOLOK
+true,res_partner_06000056id,true,EPFC SURALLAH-H
+true,res_partner_06000092id,true,EPFC SURALLAH-M
+true,res_partner_06000011id,true,EPFC TACURONG
+true,res_partner_06000065id,true,EPFC TAGUM-M
+true,res_partner_06000071id,true,EPFC VALENCIA-M
+true,res_partner_06000067id,true,EPFC-MATI
+true,res_partner_07000001id,true,HLRDC
+true,res_partner_07000004id,true,HLRDC-QUARRY
+true,res_partner_03000014id,true,HSI HSOC-MARAMAG
+true,res_partner_03000003id,true,HSI ISULAN
+true,res_partner_03000011id,true,HSI KORONADAL
+true,res_partner_03000001id,true,HSI MAIN
+true,res_partner_03000012id,true,HSI MARAMAG
+true,res_partner_03000016id,true,HSI PARTS & SERVICES
+true,res_partner_03000002id,true,HSI SURALLAH
+true,res_partner_01000069id,true,MUTI BUHANGIN
+true,res_partner_01000067id,true,MUTI CALINAN
+true,res_partner_01000009id,true,MUTI DIGOS
+true,res_partner_01000039id,true,MUTI HSI MAIN
+true,res_partner_01000005id,true,MUTI ISULAN
+true,res_partner_01000044id,true,MUTI KIDAPAWAN
+true,res_partner_01000029id,true,MUTI KORONADAL
+true,res_partner_01000076id,true,MUTI MARAMAG
+true,res_partner_01000048id,true,MUTI MATI
+true,res_partner_01000049id,true,MUTI PANABO
+true,res_partner_01000099id,true,MUTI PARTS & SERVICES
+true,res_partner_01000004id,true,MUTI POLOMOLOK
+true,res_partner_01000102id,true,MUTI SURALLAH
+true,res_partner_01000037id,true,MUTI SUZUKI 3S
+true,res_partner_01000006id,true,MUTI TACURONG
+true,res_partner_01000047id,true,MUTI TAGUM
+true,res_partner_01000061id,true,MUTI VALENCIA
+true,res_partner_01000109id,true,MUTI VILLA AMOR SHOWROOM - M
+true,res_partner_17000004id,true,PHOENIX LAGAO
+true,res_partner_17000003id,true,PHOENIX PUMGAS
+true,res_partner_16000001id,true,RBN RURAL BANK OF NORALA
+true,res_partner_16000003id,true,RBN SUPREME INVESTIGATIVE AND SECURITY AGENCY
+true,res_partner_12000011id,true,SIASA BRDC
+true,res_partner_12000021id,true,SIASA CALINAN-M
+true,res_partner_12000002id,true,SIASA DIGOS-M
+true,res_partner_12000012id,true,SIASA HLRDC
+true,res_partner_12000010id,true,SIASA ISULAN-H
+true,res_partner_12000003id,true,SIASA ISULAN-M
+true,res_partner_12000013id,true,SIASA KIDAPAWAN-M
+true,res_partner_12000008id,true,SIASA KORONADAL-H
+true,res_partner_12000005id,true,SIASA KORONADAL-M
+true,res_partner_12000028id,true,SIASA M-DIGOS
+true,res_partner_12000004id,true,SIASA MARBEL-M
+true,res_partner_12000017id,true,SIASA MATI-M
+true,res_partner_12000015id,true,SIASA PANABO-M
+true,res_partner_12000024id,true,SIASA PHOENIX
+true,res_partner_12000007id,true,SIASA POLOMOLOK-M
+true,res_partner_12000025id,true,SIASA RURAL BANK OF NORALA
+true,res_partner_12000009id,true,SIASA SURALLAH-H
+true,res_partner_12000026id,true,SIASA SURALLAH-M
+true,res_partner_12000006id,true,SIASA TACURONG-M
+true,res_partner_12000014id,true,SIASA TAGUM-M
+true,res_partner_12000020id,true,SIASA VALENCIA-M
+true,res_partner_19000013id,true,SSAIAI BRDC
+true,res_partner_19000017id,true,SSAIAI BUHANGIN
+true,res_partner_19000018id,true,SSAIAI CAGAYAN DE ORO - M
+true,res_partner_19000024id,true,SSAIAI CALINAN - M
+true,res_partner_19000001id,true,SSAIAI DIGOS-M
+true,res_partner_19000002id,true,SSAIAI GREATWALL
+true,res_partner_19000005id,true,SSAIAI HLRDC
+true,res_partner_19000004id,true,SSAIAI ISULAN-H
+true,res_partner_19000008id,true,SSAIAI ISULAN-M
+true,res_partner_19000012id,true,SSAIAI KIDAPAWAN-M
+true,res_partner_19000010id,true,SSAIAI KORONADAL-H
+true,res_partner_19000011id,true,SSAIAI KORONADAL-M
+true,res_partner_19000019id,true,SSAIAI MARAMAG - H
+true,res_partner_19000006id,true,SSAIAI MARBEL-M
+true,res_partner_19000020id,true,SSAIAI MATI - M
+true,res_partner_19000021id,true,SSAIAI PANABO - M
+true,res_partner_19000003id,true,SSAIAI PHOENIX
+true,res_partner_19000016id,true,SSAIAI PHOENIX-LAGAO
+true,res_partner_19000007id,true,SSAIAI POLOMOLOK-M
+true,res_partner_19000014id,true,SSAIAI SURALLAH-H
+true,res_partner_19000009id,true,SSAIAI TACURONG-M
+true,res_partner_19000022id,true,SSAIAI TAGUM - M
+true,res_partner_19000023id,true,SSAIAI VALENCIA - M
+True,res_partner_mutihomeoffice,True,MUTI HOME OFFICE
+True,res_partner_epfchomeoffice,True,EPFC HOME OFFICE
+True,res_partner_hondahomeoffice,True,HONDA HOME OFFICE
+True,res_partner_siasagreatwall,True,SIASA GREATWALL
+True,res_partner_siasahomeoffice,True,SIASA HOME OFFICE
+True,res_partner_ssaiaihomeoffice,True,SSAIAI HOME OFFICE
+True,res_partner_4mratcohomeoffice,True,4MRATCO HOME OFFICE
+True,res_partner_pumgashomeoffice,True,PUMGAS HOME OFFICE
+True,res_partner_cbg,True,CBG

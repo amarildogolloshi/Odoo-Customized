@@ -1,0 +1,78 @@
+<openerp>
+  <!-- Employees>Employees>Appraisal-->
+	 <record model="ir.ui.view" id="muti_appraisal_appraisal_tree_view">
+            <field name="name">muti_appraisal.appraisal.tree</field>
+            <field name="model">muti_appraisal.appraisal</field>
+            <field name="arch" type="xml">
+                <tree string="Appraisal">
+              
+                    <field name="employee_id"/>
+					<field name="report_id"/>
+                    <field name="deadline"/>
+                    <field name="state"/>
+                                           
+                </tree>
+            </field>
+        </record>	
+
+	 <record model="ir.ui.view" id="muti_appraisal_appraisal_form_view">
+            <field name="name">muti_appraisal.appraisal.form</field>
+            <field name="model">muti_appraisal.appraisal</field>
+            <field name="arch" type="xml">
+                <form string="Appraisal">
+	                	
+              		<sheet>
+              			<group>
+              				<field name="bulk"/>
+              			</group>
+              			<group attrs="{'invisible': [('bulk','=',False)]}">
+              				<field name="company_id" />
+              				<field name="branch_id" />
+              				<field name="hr_dept_id" attrs="{'required': [('bulk','=',True)]}"/>
+              				<field name="job_id" attrs="{'required': [('bulk','=',True)]}"/>
+              			</group>	
+              			<group >
+              				<field name="employee_id" string="Employee" attrs="{'invisible': [('bulk','=',True)]}"/>
+              				<field name="report_id"/>		
+              				<field name="rater_id"/>
+              				<field name="superior_id"/>
+              				<field name="employee_ids" readonly="0" attrs="{'invisible': [('bulk','=',False)]}"/>		                    		                     
+	         			</group>
+	         			<group string="Coverage Details" attrs="{'invisible': [('bulk','=',True)]}">
+	         				<group >
+	         					<field name="start_date"/>
+	         					<field name="deadline"/>
+	         				</group>
+	         				<group>
+	         					<field name="end_date"/>
+	         				</group>
+	         			</group>
+						<button name="process_appraisal" 
+              		 		 	string="Process" 
+              		 		 	type="object" 
+              		 		 	class="btn-primary" 
+              		 		 	/>
+                    </sheet>                 
+                </form>
+            </field>
+        </record>
+
+
+<!--         <record model="ir.actions.act_window" id="muti_appraisal_appraisal_action"> -->
+<!--             <field name="name">Appraisal</field> -->
+<!--             <field name="res_model">muti_appraisal.appraisal</field> -->
+<!--             <field name="view_type">form</field> -->
+<!--             <field name="view_mode">tree,form</field> -->
+<!--         </record> -->
+        
+        <act_window
+            name="Appraisal"
+            res_model="muti_appraisal.appraisal"
+            src_model="muti_appraisal.appraisal"
+            view_mode="form"
+            id="muti_appraisal_appraisal_action"
+            view_id="muti_appraisal_appraisal_form_view"
+            target="new" />   
+
+
+</openerp>
